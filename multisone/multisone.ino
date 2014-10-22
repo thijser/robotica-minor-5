@@ -61,7 +61,7 @@ void loop()
 //  delayMicroseconds(1000); - Removed this line
   delayMicroseconds(10); // Added this line
   digitalWrite(trigPin, LOW);
-  distance = pulseIn(echoPin, HIGH)/ 58,2;
+  distance = pulseIn(echoPin, HIGH)/ 58.2;
  
 
     range_msg.range = distance;
