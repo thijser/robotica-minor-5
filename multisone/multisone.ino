@@ -8,9 +8,9 @@
 #include <ros/time.h>
 #include <sensor_msgs/Range.h>
 
-#define sensNumber 3
-#define firstTrigPin 3
-#define firstEchoPin 9
+#define sensNumber 4
+#define firstTrigPin 2
+#define firstEchoPin 8
 
 
 ros::NodeHandle  nh;
@@ -18,8 +18,8 @@ sensor_msgs::Range range_msg;
 ros::Publisher pub_range( "/ultrasound", &range_msg);
 char frameid[] = "/ultrasound";
 
-int trigPin=firstTrigPin;
-int echoPin=firstEchoPin;
+ int trigPin=firstTrigPin;
+ int echoPin=firstEchoPin;
 
 void increasepins(){
   trigPin++;
@@ -55,13 +55,12 @@ void loop()
   //publish the adc value every 50 milliseconds
   //since it takes that long for the sensor to stablize
      long duration, distance;
-  digitalWrite(trigPin, LOW);  // Added this line
   delayMicroseconds(2); // Added this line
   digitalWrite(trigPin, HIGH);
 //  delayMicroseconds(1000); - Removed this line
   delayMicroseconds(10); // Added this line
   digitalWrite(trigPin, LOW);
-  distance = pulseIn(echoPin, HIGH)/ 58.2;
+  distance = pulseIn(echoPin, HIGH,100000)/ 58.2; //change timeout value, increase for more range decrease for higher sample rate 
  
 
     range_msg.range = distance;
