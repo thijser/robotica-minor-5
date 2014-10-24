@@ -314,24 +314,25 @@ Alternate options:
 \section{Sketches of exterior}
 \section{Sketches of mechanics}
 \section{Initial software architecture}
-<<<<<<< HEAD
+
 At large there is little difference between these three designs from a software perspective. The actual difference is just how the motors are controlled and how emotions are expressed by the robots. 
 The software structure diagram(Figure X) shows the different subsystems found in the software on the second row. It further specifies the functionality of these subsystems in the row below. From this diagram we learn what the distribution of classes and namespaces should look like in the software. Each node in a row should implement the nodes it is linked to in the row below it. With the top node bringing everything together into the main operating function. This diagram holds for all three concept since they only differ on the lowest level of implementation, which is not covered in this scope.
-\section{initial electronic and electrical design}
+
+\section{Initial electronic and electrical design}
 For the electrical and electronic design, a few things will have to be decided. The following parts will have to be considered: 
 \begin{itemize}
 \item Battery -- Li-Ion, LiPo and NiMH
-\item Computing -- Beaglebone, Arduino, Laptop, phone, Other
+\item Computing -- BeagleBone, Arduino, Laptop, Smartphone, Other
 \item Lights -- LED
-\item Dislay -- LCD
+\item Display -- LCD
 \item Speaker
 \item Motor
 \item Sensors -- Ultrasonic
 \end{itemize}
-=======
-\section{Initial electronic and electrical design}
 
->>>>>>> 9d8e5828f33d498bf8292a2041fc8c2f4709a604
+The only difference between the three designs is the amount of motors. The final decisions will be made in the final Prototype electrical design.
+
+
 \chapter{Concept choice}
 In this chapter, the decision for the final concept design will be made and explained. Recall that there were three concepts: the Truck Teacher, the Box-Bot and the Volcano Robot. The decision was made after careful consideration of the following factors:
 \begin{itemize}
@@ -439,9 +440,9 @@ With this structure in mind the classes can be defined. Figures \ref{fig:control
 \section{Electrical and electronic design}
 \subsection{Battery choice}
 \subsubsection{Type of battery}
-When choosing the battery, three types will be considered: Lithium-Ion, Nickel Metal Hydride and Lead batteries. To start off, Lead batteries are not considered viable, because of the low energy density and the size of the batteries (“Lead Based Batteries”, n.d.). The low energy density makes it heavy, while Li-Ion and NiMH can have the same capacity while they are lighter and smaller. Since the robot is supposed to be small, the lead batteries will not be used. 
+When choosing the battery, three types will be considered: Lithium-Ion, Nickel Metal Hydride and Lead batteries. To start off, Lead batteries are not considered viable, because of the low energy density and the size of the batteries (\lq\lq{}Lead Based Batteries\rq\rq{}, n.d.). The low energy density makes it heavy, while Li-Ion and NiMH can have the same capacity while they are lighter and smaller. Since the robot is supposed to be small, the lead batteries will not be used. 
 \subsubsection{Li-Ion vs NiMH}
-The advantages of Lithium Ion batteries (“Lithium Based Batteries”, n.d.) opposed to NiMH batteries (“Nickel Based Batteries”, n.d.) will be summed up here:
+The advantages of Lithium Ion batteries (\lq\lq{}Lithium Based Batteries\rq\rq{}, n.d.) opposed to NiMH batteries (\lq\lq{}Nickel Based Batteries\rq\rq{}, n.d.) will be summed up here:
 Advantages Li-ion over NiMH
 \begin{itemize}
 \item No memory effect like NiMH.
@@ -454,19 +455,15 @@ Advantages NiMH over Li-ion:
 \begin{itemize}
 \item Faster charging
 \item Li-ion can burst into fire when overcharged or overheated. Requires a special protection circuit. 
-\item Li-ion starts losing capacity from the day it’s fabricated
+\item Li-ion starts losing capacity from the day it\rq{}s fabricated
 \end{itemize}
-The memory effect means that Nickel based batteries, when constantly discharged until a certain point, can “forget” it can discharge even further than that.  This can be cured by fully discharging the battery once in a while. It’s the NiCd battery that mainly suffers from this though and the NiMH batteries don’t suffer  from it that much anymore. Also, it mainly occurs when the batteries are always discharged until the same point, which is usually not the case for consumer technology.\\ 
+The memory effect means that Nickel based batteries, when constantly discharged until a certain point, can \lq\lq{}forget\rq\rq{} it can discharge even further than that.  This can be cured by fully discharging the battery once in a while. It\rq{}s the NiCd battery that mainly suffers from this though and the NiMH batteries don\rq{}t suffer  from it that much anymore. Also, it mainly occurs when the batteries are always discharged until the same point, which is usually not the case for consumer technology.\\ 
 Lithium Ion batteries are quite similar to NiMH batteries, but Li-ion has a slight edge. The main decision will be made by availability and price.
 
 \subsubsection{Required battery capacity}
 The required capacity of the battery, is based on one of the requirements stated in the MoSCoW Model in Appendix B. The robot must be able to run for 30 minutes at least. For this reason, Figure \ref{table:battery} in Appendix \ref{appendix:battery} is based on 30 minutes runtime. 
-There’s a few things to note about the figure. The capacity of a battery is not equal to the actual capacity that can be used. Service life of batteries are higher when the Depth of Discharge is lower than 80\% (“Battery Discharge Methods”, n.d.). Besides this, there is also the self-discharge of the battery. This will make the effective capacity of the battery approximately 70\% of the total capacity. 
+There\rq{}s a few things to note about the figure. The capacity of a battery is not equal to the actual capacity that can be used. Service life of batteries are higher when the Depth of Discharge is lower than 80\% (\lq\lq{}Battery Discharge Methods\rq\rq{}, n.d.). Besides this, there is also the self-discharge of the battery. This will make the effective capacity of the battery approximately 70\% of the total capacity. 
 The Time Type indicates when that part receives the current. This is important, since for example the Shooting motor uses 4A, which is a lot more than the other parts, but it only uses it for a short time period. Therefore there is a Maximum Capacity, in which the Shooting motor, the Wheel motors and the Speakers are always on, the Minimum Capacity, in which those objects are always off, and the Average Capacity, which is the average of those two. The Average Capacity is a slightly more realistic indication of how much capacity it will require. 
-\subsubsection{Maximum battery size}
-The required capacity of the battery, is based on one of the requirements stated in the MoSCoW Model in Appendix B. The robot must be able to run for 30 minutes at least. For this reason, Figure \ref{table:battery} in Appendix \ref{appendix:battery} is based on 30 minutes runtime. 
-There’s a few things to note about the figure. The capacity of a battery is not equal to the actual capacity that can be used. Service life of batteries are higher when the Depth of Discharge is lower than 80\% (“Battery Discharge Methods”, n.d.). Besides this, there is also the self-discharge of the battery. This will make the effective capacity of the battery approximately 70\% of the total capacity. 
-The Time Type indicates when that part receives the current. This is important, since for example the Shooting motor uses 4A, which is a lot more than the other parts, but it only uses it for a short time period. Therefore there is a Maximum Capacity, in which the Shooting motor, the Wheel motors and the Speakers are always on, the Minimum Capacity, in which those objects are always off, and the Average Capacity, which is the average of those two. The Average Capacity is a slightly more realistic indication of how much capacity it will require.
 
 \subsection{Battery decision}
 The options are lined up in Figure \ref{table:batteryOptions}. According to the Required Capacity paragraph, the robot would require at least 2633 mAh for half an hour. Also, the required voltage for the motors is 12V. Therefore, at least 3 of Option 1 would have to be bought for 11.1V. To reach the required capacity for Option 2, 2 of those would need to be bought. The other two options already fulfill the requirements. 
