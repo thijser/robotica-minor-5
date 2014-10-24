@@ -22,6 +22,7 @@
 \chapter{Introduction}
 Currently, there are not a lot of robots on the market, but since recent developments in technology, it will increase to become relevant. The main idea of this project is to create an autonomous robot from scratch. \\
 This report will be about the conceptual design of the Tawi, a robot that will play an educational game with children. This will be told starting with the original brainstorm for ideas for a robot. After that, by making a Functional Analysis and a MoSCoW model, a Morphological Map will be created. By using the Morphological Map, the Initial Designs can be set up. After the Initial Designs are improved, a final concept will be chosen and a prototype can be designed. For the prototype, further calculations on the final concept and the motivations behind the decisions can be made.
+
 \chapter{Ideas and choice of the robot}
 The first stage of creating a concept is holding a brainstorm for a function of the robot. The following ideas were considered : 
 \begin{itemize}
@@ -34,35 +35,41 @@ The first stage of creating a concept is holding a brainstorm for a function of 
 \item{Volcano robot}
 \item{Volcano robot second iteration}
 \end{itemize}
+
 \section{Underwater exploration robot}
 The first idea was the Underwater Exploration Robot. It would explore the depths of the North Sea to map it out and discover new species of fish, since a lot of the depths are still unexplored and are currently still being explored by divers. \\
 This idea was considered very difficult. It would require a waterproof shell up to depths of 70m. If the robot would leak even slightly, the entire robot could stop working. On the other hand, it is a very interesting idea. \\
 In the end, it was decided it to be too challenging.
+
 \section{Train cleaning robot}
 The next idea that passed the block was a train cleaning robot. This robot would vacuum and scrub the floor of the train carriages, empty garbage bins and maybe even check the seats for contamination. 
-This idea didn’t come through because it’s not that interesting to work on, the market for it is small and it’s not easy to test, since it would require an empty train. It also scored low in terms of innovation, as there are already vacuuming robots on the market.
+This idea didn\rq{}t come through because it\rq{}s not that interesting to work on, the market for it is small and it\rq{}s not easy to test, since it would require an empty train. It also scored low in terms of innovation, as there are already vacuuming robots on the market.
+
 \section{Groceries sorting robot}
 The third idea was a groceries sorting and storing robot. It would be an arm that picks up groceries, scans its barcode to identify it and then puts it away in a cupboard or drawer. An example of usage would be that the supermarket would place the box with shopping items on the counter and the robot would unload this. \\
 This would involve making an arm with at least 5 motors in it, making a program that compares the barcode to one in a database to find out what product it is and a vision system to identify cupboards and drawers. This was considered quite complex, because of the many components and the perfect communication necessary between them. So it was decided to be too difficult for the time given to complete this project.
+
 \section{Gum-buster robot}
-Another idea that was mentioned was a “gum-buster” robot. The robot would carry a steam powered device that would clean urban areas. This would be useful, because it is currently a very time-consuming activity, and in the UK, the government currently spends £850 billion per year on cleaning gum. (Gray. L, 2014) \\
-The robot would have to know where to clean and where not to clean. This could be done with GPS or the robot would clean per block and it would have to be able to stay on the sidewalk. The robot would also have to have a strong body, so that people won\rq{}t accidentally knock it over. Finally the robot would have to be safe, so that it does not try to bust someones foot(with steam). \\
+Another idea that was mentioned was a \lq\lq{}gum-buster\rq\rq{} robot. The robot would carry a steam powered device that would clean urban areas. This would be useful, because it is currently a very time-consuming activity, and in the UK, the government currently spends £850 billion per year on cleaning gum. (Gray, 2014) \\
+The robot would have to know where to clean and where not to clean. This could be done with GPS or the robot would clean per block and it would have to be able to stay on the sidewalk. The robot would also have to have a strong body, so that people won\rq{}t accidentally knock it over. Finally the robot would have to be safe, so that it does not try to bust someones foot with steam. \\
 Safety and navigation are big issues, so this was also considered difficult.
+
 \section{Toy clean-up robot}
 One of the top ideas was a robot that would help kids clean up their toys. It would make cleaning fun by helping the child with cleaning up leftover toys on the floor. Imagine this robot to look like an open dump truck, with a shovel on the front to scoop up the toys. It would then put the toys in the box where they belong and children could make a game of it. \\
 The robot would need to identify toys to clean up, while leaving stuff like extension cords on the floor. This would be done with a vision system. \\
 This robot sounded very fun to build, since it already gave a clear view of how this robot would operate. It helps teach children to clean up their stuff and looks cool doing it. It would have some difficulties in recognizing objects and differentiating them from other objects that should not be cleaned, but it would be possible and not too challenging.
+
 \section{Tag robot}
-A growing problem in society is that people are getting heavier and are exercising less. Children are also getting lazier, and resort to playing inside on game consoles, iPads etc. A robot, that plays with children to motivate them to move and to play outdoors more, could be a solution to this problem. The first idea to motivate kids to play outside is the “Tag” robot, that would run or drive away from the person playing with it. \\
+A growing problem in society is that people are getting heavier and are exercising less. Children are also getting lazier, and resort to playing inside on game consoles, iPads etc. A robot, that plays with children to motivate them to move and to play outdoors more, could be a solution to this problem. The first idea to motivate kids to play outside is the \lq\lq{}Tag\rq\rq{} robot, that would run or drive away from the person playing with it. \\
 It would need a button or touch sensitive layer to recognize that it has been tapped. This could result in the sensors breaking, because the child operating it might tap it too hard and could break it. Another point to consider is the fact it would have to drive at a high enough speed to be challenging for a child. This makes for a lot of safety issues and makes it very risky. 
 \section{Volcano robot}
-Another idea, inspired by a Dutch game called “buskruit”, came to the table. This game is played with a ball that is kicked away and while one person retrieves the ball, the other people hide. This idea, combined with “Tag”, resulted in the volcano robot. The robot would shoot a light-weight ball (to avoid injury to the person operating it) into the air, and would run away from the person playing with it. The person playing with the robot would retrieve the ball and wins by putting it back into the robot. Part of the attraction in this robot would be a fun-looking shell (think of a turtle-like shell) so that the child likes to play with it. \\
-This robot would involve making an object detection function so that it doesn’t drive into objects on the playing field. It would also require the playing field to be predetermined, so it doesn’t randomly drive onto the road. Finally, the same issue of driving at a high speed would create the same safety issues as the “Tag” Robot.
-\section{Object requestiong educational robot}
-The last idea is a robot that requests items, for example by voice or an lcd screen, that have a number or some sort of picture on it. The robot requests a specific number or item and a child places the item in the mouth of the robot, or in the hands of the robot. The robot recognizes the object, and if it is the correct object, the robot will pass it through to its shooting mechanism magazine and plays a rewarding sound or wiggles or moves in a way that displays positive emotions. If the item is incorrect, the robot spits the object out or returns the object to the child. When there are multiple (or all objects) in the shooting mechanism magazine, the robot will shoot them all away. Then the robot will request the next item and the child searches for them. After finding it, the child will give the correct object to the robot and the game will start over.
+Another idea, inspired by a Dutch game called \lq\lq{}buskruit\rq\rq{}, came to the table. This game is played with a ball that is kicked away and while one person retrieves the ball, the other people hide. This idea, combined with \lq\lq{}Tag\rq\rq{}, resulted in the volcano robot. The robot would shoot a light-weight ball (to avoid injury to the person operating it) into the air, and would run away from the person playing with it. The person playing with the robot would retrieve the ball and wins by putting it back into the robot. Part of the attraction in this robot would be a fun-looking shell (think of a turtle-like shell) so that the child likes to play with it. \\
+This robot would involve making an object detection function so that it doesn\rq{}t drive into objects on the playing field. It would also require the playing field to be predetermined, so it doesn\rq{}t randomly drive onto the road. Finally, the same issue of driving at a high speed would create the same safety issues as the \lq\lq{}Tag\rq\rq{} Robot.
+\section{Object requesting educational robot}
+The last idea is a robot that requests items, for example by voice or an LCD screen, that have a number or some sort of picture on it. The robot requests a specific number or item and a child places the item in the mouth of the robot or in the hands of the robot. The robot recognizes the object, and if it is the correct object, the robot will pass it through to its shooting mechanism magazine and plays a rewarding sound or wiggles or moves in a way that displays positive emotions. If the item is incorrect, the robot spits the object out or returns the object to the child. When there\rq{}s a certain amount of objects in the shooting mechanism magazine, the robot will shoot them all away. Then the robot will request the next item and the child searches for them. After finding it, the child will give the correct object to the robot and the game will start over.
 This robot would require a shooting mechanism, with for example a spring. It would also need to recognize the items, preferably with RFID.
 \section{Final decision}
-For the final decision, every idea was rated, as shown in table 2.1. The ideas will have several categories with different weights, each of them will be graded. The following categories, are considered:
+For the final decision, every idea was rated, as shown in Table \ref{table:grading}. The ideas will have several categories with different weights, each of them will be graded. The following categories, are considered:
 \begin{itemize}
 \item Ease of programming
 \item Ease of mechanics
@@ -73,22 +80,23 @@ For the final decision, every idea was rated, as shown in table 2.1. The ideas w
 \item Safety
 \end{itemize}
 To decide which idea will be developed into a robot, the ideas were given grades. First, categories on which the ideas will be graded have been created.\\
-The weight factor goes from one to four depending on the importance of every category, one being not so important and four being very important. Testing also got a four because this will be done at the end of the creation process where time and money are limited and on-the-spot testing would heavily be preferred over requiring a high pressure water tank for example. The “cool-factor” is a small bonus for cooler ideas, since it would be more interesting to make “cooler” ideas, thus motivating the team to work harder.\\
+The weight factor goes from one to four depending on the importance of every category, one being not so important and four being very important. Testing also got a four because this will be done at the end of the creation process where time and money are limited and on-the-spot testing would heavily be preferred over requiring a high pressure water tank for example. The \lq\lq{}cool-factor\rq\rq{} is a small bonus for cooler ideas, since it would be more interesting to make \lq\lq{}cooler\rq\rq{} ideas, thus motivating the team to work harder.\\
 After grading every idea in every category. The average of the grades of the individual group members was taken per category in every concept. The final score would be the sum of all marks multiplied by their weight. The lowest score has been awarded to the underwater exploration robot and the concept with the highest score is the object requesting educational robot. 
 
 
 \begin{sidewaystable}
 \caption{Grading of factors}
-\begin{tabular}{>{\centering}m{5cm}|>{\centering}m{2cm}|>{\centering}m{2cm}|>{\centering}m{2cm}|>{\centering}m{2cm}|>{\centering}m{2cm}|>{\centering}m{2cm}|>{\centering}m{1cm}|>{\centering}m{2cm}|c|}
+\label{table:grading}
+\begin{tabular}{>{\centering}m{4cm}|>{\centering}m{2cm}|>{\centering}m{1.8cm}|>{\centering}m{1.8cm}|>{\centering}m{1.8cm}|>{\centering}m{1.8cm}|>{\centering}m{1.7cm}|>{\centering}m{1cm}|>{\centering}m{1.9cm}|c|}
 Idea description/name            & Ease of programming & Ease of mechanics & Ease of electronics & Size of potential  market & Testability & Innovation & Safety & Cool-factor & Total \\
 Water exploration robot            & 5                   & 2                 & 1                 & 4                      & 6           & 8          & 7      & 7           & 119   \\
 Train cleaning robot               & 8                   & 6                 & 7                 & 4                      & 2           & 5          & 5      & 5           & 123   \\
-Groceriessort \& storerobot        & 3                   & 3                 & 8                 & 6                      & 7           & 9          & 4      & 9           & 140   \\
-gum-buster robot                  & 8                   & 5                 & 8                 & 5                      & 8           & 7          & 4      & 5           & 152   \\
-cleaning-up motivational robot      & 2                   & 8                 & 7                 & 8                      & 8           & 7          & 7      & 7           & 163   \\
+Grocery robot        & 3                   & 3                 & 8                 & 6                      & 7           & 9          & 4      & 9           & 140   \\
+Gum-buster robot                  & 8                   & 5                 & 8                 & 5                      & 8           & 7          & 4      & 5           & 152   \\
+Cleaning robot      & 2                   & 8                 & 7                 & 8                      & 8           & 7          & 7      & 7           & 163   \\
 Volcano Robot                   & 8                   & 7                 & 6                 & 8                      & 7           & 6          & 3      & 8           & 141   \\
-Object requesting educational robot & 9                   & 6                 & 7                 & 8                      & 8           & 6          & 8      & 7           & 179   \\
-Weight factor of each category       & 3                   & 3                 & 3                 & 3                      & 4           & 3          & 4      & 1           &      
+Object requesting robot & 9                   & 6                 & 7                 & 8                      & 8           & 6          & 8      & 7           & 179   \\
+Weight factor       & 3                   & 3                 & 3                 & 3                      & 4           & 3          & 4      & 1           &      
 \end{tabular}
 \end{sidewaystable}
 
