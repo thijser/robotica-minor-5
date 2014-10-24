@@ -1,0 +1,242 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>CTAN: tex-archive/fonts/eurosym</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" sizes="196x196" href="/skin/ctan-196.png" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/skin/ctan-57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/skin/ctan-72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/skin/ctan-114.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/skin/ctan-152.png" />
+  <link rel="search" type="application/opensearchdescription+xml" title="CTAN Search" href="http://www.ctan.org/search/open-search.xml" />
+  <script src="/ctan-portal/static/cU6v3gFdrw4tOpo0Relq96l8V04G3qIY3rqGYYy9lwW.js" type="text/javascript" ></script>
+<link href="/ctan-portal/static/VXPbgb8eVU6mT6I0D2m0h5Etflk5lvqIanaiRJu1wWY.css" type="text/css" rel="stylesheet" media="screen, projection" />
+<script src="/ctan-portal/static/Vn7TklDIZBg1IIGFEaXVZn7O2DSOYMWzaljxVHXXDcw.js" type="text/javascript" ></script>
+<script src="/ctan-portal/static/x8xjFT2qDAouWGEkRb7VWWaugXlSLo36J13EpAY0av.js" type="text/javascript" ></script>
+
+    <meta name="layout" content="ctan"/>
+    
+  <link rel="stylesheet" href="/ctan-portal/skin/gray/skin.css" id="skin" type="text/css" />
+
+ </head>
+ <body>
+  <div class="topBar">
+   <img class="m" src="/skin/menu-b.png" title="Menu" alt="Menu"/>
+   <ul>
+      <li><a href="/user/settings">Settings</a></li>
+    <li><a href="/help">Help</a></li>
+   </ul>
+  </div>
+  <div class="logo">
+   <a href="/lion/" class="lion"
+   ><img id="logo" src="/skin/gray/ctan_lion.png"
+         title="CTAN lion drawing by Duane Bibby"
+         alt="CTAN lion drawing by Duane Bibby"/></a>
+  </div>
+  <div class="head">
+   <div><a href="/">CTAN</a></div>
+   <div><a href="/">Comprehensive T<span class="e">e</span>X Archive Network</a></div>
+  </div>
+  <div class="blocks">
+   <div class="functions">
+    <form name="searchForm" method="get" action="/search">
+     <a class="func home" href="/">Cover</a>
+     <a class="func upload" href="/upload">Upload</a>
+     <a class="func browse" href="/tex-archive/">Browse</a>
+     <input name="phrase" type="text" size="24" value="" />
+     <a class="func search" onClick="document.searchForm.submit();">Search</a>
+    </form>
+   </div>
+   <div class="breadcrumb">Location:
+    <a href="/">CTAN</a><a href="/tex-archive">tex-archive</a>
+      <a href="/tex-archive/fonts">fonts</a>
+      <a href="/tex-archive/fonts/eurosym">eurosym</a>
+   </div>   <div class="content">
+    
+    <h1>Direc&shy;tory <code>tex-archive/fonts/eurosym</code></h1>
+    <div class="left">
+    
+<pre id="readme">+------------------------------------------------------+
+| The Euro Symbol Package for LaTeX by Henrik Theiling |
+| Version 1.4                                          |
+| &lt;henrik@theiling.de&gt;, http://www.theiling.de/        |
++------------------------------------------------------+
+
+Hi!
+
+This is the Euro symbol package I created.  It provides a new symbol
+to be used for the new European currency symbol, the Euro.  The
+specifications were taken from the c&#39;t magazine 11/98 p.211 from from
+Encyclopaedia Britannica, Book of the Year 2002.
+
+There is a style file (sty/eurosym.sty), some Metafont source files
+(src/*.mf) and a LaTeX file (doc/testeuro.tex).  For installation, put
+this somewere where LaTeX can find it.
+
+Further documentation can be found in doc/testeuro.dvi.  You can only
+see the Euro symbols in the text if you have installed the package
+successfully, though.
+
+System Wide Installation Done by the Superuser
+----------------------------------------------
+An example follows.  Substitute $TEXMF with something that
+matches your installation (search for texmf on your system
+if you don&#39;t know where it is).
+
+If you are the superuser, move the eurosym/src directory to
+$TEXMF/fonts/source/eurosym, the eurosym/tfm directory to
+$TEXMF/fonts/tfm/eurosym and the eurosym/sty directory to
+$TEXMF/tex/latex/eurosym.
+
+Use Installation
+----------------
+Choose a directory for this installation, say $HOME/lib/tex/eurosym
+and make sure that the programmes `latex&#39;, `dvips&#39;, `xdvi&#39;, and
+possible other TeX related programmes find the files by ensuring
+that the environment variables TEXINPUTS, MFINPUT and TFMFONTS
+point to $HOME/lib/tex// (double slash at the end to ensure
+sub-directory recursion) as well.  See the file doc/runlatex for
+an example.
+
+Testing
+-------
+Go to the doc subdirectory, compile testeuro.tex with latex and read
+it with xdvi.  Ignore some warnings about underfull hboxes which
+occur because there is a three column part of text which TeX can&#39;t
+typeset perfectly.  Also ignore the warnings about unavailable shapes
+of cmr.
+
+TODO
+----
+  Implement the OCR Euro symbols. (long term project...)
+
+
+BUGS
+----
+- testeuro.tex creates warnings about unavailable shapes of cmr
+  although I tried my best to make the scope of the \olshape
+  command include the \officialeuro{} command only.
+
+- FIXED:
+  at least on my machine, dvips and xdvi produce checksum mismatches
+  for some unknown reason.
+
+- FIXED:
+  problems with names: `eurosymbol&#39; and `eurosym&#39; were both used.
+
+**Henrik
+</pre>
+    <h2>Direc&shy;to&shy;ries</h2>
+    <table class="browse">
+      <tr>
+        <th class="nameCol">Name</th>
+        <th class="noteCol" width="75%">Notes</th>
+      </tr>
+      <tr class="odd" onclick="window.location.href='/tex-archive/fonts/eurosym/c';">
+        <td class="nameCol i_directory"><a lang="none" href="/tex-archive/fonts/eurosym/c">c</a></td>
+        <td class="noteCol"></td>
+      </tr>
+      <tr class="even" onclick="window.location.href='/tex-archive/fonts/eurosym/contrib';">
+        <td class="nameCol i_directory"><a lang="none" href="/tex-archive/fonts/eurosym/contrib">contrib</a></td>
+        <td class="noteCol"></td>
+      </tr>
+      <tr class="odd" onclick="window.location.href='/tex-archive/fonts/eurosym/doc';">
+        <td class="nameCol i_directory"><a lang="none" href="/tex-archive/fonts/eurosym/doc">doc</a></td>
+        <td class="noteCol"></td>
+      </tr>
+      <tr class="even" onclick="window.location.href='/tex-archive/fonts/eurosym/src';">
+        <td class="nameCol i_directory"><a lang="none" href="/tex-archive/fonts/eurosym/src">src</a></td>
+        <td class="noteCol"></td>
+      </tr>
+      <tr class="odd" onclick="window.location.href='/tex-archive/fonts/eurosym/sty';">
+        <td class="nameCol i_directory"><a lang="none" href="/tex-archive/fonts/eurosym/sty">sty</a></td>
+        <td class="noteCol"></td>
+      </tr>
+      <tr class="even" onclick="window.location.href='/tex-archive/fonts/eurosym/tfm';">
+        <td class="nameCol i_directory"><a lang="none" href="/tex-archive/fonts/eurosym/tfm">tfm</a></td>
+        <td class="noteCol"></td>
+      </tr>
+    </table>
+    
+    <h2>Files</h2>
+    <table class="browse">
+      <tr>
+        <th class="nameCol">Name</th>
+        <th class="sizeCol" width="10%">Size</th>
+        <th class="dateCol" width="10%">Date</th>
+        <th class="noteCol" width="55%">Notes</th>
+      </tr>
+      <tr class="odd" onclick="window.location.href='http://mirrors.ctan.org/fonts/eurosym/COPYING';">
+        <td class="nameCol i_file"><a lang="none" href="http://mirrors.ctan.org/fonts/eurosym/COPYING">COPYING</a></td>
+        <td class="sizeCol">1344</td>
+        <td class="dateCol">2002-05-01 02:33 </td>
+        <td class="noteCol"></td>
+      </tr>
+      <tr class="even" onclick="window.location.href='http://mirrors.ctan.org/fonts/eurosym/Changes';">
+        <td class="nameCol i_file"><a lang="none" href="http://mirrors.ctan.org/fonts/eurosym/Changes">Changes</a></td>
+        <td class="sizeCol">1447</td>
+        <td class="dateCol">2002-04-30 06:24 </td>
+        <td class="noteCol"></td>
+      </tr>
+      <tr class="odd" onclick="window.location.href='http://mirrors.ctan.org/fonts/eurosym/README';">
+        <td class="nameCol i_readme"><a lang="none" href="http://mirrors.ctan.org/fonts/eurosym/README">README</a></td>
+        <td class="sizeCol">2507</td>
+        <td class="dateCol">2002-07-03 12:57 </td>
+        <td class="noteCol"></td>
+      </tr>
+    </table>
+    </div>
+    <div class="right">
+    
+      <p class="download">
+        <a href="http://mirrors.ctan.org/fonts/eurosym.zip">Down&shy;load</a> the con&shy;tents of this pack&shy;age in one zip archive
+          (441.1k).
+        </p>
+    <h2>eu&shy;rosym &ndash; <span class="mflogo">METAFONT</span> and macros for Euro sign</h2>
+    <p>The Euro&shy;pean cur&shy;rency sym&shy;bol for the Euro im&shy;ple&shy;mented
+      in <span class="mflogo">METAFONT</span>, us&shy;ing the of&shy;fi&shy;cial Euro&shy;pean Com&shy;mis&shy;sion di&shy;men&shy;sions,
+      and pro&shy;vid&shy;ing sev&shy;eral shapes (nor&shy;mal, slanted, bold,
+      out&shy;line). The pack&shy;age also in&shy;cludes a L<span class="a">a</span>T<span class="e">e</span>X pack&shy;age which
+      de&shy;fines the macro, pre-com&shy;piled tfm files, and doc&shy;u&shy;men&shy;ta&shy;tion.</p>
+    <table class="entry">
+      <tr><td>Pack&shy;age De&shy;tails</td><td><a href="/pkg/eurosym">eu&shy;rosym</a></td></tr>
+      <tr><td>Home&nbsp;page</td><td><a href="http://www.theiling.de/eurosym.html">http://www.theil&shy;ing.de/eu&shy;rosym.html</a></td></tr>
+      <tr><td>Ver&shy;sion</td><td>1.4-sub&shy;r&shy;fix </td></tr>
+      <tr><td>Li&shy;cense</td><td><a href="/license/other-free">Free li&shy;cense not oth&shy;er&shy;wise listed, or more than one free li&shy;cense ap&shy;plies</a></td></tr>
+      <tr><td>Copy&shy;right</td><td>1999-2002 Hen&shy;rik Theil&shy;ing<br /></td></tr>
+      <tr><td>Main&shy;tainer</td><td><a href="/author/theiling">Hen&shy;rik Theil&shy;ing</a><br /></td></tr>
+      <tr><td>Con&shy;tained&nbsp;in</td><td>T<span class="e">e</span>Xlive as eu&shy;rosym</td></tr>
+      <tr><td></td><td>MikT<span class="e">e</span>X as eu&shy;rosym</td></tr>
+      <tr><td>Topics</td><td>
+      <a href="/topic/font-specialist">fonts with spe&shy;cific small ap&shy;pli&shy;ca&shy;tion ar&shy;eas</a><br />
+      <a href="/topic/font-mf">fonts dis&shy;tributed as <span class="mflogo">METAFONT</span> source</a><br />
+      <a href="/topic/font">fonts them&shy;selves</a><br /></td></tr>
+      <tr><td>See&nbsp;also</td><td>
+      <a href="/pkg/europs">europs</a><br />
+      <a href="/pkg/marvosym">marvosym</a><br /></td></tr>
+    </table>
+
+
+
+    </div>
+  
+    <div class="clear"></div>
+   </div>
+   <div class="foot">
+    <a class="guestbook" href="/guestbook/">Guest Book</a>
+    <a class="sitemap" href="/sitemap/">Sitemap</a>
+    <a class="contact" href="/contact/">Contact</a>
+   </div>
+  </div>
+  <div class="footer">
+   <span class="date">2014-10-24 12:36 CEST</span>
+  </div>
+  <div id="portal-message"></div>
+ </body>
+</html>
