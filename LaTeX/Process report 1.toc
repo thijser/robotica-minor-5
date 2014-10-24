@@ -67,7 +67,7 @@
 \contentsline {subsection}{\numberline {14.5.2}Battery decision}{36}{subsection.14.5.2}
 \contentsline {subsection}{\numberline {14.5.3}Circuit design}{37}{subsection.14.5.3}
 \contentsline {section}{\numberline {14.6}Part list}{37}{section.14.6}
-\contentsline {chapter}{\numberline {15}Planning Noverber to January}{38}{chapter.15}
+\contentsline {chapter}{\numberline {15}Planning November to January}{38}{chapter.15}
 \contentsline {chapter}{\numberline {16}Conclusion}{40}{chapter.16}
 \contentsline {chapter}{\numberline {17}References}{41}{chapter.17}
 \contentsline {chapter}{Appendices}{43}{section*.23}
@@ -84,7 +84,7 @@
 \contentsline {section}{\numberline {D.3}Food recognition, age 3 to 5}{47}{section.1.D.3}
 \contentsline {section}{\numberline {D.4}Math, age 4 to 9}{47}{section.1.D.4}
 \contentsline {section}{\numberline {D.5}Animal recognition, age 3 to 5}{47}{section.1.D.5}
-\contentsline {section}{\numberline {D.6}Aplhabet, age 4 to 9}{48}{section.1.D.6}
+\contentsline {section}{\numberline {D.6}Alphabet, age 4 to 9}{48}{section.1.D.6}
 \contentsline {chapter}{\numberline {E}Details software design}{49}{Appendix.1.E}
 \contentsline {chapter}{\numberline {F}Competitors}{50}{Appendix.1.F}
 \contentsline {section}{\numberline {F.1}Innvo Labs}{50}{section.1.F.1}
