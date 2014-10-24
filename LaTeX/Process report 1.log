@@ -1,14 +1,21 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.10.22)  24 OCT 2014 11:00
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.3.27)  24 OCT 2014 11:49
 entering extended mode
- %&-line parsing enabled.
-**"Process report 1.tex"
-(./Process report 1.tex
-LaTeX2e <2009/09/24>
-Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, loaded.
-(/usr/share/texmf-texlive/tex/latex/base/report.cls
+**C:/Users/Administrator/robotica/LaTeX/Process*report*1.tex
+("C:/Users/Administrator/robotica/LaTeX/Process report 1.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texmf-texlive/tex/latex/base/size11.clo
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,53 +31,64 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texmf-texlive/tex/generic/babel/babel.sty
-Package: babel 2008/07/06 v3.8l The Babel package
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
 
-(/usr/share/texmf-texlive/tex/generic/babel/english.ldf
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\english.ldf"
 Language: english 2005/03/30 v3.3o English support from the babel system
 
-(/usr/share/texmf-texlive/tex/generic/babel/babel.def
-File: babel.def 2008/07/06 v3.8l Babel common definitions
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/etc/texmf/tex/latex/config/graphics.cfg
-File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
 \Gread@gobject=\count89
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-(/usr/share/texmf-texlive/tex/latex/preprint/fullpage.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip43
 )
-(/usr/share/texmf-texlive/tex/latex/tools/array.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen106
 \extrarowheight=\dimen107
@@ -78,10 +96,10 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip44
 \backup@length=\skip45
 )
-(/usr/share/texmf-texlive/tex/latex/rotating/rotating.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 
-(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count90
@@ -90,7 +108,7 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box26
 \rot@mess@toks=\toks16
 )
-(/usr/share/texmf-texlive/tex/latex/tools/tabularx.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
 Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@col@width=\dimen108
 \TX@old@table=\dimen109
@@ -100,11 +118,11 @@ Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@cols=\count91
 \TX@ftn=\toks17
 )
-(/usr/share/texmf-texlive/tex/latex/ms/ragged2e.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 
-(/usr/share/texmf-texlive/tex/latex/ms/everysel.sty
-Package: everysel 1999/06/08 v1.03 EverySelectfont Package (MS)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everysel.sty"
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
 \CenteringLeftskip=\skip48
 \RaggedLeftLeftskip=\skip49
@@ -121,7 +139,7 @@ Package: everysel 1999/06/08 v1.03 EverySelectfont Package (MS)
 \RaggedRightParindent=\skip60
 \JustifyingParindent=\skip61
 )
-(/usr/share/texmf-texlive/tex/latex/booktabs/booktabs.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen113
 \lightrulewidth=\dimen114
@@ -141,160 +159,160 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count95
 \@thisrulewidth=\dimen125
 )
-(/usr/share/texmf-texlive/tex/latex/caption/caption.sty
-Package: caption 2009/10/09 v3.1k Customizing captions (AR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/share/texmf-texlive/tex/latex/caption/caption3.sty
-Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen126
 \captionmargin@=\dimen127
 \captionwidth=\dimen128
-\caption@indent=\dimen129
-\caption@parindent=\dimen130
-\caption@hangindent=\dimen131
+\caption@tempdima=\dimen129
+\caption@indent=\dimen130
+\caption@parindent=\dimen131
+\caption@hangindent=\dimen132
 )
 \c@ContinuedFloat=\count96
 Package caption Info: rotating package is loaded.
 )
-(/usr/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2009/10/09 v6.79a Hypertext links for LaTeX
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
 
-(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in pdf mode detected.
-)
-(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
-)
-(/usr/share/texmf-texlive/tex/generic/ifxetex/ifxetex.sty
-Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
-)
-(/usr/share/texmf-texlive/tex/latex/oberdiek/hycolor.sty
-Package: hycolor 2009/10/02 v1.5 Code for color options of hyperref/bookmark (H
-O)
-
-(/usr/share/texmf-texlive/tex/latex/oberdiek/xcolor-patch.sty
-Package: xcolor-patch 2009/10/02 xcolor patch
-))
-\@linkdim=\dimen132
-\Hy@linkcounter=\count97
-\Hy@pagecounter=\count98
-
-(/usr/share/texmf-texlive/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2009/10/09 v6.79a Hyperref: PDFDocEncoding definition (HO)
-)
-(/usr/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2007/12/12 v1.2 Prefix for e-TeX command names (HO)
-
-(/usr/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
-)
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-)
-(/usr/share/texmf-texlive/tex/latex/latexconfig/hyperref.cfg
-File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
-)
-(/usr/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2009/08/13 v3.4 Keyval support for LaTeX options (HO)
-
-(/usr/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2009/07/30 v1.5 Key value parser with default handler suppor
-t (HO)
-))
-Package hyperref Info: Hyper figures OFF on input line 2975.
-Package hyperref Info: Link nesting OFF on input line 2980.
-Package hyperref Info: Hyper index ON on input line 2983.
-Package hyperref Info: Plain pages OFF on input line 2990.
-Package hyperref Info: Backreferencing OFF on input line 2995.
-
-Implicit mode ON; LaTeX internals redefined
-Package hyperref Info: Bookmarks ON on input line 3191.
-(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
-\Urlmuskip=\muskip10
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
-)
-LaTeX Info: Redefining \url on input line 3428.
-
-(/usr/share/texmf-texlive/tex/generic/oberdiek/bitset.sty
-Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
-
-(/usr/share/texmf-texlive/tex/generic/oberdiek/intcalc.sty
-Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
-)
-(/usr/share/texmf-texlive/tex/generic/oberdiek/bigintcalc.sty
-Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
-
-(/usr/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2009/09/23 v0.6 LuaTeX support for pdfTeX utility functions
- (HO)
-
-(/usr/share/texmf-texlive/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2009/04/17 v1.2 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2009/08/05 v1.0 Some LaTeX kernel commands for general use (HO
-)
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-)))
-\Fld@menulength=\count99
-\Field@Width=\dimen133
-\Fld@charsize=\dimen134
-\Field@toks=\toks18
-Package hyperref Info: Hyper figures OFF on input line 4377.
-Package hyperref Info: Link nesting OFF on input line 4382.
-Package hyperref Info: Hyper index ON on input line 4385.
-Package hyperref Info: backreferencing OFF on input line 4392.
-Package hyperref Info: Link coloring OFF on input line 4397.
-Package hyperref Info: Link coloring with OCG OFF on input line 4402.
-Package hyperref Info: PDF/A mode OFF on input line 4407.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen133
+\Hy@linkcounter=\count97
+\Hy@pagecounter=\count98
 
-(/usr/share/texmf-texlive/tex/generic/oberdiek/atbegshi.sty
-Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@abspage=\count100
-\c@Item=\count101
+\Hy@SavedSpaceFactor=\count99
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-*hyperref using default driver hpdftex*
-(/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
-\Fld@listcount=\count102
+Package hyperref Info: Hyper figures OFF on input line 4062.
+Package hyperref Info: Link nesting OFF on input line 4067.
+Package hyperref Info: Hyper index ON on input line 4070.
+Package hyperref Info: Plain pages OFF on input line 4077.
+Package hyperref Info: Backreferencing OFF on input line 4082.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4300.
+\c@Hy@tempcnt=\count100
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-(/usr/share/texmf-texlive/tex/latex/appendix/appendix.sty
+LaTeX Info: Redefining \url on input line 4653.
+\Fld@menulength=\count101
+\Field@Width=\dimen134
+\Fld@charsize=\dimen135
+Package hyperref Info: Hyper figures OFF on input line 5773.
+Package hyperref Info: Link nesting OFF on input line 5778.
+Package hyperref Info: Hyper index ON on input line 5781.
+Package hyperref Info: backreferencing OFF on input line 5788.
+Package hyperref Info: Link coloring OFF on input line 5793.
+Package hyperref Info: Link coloring with OCG OFF on input line 5798.
+Package hyperref Info: PDF/A mode OFF on input line 5803.
+LaTeX Info: Redefining \ref on input line 5843.
+LaTeX Info: Redefining \pageref on input line 5847.
+\Hy@abspage=\count102
+\c@Item=\count103
+\c@Hfootnote=\count104
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
+\Fld@listcount=\count105
+\c@bookmark@seq@number=\count106
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip62
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count103
-\c@@ppsavesec=\count104
-\c@@ppsaveapp=\count105
+\c@@pps=\count107
+\c@@ppsavesec=\count108
+\c@@ppsaveapp=\count109
 )
-(/usr/share/texmf-texlive/tex/latex/float/float.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count106
-\float@exts=\toks19
+\c@float@type=\count110
+\float@exts=\toks18
 \float@box=\box27
-\@float@everytoks=\toks20
+\@float@everytoks=\toks19
 \@floatcapt=\box28
 )
-(/usr/share/texmf-texlive/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen135
-\WF@size=\dimen136
-\c@WF@wrappedlines=\count107
+("C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen136
+\WF@size=\dimen137
+\c@WF@wrappedlines=\count111
 \WF@box=\box29
-\WF@everypar=\toks21
+\WF@everypar=\toks20
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/usr/share/texmf-texlive/tex/latex/placeins/placeins.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
 Package: placeins 2005/04/18  v 2.2
 )
-(./Process report 1.aux)
-\openout1 = `"Process report 1.aux"'.
-
+("C:\Users\Administrator\robotica\LaTeX\Process report 1.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
@@ -310,59 +328,60 @@ LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 
-(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count108
-\scratchdimen=\dimen137
+\scratchcounter=\count112
+\scratchdimen=\dimen138
 \scratchbox=\box30
-\nofMPsegments=\count109
-\nofMParguments=\count110
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count111
-\MPscratchDim=\dimen138
-\MPnumerator=\count112
-\everyMPtoPDFconversion=\toks23
-)
+\nofMPsegments=\count113
+\nofMParguments=\count114
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen139
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
+\everyMPtoPDFconversion=\toks22
+) ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 15.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box31
 Package hyperref Info: Link coloring OFF on input line 15.
- (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
-Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
-(/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
-Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count113
+\c@section@level=\count118
 )
 LaTeX Info: Redefining \ref on input line 15.
 LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
 
-(./Process report 1.out) (./Process report 1.out)
+("C:\Users\Administrator\robotica\LaTeX\Process report 1.out")
+("C:\Users\Administrator\robotica\LaTeX\Process report 1.out")
 \@outlinefile=\write3
-\openout3 = `"Process report 1.out"'.
-
-\AtBeginShipoutBox=\box31
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 18.
+(Font)              <12> on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 18.
+(Font)              <8> on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 18.
+(Font)              <6> on input line 19.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Process report 1.toc
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+("C:\Users\Administrator\robotica\LaTeX\Process report 1.toc"
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 4.
  [2
 
 ] [3])
 \tf@toc=\write4
-\openout4 = `"Process report 1.toc"'.
-
  [4]
 Chapter 1.
 [5
@@ -370,20 +389,11 @@ Chapter 1.
 ]
 Chapter 2.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 27.
-(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
  [6
 
 ]
@@ -481,13 +491,16 @@ Chapter 5.
 File: Images/FunctionalAnalysis.png Graphic file (type png)
 
 <use Images/FunctionalAnalysis.png>
+Package pdftex.def Info: Images/FunctionalAnalysis.png used on input line 121.
+(pdftex.def)             Requested size: 483.69684pt x 182.46783pt.
+
 Overfull \hbox (30.72894pt too wide) in paragraph at lines 121--122
  [] 
  []
 
 [14
 
- <./Images/FunctionalAnalysis.png>]
+ <C:/Users/Administrator/robotica/LaTeX/Images/FunctionalAnalysis.png>]
 Chapter 6.
 [15
 
@@ -520,6 +533,9 @@ Missing character: There is no ù in font cmr10!
 <Images/BallLaunch.png, id=495, 401.5pt x 401.5pt>
 File: Images/BallLaunch.png Graphic file (type png)
  <use Images/BallLaunch.png>
+Package pdftex.def Info: Images/BallLaunch.png used on input line 181.
+(pdftex.def)             Requested size: 284.52756pt x 284.54623pt.
+
 Underfull \hbox (badness 10000) in paragraph at lines 173--185
 
  []
@@ -530,17 +546,23 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [17
 
 ]
-[18 <./Images/BallLaunch.png>]
+[18 <C:/Users/Administrator/robotica/LaTeX/Images/BallLaunch.png>]
 <Images/LOTTERY-BALLS-with-rfid.jpg, id=510, 317.185pt x 302.12875pt>
 File: Images/LOTTERY-BALLS-with-rfid.jpg Graphic file (type jpg)
 
-<use Images/LOTTERY-BALLS-with-rfid.jpg> [19 <./Images/LOTTERY-BALLS-with-rfid.
-jpg>]
+<use Images/LOTTERY-BALLS-with-rfid.jpg>
+Package pdftex.def Info: Images/LOTTERY-BALLS-with-rfid.jpg used on input line 
+196.
+(pdftex.def)             Requested size: 284.52756pt x 271.04204pt.
+ [19 <C:/Users/Administrator/robotica/LaTeX/Images/LOTTERY-BALLS-with-rfid.jpg>
+]
 Chapter 9.
 <Images/VolcanoBotConcept.pdf, id=520, 1195.10492pt x 845.07718pt>
 File: Images/VolcanoBotConcept.pdf Graphic file (type pdf)
 
 <use Images/VolcanoBotConcept.pdf>
+Package pdftex.def Info: Images/VolcanoBotConcept.pdf used on input line 206.
+(pdftex.def)             Requested size: 217.42265pt x 153.73207pt.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
@@ -548,14 +570,21 @@ Missing character: There is no ô in font cmr10!
 <Images/BoxBotConcept.pdf, id=522, 1195.10492pt x 845.07718pt>
 File: Images/BoxBotConcept.pdf Graphic file (type pdf)
 
-<use Images/BoxBotConcept.pdf> [20
+<use Images/BoxBotConcept.pdf>
+Package pdftex.def Info: Images/BoxBotConcept.pdf used on input line 221.
+(pdftex.def)             Requested size: 217.42265pt x 153.73207pt.
+ [20
 
- <./Images/VolcanoBotConcept.pdf>]
+ <C:/Users/Administrator/robotica/LaTeX/Images/VolcanoBotConcept.pdf>]
 <Images/TruckTeacherConcept.pdf, id=531, 1195.10492pt x 845.07718pt>
 File: Images/TruckTeacherConcept.pdf Graphic file (type pdf)
 
-<use Images/TruckTeacherConcept.pdf> [21 <./Images/BoxBotConcept.pdf> <./Images
-/TruckTeacherConcept.pdf>]
+<use Images/TruckTeacherConcept.pdf>
+Package pdftex.def Info: Images/TruckTeacherConcept.pdf used on input line 232.
+
+(pdftex.def)             Requested size: 217.42265pt x 153.73207pt.
+ [21 <C:/Users/Administrator/robotica/LaTeX/Images/BoxBotConcept.pdf> <C:/Users
+/Administrator/robotica/LaTeX/Images/TruckTeacherConcept.pdf>]
 Chapter 10.
 
 Underfull \hbox (badness 10000) in paragraph at lines 258--261
@@ -647,9 +676,12 @@ Chapter 13.
 <Images/logo_Tawi.png, id=570, 648.4225pt x 512.91624pt>
 File: Images/logo_Tawi.png Graphic file (type png)
 
-<use Images/logo_Tawi.png> [28
+<use Images/logo_Tawi.png>
+Package pdftex.def Info: Images/logo_Tawi.png used on input line 333.
+(pdftex.def)             Requested size: 284.52756pt x 225.06555pt.
+ [28
 
- <./Images/logo_Tawi.png>]
+ <C:/Users/Administrator/robotica/LaTeX/Images/logo_Tawi.png>]
 Chapter 14.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
@@ -661,14 +693,25 @@ Missing character: There is no ù in font cmr10!
 File: Images/VolcanoBot-Controllers.png Graphic file (type png)
 
 <use Images/VolcanoBot-Controllers.png>
+Package pdftex.def Info: Images/VolcanoBot-Controllers.png used on input line 3
+50.
+(pdftex.def)             Requested size: 578.14977pt x 273.01517pt.
+
 <Images/VolcanoBot-Audio-Video.png, id=580, 1304.875pt x 642.4pt>
 File: Images/VolcanoBot-Audio-Video.png Graphic file (type png)
 
 <use Images/VolcanoBot-Audio-Video.png>
+Package pdftex.def Info: Images/VolcanoBot-Audio-Video.png used on input line 3
+57.
+(pdftex.def)             Requested size: 521.94077pt x 256.95544pt.
+
 <Images/VolcanoBot-ObjectScanning.png, id=581, 1184.425pt x 943.525pt>
 File: Images/VolcanoBot-ObjectScanning.png Graphic file (type png)
 
 <use Images/VolcanoBot-ObjectScanning.png>
+Package pdftex.def Info: Images/VolcanoBot-ObjectScanning.png used on input lin
+e 364.
+(pdftex.def)             Requested size: 473.76161pt x 377.4033pt.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
@@ -685,15 +728,19 @@ Missing character: There is no ù in font cmr10!
 <Images/VolcanoBot-Motors.png, id=582, 1756.5625pt x 1104.125pt>
 File: Images/VolcanoBot-Motors.png Graphic file (type png)
 
-<use Images/VolcanoBot-Motors.png> [29
+<use Images/VolcanoBot-Motors.png>
+Package pdftex.def Info: Images/VolcanoBot-Motors.png used on input line 372.
+(pdftex.def)             Requested size: 614.80609pt x 386.44954pt.
+ [29
 
 ]
 
 LaTeX Warning: Text page 30 contains only floats.
 
-[30 <./Images/VolcanoBot-Controllers.png>] [31 <./Images/VolcanoBot-Audio-Video
-.png>] [32 <./Images/VolcanoBot-ObjectScanning.png>] [33 <./Images/VolcanoBot-M
-otors.png>]
+[30 <C:/Users/Administrator/robotica/LaTeX/Images/VolcanoBot-Controllers.png>]
+[31 <C:/Users/Administrator/robotica/LaTeX/Images/VolcanoBot-Audio-Video.png>]
+[32 <C:/Users/Administrator/robotica/LaTeX/Images/VolcanoBot-ObjectScanning.png
+>] [33 <C:/Users/Administrator/robotica/LaTeX/Images/VolcanoBot-Motors.png>]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
@@ -736,7 +783,8 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
- [34
+
+[34
 
 ]
 Missing character: There is no ‚ in font cmr10!
@@ -751,12 +799,14 @@ Missing character: There is no ù in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
- [35]
-<Images/ElectronicalDiagram.png, id=627, 1073.00874pt x 461.725pt>
+ [35] <Images/ElectronicalDiagram.png, id=627, 1073.00874pt x 461.725pt>
 File: Images/ElectronicalDiagram.png Graphic file (type png)
 
-<use Images/ElectronicalDiagram.png> [36 <./Images/ElectronicalDiagram.png (PNG
- copy)>]
+<use Images/ElectronicalDiagram.png>
+Package pdftex.def Info: Images/ElectronicalDiagram.png used on input line 419.
+
+(pdftex.def)             Requested size: 284.52756pt x 122.43404pt.
+ [36 <C:/Users/Administrator/robotica/LaTeX/Images/ElectronicalDiagram.png>]
 Chapter 15.
 
 Underfull \hbox (badness 10000) in paragraph at lines 428--468
@@ -912,24 +962,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 528--528
 []|\OT1/cmr/m/n/10.95 While
  []
 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 543.
 [48
 
-] [49] (./Process report 1.aux) ) 
+] [49]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 543.
+ ("C:\Users\Administrator\robotica\LaTeX\Process report 1.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 543.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 543.
+Package rerunfilecheck Info: File `Process*report*1.out' has not changed.
+(rerunfilecheck)             Checksum: <no file>.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 543.
+ ) 
 Here is how much of TeX's memory you used:
- 6203 strings out of 495061
- 93270 string characters out of 1182620
- 181518 words of memory out of 3000000
- 9117 multiletter control sequences out of 15000+50000
+ 7053 strings out of 494045
+ 107593 string characters out of 3148363
+ 202660 words of memory out of 3000000
+ 10107 multiletter control sequences out of 15000+200000
  10023 words of font info for 35 fonts, out of 3000000 for 9000
- 28 hyphenation exceptions out of 8191
- 38i,13n,38p,892b,409s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/a
-msfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
-exmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Process report 1.pdf" (49 pages, 2377779 bytes).
+ 715 hyphenation exceptions out of 8191
+ 36i,13n,38p,929b,438s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb>
+Output written on "Process report 1.pdf" (49 pages, 2364953 bytes).
 PDF statistics:
  745 PDF objects out of 1000 (max. 8388607)
  156 named destinations out of 1000 (max. 500000)
