@@ -57,35 +57,35 @@
 \contentsline {section}{\numberline {14.2}Mechanical design}{29}{section.14.2}
 \contentsline {section}{\numberline {14.3}SolidWorks model}{29}{section.14.3}
 \contentsline {section}{\numberline {14.4}Software architecture}{29}{section.14.4}
-\contentsline {section}{\numberline {14.5}Electrical and electronic design}{34}{section.14.5}
-\contentsline {subsection}{\numberline {14.5.1}Battery choice}{34}{subsection.14.5.1}
-\contentsline {subsubsection}{Type of battery}{34}{section*.19}
-\contentsline {subsubsection}{Li-Ion vs NiMH}{34}{section*.20}
-\contentsline {subsubsection}{Required battery capacity}{34}{section*.21}
-\contentsline {subsubsection}{Maximum battery size}{35}{section*.22}
-\contentsline {subsection}{\numberline {14.5.2}Battery decision}{35}{subsection.14.5.2}
-\contentsline {subsection}{\numberline {14.5.3}Circuit design}{36}{subsection.14.5.3}
-\contentsline {section}{\numberline {14.6}Part list}{36}{section.14.6}
-\contentsline {chapter}{\numberline {15}Planning Noverber to January}{37}{chapter.15}
-\contentsline {chapter}{\numberline {16}Conclusion}{39}{chapter.16}
-\contentsline {chapter}{\numberline {17}References}{40}{chapter.17}
-\contentsline {chapter}{Appendices}{42}{section*.24}
-\contentsline {chapter}{\numberline {A}Use Case}{43}{Appendix.1.A}
-\contentsline {chapter}{\numberline {B}MoSCoW model}{44}{Appendix.1.B}
-\contentsline {section}{\numberline {B.1}Musts}{44}{section.1.B.1}
-\contentsline {section}{\numberline {B.2}Shoulds}{44}{section.1.B.2}
-\contentsline {section}{\numberline {B.3}Coulds}{44}{section.1.B.3}
-\contentsline {section}{\numberline {B.4}won'ts}{44}{section.1.B.4}
-\contentsline {chapter}{\numberline {C}Brainstorm initial designs}{45}{Appendix.1.C}
-\contentsline {chapter}{\numberline {D}Different games}{46}{Appendix.1.D}
-\contentsline {chapter}{\numberline {E}Details software design}{47}{Appendix.1.E}
-\contentsline {chapter}{\numberline {F}Competitors}{48}{Appendix.1.F}
-\contentsline {section}{\numberline {F.1}Innvo Labs}{48}{section.1.F.1}
-\contentsline {section}{\numberline {F.2}Zoomer}{48}{section.1.F.2}
-\contentsline {section}{\numberline {F.3}Orbotix}{48}{section.1.F.3}
-\contentsline {section}{\numberline {F.4}Anki}{48}{section.1.F.4}
-\contentsline {section}{\numberline {F.5}LittleBits Electronics}{48}{section.1.F.5}
-\contentsline {section}{\numberline {F.6}Ubooly Inc.}{48}{section.1.F.6}
-\contentsline {section}{\numberline {F.7}Hasbro}{48}{section.1.F.7}
-\contentsline {chapter}{\numberline {G}Battery}{49}{Appendix.1.G}
-\contentsline {chapter}{\numberline {H}Drawings}{51}{Appendix.1.H}
+\contentsline {section}{\numberline {14.5}Electrical and electronic design}{35}{section.14.5}
+\contentsline {subsection}{\numberline {14.5.1}Battery choice}{35}{subsection.14.5.1}
+\contentsline {subsubsection}{Type of battery}{35}{section*.19}
+\contentsline {subsubsection}{Li-Ion vs NiMH}{35}{section*.20}
+\contentsline {subsubsection}{Required battery capacity}{35}{section*.21}
+\contentsline {subsubsection}{Maximum battery size}{36}{section*.22}
+\contentsline {subsection}{\numberline {14.5.2}Battery decision}{36}{subsection.14.5.2}
+\contentsline {subsection}{\numberline {14.5.3}Circuit design}{37}{subsection.14.5.3}
+\contentsline {section}{\numberline {14.6}Part list}{37}{section.14.6}
+\contentsline {chapter}{\numberline {15}Planning Noverber to January}{38}{chapter.15}
+\contentsline {chapter}{\numberline {16}Conclusion}{40}{chapter.16}
+\contentsline {chapter}{\numberline {17}References}{41}{chapter.17}
+\contentsline {chapter}{Appendices}{43}{section*.24}
+\contentsline {chapter}{\numberline {A}Use Case}{44}{Appendix.1.A}
+\contentsline {chapter}{\numberline {B}MoSCoW model}{45}{Appendix.1.B}
+\contentsline {section}{\numberline {B.1}Musts}{45}{section.1.B.1}
+\contentsline {section}{\numberline {B.2}Shoulds}{45}{section.1.B.2}
+\contentsline {section}{\numberline {B.3}Coulds}{45}{section.1.B.3}
+\contentsline {section}{\numberline {B.4}won'ts}{45}{section.1.B.4}
+\contentsline {chapter}{\numberline {C}Brainstorm initial designs}{46}{Appendix.1.C}
+\contentsline {chapter}{\numberline {D}Different games}{47}{Appendix.1.D}
+\contentsline {chapter}{\numberline {E}Details software design}{48}{Appendix.1.E}
+\contentsline {chapter}{\numberline {F}Competitors}{49}{Appendix.1.F}
+\contentsline {section}{\numberline {F.1}Innvo Labs}{49}{section.1.F.1}
+\contentsline {section}{\numberline {F.2}Zoomer}{49}{section.1.F.2}
+\contentsline {section}{\numberline {F.3}Orbotix}{49}{section.1.F.3}
+\contentsline {section}{\numberline {F.4}Anki}{49}{section.1.F.4}
+\contentsline {section}{\numberline {F.5}LittleBits Electronics}{49}{section.1.F.5}
+\contentsline {section}{\numberline {F.6}Ubooly Inc.}{49}{section.1.F.6}
+\contentsline {section}{\numberline {F.7}Hasbro}{49}{section.1.F.7}
+\contentsline {chapter}{\numberline {G}Battery}{50}{Appendix.1.G}
+\contentsline {chapter}{\numberline {H}Drawings}{52}{Appendix.1.H}
