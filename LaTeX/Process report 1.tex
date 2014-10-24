@@ -311,10 +311,56 @@ Alternate options:
 
 \chapter{Improve 3 initial designs}
 \section{Proof of concept calculations}
+For the box-bot and Volcanobot, we’re using similar launching systems with springs. Calculations will therefore be largely the same.
+All of the calculations on the spring launching mechanism can be found in Appendix \ref{appendix:calcs}. In short, the motor we need would have to deliver a minimum of 1.5Nm. This is quite large, but nothing we cannot work with.\\
+For the Truck Teacher concept, only the tipping mechanism needs some calculations. Again, the calculations can be found in Appendix \ref{appendix:calcs} but in short, we only need to have a lifting force of about 3N. This is easily solved with a screw spindle and a small motor.
 \section{Sketches of exterior}
-\section{Sketches of mechanics}
-\section{Initial software architecture}
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{Images/VolcanoBotConcept.pdf}
+  \end{center}
+  \caption{Volcanobot}
+  \label{figure:volcanobot2}
+\end{figure}
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{Images/BoxBotConcept.pdf}
+  \end{center}
+  \caption{Box-bot}
+  \label{figure:boxbot2}
+\end{figure}
+\begin{figure}
+  \begin{center}[h!]
+    \includegraphics[width=0.48\textwidth]{Images/TruckTeacherConcept.pdf}
+  \end{center}
+  \caption{Truck Teacher}
+  \label{figure:truckteacher2}
+\end{figure}
+\section{Sketches of exterior}
 
+\section{Sketches of mechanics}
+Again, the mechanics for the Box-Bot and for Volcanobot are quite similar. The spring launch mechanism applies to both the Box-Bot and Volcanobot.
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{Images/launchmechschematic.jpg}
+  \end{center}
+  \caption{Schematics for the launching mechanism of the Box-bot and Volcanobot}
+  \label{figure:launchscheme}
+\end{figure}
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{Images/tipmechschematic.jpg}
+  \end{center}
+  \caption{Schematics for dumping functionality of the Truck Teacher}
+  \label{figure:tipscheme}
+\end{figure}
+
+\section{Initial software architecture}
+\begin{figure}
+\begin{center}
+\includegraphics[width=16cm]{Images/FunctionalAnalysis.png}
+\end{center}
+\end{figure}
 At large there is little difference between these three designs from a software perspective. The actual difference is just how the motors are controlled and how emotions are expressed by the robots. 
 The software structure diagram(Figure X) shows the different subsystems found in the software on the second row. It further specifies the functionality of these subsystems in the row below. From this diagram we learn what the distribution of classes and namespaces should look like in the software. Each node in a row should implement the nodes it is linked to in the row below it. With the top node bringing everything together into the main operating function. This diagram holds for all three concept since they only differ on the lowest level of implementation, which is not covered in this scope.
 

@@ -1,21 +1,20 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.3.27)  24 OCT 2014 15:12
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.10.24)  24 OCT 2014 15:23
 entering extended mode
-**C:/Users/Administrator/robotica/LaTeX/Process*report*1.tex
-("C:/Users/Administrator/robotica/LaTeX/Process report 1.tex"
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
-vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
-an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
-romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
-sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
-senglishmax, welsh, loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
+ %&-line parsing enabled.
+**"Process report 1.tex"
+(./Process report 1.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
+(/usr/share/texmf-texlive/tex/latex/base/size11.clo
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -31,20 +30,14 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2008/07/08 v3.8m The Babel package
+(/var/lib/texmf/tex/generic/babel/babel.sty
+Package: babel 2008/07/06 v3.8l The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\english.ldf"
+(/usr/share/texmf-texlive/tex/generic/babel/english.ldf
 Language: english 2005/03/30 v3.3o English support from the babel system
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2008/07/08 v3.8m Babel common definitions
+(/usr/share/texmf-texlive/tex/generic/babel/babel.def
+File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
@@ -52,43 +45,36 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 \Gread@gobject=\count89
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
+(/usr/share/texmf-texlive/tex/latex/preprint/fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip43
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+(/usr/share/texmf-texlive/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen106
 \extrarowheight=\dimen107
@@ -96,10 +82,10 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip44
 \backup@length=\skip45
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
+(/usr/share/texmf-texlive/tex/latex/rotating/rotating.sty
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count90
@@ -108,7 +94,7 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box26
 \rot@mess@toks=\toks16
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
+(/usr/share/texmf-texlive/tex/latex/tools/tabularx.sty
 Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@col@width=\dimen108
 \TX@old@table=\dimen109
@@ -118,11 +104,11 @@ Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@cols=\count91
 \TX@ftn=\toks17
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
+(/usr/share/texmf-texlive/tex/latex/ms/ragged2e.sty
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everysel.sty"
-Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+(/usr/share/texmf-texlive/tex/latex/ms/everysel.sty
+Package: everysel 1999/06/08 v1.03 EverySelectfont Package (MS)
 )
 \CenteringLeftskip=\skip48
 \RaggedLeftLeftskip=\skip49
@@ -139,7 +125,7 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 \RaggedRightParindent=\skip60
 \JustifyingParindent=\skip61
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+(/usr/share/texmf-texlive/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen113
 \lightrulewidth=\dimen114
@@ -159,208 +145,194 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count95
 \@thisrulewidth=\dimen125
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+(/usr/share/texmf-texlive/tex/latex/caption/caption.sty
+Package: caption 2009/10/09 v3.1k Customizing captions (AR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
+(/usr/share/texmf-texlive/tex/latex/caption/caption3.sty
+Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
 \captionmargin=\dimen126
 \captionmargin@=\dimen127
 \captionwidth=\dimen128
-\caption@tempdima=\dimen129
-\caption@indent=\dimen130
-\caption@parindent=\dimen131
-\caption@hangindent=\dimen132
+\caption@indent=\dimen129
+\caption@parindent=\dimen130
+\caption@hangindent=\dimen131
 )
 \c@ContinuedFloat=\count96
 Package caption Info: rotating package is loaded.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2012/05/13 v6.82q Hypertext links for LaTeX
+(/usr/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2009/10/09 v6.79a Hypertext links for LaTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
-
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
-Package hobsub Info: Skipping package `infwarerr' (already loaded).
-Package hobsub Info: Skipping package `ltxcmds' (already loaded).
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
 Package ifvtex Info: VTeX not detected.
-Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/hycolor.sty
+Package: hycolor 2009/10/02 v1.5 Code for color options of hyperref/bookmark (H
+O)
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/xcolor-patch.sty
+Package: xcolor-patch 2009/10/02 xcolor patch
+))
+\@linkdim=\dimen132
+\Hy@linkcounter=\count97
+\Hy@pagecounter=\count98
+
+(/usr/share/texmf-texlive/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2009/10/09 v6.79a Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2007/12/12 v1.2 Prefix for e-TeX command names (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/share/texmf-texlive/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2009/08/13 v3.4 Keyval support for LaTeX options (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2009/07/30 v1.5 Key value parser with default handler suppor
+t (HO)
+))
+Package hyperref Info: Hyper figures OFF on input line 2975.
+Package hyperref Info: Link nesting OFF on input line 2980.
+Package hyperref Info: Hyper index ON on input line 2983.
+Package hyperref Info: Plain pages OFF on input line 2990.
+Package hyperref Info: Backreferencing OFF on input line 2995.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 3191.
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 3428.
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bitset.sty
+Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/intcalc.sty
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bigintcalc.sty
+Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2009/09/23 v0.6 LuaTeX support for pdfTeX utility functions
+ (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2009/04/17 v1.2 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2009/08/05 v1.0 Some LaTeX kernel commands for general use (HO
+)
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
-)
-Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
-Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
-)
-Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
-Package: xcolor-patch 2011/01/30 xcolor patch
-Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
-Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
-Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
-Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-)
-\@linkdim=\dimen133
-\Hy@linkcounter=\count97
-\Hy@pagecounter=\count98
+)))
+\Fld@menulength=\count99
+\Field@Width=\dimen133
+\Fld@charsize=\dimen134
+\Field@toks=\toks18
+Package hyperref Info: Hyper figures OFF on input line 4377.
+Package hyperref Info: Link nesting OFF on input line 4382.
+Package hyperref Info: Hyper index ON on input line 4385.
+Package hyperref Info: backreferencing OFF on input line 4392.
+Package hyperref Info: Link coloring OFF on input line 4397.
+Package hyperref Info: Link coloring with OCG OFF on input line 4402.
+Package hyperref Info: PDF/A mode OFF on input line 4407.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
 )
-\Hy@SavedSpaceFactor=\count99
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
-File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+\Hy@abspage=\count100
+\c@Item=\count101
 )
-Package hyperref Info: Hyper figures OFF on input line 4062.
-Package hyperref Info: Link nesting OFF on input line 4067.
-Package hyperref Info: Hyper index ON on input line 4070.
-Package hyperref Info: Plain pages OFF on input line 4077.
-Package hyperref Info: Backreferencing OFF on input line 4082.
-Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4300.
-\c@Hy@tempcnt=\count100
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
-\Urlmuskip=\muskip10
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+*hyperref using default driver hpdftex*
+(/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
+\Fld@listcount=\count102
 )
-LaTeX Info: Redefining \url on input line 4653.
-\Fld@menulength=\count101
-\Field@Width=\dimen134
-\Fld@charsize=\dimen135
-Package hyperref Info: Hyper figures OFF on input line 5773.
-Package hyperref Info: Link nesting OFF on input line 5778.
-Package hyperref Info: Hyper index ON on input line 5781.
-Package hyperref Info: backreferencing OFF on input line 5788.
-Package hyperref Info: Link coloring OFF on input line 5793.
-Package hyperref Info: Link coloring with OCG OFF on input line 5798.
-Package hyperref Info: PDF/A mode OFF on input line 5803.
-LaTeX Info: Redefining \ref on input line 5843.
-LaTeX Info: Redefining \pageref on input line 5847.
-\Hy@abspage=\count102
-\c@Item=\count103
-\c@Hfootnote=\count104
-)
-
-Package hyperref Message: Driver (autodetected): hpdftex.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
-File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
-\Fld@listcount=\count105
-\c@bookmark@seq@number=\count106
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
-Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-82.
-)
-\Hy@SectionHShift=\skip62
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
+(/usr/share/texmf-texlive/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count107
-\c@@ppsavesec=\count108
-\c@@ppsaveapp=\count109
+\c@@pps=\count103
+\c@@ppsavesec=\count104
+\c@@ppsaveapp=\count105
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+(/usr/share/texmf-texlive/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count110
-\float@exts=\toks18
+\c@float@type=\count106
+\float@exts=\toks19
 \float@box=\box27
-\@float@everytoks=\toks19
+\@float@everytoks=\toks20
 \@floatcapt=\box28
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
-\wrapoverhang=\dimen136
-\WF@size=\dimen137
-\c@WF@wrappedlines=\count111
+(/usr/share/texmf-texlive/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen135
+\WF@size=\dimen136
+\c@WF@wrappedlines=\count107
 \WF@box=\box29
-\WF@everypar=\toks20
+\WF@everypar=\toks21
 Package: wrapfig 2003/01/31  v 3.6
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\placeins\placeins.sty"
+(/usr/share/texmf-texlive/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
-Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
+(/usr/share/texmf-texlive/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2009/02/07 v0.4g Insert pages of external PDF documents (AM)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+(/usr/share/texmf-texlive/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count112
-\calc@Bcount=\count113
-\calc@Adimen=\dimen138
-\calc@Bdimen=\dimen139
-\calc@Askip=\skip63
-\calc@Bskip=\skip64
+\calc@Acount=\count108
+\calc@Bcount=\count109
+\calc@Adimen=\dimen137
+\calc@Bdimen=\dimen138
+\calc@Askip=\skip62
+\calc@Bskip=\skip63
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count114
-\calc@Cskip=\skip65
+\calc@Ccount=\count110
+\calc@Cskip=\skip64
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
-Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+(/usr/share/texmf-texlive/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2006/07/14 v1.1d eso-pic (RN)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+(/usr/share/texmf-texlive/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def"
-File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
+(/usr/share/texmf-texlive/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2009/02/07 v0.4g Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box30
-\AM@toc@title=\toks21
-\c@AM@survey=\count115
+\AM@toc@title=\toks22
+\c@AM@survey=\count111
 \AM@templatesizebox=\box31
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\eurosym\eurosym.sty"
+(/usr/share/texmf-texlive/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@eurobox=\box32
 )
-("C:\Users\Administrator\robotica\LaTeX\Process report 1.aux")
+(./Process report 1.aux)
+\openout1 = `"Process report 1.aux"'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
@@ -376,60 +348,69 @@ LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count116
-\scratchdimen=\dimen140
+\scratchcounter=\count112
+\scratchdimen=\dimen139
 \scratchbox=\box33
-\nofMPsegments=\count117
-\nofMParguments=\count118
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count119
-\MPscratchDim=\dimen141
-\MPnumerator=\count120
-\makeMPintoPDFobject=\count121
-\everyMPtoPDFconversion=\toks23
-) ABD: EverySelectfont initializing macros
+\nofMPsegments=\count113
+\nofMParguments=\count114
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen140
+\MPnumerator=\count116
+\everyMPtoPDFconversion=\toks24
+)
 LaTeX Info: Redefining \selectfont on input line 17.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box34
 Package hyperref Info: Link coloring OFF on input line 17.
+ (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
-Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
-Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
+Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count122
+\c@section@level=\count117
 )
 LaTeX Info: Redefining \ref on input line 17.
 LaTeX Info: Redefining \pageref on input line 17.
-LaTeX Info: Redefining \nameref on input line 17.
 
-("C:\Users\Administrator\robotica\LaTeX\Process report 1.out")
-("C:\Users\Administrator\robotica\LaTeX\Process report 1.out")
+(./Process report 1.out) (./Process report 1.out)
 \@outlinefile=\write3
+\openout3 = `"Process report 1.out"'.
+
+\AtBeginShipoutBox=\box34
+
+ABD: EveryShipout initializing macros
+(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 21.
+(Font)              <12> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 21.
+(Font)              <8> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 21.
+(Font)              <6> on input line 20.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-("C:\Users\Administrator\robotica\LaTeX\Process report 1.toc"
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Process report 1.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 4.
  [2
 
 ] [3])
 \tf@toc=\write4
+\openout4 = `"Process report 1.toc"'.
+
  [4]
 Chapter 1.
 [5
@@ -437,7 +418,7 @@ Chapter 1.
 ]
 Chapter 2.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 30.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
@@ -467,20 +448,17 @@ Chapter 4.
 
 ]
 Chapter 5.
-<Images/FunctionalAnalysis.png, id=526, 4432.56pt x 1672.2475pt>
+<Images/FunctionalAnalysis.png, id=531, 4432.56pt x 1672.2475pt>
 File: Images/FunctionalAnalysis.png Graphic file (type png)
 
 <use Images/FunctionalAnalysis.png>
-Package pdftex.def Info: Images/FunctionalAnalysis.png used on input line 132.
-(pdftex.def)             Requested size: 483.69684pt x 182.46783pt.
-
 Overfull \hbox (30.72894pt too wide) in paragraph at lines 132--133
  [] 
  []
 
 [14
 
- <C:/Users/Administrator/robotica/LaTeX/Images/FunctionalAnalysis.png>]
+ <./Images/FunctionalAnalysis.png>]
 Chapter 6.
 [15
 
@@ -495,12 +473,9 @@ Overfull \hbox (28.10645pt too wide) in paragraph at lines 148--169
 
 ]
 Chapter 8.
-<Images/BallLaunch.png, id=547, 401.5pt x 401.5pt>
+<Images/BallLaunch.png, id=552, 401.5pt x 401.5pt>
 File: Images/BallLaunch.png Graphic file (type png)
  <use Images/BallLaunch.png>
-Package pdftex.def Info: Images/BallLaunch.png used on input line 193.
-(pdftex.def)             Requested size: 284.52756pt x 284.54623pt.
-
 Underfull \hbox (badness 10000) in paragraph at lines 186--197
 
  []
@@ -511,42 +486,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [17
 
 ]
-[18 <C:/Users/Administrator/robotica/LaTeX/Images/BallLaunch.png>]
-<Images/LOTTERY-BALLS-with-rfid.jpg, id=562, 317.185pt x 302.12875pt>
+[18 <./Images/BallLaunch.png>]
+<Images/LOTTERY-BALLS-with-rfid.jpg, id=567, 317.185pt x 302.12875pt>
 File: Images/LOTTERY-BALLS-with-rfid.jpg Graphic file (type jpg)
 
-<use Images/LOTTERY-BALLS-with-rfid.jpg>
-Package pdftex.def Info: Images/LOTTERY-BALLS-with-rfid.jpg used on input line 
-209.
-(pdftex.def)             Requested size: 284.52756pt x 271.04204pt.
- [19 <C:/Users/Administrator/robotica/LaTeX/Images/LOTTERY-BALLS-with-rfid.jpg>
-]
+<use Images/LOTTERY-BALLS-with-rfid.jpg> [19 <./Images/LOTTERY-BALLS-with-rfid.
+jpg>]
 Chapter 9.
-<Images/VolcanoBotConcept.pdf, id=572, 1195.10492pt x 845.07718pt>
+<Images/VolcanoBotConcept.pdf, id=577, 1195.10492pt x 845.07718pt>
 File: Images/VolcanoBotConcept.pdf Graphic file (type pdf)
 
 <use Images/VolcanoBotConcept.pdf>
-Package pdftex.def Info: Images/VolcanoBotConcept.pdf used on input line 222.
-(pdftex.def)             Requested size: 217.42265pt x 153.73207pt.
-
-<Images/BoxBotConcept.pdf, id=574, 1195.10492pt x 845.07718pt>
+<Images/BoxBotConcept.pdf, id=579, 1195.10492pt x 845.07718pt>
 File: Images/BoxBotConcept.pdf Graphic file (type pdf)
 
-<use Images/BoxBotConcept.pdf>
-Package pdftex.def Info: Images/BoxBotConcept.pdf used on input line 238.
-(pdftex.def)             Requested size: 217.42265pt x 153.73207pt.
- [20
+<use Images/BoxBotConcept.pdf> [20
 
- <C:/Users/Administrator/robotica/LaTeX/Images/VolcanoBotConcept.pdf>]
-<Images/TruckTeacherConcept.pdf, id=583, 1195.10492pt x 845.07718pt>
+ <./Images/VolcanoBotConcept.pdf>]
+<Images/TruckTeacherConcept.pdf, id=588, 1195.10492pt x 845.07718pt>
 File: Images/TruckTeacherConcept.pdf Graphic file (type pdf)
 
-<use Images/TruckTeacherConcept.pdf>
-Package pdftex.def Info: Images/TruckTeacherConcept.pdf used on input line 250.
-
-(pdftex.def)             Requested size: 217.42265pt x 153.73207pt.
- [21 <C:/Users/Administrator/robotica/LaTeX/Images/BoxBotConcept.pdf> <C:/Users
-/Administrator/robotica/LaTeX/Images/TruckTeacherConcept.pdf>]
+<use Images/TruckTeacherConcept.pdf> [21 <./Images/BoxBotConcept.pdf> <./Images
+/TruckTeacherConcept.pdf>]
 Chapter 10.
 [22
 
@@ -557,90 +518,109 @@ Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
 [23] [24]
 Chapter 11.
-[25
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
 
-]
+LaTeX Warning: Reference `appendix:calcs' on page 25 undefined on input line 31
+5.
+
+
+LaTeX Warning: Reference `appendix:calcs' on page 25 undefined on input line 31
+6.
+
+File: Images/VolcanoBotConcept.pdf Graphic file (type pdf)
+<use Images/VolcanoBotConcept.pdf>
+File: Images/BoxBotConcept.pdf Graphic file (type pdf)
+ <use Images/BoxBotConcept.pdf>
+File: Images/TruckTeacherConcept.pdf Graphic file (type pdf)
+
+<use Images/TruckTeacherConcept.pdf> [25
+
+] [26]
+<Images/launchmechschematic.jpg, id=625, 2535.4725pt x 1482.53876pt>
+File: Images/launchmechschematic.jpg Graphic file (type jpg)
+
+<use Images/launchmechschematic.jpg>
+<Images/tipmechschematic.jpg, id=626, 2405.98875pt x 894.34125pt>
+File: Images/tipmechschematic.jpg Graphic file (type jpg)
+
+<use Images/tipmechschematic.jpg>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[27 <./Images/launchmechschematic.jpg>]
+File: Images/FunctionalAnalysis.png Graphic file (type png)
+ <use Images/FunctionalAnalysis.png>
+Overfull \hbox (2.27618pt too wide) in paragraph at lines 361--362
+ [] 
+ []
+
+[28 <./Images/tipmechschematic.jpg>] [29]
 Chapter 12.
-[26
+[30
 
-] [27]
+] [31]
 Chapter 13.
-<Images/logo_Tawi.png, id=622, 648.4225pt x 512.91624pt>
+<Images/logo_Tawi.png, id=652, 648.4225pt x 512.91624pt>
 File: Images/logo_Tawi.png Graphic file (type png)
 
-<use Images/logo_Tawi.png>
-Package pdftex.def Info: Images/logo_Tawi.png used on input line 371.
-(pdftex.def)             Requested size: 284.52756pt x 225.06555pt.
- [28
+<use Images/logo_Tawi.png> [32
 
- <C:/Users/Administrator/robotica/LaTeX/Images/logo_Tawi.png>]
+ <./Images/logo_Tawi.png>]
 Chapter 14.
-<Images/headmechanism.jpg, id=629, 1927.2pt x 1084.05pt>
+<Images/headmechanism.jpg, id=659, 1927.2pt x 1084.05pt>
 File: Images/headmechanism.jpg Graphic file (type jpg)
 
 <use Images/headmechanism.jpg>
-Package pdftex.def Info: Images/headmechanism.jpg used on input line 388.
-(pdftex.def)             Requested size: 284.52756pt x 160.03659pt.
+
+LaTeX Warning: Reference `figure:balltransport' on page 33 undefined on input l
+ine 448.
 
 
-LaTeX Warning: Reference `figure:balltransport' on page 29 undefined on input l
-ine 402.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 397--403
+Underfull \hbox (badness 10000) in paragraph at lines 443--449
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--403
+Underfull \hbox (badness 10000) in paragraph at lines 443--449
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--403
+Underfull \hbox (badness 10000) in paragraph at lines 443--449
 
  []
 
-[29
+[33
 
- <C:/Users/Administrator/robotica/LaTeX/Images/headmechanism.jpg>]
+ <./Images/headmechanism.jpg>]
 Missing character: There is no ¬ in font cmr8!
 Missing character: There is no ≠ in font cmr8!
 
 
 LaTeX Warning: Reference `sect: mechanical design: center of mass(or something 
-like that)' on page 30 undefined on input line 414.
+like that)' on page 34 undefined on input line 460.
 
-[30]
+[34]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
- <Images/VolcanoBot-Controllers.png, id=644, 1445.4pt x 682.55pt>
+ <Images/VolcanoBot-Controllers.png, id=674, 1445.4pt x 682.55pt>
 File: Images/VolcanoBot-Controllers.png Graphic file (type png)
 
 <use Images/VolcanoBot-Controllers.png>
-Package pdftex.def Info: Images/VolcanoBot-Controllers.png used on input line 4
-25.
-(pdftex.def)             Requested size: 578.14977pt x 273.01517pt.
-
-<Images/VolcanoBot-Audio-Video.png, id=645, 1304.875pt x 642.4pt>
+<Images/VolcanoBot-Audio-Video.png, id=675, 1304.875pt x 642.4pt>
 File: Images/VolcanoBot-Audio-Video.png Graphic file (type png)
 
 <use Images/VolcanoBot-Audio-Video.png>
-Package pdftex.def Info: Images/VolcanoBot-Audio-Video.png used on input line 4
-32.
-(pdftex.def)             Requested size: 521.94077pt x 256.95544pt.
-
-<Images/VolcanoBot-ObjectScanning.png, id=646, 1184.425pt x 943.525pt>
+<Images/VolcanoBot-ObjectScanning.png, id=676, 1184.425pt x 943.525pt>
 File: Images/VolcanoBot-ObjectScanning.png Graphic file (type png)
 
 <use Images/VolcanoBot-ObjectScanning.png>
-Package pdftex.def Info: Images/VolcanoBot-ObjectScanning.png used on input lin
-e 439.
-(pdftex.def)             Requested size: 473.76161pt x 377.4033pt.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
@@ -654,1656 +634,816 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
 
-<Images/VolcanoBot-Motors.png, id=647, 1756.5625pt x 1104.125pt>
+<Images/VolcanoBot-Motors.png, id=677, 1756.5625pt x 1104.125pt>
 File: Images/VolcanoBot-Motors.png Graphic file (type png)
 
-<use Images/VolcanoBot-Motors.png>
-Package pdftex.def Info: Images/VolcanoBot-Motors.png used on input line 447.
-(pdftex.def)             Requested size: 614.80609pt x 386.44954pt.
- [31]
+<use Images/VolcanoBot-Motors.png> [35]
 
-LaTeX Warning: Text page 32 contains only floats.
+LaTeX Warning: Text page 36 contains only floats.
 
-[32 <C:/Users/Administrator/robotica/LaTeX/Images/VolcanoBot-Controllers.png>]
-[33 <C:/Users/Administrator/robotica/LaTeX/Images/VolcanoBot-Audio-Video.png>]
-[34 <C:/Users/Administrator/robotica/LaTeX/Images/VolcanoBot-ObjectScanning.png
->] [35 <C:/Users/Administrator/robotica/LaTeX/Images/VolcanoBot-Motors.png>]
-[36
+[36 <./Images/VolcanoBot-Controllers.png>] [37 <./Images/VolcanoBot-Audio-Video
+.png>] [38 <./Images/VolcanoBot-ObjectScanning.png>] [39 <./Images/VolcanoBot-M
+otors.png>] [40
 
-] [37] <Images/ElectronicalDiagram.png, id=695, 1073.00874pt x 461.725pt>
+] [41]
+<Images/ElectronicalDiagram.png, id=724, 1073.00874pt x 461.725pt>
 File: Images/ElectronicalDiagram.png Graphic file (type png)
 
 <use Images/ElectronicalDiagram.png>
-Package pdftex.def Info: Images/ElectronicalDiagram.png used on input line 490.
-
-(pdftex.def)             Requested size: 483.69684pt x 208.13364pt.
-
-Overfull \hbox (30.72894pt too wide) in paragraph at lines 490--491
+Overfull \hbox (30.72894pt too wide) in paragraph at lines 536--537
  [] 
  []
 
-[38 <C:/Users/Administrator/robotica/LaTeX/Images/ElectronicalDiagram.png>]
+[42 <./Images/ElectronicalDiagram.png (PNG copy)>]
 Chapter 15.
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--539
+Underfull \hbox (badness 10000) in paragraph at lines 545--585
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--539
+Underfull \hbox (badness 10000) in paragraph at lines 545--585
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--539
+Underfull \hbox (badness 10000) in paragraph at lines 545--585
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--539
+Underfull \hbox (badness 10000) in paragraph at lines 545--585
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--539
+Underfull \hbox (badness 10000) in paragraph at lines 545--585
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--539
+Underfull \hbox (badness 10000) in paragraph at lines 545--585
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--539
+Underfull \hbox (badness 10000) in paragraph at lines 545--585
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--539
+Underfull \hbox (badness 10000) in paragraph at lines 545--585
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 499--539
+Underfull \hbox (badness 10000) in paragraph at lines 545--585
 
  []
 
-[39
+[43
 
-] [40]
+] [44]
 Chapter 16.
 
-Underfull \hbox (badness 10000) in paragraph at lines 541--546
+Underfull \hbox (badness 10000) in paragraph at lines 587--592
 
  []
 
-[41
+[45
 
 ]
 Chapter 17.
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Overfull \hbox (16.08812pt too wide) in paragraph at lines 548--591
+Overfull \hbox (16.08812pt too wide) in paragraph at lines 594--637
 \OT1/cmr/m/n/10.95 from http://www.telegraph.co.uk/earth/earthnews/7897112/Brit
 ains-litter-epidemic-costs-almost-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Overfull \hbox (192.85783pt too wide) in paragraph at lines 548--591
+Overfull \hbox (192.85783pt too wide) in paragraph at lines 594--637
 \OT1/cmr/m/n/10.95 from http://www.dyka.nl/nl/binaries/2010%20TD%20Drukleiding%
 20PVC%20en%20PE%20maart%202003%20nwe%20omslag[]tcm29-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--591
+Underfull \hbox (badness 10000) in paragraph at lines 594--637
 
  []
 
-[42
+[46
 
-] [43] [44
+] [47] [48
 
 
 ]
 Appendix A.
-[45
+[49
 
 ]
 Appendix B.
-[46
-
-]
-Appendix C.
-[47
-
-]
-Appendix D.
-[48
-
-] [49]
-Appendix E.
 [50
 
 ]
-Appendix F.
+Appendix C.
 [51
 
-] [52]
+]
+Appendix D.
+[52
+
+] [53]
+Appendix E.
+[54
+
+]
+Appendix F.
+[55
+
+] [56]
 Appendix G.
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 715--715
 []|\OT1/cmr/m/n/10.95 Maximum
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 715--715
 []|\OT1/cmr/m/n/10.95 Effective
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 715--715
 \OT1/cmr/m/n/10.95 Re-quired
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 715--715
 []|\OT1/cmr/m/n/10.95 Minimum
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 715--715
 []|\OT1/cmr/m/n/10.95 Effective
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
+Underfull \hbox (badness 10000) in paragraph at lines 715--715
 \OT1/cmr/m/n/10.95 Re-quired
  []
 
 
-Underfull \hbox (badness 6995) in paragraph at lines 669--670
+Underfull \hbox (badness 6995) in paragraph at lines 715--716
 []|\OT1/cmr/m/n/10.95 Average Ef-fec-tive
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--671
+Underfull \hbox (badness 10000) in paragraph at lines 717--717
 []|\OT1/cmr/m/n/10.95 Shooting
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 671--671
+Underfull \hbox (badness 10000) in paragraph at lines 717--717
 []|\OT1/cmr/m/n/10.95 While
  []
 
 
-Underfull \hbox (badness 1924) in paragraph at lines 672--672
+Underfull \hbox (badness 1924) in paragraph at lines 718--718
 []|\OT1/cmr/m/n/10.95 Wheel mo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 673--673
+Underfull \hbox (badness 10000) in paragraph at lines 719--719
 []|\OT1/cmr/m/n/10.95 RFID
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 674--674
+Underfull \hbox (badness 10000) in paragraph at lines 720--720
 []|\OT1/cmr/m/n/10.95 Ultrasonic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 678--678
+Underfull \hbox (badness 10000) in paragraph at lines 724--724
 []|\OT1/cmr/m/n/10.95 While
  []
 
-[53
+[57
 
-] [54]
+] [58]
 Appendix H.
-<pdfdrawings/as_onderkaak.PDF, id=768, 845.0471pt x 597.50829pt>
-File: pdfdrawings/as_onderkaak.PDF Graphic file (type pdf)
+[59
 
-<use pdfdrawings/as_onderkaak.PDF>
-Package pdftex.def Info: pdfdrawings/as_onderkaak.PDF used on input line 686.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/as_onderkaak.PDF Graphic file (type pdf)
- <use pdfdrawings/as_onderkaak.PDF>
-Package pdftex.def Info: pdfdrawings/as_onderkaak.PDF used on input line 686.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
- [55
-
-]
-<pdfdrawings/as_onderkaak.PDF, id=776, page=1, 845.0471pt x 597.50829pt>
+] <pdfdrawings/as_onderkaak.PDF, id=804, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/as_onderkaak.PDF Graphic file (type pdf)
 
 <use pdfdrawings/as_onderkaak.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/as_onderkaak.PDF, page1 used on input line
- 686.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
 File: pdfdrawings/as_onderkaak.PDF Graphic file (type pdf)
 
 <use pdfdrawings/as_onderkaak.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/as_onderkaak.PDF, page1 used on input line
- 686.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/as_onderkaak.PDF Graphic file (type pdf)
 
 <use pdfdrawings/as_onderkaak.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/as_onderkaak.PDF, page1 used on input line
- 686.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/as_onderkaak.PDF Graphic file (type pdf)
 
 <use pdfdrawings/as_onderkaak.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/as_onderkaak.PDF, page1 used on input line
- 686.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/as_onderkaak.PDF Graphic file (type pdf)
 
-<use pdfdrawings/as_onderkaak.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/as_onderkaak.PDF, page1 used on input line
- 686.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [56 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/as_onderkaak.PDF>]
-<pdfdrawings/Axle.PDF, id=798, 845.0471pt x 597.50829pt>
-File: pdfdrawings/Axle.PDF Graphic file (type pdf)
-
-<use pdfdrawings/Axle.PDF>
-Package pdftex.def Info: pdfdrawings/Axle.PDF used on input line 687.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/Axle.PDF Graphic file (type pdf)
- <use pdfdrawings/Axle.PDF>
-Package pdftex.def Info: pdfdrawings/Axle.PDF used on input line 687.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/Axle.PDF, id=801, page=1, 845.0471pt x 597.50829pt>
+<use pdfdrawings/as_onderkaak.PDF, page 1> [60 <./pdfdrawings/as_onderkaak.PDF>
+] <pdfdrawings/Axle.PDF, id=828, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/Axle.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Axle.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Axle.PDF, page1 used on input line 687.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
 File: pdfdrawings/Axle.PDF Graphic file (type pdf)
  <use pdfdrawings/Axle.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Axle.PDF, page1 used on input line 687.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/Axle.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Axle.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Axle.PDF, page1 used on input line 687.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/Axle.PDF Graphic file (type pdf)
  <use pdfdrawings/Axle.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Axle.PDF, page1 used on input line 687.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/Axle.PDF Graphic file (type pdf)
 
-<use pdfdrawings/Axle.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Axle.PDF, page1 used on input line 687.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [57 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/Axle.PDF>]
-<pdfdrawings/axle_to_pushrod.PDF, id=823, 597.50829pt x 845.0471pt>
-File: pdfdrawings/axle_to_pushrod.PDF Graphic file (type pdf)
-
-<use pdfdrawings/axle_to_pushrod.PDF>
-Package pdftex.def Info: pdfdrawings/axle_to_pushrod.PDF used on input line 688
-.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: pdfdrawings/axle_to_pushrod.PDF Graphic file (type pdf)
- <use pdfdrawings/axle_to_pushrod.PDF>
-Package pdftex.def Info: pdfdrawings/axle_to_pushrod.PDF used on input line 688
-.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<pdfdrawings/axle_to_pushrod.PDF, id=826, page=1, 597.50829pt x 845.0471pt>
+<use pdfdrawings/Axle.PDF, page 1> [61 <./pdfdrawings/Axle.PDF>]
+<pdfdrawings/axle_to_pushrod.PDF, id=853, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/axle_to_pushrod.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axle_to_pushrod.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/axle_to_pushrod.PDF, page1 used on input l
-ine 688.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: pdfdrawings/axle_to_pushrod.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axle_to_pushrod.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/axle_to_pushrod.PDF, page1 used on input l
-ine 688.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/axle_to_pushrod.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axle_to_pushrod.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/axle_to_pushrod.PDF, page1 used on input l
-ine 688.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/axle_to_pushrod.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axle_to_pushrod.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/axle_to_pushrod.PDF, page1 used on input l
-ine 688.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/axle_to_pushrod.PDF Graphic file (type pdf)
 
-<use pdfdrawings/axle_to_pushrod.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/axle_to_pushrod.PDF, page1 used on input l
-ine 688.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [58 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/axle_to_pushrod.PDF>]
-<pdfdrawings/axlemount.PDF, id=848, 597.50829pt x 845.0471pt>
-File: pdfdrawings/axlemount.PDF Graphic file (type pdf)
-
-<use pdfdrawings/axlemount.PDF>
-Package pdftex.def Info: pdfdrawings/axlemount.PDF used on input line 689.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: pdfdrawings/axlemount.PDF Graphic file (type pdf)
- <use pdfdrawings/axlemount.PDF>
-Package pdftex.def Info: pdfdrawings/axlemount.PDF used on input line 689.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<pdfdrawings/axlemount.PDF, id=851, page=1, 597.50829pt x 845.0471pt>
+<use pdfdrawings/axle_to_pushrod.PDF, page 1> [62 <./pdfdrawings/axle_to_pushro
+d.PDF>] <pdfdrawings/axlemount.PDF, id=877, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/axlemount.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axlemount.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/axlemount.PDF, page1 used on input line 68
-9.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: pdfdrawings/axlemount.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axlemount.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/axlemount.PDF, page1 used on input line 68
-9.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/axlemount.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axlemount.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/axlemount.PDF, page1 used on input line 68
-9.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/axlemount.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axlemount.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/axlemount.PDF, page1 used on input line 68
-9.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/axlemount.PDF Graphic file (type pdf)
 
-<use pdfdrawings/axlemount.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/axlemount.PDF, page1 used on input line 68
-9.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [59 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/axlemount.PDF>]
-<pdfdrawings/axlemountRight.PDF, id=873, 597.50829pt x 845.0471pt>
-File: pdfdrawings/axlemountRight.PDF Graphic file (type pdf)
-
-<use pdfdrawings/axlemountRight.PDF>
-Package pdftex.def Info: pdfdrawings/axlemountRight.PDF used on input line 690.
-
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: pdfdrawings/axlemountRight.PDF Graphic file (type pdf)
- <use pdfdrawings/axlemountRight.PDF>
-Package pdftex.def Info: pdfdrawings/axlemountRight.PDF used on input line 690.
-
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<pdfdrawings/axlemountRight.PDF, id=876, page=1, 597.50829pt x 845.0471pt>
+<use pdfdrawings/axlemount.PDF, page 1> [63 <./pdfdrawings/axlemount.PDF>]
+<pdfdrawings/axlemountRight.PDF, id=901, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/axlemountRight.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axlemountRight.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/axlemountRight.PDF, page1 used on input li
-ne 690.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: pdfdrawings/axlemountRight.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axlemountRight.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/axlemountRight.PDF, page1 used on input li
-ne 690.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/axlemountRight.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axlemountRight.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/axlemountRight.PDF, page1 used on input li
-ne 690.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/axlemountRight.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axlemountRight.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/axlemountRight.PDF, page1 used on input li
-ne 690.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/axlemountRight.PDF Graphic file (type pdf)
 
-<use pdfdrawings/axlemountRight.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/axlemountRight.PDF, page1 used on input li
-ne 690.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [60 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/axlemountRight.PDF>]
-<pdfdrawings/BaseV2.PDF, id=898, 845.0471pt x 597.50829pt>
-File: pdfdrawings/BaseV2.PDF Graphic file (type pdf)
-
-<use pdfdrawings/BaseV2.PDF>
-Package pdftex.def Info: pdfdrawings/BaseV2.PDF used on input line 691.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/BaseV2.PDF Graphic file (type pdf)
- <use pdfdrawings/BaseV2.PDF>
-Package pdftex.def Info: pdfdrawings/BaseV2.PDF used on input line 691.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/BaseV2.PDF, id=901, page=1, 845.0471pt x 597.50829pt>
+<use pdfdrawings/axlemountRight.PDF, page 1> [64 <./pdfdrawings/axlemountRight.
+PDF>] <pdfdrawings/BaseV2.PDF, id=925, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/BaseV2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BaseV2.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/BaseV2.PDF, page1 used on input line 691.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
 File: pdfdrawings/BaseV2.PDF Graphic file (type pdf)
  <use pdfdrawings/BaseV2.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/BaseV2.PDF, page1 used on input line 691.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/BaseV2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BaseV2.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/BaseV2.PDF, page1 used on input line 691.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/BaseV2.PDF Graphic file (type pdf)
  <use pdfdrawings/BaseV2.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/BaseV2.PDF, page1 used on input line 691.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/BaseV2.PDF Graphic file (type pdf)
 
-<use pdfdrawings/BaseV2.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/BaseV2.PDF, page1 used on input line 691.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [61 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/BaseV2.PDF>]
-<pdfdrawings/BearingBlock.PDF, id=924, 597.50829pt x 845.0471pt>
-File: pdfdrawings/BearingBlock.PDF Graphic file (type pdf)
-
-<use pdfdrawings/BearingBlock.PDF>
-Package pdftex.def Info: pdfdrawings/BearingBlock.PDF used on input line 692.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: pdfdrawings/BearingBlock.PDF Graphic file (type pdf)
- <use pdfdrawings/BearingBlock.PDF>
-Package pdftex.def Info: pdfdrawings/BearingBlock.PDF used on input line 692.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<pdfdrawings/BearingBlock.PDF, id=927, page=1, 597.50829pt x 845.0471pt>
+<use pdfdrawings/BaseV2.PDF, page 1> [65 <./pdfdrawings/BaseV2.PDF>]
+<pdfdrawings/BearingBlock.PDF, id=949, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/BearingBlock.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BearingBlock.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/BearingBlock.PDF, page1 used on input line
- 692.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: pdfdrawings/BearingBlock.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BearingBlock.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/BearingBlock.PDF, page1 used on input line
- 692.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/BearingBlock.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BearingBlock.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/BearingBlock.PDF, page1 used on input line
- 692.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/BearingBlock.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BearingBlock.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/BearingBlock.PDF, page1 used on input line
- 692.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/BearingBlock.PDF Graphic file (type pdf)
 
-<use pdfdrawings/BearingBlock.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/BearingBlock.PDF, page1 used on input line
- 692.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [62 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/BearingBlock.PDF>]
-<pdfdrawings/BijnaUBeugel.PDF, id=949, 597.50829pt x 845.0471pt>
-File: pdfdrawings/BijnaUBeugel.PDF Graphic file (type pdf)
-
-<use pdfdrawings/BijnaUBeugel.PDF>
-Package pdftex.def Info: pdfdrawings/BijnaUBeugel.PDF used on input line 693.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: pdfdrawings/BijnaUBeugel.PDF Graphic file (type pdf)
- <use pdfdrawings/BijnaUBeugel.PDF>
-Package pdftex.def Info: pdfdrawings/BijnaUBeugel.PDF used on input line 693.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<pdfdrawings/BijnaUBeugel.PDF, id=952, page=1, 597.50829pt x 845.0471pt>
+<use pdfdrawings/BearingBlock.PDF, page 1> [66 <./pdfdrawings/BearingBlock.PDF>
+] <pdfdrawings/BijnaUBeugel.PDF, id=973, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/BijnaUBeugel.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BijnaUBeugel.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/BijnaUBeugel.PDF, page1 used on input line
- 693.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: pdfdrawings/BijnaUBeugel.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BijnaUBeugel.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/BijnaUBeugel.PDF, page1 used on input line
- 693.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/BijnaUBeugel.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BijnaUBeugel.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/BijnaUBeugel.PDF, page1 used on input line
- 693.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/BijnaUBeugel.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BijnaUBeugel.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/BijnaUBeugel.PDF, page1 used on input line
- 693.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/BijnaUBeugel.PDF Graphic file (type pdf)
 
-<use pdfdrawings/BijnaUBeugel.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/BijnaUBeugel.PDF, page1 used on input line
- 693.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [63 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/BijnaUBeugel.PDF>]
-<pdfdrawings/containment_ring.PDF, id=974, 845.0471pt x 597.50829pt>
-File: pdfdrawings/containment_ring.PDF Graphic file (type pdf)
-
-<use pdfdrawings/containment_ring.PDF>
-Package pdftex.def Info: pdfdrawings/containment_ring.PDF used on input line 69
-4.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/containment_ring.PDF Graphic file (type pdf)
- <use pdfdrawings/containment_ring.PDF>
-Package pdftex.def Info: pdfdrawings/containment_ring.PDF used on input line 69
-4.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/containment_ring.PDF, id=977, page=1, 845.0471pt x 597.50829pt>
+<use pdfdrawings/BijnaUBeugel.PDF, page 1> [67 <./pdfdrawings/BijnaUBeugel.PDF>
+] <pdfdrawings/containment_ring.PDF, id=998, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/containment_ring.PDF Graphic file (type pdf)
 
 <use pdfdrawings/containment_ring.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/containment_ring.PDF, page1 used on input 
-line 694.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
 File: pdfdrawings/containment_ring.PDF Graphic file (type pdf)
 
 <use pdfdrawings/containment_ring.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/containment_ring.PDF, page1 used on input 
-line 694.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/containment_ring.PDF Graphic file (type pdf)
 
 <use pdfdrawings/containment_ring.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/containment_ring.PDF, page1 used on input 
-line 694.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/containment_ring.PDF Graphic file (type pdf)
 
 <use pdfdrawings/containment_ring.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/containment_ring.PDF, page1 used on input 
-line 694.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/containment_ring.PDF Graphic file (type pdf)
 
-<use pdfdrawings/containment_ring.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/containment_ring.PDF, page1 used on input 
-line 694.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [64 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/containment_ring.PDF>]
-<pdfdrawings/fixatie_pvc_onder.PDF, id=999, 845.0471pt x 597.50829pt>
-File: pdfdrawings/fixatie_pvc_onder.PDF Graphic file (type pdf)
-
-<use pdfdrawings/fixatie_pvc_onder.PDF>
-Package pdftex.def Info: pdfdrawings/fixatie_pvc_onder.PDF used on input line 6
-95.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/fixatie_pvc_onder.PDF Graphic file (type pdf)
-
-<use pdfdrawings/fixatie_pvc_onder.PDF>
-Package pdftex.def Info: pdfdrawings/fixatie_pvc_onder.PDF used on input line 6
-95.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/fixatie_pvc_onder.PDF, id=1002, page=1, 845.0471pt x 597.50829pt>
+<use pdfdrawings/containment_ring.PDF, page 1> [68 <./pdfdrawings/containment_r
+ing.PDF>]
+<pdfdrawings/fixatie_pvc_onder.PDF, id=1022, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/fixatie_pvc_onder.PDF Graphic file (type pdf)
 
 <use pdfdrawings/fixatie_pvc_onder.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/fixatie_pvc_onder.PDF, page1 used on input
- line 695.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
 File: pdfdrawings/fixatie_pvc_onder.PDF Graphic file (type pdf)
 
 <use pdfdrawings/fixatie_pvc_onder.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/fixatie_pvc_onder.PDF, page1 used on input
- line 695.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/fixatie_pvc_onder.PDF Graphic file (type pdf)
 
 <use pdfdrawings/fixatie_pvc_onder.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/fixatie_pvc_onder.PDF, page1 used on input
- line 695.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/fixatie_pvc_onder.PDF Graphic file (type pdf)
 
 <use pdfdrawings/fixatie_pvc_onder.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/fixatie_pvc_onder.PDF, page1 used on input
- line 695.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/fixatie_pvc_onder.PDF Graphic file (type pdf)
 
-<use pdfdrawings/fixatie_pvc_onder.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/fixatie_pvc_onder.PDF, page1 used on input
- line 695.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [65 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/fixatie_pvc_onder.PDF>]
-
-<pdfdrawings/GuideRail1.PDF, id=1024, 845.0471pt x 597.50829pt>
-File: pdfdrawings/GuideRail1.PDF Graphic file (type pdf)
-
-<use pdfdrawings/GuideRail1.PDF>
-Package pdftex.def Info: pdfdrawings/GuideRail1.PDF used on input line 696.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/GuideRail1.PDF Graphic file (type pdf)
- <use pdfdrawings/GuideRail1.PDF>
-Package pdftex.def Info: pdfdrawings/GuideRail1.PDF used on input line 696.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/GuideRail1.PDF, id=1027, page=1, 845.0471pt x 597.50829pt>
+<use pdfdrawings/fixatie_pvc_onder.PDF, page 1> [69 <./pdfdrawings/fixatie_pvc_
+onder.PDF>]
+<pdfdrawings/GuideRail1.PDF, id=1046, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/GuideRail1.PDF Graphic file (type pdf)
 
 <use pdfdrawings/GuideRail1.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/GuideRail1.PDF, page1 used on input line 6
-96.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
 File: pdfdrawings/GuideRail1.PDF Graphic file (type pdf)
 
 <use pdfdrawings/GuideRail1.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/GuideRail1.PDF, page1 used on input line 6
-96.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/GuideRail1.PDF Graphic file (type pdf)
 
 <use pdfdrawings/GuideRail1.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/GuideRail1.PDF, page1 used on input line 6
-96.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/GuideRail1.PDF Graphic file (type pdf)
 
 <use pdfdrawings/GuideRail1.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/GuideRail1.PDF, page1 used on input line 6
-96.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/GuideRail1.PDF Graphic file (type pdf)
 
-<use pdfdrawings/GuideRail1.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/GuideRail1.PDF, page1 used on input line 6
-96.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [66 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/GuideRail1.PDF>]
-<pdfdrawings/GuideRail2.PDF, id=1049, 597.50829pt x 845.0471pt>
-File: pdfdrawings/GuideRail2.PDF Graphic file (type pdf)
-
-<use pdfdrawings/GuideRail2.PDF>
-Package pdftex.def Info: pdfdrawings/GuideRail2.PDF used on input line 697.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: pdfdrawings/GuideRail2.PDF Graphic file (type pdf)
- <use pdfdrawings/GuideRail2.PDF>
-Package pdftex.def Info: pdfdrawings/GuideRail2.PDF used on input line 697.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<pdfdrawings/GuideRail2.PDF, id=1052, page=1, 597.50829pt x 845.0471pt>
+<use pdfdrawings/GuideRail1.PDF, page 1> [70 <./pdfdrawings/GuideRail1.PDF>]
+<pdfdrawings/GuideRail2.PDF, id=1070, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/GuideRail2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/GuideRail2.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/GuideRail2.PDF, page1 used on input line 6
-97.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: pdfdrawings/GuideRail2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/GuideRail2.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/GuideRail2.PDF, page1 used on input line 6
-97.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/GuideRail2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/GuideRail2.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/GuideRail2.PDF, page1 used on input line 6
-97.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/GuideRail2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/GuideRail2.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/GuideRail2.PDF, page1 used on input line 6
-97.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/GuideRail2.PDF Graphic file (type pdf)
 
-<use pdfdrawings/GuideRail2.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/GuideRail2.PDF, page1 used on input line 6
-97.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [67 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/GuideRail2.PDF>]
-<pdfdrawings/Head.PDF, id=1075, 845.0471pt x 1195.01462pt>
-File: pdfdrawings/Head.PDF Graphic file (type pdf)
-
-<use pdfdrawings/Head.PDF>
-Package pdftex.def Info: pdfdrawings/Head.PDF used on input line 698.
-(pdftex.def)             Requested size: 845.04504pt x 1195.0117pt.
-File: pdfdrawings/Head.PDF Graphic file (type pdf)
- <use pdfdrawings/Head.PDF>
-Package pdftex.def Info: pdfdrawings/Head.PDF used on input line 698.
-(pdftex.def)             Requested size: 845.04504pt x 1195.0117pt.
-
-<pdfdrawings/Head.PDF, id=1078, page=1, 845.0471pt x 1195.01462pt>
+<use pdfdrawings/GuideRail2.PDF, page 1> [71 <./pdfdrawings/GuideRail2.PDF>]
+<pdfdrawings/Head.PDF, id=1094, page=1, 845.0471pt x 1195.01462pt>
 File: pdfdrawings/Head.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Head.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Head.PDF, page1 used on input line 698.
-(pdftex.def)             Requested size: 845.04504pt x 1195.0117pt.
 File: pdfdrawings/Head.PDF Graphic file (type pdf)
  <use pdfdrawings/Head.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Head.PDF, page1 used on input line 698.
-(pdftex.def)             Requested size: 597.53772pt x 845.00179pt.
 File: pdfdrawings/Head.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Head.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Head.PDF, page1 used on input line 698.
-(pdftex.def)             Requested size: 597.53772pt x 845.00179pt.
 File: pdfdrawings/Head.PDF Graphic file (type pdf)
  <use pdfdrawings/Head.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Head.PDF, page1 used on input line 698.
-(pdftex.def)             Requested size: 597.53772pt x 845.00179pt.
 File: pdfdrawings/Head.PDF Graphic file (type pdf)
 
-<use pdfdrawings/Head.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Head.PDF, page1 used on input line 698.
-(pdftex.def)             Requested size: 597.53772pt x 845.00179pt.
- [68 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/Head.PDF>]
-<pdfdrawings/Jaw_Head.PDF, id=1100, 845.0471pt x 597.50829pt>
-File: pdfdrawings/Jaw_Head.PDF Graphic file (type pdf)
-
-<use pdfdrawings/Jaw_Head.PDF>
-Package pdftex.def Info: pdfdrawings/Jaw_Head.PDF used on input line 699.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/Jaw_Head.PDF Graphic file (type pdf)
- <use pdfdrawings/Jaw_Head.PDF>
-Package pdftex.def Info: pdfdrawings/Jaw_Head.PDF used on input line 699.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/Jaw_Head.PDF, id=1103, page=1, 845.0471pt x 597.50829pt>
+<use pdfdrawings/Head.PDF, page 1> [72 <./pdfdrawings/Head.PDF>]
+<pdfdrawings/Jaw_Head.PDF, id=1118, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/Jaw_Head.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Jaw_Head.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Jaw_Head.PDF, page1 used on input line 699
-.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
 File: pdfdrawings/Jaw_Head.PDF Graphic file (type pdf)
  <use pdfdrawings/Jaw_Head.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Jaw_Head.PDF, page1 used on input line 699
-.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/Jaw_Head.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Jaw_Head.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Jaw_Head.PDF, page1 used on input line 699
-.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/Jaw_Head.PDF Graphic file (type pdf)
  <use pdfdrawings/Jaw_Head.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Jaw_Head.PDF, page1 used on input line 699
-.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/Jaw_Head.PDF Graphic file (type pdf)
 
-<use pdfdrawings/Jaw_Head.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Jaw_Head.PDF, page1 used on input line 699
-.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [69 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/Jaw_Head.PDF>]
-<pdfdrawings/linkage_mouthplate.PDF, id=1125, 845.0471pt x 597.50829pt>
-File: pdfdrawings/linkage_mouthplate.PDF Graphic file (type pdf)
-
-<use pdfdrawings/linkage_mouthplate.PDF>
-Package pdftex.def Info: pdfdrawings/linkage_mouthplate.PDF used on input line 
-700.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/linkage_mouthplate.PDF Graphic file (type pdf)
-
-<use pdfdrawings/linkage_mouthplate.PDF>
-Package pdftex.def Info: pdfdrawings/linkage_mouthplate.PDF used on input line 
-700.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/linkage_mouthplate.PDF, id=1128, page=1, 845.0471pt x 597.50829pt>
+<use pdfdrawings/Jaw_Head.PDF, page 1> [73 <./pdfdrawings/Jaw_Head.PDF>]
+<pdfdrawings/linkage_mouthplate.PDF, id=1143, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/linkage_mouthplate.PDF Graphic file (type pdf)
 <use pdfdrawings/linkage_mouthplate.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/linkage_mouthplate.PDF, page1 used on inpu
-t line 700.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
 File: pdfdrawings/linkage_mouthplate.PDF Graphic file (type pdf)
 
 <use pdfdrawings/linkage_mouthplate.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/linkage_mouthplate.PDF, page1 used on inpu
-t line 700.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/linkage_mouthplate.PDF Graphic file (type pdf)
 
 <use pdfdrawings/linkage_mouthplate.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/linkage_mouthplate.PDF, page1 used on inpu
-t line 700.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/linkage_mouthplate.PDF Graphic file (type pdf)
 
 <use pdfdrawings/linkage_mouthplate.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/linkage_mouthplate.PDF, page1 used on inpu
-t line 700.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/linkage_mouthplate.PDF Graphic file (type pdf)
 
-<use pdfdrawings/linkage_mouthplate.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/linkage_mouthplate.PDF, page1 used on inpu
-t line 700.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [70 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/linkage_mouthplate.PDF>
+<use pdfdrawings/linkage_mouthplate.PDF, page 1> [74 <./pdfdrawings/linkage_mou
+thplate.PDF>]
+<pdfdrawings/mainframe.PDF, id=1167, page=1, 845.0471pt x 597.50829pt>
+File: pdfdrawings/mainframe.PDF Graphic file (type pdf)
+
+<use pdfdrawings/mainframe.PDF, page 1>
+File: pdfdrawings/mainframe.PDF Graphic file (type pdf)
+
+<use pdfdrawings/mainframe.PDF, page 1>
+File: pdfdrawings/mainframe.PDF Graphic file (type pdf)
+
+<use pdfdrawings/mainframe.PDF, page 1>
+File: pdfdrawings/mainframe.PDF Graphic file (type pdf)
+
+<use pdfdrawings/mainframe.PDF, page 1>
+File: pdfdrawings/mainframe.PDF Graphic file (type pdf)
+
+<use pdfdrawings/mainframe.PDF, page 1> [75 <./pdfdrawings/mainframe.PDF>]
+<pdfdrawings/motordakje.PDF, id=1191, page=1, 845.0471pt x 597.50829pt>
+File: pdfdrawings/motordakje.PDF Graphic file (type pdf)
+
+<use pdfdrawings/motordakje.PDF, page 1>
+File: pdfdrawings/motordakje.PDF Graphic file (type pdf)
+
+<use pdfdrawings/motordakje.PDF, page 1>
+File: pdfdrawings/motordakje.PDF Graphic file (type pdf)
+
+<use pdfdrawings/motordakje.PDF, page 1>
+File: pdfdrawings/motordakje.PDF Graphic file (type pdf)
+
+<use pdfdrawings/motordakje.PDF, page 1>
+File: pdfdrawings/motordakje.PDF Graphic file (type pdf)
+
+<use pdfdrawings/motordakje.PDF, page 1> [76 <./pdfdrawings/motordakje.PDF>]
+<pdfdrawings/motormount.PDF, id=1215, page=1, 597.50829pt x 845.0471pt>
+File: pdfdrawings/motormount.PDF Graphic file (type pdf)
+
+<use pdfdrawings/motormount.PDF, page 1>
+File: pdfdrawings/motormount.PDF Graphic file (type pdf)
+
+<use pdfdrawings/motormount.PDF, page 1>
+File: pdfdrawings/motormount.PDF Graphic file (type pdf)
+
+<use pdfdrawings/motormount.PDF, page 1>
+File: pdfdrawings/motormount.PDF Graphic file (type pdf)
+
+<use pdfdrawings/motormount.PDF, page 1>
+File: pdfdrawings/motormount.PDF Graphic file (type pdf)
+
+<use pdfdrawings/motormount.PDF, page 1> [77 <./pdfdrawings/motormount.PDF>]
+<pdfdrawings/mouthplate.PDF, id=1239, page=1, 845.0471pt x 597.50829pt>
+File: pdfdrawings/mouthplate.PDF Graphic file (type pdf)
+
+<use pdfdrawings/mouthplate.PDF, page 1>
+File: pdfdrawings/mouthplate.PDF Graphic file (type pdf)
+
+<use pdfdrawings/mouthplate.PDF, page 1>
+File: pdfdrawings/mouthplate.PDF Graphic file (type pdf)
+
+<use pdfdrawings/mouthplate.PDF, page 1>
+File: pdfdrawings/mouthplate.PDF Graphic file (type pdf)
+
+<use pdfdrawings/mouthplate.PDF, page 1>
+File: pdfdrawings/mouthplate.PDF Graphic file (type pdf)
+
+<use pdfdrawings/mouthplate.PDF, page 1> [78 <./pdfdrawings/mouthplate.PDF>]
+<pdfdrawings/pipe_catcher.PDF, id=1263, page=1, 597.50829pt x 845.0471pt>
+File: pdfdrawings/pipe_catcher.PDF Graphic file (type pdf)
+
+<use pdfdrawings/pipe_catcher.PDF, page 1>
+File: pdfdrawings/pipe_catcher.PDF Graphic file (type pdf)
+
+<use pdfdrawings/pipe_catcher.PDF, page 1>
+File: pdfdrawings/pipe_catcher.PDF Graphic file (type pdf)
+
+<use pdfdrawings/pipe_catcher.PDF, page 1>
+File: pdfdrawings/pipe_catcher.PDF Graphic file (type pdf)
+
+<use pdfdrawings/pipe_catcher.PDF, page 1>
+File: pdfdrawings/pipe_catcher.PDF Graphic file (type pdf)
+
+<use pdfdrawings/pipe_catcher.PDF, page 1> [79 <./pdfdrawings/pipe_catcher.PDF>
 ]
-<pdfdrawings/mainframe.PDF, id=1150, 845.0471pt x 597.50829pt>
-File: pdfdrawings/mainframe.PDF Graphic file (type pdf)
-
-<use pdfdrawings/mainframe.PDF>
-Package pdftex.def Info: pdfdrawings/mainframe.PDF used on input line 701.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/mainframe.PDF Graphic file (type pdf)
- <use pdfdrawings/mainframe.PDF>
-Package pdftex.def Info: pdfdrawings/mainframe.PDF used on input line 701.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/mainframe.PDF, id=1153, page=1, 845.0471pt x 597.50829pt>
-File: pdfdrawings/mainframe.PDF Graphic file (type pdf)
-
-<use pdfdrawings/mainframe.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/mainframe.PDF, page1 used on input line 70
-1.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/mainframe.PDF Graphic file (type pdf)
-
-<use pdfdrawings/mainframe.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/mainframe.PDF, page1 used on input line 70
-1.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
-File: pdfdrawings/mainframe.PDF Graphic file (type pdf)
-
-<use pdfdrawings/mainframe.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/mainframe.PDF, page1 used on input line 70
-1.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
-File: pdfdrawings/mainframe.PDF Graphic file (type pdf)
-
-<use pdfdrawings/mainframe.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/mainframe.PDF, page1 used on input line 70
-1.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
-File: pdfdrawings/mainframe.PDF Graphic file (type pdf)
-
-<use pdfdrawings/mainframe.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/mainframe.PDF, page1 used on input line 70
-1.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [71 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/mainframe.PDF>]
-<pdfdrawings/motordakje.PDF, id=1175, 845.0471pt x 597.50829pt>
-File: pdfdrawings/motordakje.PDF Graphic file (type pdf)
-
-<use pdfdrawings/motordakje.PDF>
-Package pdftex.def Info: pdfdrawings/motordakje.PDF used on input line 702.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/motordakje.PDF Graphic file (type pdf)
- <use pdfdrawings/motordakje.PDF>
-Package pdftex.def Info: pdfdrawings/motordakje.PDF used on input line 702.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/motordakje.PDF, id=1178, page=1, 845.0471pt x 597.50829pt>
-File: pdfdrawings/motordakje.PDF Graphic file (type pdf)
-
-<use pdfdrawings/motordakje.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/motordakje.PDF, page1 used on input line 7
-02.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/motordakje.PDF Graphic file (type pdf)
-
-<use pdfdrawings/motordakje.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/motordakje.PDF, page1 used on input line 7
-02.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
-File: pdfdrawings/motordakje.PDF Graphic file (type pdf)
-
-<use pdfdrawings/motordakje.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/motordakje.PDF, page1 used on input line 7
-02.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
-File: pdfdrawings/motordakje.PDF Graphic file (type pdf)
-
-<use pdfdrawings/motordakje.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/motordakje.PDF, page1 used on input line 7
-02.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
-File: pdfdrawings/motordakje.PDF Graphic file (type pdf)
-
-<use pdfdrawings/motordakje.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/motordakje.PDF, page1 used on input line 7
-02.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [72 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/motordakje.PDF>]
-<pdfdrawings/motormount.PDF, id=1200, 597.50829pt x 845.0471pt>
-File: pdfdrawings/motormount.PDF Graphic file (type pdf)
-
-<use pdfdrawings/motormount.PDF>
-Package pdftex.def Info: pdfdrawings/motormount.PDF used on input line 703.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: pdfdrawings/motormount.PDF Graphic file (type pdf)
- <use pdfdrawings/motormount.PDF>
-Package pdftex.def Info: pdfdrawings/motormount.PDF used on input line 703.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<pdfdrawings/motormount.PDF, id=1203, page=1, 597.50829pt x 845.0471pt>
-File: pdfdrawings/motormount.PDF Graphic file (type pdf)
-
-<use pdfdrawings/motormount.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/motormount.PDF, page1 used on input line 7
-03.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: pdfdrawings/motormount.PDF Graphic file (type pdf)
-
-<use pdfdrawings/motormount.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/motormount.PDF, page1 used on input line 7
-03.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: pdfdrawings/motormount.PDF Graphic file (type pdf)
-
-<use pdfdrawings/motormount.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/motormount.PDF, page1 used on input line 7
-03.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: pdfdrawings/motormount.PDF Graphic file (type pdf)
-
-<use pdfdrawings/motormount.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/motormount.PDF, page1 used on input line 7
-03.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: pdfdrawings/motormount.PDF Graphic file (type pdf)
-
-<use pdfdrawings/motormount.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/motormount.PDF, page1 used on input line 7
-03.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [73 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/motormount.PDF>]
-<pdfdrawings/mouthplate.PDF, id=1226, 845.0471pt x 597.50829pt>
-File: pdfdrawings/mouthplate.PDF Graphic file (type pdf)
-
-<use pdfdrawings/mouthplate.PDF>
-Package pdftex.def Info: pdfdrawings/mouthplate.PDF used on input line 704.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/mouthplate.PDF Graphic file (type pdf)
- <use pdfdrawings/mouthplate.PDF>
-Package pdftex.def Info: pdfdrawings/mouthplate.PDF used on input line 704.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/mouthplate.PDF, id=1229, page=1, 845.0471pt x 597.50829pt>
-File: pdfdrawings/mouthplate.PDF Graphic file (type pdf)
-
-<use pdfdrawings/mouthplate.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/mouthplate.PDF, page1 used on input line 7
-04.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/mouthplate.PDF Graphic file (type pdf)
-
-<use pdfdrawings/mouthplate.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/mouthplate.PDF, page1 used on input line 7
-04.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
-File: pdfdrawings/mouthplate.PDF Graphic file (type pdf)
-
-<use pdfdrawings/mouthplate.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/mouthplate.PDF, page1 used on input line 7
-04.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
-File: pdfdrawings/mouthplate.PDF Graphic file (type pdf)
-
-<use pdfdrawings/mouthplate.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/mouthplate.PDF, page1 used on input line 7
-04.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
-File: pdfdrawings/mouthplate.PDF Graphic file (type pdf)
-
-<use pdfdrawings/mouthplate.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/mouthplate.PDF, page1 used on input line 7
-04.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [74 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/mouthplate.PDF>]
-<pdfdrawings/pipe_catcher.PDF, id=1251, 597.50829pt x 845.0471pt>
-File: pdfdrawings/pipe_catcher.PDF Graphic file (type pdf)
-
-<use pdfdrawings/pipe_catcher.PDF>
-Package pdftex.def Info: pdfdrawings/pipe_catcher.PDF used on input line 705.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: pdfdrawings/pipe_catcher.PDF Graphic file (type pdf)
- <use pdfdrawings/pipe_catcher.PDF>
-Package pdftex.def Info: pdfdrawings/pipe_catcher.PDF used on input line 705.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<pdfdrawings/pipe_catcher.PDF, id=1254, page=1, 597.50829pt x 845.0471pt>
-File: pdfdrawings/pipe_catcher.PDF Graphic file (type pdf)
-
-<use pdfdrawings/pipe_catcher.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/pipe_catcher.PDF, page1 used on input line
- 705.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: pdfdrawings/pipe_catcher.PDF Graphic file (type pdf)
-
-<use pdfdrawings/pipe_catcher.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/pipe_catcher.PDF, page1 used on input line
- 705.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: pdfdrawings/pipe_catcher.PDF Graphic file (type pdf)
-
-<use pdfdrawings/pipe_catcher.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/pipe_catcher.PDF, page1 used on input line
- 705.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: pdfdrawings/pipe_catcher.PDF Graphic file (type pdf)
-
-<use pdfdrawings/pipe_catcher.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/pipe_catcher.PDF, page1 used on input line
- 705.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
-File: pdfdrawings/pipe_catcher.PDF Graphic file (type pdf)
-
-<use pdfdrawings/pipe_catcher.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/pipe_catcher.PDF, page1 used on input line
- 705.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [75 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/pipe_catcher.PDF>]
-<pdfdrawings/plaatje_voorkant.PDF, id=1276, 845.0471pt x 597.50829pt>
-File: pdfdrawings/plaatje_voorkant.PDF Graphic file (type pdf)
-
-<use pdfdrawings/plaatje_voorkant.PDF>
-Package pdftex.def Info: pdfdrawings/plaatje_voorkant.PDF used on input line 70
-6.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/plaatje_voorkant.PDF Graphic file (type pdf)
- <use pdfdrawings/plaatje_voorkant.PDF>
-Package pdftex.def Info: pdfdrawings/plaatje_voorkant.PDF used on input line 70
-6.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/plaatje_voorkant.PDF, id=1279, page=1, 845.0471pt x 597.50829pt>
+<pdfdrawings/plaatje_voorkant.PDF, id=1288, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/plaatje_voorkant.PDF Graphic file (type pdf)
 
 <use pdfdrawings/plaatje_voorkant.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/plaatje_voorkant.PDF, page1 used on input 
-line 706.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
 File: pdfdrawings/plaatje_voorkant.PDF Graphic file (type pdf)
 
 <use pdfdrawings/plaatje_voorkant.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/plaatje_voorkant.PDF, page1 used on input 
-line 706.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/plaatje_voorkant.PDF Graphic file (type pdf)
 
 <use pdfdrawings/plaatje_voorkant.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/plaatje_voorkant.PDF, page1 used on input 
-line 706.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/plaatje_voorkant.PDF Graphic file (type pdf)
 
 <use pdfdrawings/plaatje_voorkant.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/plaatje_voorkant.PDF, page1 used on input 
-line 706.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/plaatje_voorkant.PDF Graphic file (type pdf)
 
-<use pdfdrawings/plaatje_voorkant.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/plaatje_voorkant.PDF, page1 used on input 
-line 706.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [76 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/plaatje_voorkant.PDF>]
-<pdfdrawings/pulleyblock.PDF, id=1301, 597.50829pt x 845.0471pt>
-File: pdfdrawings/pulleyblock.PDF Graphic file (type pdf)
-
-<use pdfdrawings/pulleyblock.PDF>
-Package pdftex.def Info: pdfdrawings/pulleyblock.PDF used on input line 707.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: pdfdrawings/pulleyblock.PDF Graphic file (type pdf)
- <use pdfdrawings/pulleyblock.PDF>
-Package pdftex.def Info: pdfdrawings/pulleyblock.PDF used on input line 707.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<pdfdrawings/pulleyblock.PDF, id=1304, page=1, 597.50829pt x 845.0471pt>
+<use pdfdrawings/plaatje_voorkant.PDF, page 1> [80 <./pdfdrawings/plaatje_voork
+ant.PDF>]
+<pdfdrawings/pulleyblock.PDF, id=1312, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/pulleyblock.PDF Graphic file (type pdf)
 
 <use pdfdrawings/pulleyblock.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/pulleyblock.PDF, page1 used on input line 
-707.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: pdfdrawings/pulleyblock.PDF Graphic file (type pdf)
 
 <use pdfdrawings/pulleyblock.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/pulleyblock.PDF, page1 used on input line 
-707.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/pulleyblock.PDF Graphic file (type pdf)
 
 <use pdfdrawings/pulleyblock.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/pulleyblock.PDF, page1 used on input line 
-707.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/pulleyblock.PDF Graphic file (type pdf)
 
 <use pdfdrawings/pulleyblock.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/pulleyblock.PDF, page1 used on input line 
-707.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/pulleyblock.PDF Graphic file (type pdf)
 
-<use pdfdrawings/pulleyblock.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/pulleyblock.PDF, page1 used on input line 
-707.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [77 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/pulleyblock.PDF>]
-<pdfdrawings/pushrod.PDF, id=1326, 845.0471pt x 597.50829pt>
-File: pdfdrawings/pushrod.PDF Graphic file (type pdf)
-
-<use pdfdrawings/pushrod.PDF>
-Package pdftex.def Info: pdfdrawings/pushrod.PDF used on input line 708.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/pushrod.PDF Graphic file (type pdf)
- <use pdfdrawings/pushrod.PDF>
-Package pdftex.def Info: pdfdrawings/pushrod.PDF used on input line 708.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/pushrod.PDF, id=1329, page=1, 845.0471pt x 597.50829pt>
+<use pdfdrawings/pulleyblock.PDF, page 1> [81 <./pdfdrawings/pulleyblock.PDF>]
+<pdfdrawings/pushrod.PDF, id=1336, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/pushrod.PDF Graphic file (type pdf)
 
 <use pdfdrawings/pushrod.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/pushrod.PDF, page1 used on input line 708.
-
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
 File: pdfdrawings/pushrod.PDF Graphic file (type pdf)
  <use pdfdrawings/pushrod.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/pushrod.PDF, page1 used on input line 708.
-
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/pushrod.PDF Graphic file (type pdf)
 
 <use pdfdrawings/pushrod.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/pushrod.PDF, page1 used on input line 708.
-
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/pushrod.PDF Graphic file (type pdf)
  <use pdfdrawings/pushrod.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/pushrod.PDF, page1 used on input line 708.
-
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/pushrod.PDF Graphic file (type pdf)
 
-<use pdfdrawings/pushrod.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/pushrod.PDF, page1 used on input line 708.
-
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [78 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/pushrod.PDF>]
-<pdfdrawings/RackStopper.PDF, id=1351, 597.50829pt x 845.0471pt>
-File: pdfdrawings/RackStopper.PDF Graphic file (type pdf)
-
-<use pdfdrawings/RackStopper.PDF>
-Package pdftex.def Info: pdfdrawings/RackStopper.PDF used on input line 709.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: pdfdrawings/RackStopper.PDF Graphic file (type pdf)
- <use pdfdrawings/RackStopper.PDF>
-Package pdftex.def Info: pdfdrawings/RackStopper.PDF used on input line 709.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<pdfdrawings/RackStopper.PDF, id=1354, page=1, 597.50829pt x 845.0471pt>
+<use pdfdrawings/pushrod.PDF, page 1> [82 <./pdfdrawings/pushrod.PDF>]
+<pdfdrawings/RackStopper.PDF, id=1360, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/RackStopper.PDF Graphic file (type pdf)
 
 <use pdfdrawings/RackStopper.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/RackStopper.PDF, page1 used on input line 
-709.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: pdfdrawings/RackStopper.PDF Graphic file (type pdf)
 
 <use pdfdrawings/RackStopper.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/RackStopper.PDF, page1 used on input line 
-709.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/RackStopper.PDF Graphic file (type pdf)
 
 <use pdfdrawings/RackStopper.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/RackStopper.PDF, page1 used on input line 
-709.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/RackStopper.PDF Graphic file (type pdf)
 
 <use pdfdrawings/RackStopper.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/RackStopper.PDF, page1 used on input line 
-709.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/RackStopper.PDF Graphic file (type pdf)
 
-<use pdfdrawings/RackStopper.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/RackStopper.PDF, page1 used on input line 
-709.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [79 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/RackStopper.PDF>]
-<pdfdrawings/ring.PDF, id=1377, 597.50829pt x 845.0471pt>
-File: pdfdrawings/ring.PDF Graphic file (type pdf)
-
-<use pdfdrawings/ring.PDF>
-Package pdftex.def Info: pdfdrawings/ring.PDF used on input line 710.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: pdfdrawings/ring.PDF Graphic file (type pdf)
- <use pdfdrawings/ring.PDF>
-Package pdftex.def Info: pdfdrawings/ring.PDF used on input line 710.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<pdfdrawings/ring.PDF, id=1380, page=1, 597.50829pt x 845.0471pt>
+<use pdfdrawings/RackStopper.PDF, page 1> [83 <./pdfdrawings/RackStopper.PDF>]
+<pdfdrawings/ring.PDF, id=1384, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/ring.PDF Graphic file (type pdf)
 
 <use pdfdrawings/ring.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/ring.PDF, page1 used on input line 710.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: pdfdrawings/ring.PDF Graphic file (type pdf)
  <use pdfdrawings/ring.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/ring.PDF, page1 used on input line 710.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/ring.PDF Graphic file (type pdf)
 
 <use pdfdrawings/ring.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/ring.PDF, page1 used on input line 710.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/ring.PDF Graphic file (type pdf)
  <use pdfdrawings/ring.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/ring.PDF, page1 used on input line 710.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/ring.PDF Graphic file (type pdf)
 
-<use pdfdrawings/ring.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/ring.PDF, page1 used on input line 710.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [80 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/ring.PDF>]
-<pdfdrawings/screenholderV2.PDF, id=1402, 845.0471pt x 597.50829pt>
-File: pdfdrawings/screenholderV2.PDF Graphic file (type pdf)
-
-<use pdfdrawings/screenholderV2.PDF>
-Package pdftex.def Info: pdfdrawings/screenholderV2.PDF used on input line 711.
-
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/screenholderV2.PDF Graphic file (type pdf)
- <use pdfdrawings/screenholderV2.PDF>
-Package pdftex.def Info: pdfdrawings/screenholderV2.PDF used on input line 711.
-
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/screenholderV2.PDF, id=1405, page=1, 845.0471pt x 597.50829pt>
+<use pdfdrawings/ring.PDF, page 1> [84 <./pdfdrawings/ring.PDF>]
+<pdfdrawings/screenholderV2.PDF, id=1408, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/screenholderV2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/screenholderV2.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/screenholderV2.PDF, page1 used on input li
-ne 711.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
 File: pdfdrawings/screenholderV2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/screenholderV2.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/screenholderV2.PDF, page1 used on input li
-ne 711.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/screenholderV2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/screenholderV2.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/screenholderV2.PDF, page1 used on input li
-ne 711.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/screenholderV2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/screenholderV2.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/screenholderV2.PDF, page1 used on input li
-ne 711.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/screenholderV2.PDF Graphic file (type pdf)
 
-<use pdfdrawings/screenholderV2.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/screenholderV2.PDF, page1 used on input li
-ne 711.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [81 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/screenholderV2.PDF>]
-<pdfdrawings/Shell.PDF, id=1427, 845.0471pt x 597.50829pt>
-File: pdfdrawings/Shell.PDF Graphic file (type pdf)
-
-<use pdfdrawings/Shell.PDF>
-Package pdftex.def Info: pdfdrawings/Shell.PDF used on input line 712.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/Shell.PDF Graphic file (type pdf)
- <use pdfdrawings/Shell.PDF>
-Package pdftex.def Info: pdfdrawings/Shell.PDF used on input line 712.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/Shell.PDF, id=1430, page=1, 845.0471pt x 597.50829pt>
+<use pdfdrawings/screenholderV2.PDF, page 1> [85 <./pdfdrawings/screenholderV2.
+PDF>] <pdfdrawings/Shell.PDF, id=1433, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/Shell.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Shell.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Shell.PDF, page1 used on input line 712.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
 File: pdfdrawings/Shell.PDF Graphic file (type pdf)
  <use pdfdrawings/Shell.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Shell.PDF, page1 used on input line 712.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/Shell.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Shell.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Shell.PDF, page1 used on input line 712.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/Shell.PDF Graphic file (type pdf)
  <use pdfdrawings/Shell.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Shell.PDF, page1 used on input line 712.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/Shell.PDF Graphic file (type pdf)
 
-<use pdfdrawings/Shell.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Shell.PDF, page1 used on input line 712.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [82 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/Shell.PDF>]
-<pdfdrawings/shell_fastener.PDF, id=1452, 845.0471pt x 597.50829pt>
-File: pdfdrawings/shell_fastener.PDF Graphic file (type pdf)
-
-<use pdfdrawings/shell_fastener.PDF>
-Package pdftex.def Info: pdfdrawings/shell_fastener.PDF used on input line 713.
-
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/shell_fastener.PDF Graphic file (type pdf)
- <use pdfdrawings/shell_fastener.PDF>
-Package pdftex.def Info: pdfdrawings/shell_fastener.PDF used on input line 713.
-
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/shell_fastener.PDF, id=1455, page=1, 845.0471pt x 597.50829pt>
+<use pdfdrawings/Shell.PDF, page 1> [86 <./pdfdrawings/Shell.PDF>]
+<pdfdrawings/shell_fastener.PDF, id=1457, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/shell_fastener.PDF Graphic file (type pdf)
 
 <use pdfdrawings/shell_fastener.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/shell_fastener.PDF, page1 used on input li
-ne 713.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
 File: pdfdrawings/shell_fastener.PDF Graphic file (type pdf)
 
 <use pdfdrawings/shell_fastener.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/shell_fastener.PDF, page1 used on input li
-ne 713.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/shell_fastener.PDF Graphic file (type pdf)
 
 <use pdfdrawings/shell_fastener.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/shell_fastener.PDF, page1 used on input li
-ne 713.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/shell_fastener.PDF Graphic file (type pdf)
 
 <use pdfdrawings/shell_fastener.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/shell_fastener.PDF, page1 used on input li
-ne 713.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/shell_fastener.PDF Graphic file (type pdf)
 
-<use pdfdrawings/shell_fastener.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/shell_fastener.PDF, page1 used on input li
-ne 713.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [83 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/shell_fastener.PDF>]
-<pdfdrawings/Slider_Platform.PDF, id=1477, 845.0471pt x 597.50829pt>
-File: pdfdrawings/Slider_Platform.PDF Graphic file (type pdf)
-
-<use pdfdrawings/Slider_Platform.PDF>
-Package pdftex.def Info: pdfdrawings/Slider_Platform.PDF used on input line 714
-.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/Slider_Platform.PDF Graphic file (type pdf)
- <use pdfdrawings/Slider_Platform.PDF>
-Package pdftex.def Info: pdfdrawings/Slider_Platform.PDF used on input line 714
-.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/Slider_Platform.PDF, id=1480, page=1, 845.0471pt x 597.50829pt>
+<use pdfdrawings/shell_fastener.PDF, page 1> [87 <./pdfdrawings/shell_fastener.
+PDF>]
+<pdfdrawings/Slider_Platform.PDF, id=1481, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/Slider_Platform.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Slider_Platform.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Slider_Platform.PDF, page1 used on input l
-ine 714.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
 File: pdfdrawings/Slider_Platform.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Slider_Platform.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Slider_Platform.PDF, page1 used on input l
-ine 714.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/Slider_Platform.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Slider_Platform.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Slider_Platform.PDF, page1 used on input l
-ine 714.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/Slider_Platform.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Slider_Platform.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Slider_Platform.PDF, page1 used on input l
-ine 714.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/Slider_Platform.PDF Graphic file (type pdf)
 
-<use pdfdrawings/Slider_Platform.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/Slider_Platform.PDF, page1 used on input l
-ine 714.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [84 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/Slider_Platform.PDF>]
-<pdfdrawings/steun.PDF, id=1502, 597.50829pt x 845.0471pt>
-File: pdfdrawings/steun.PDF Graphic file (type pdf)
-
-<use pdfdrawings/steun.PDF>
-Package pdftex.def Info: pdfdrawings/steun.PDF used on input line 715.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: pdfdrawings/steun.PDF Graphic file (type pdf)
- <use pdfdrawings/steun.PDF>
-Package pdftex.def Info: pdfdrawings/steun.PDF used on input line 715.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-
-<pdfdrawings/steun.PDF, id=1505, page=1, 597.50829pt x 845.0471pt>
+<use pdfdrawings/Slider_Platform.PDF, page 1> [88 <./pdfdrawings/Slider_Platfor
+m.PDF>] <pdfdrawings/steun.PDF, id=1505, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/steun.PDF Graphic file (type pdf)
 
 <use pdfdrawings/steun.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/steun.PDF, page1 used on input line 715.
-(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: pdfdrawings/steun.PDF Graphic file (type pdf)
  <use pdfdrawings/steun.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/steun.PDF, page1 used on input line 715.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/steun.PDF Graphic file (type pdf)
 
 <use pdfdrawings/steun.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/steun.PDF, page1 used on input line 715.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/steun.PDF Graphic file (type pdf)
  <use pdfdrawings/steun.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/steun.PDF, page1 used on input line 715.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: pdfdrawings/steun.PDF Graphic file (type pdf)
 
-<use pdfdrawings/steun.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/steun.PDF, page1 used on input line 715.
-(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
- [85 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/steun.PDF>]
-<pdfdrawings/vierkantas.PDF, id=1528, 845.0471pt x 597.50829pt>
-File: pdfdrawings/vierkantas.PDF Graphic file (type pdf)
-
-<use pdfdrawings/vierkantas.PDF>
-Package pdftex.def Info: pdfdrawings/vierkantas.PDF used on input line 716.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-File: pdfdrawings/vierkantas.PDF Graphic file (type pdf)
- <use pdfdrawings/vierkantas.PDF>
-Package pdftex.def Info: pdfdrawings/vierkantas.PDF used on input line 716.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
-
-<pdfdrawings/vierkantas.PDF, id=1531, page=1, 845.0471pt x 597.50829pt>
+<use pdfdrawings/steun.PDF, page 1> [89 <./pdfdrawings/steun.PDF>]
+<pdfdrawings/vierkantas.PDF, id=1529, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/vierkantas.PDF Graphic file (type pdf)
 
 <use pdfdrawings/vierkantas.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/vierkantas.PDF, page1 used on input line 7
-16.
-(pdftex.def)             Requested size: 845.04504pt x 597.50682pt.
 File: pdfdrawings/vierkantas.PDF Graphic file (type pdf)
 
 <use pdfdrawings/vierkantas.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/vierkantas.PDF, page1 used on input line 7
-16.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/vierkantas.PDF Graphic file (type pdf)
 
 <use pdfdrawings/vierkantas.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/vierkantas.PDF, page1 used on input line 7
-16.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/vierkantas.PDF Graphic file (type pdf)
 
 <use pdfdrawings/vierkantas.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/vierkantas.PDF, page1 used on input line 7
-16.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
 File: pdfdrawings/vierkantas.PDF Graphic file (type pdf)
 
-<use pdfdrawings/vierkantas.PDF, page 1>
-Package pdftex.def Info: pdfdrawings/vierkantas.PDF, page1 used on input line 7
-16.
-(pdftex.def)             Requested size: 845.08372pt x 597.53416pt.
- [86 <C:/Users/Administrator/robotica/LaTeX/pdfdrawings/vierkantas.PDF>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 720.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 720.
-
-("C:\Users\Administrator\robotica\LaTeX\Process report 1.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 720.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 720.
-Package rerunfilecheck Info: File `Process*report*1.out' has not changed.
-(rerunfilecheck)             Checksum: <no file>.
-
+<use pdfdrawings/vierkantas.PDF, page 1> [90 <./pdfdrawings/vierkantas.PDF>]
+(./Process report 1.aux)
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 720.
  ) 
 Here is how much of TeX's memory you used:
- 8542 strings out of 494045
- 132637 string characters out of 3148363
- 225815 words of memory out of 3000000
- 11457 multiletter control sequences out of 15000+200000
+ 7226 strings out of 493848
+ 111171 string characters out of 1152822
+ 195885 words of memory out of 3000000
+ 10085 multiletter control sequences out of 15000+50000
  10486 words of font info for 37 fonts, out of 3000000 for 9000
- 715 hyphenation exceptions out of 8191
- 38i,18n,42p,1441b,541s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on "Process report 1.pdf" (86 pages, 4507101 bytes).
+ 714 hyphenation exceptions out of 8191
+ 38i,16n,38p,1404b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/t
+exmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/typ
+e1/public/eurosym/feymr10.pfb>
+Output written on "Process report 1.pdf" (90 pages, 6381918 bytes).
 PDF statistics:
  1634 PDF objects out of 1728 (max. 8388607)
- 203 named destinations out of 1000 (max. 500000)
- 1414 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 214 named destinations out of 1000 (max. 500000)
+ 1277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
