@@ -23,24 +23,25 @@
 \BOOKMARK [0][-]{chapter.9}{Initial design}{}
 \BOOKMARK [1][-]{section.9.1}{Volcanobot}{chapter.9}
 \BOOKMARK [1][-]{section.9.2}{Box-bot}{chapter.9}
-\BOOKMARK [1][-]{section.9.3}{Truck teacher}{chapter.9}
+\BOOKMARK [1][-]{section.9.3}{Truck Teacher}{chapter.9}
 \BOOKMARK [0][-]{chapter.10}{The game}{}
-\BOOKMARK [1][-]{section.10.1}{Game options}{chapter.10}
-\BOOKMARK [1][-]{section.10.2}{Game Choice}{chapter.10}
-\BOOKMARK [2][-]{subsection.10.2.1}{Tag}{section.10.2}
-\BOOKMARK [2][-]{subsection.10.2.2}{Ball shooting game 1}{section.10.2}
-\BOOKMARK [2][-]{subsection.10.2.3}{Hide and Seek}{section.10.2}
-\BOOKMARK [2][-]{subsection.10.2.4}{Tamagotchi}{section.10.2}
-\BOOKMARK [2][-]{subsection.10.2.5}{Dancing}{section.10.2}
-\BOOKMARK [2][-]{subsection.10.2.6}{Manual driving}{section.10.2}
-\BOOKMARK [2][-]{subsection.10.2.7}{Ball shooting game 2}{section.10.2}
-\BOOKMARK [2][-]{subsection.10.2.8}{Conclusion}{section.10.2}
+\BOOKMARK [1][-]{section.10.1}{Initial Game Choice}{chapter.10}
+\BOOKMARK [2][-]{subsection.10.1.1}{Tag}{section.10.1}
+\BOOKMARK [2][-]{subsection.10.1.2}{Ball shooting game 1}{section.10.1}
+\BOOKMARK [2][-]{subsection.10.1.3}{Hide and Seek}{section.10.1}
+\BOOKMARK [2][-]{subsection.10.1.4}{Tamagotchi}{section.10.1}
+\BOOKMARK [2][-]{subsection.10.1.5}{Dancing}{section.10.1}
+\BOOKMARK [2][-]{subsection.10.1.6}{Manual driving}{section.10.1}
+\BOOKMARK [2][-]{subsection.10.1.7}{Ball shooting game 2}{section.10.1}
+\BOOKMARK [2][-]{subsection.10.1.8}{Conclusion}{section.10.1}
+\BOOKMARK [1][-]{section.10.2}{Game options}{chapter.10}
 \BOOKMARK [0][-]{chapter.11}{Improve 3 initial designs}{}
 \BOOKMARK [1][-]{section.11.1}{Proof of concept calculations}{chapter.11}
 \BOOKMARK [1][-]{section.11.2}{Sketches of exterior}{chapter.11}
 \BOOKMARK [1][-]{section.11.3}{Sketches of mechanics}{chapter.11}
 \BOOKMARK [1][-]{section.11.4}{Initial software architecture}{chapter.11}
 \BOOKMARK [1][-]{section.11.5}{initial electronic and electrical design}{chapter.11}
+\BOOKMARK [1][-]{section.11.6}{Initial electronic and electrical design}{chapter.11}
 \BOOKMARK [0][-]{chapter.12}{Concept choice}{}
 \BOOKMARK [1][-]{section.12.1}{Difficulty to build}{chapter.12}
 \BOOKMARK [1][-]{section.12.2}{Entertainment value for children}{chapter.12}
@@ -50,7 +51,7 @@
 \BOOKMARK [0][-]{chapter.14}{Development prototype design}{}
 \BOOKMARK [1][-]{section.14.1}{Analysis of required parts}{chapter.14}
 \BOOKMARK [1][-]{section.14.2}{Mechanical design}{chapter.14}
-\BOOKMARK [2][-]{subsection.14.2.1}{The ball transport system }{section.14.2}
+\BOOKMARK [2][-]{subsection.14.2.1}{The ball transport system}{section.14.2}
 \BOOKMARK [2][-]{subsection.14.2.2}{Neck strength calculations}{section.14.2}
 \BOOKMARK [1][-]{section.14.3}{SolidWorks model}{chapter.14}
 \BOOKMARK [1][-]{section.14.4}{Software architecture}{chapter.14}
