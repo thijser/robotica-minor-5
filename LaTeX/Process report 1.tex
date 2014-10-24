@@ -338,17 +338,30 @@ After deciding on the name a logo was designed. The logo (see figure \ref{fig:lo
 \end{figure}
 
 \chapter{Development prototype design}
+
 \section{Analysisof required parts}
+
 \section{Mechanical design}
-The ball transport system \\
- \\
+\subsection{The ball transport system }
 In the robot, spherical objects need to be transported from the lower part of the neck to the upper part of the launching pipe. There are multiple solutions to this problem. First let’s start with the requirements for this problem. The objects that needs to be transported are styrofoam balls with a weight that is one or two grams. The solution must also be small in height to make sure that the robot is as low as possible.  \\
 It was considered to use a shooting system that shoots the balls through a pipe into the launching pipe. This would involve a similar system as used in the launching pipe itself; a spring that stores the energy and a rack and pinion construction. A system like this is complex and it would not be easy to calculate the friction between the spherical objects and the walls of the pipe.\\
 \\
 Another solution was a conveyer belt to transport the spherical objects. This belt could be a V belt or a timing belt. V belt pulleys are bigger in diameter than timing belt pulleys, and the whole solution would also be more expensive than a timing belt setup. So the solution comes to a timing belt with pulley.\\
 \\
 In figure \ref{figure:balltransport} , a drawing is displayed which shows the timing belt pulley setup. Now, a calculation of the torque of the motor to transport the balls is made.\\
-\\The torque that needs to transmitted to the driving pulley (the upper pulley in picture xxx) is equal to :
+\\The torque that needs to transmitted to the driving pulley (the upper pulley in picture xxx) is equal to: \[M=T_{e}*d_{p}/2c  \].
+The effective tension is equal to:
+\[T_{e}=F_{a}+F_{g}+F_{ab}+F_{ai}  \]
+$F_{a}$ is the resulting force from acceleration of the balls. $F_{g}$ is the resulting force of the weight of the balls. $F_{ab}$ is the force resulting from acceleration of the belt and $F_{­ai}$ the force required to accelerate the pulley.  There is also friction from the fact that the rubber strips that hold the balls are colliding with the launching pipe. It is now stated that the acceleration is almost zero and only the steady state situation is regarded. Then, only the weight of the balls is important. There is room for five balls at once, so the total weight is 10 grams. With the angle included (56.37 degrees) this results in a tension force of 0.1 N. The total moment the motor will have to deliver, with a pitch diameter of 0.02 meter is 1 Nmm. The friction from the flaps is hard to calculate. We will assume that the total moment to be delivered is 10 ten times this, so 1 Ncm. It is accepted that the balls will travel the 0.25 meter along the belt in 10 seconds. With the pitch diameter of the pulley, this results in axle speed 24 rpm. The selected motor which is properly available has a no load speed of 25 rpm, and a rated torque of 8 Ncm. This motor will operate at near no load speed, because the moment required is much lower than the rated torque, so the 24 rpm will most likely be reached and the ball will be transported in just over 10 seconds. 
+\subsection{Neck strength calculations}
+To check whether the neck is strong enough to support a child pulling on it, a strength calculation is necessary. The material used is pvc, with yield strength of 35 MPa (DYNA, 2003).
+The maximum moment which the pipe can hold is:
+\[M=W*\sigma\]
+With
+\[W=\Pi/32*(D^{4}-d^{4})/D\]
+The outer diameter $D$ is $63 mm$, and the inner diameter $d$ is 59 $mm$. So $W$ is $5665 mm3$. The maximum moment that can be imposed is $35*5665= 2.0*10^5$ Nmm. 
+The free neck length is $112 mm$, so the maximum force to be imposed $2.0*10^5/112 = 1770 N$. This equals a pull force of $180 kg$ in perpendicular direction of the neck. Conclusion: this is enough to support a child pulling it. How much force the robot can sustain before it tips over will be calculated in  \ref{sect: mechanical design: center of mass(or something like that)} 
+
 
 \section{SolidWorks model}
 \section{Software architecture}
@@ -511,6 +524,9 @@ Viola, N., Corpino, S., Fioriti, M. and Stesina. F.(2012) \textit{Functional Ana
 Choosing Safe Toys, (n.d.), Retrieved 29 September 2014, \\from http://kidshealth.org/parent/firstaid\_safe/home/safe\_toys.html \\
 \\
 Engineering “Laws” – Moore’s, Rock’s, Butter’s and others (2012), Retrieved 22 October 2014, \\from http://sourcetech411.com/2012/12/engineering-laws-moores-rocks-butters-and-others/ \\
+\\
+DYKA (2003), \textit{Technicshe Documentatie drukleiding PVC}, Retrieved 23 October 2014 \\
+from http://www.dyka.nl/nl/binaries/2010\%20TD\%20Drukleiding\%20PVC\%20en\%20PE\%20maart\%202003\%20nwe\%20omslag\_tcm29-6927.pdf \\
 \\
 Battery Discharge Methods, (n.d.), Retrieved 23 October 2014, \\from http://batteryuniversity.com/learn/article/discharge\_methods\\
 \\

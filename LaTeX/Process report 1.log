@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.10.22)  24 OCT 2014 11:58
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.10.22)  24 OCT 2014 12:28
 entering extended mode
  %&-line parsing enabled.
 **"Process report 1.tex"
@@ -437,9 +437,6 @@ Missing character: There is no ¬ in font cmr10!
 Missing character: There is no £ in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
@@ -517,7 +514,7 @@ Chapter 4.
 
 ]
 Chapter 5.
-<Images/FunctionalAnalysis.png, id=479, 4432.56pt x 1672.2475pt>
+<Images/FunctionalAnalysis.png, id=489, 4432.56pt x 1672.2475pt>
 File: Images/FunctionalAnalysis.png Graphic file (type png)
 
 <use Images/FunctionalAnalysis.png>
@@ -557,7 +554,7 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-<Images/BallLaunch.png, id=500, 401.5pt x 401.5pt>
+<Images/BallLaunch.png, id=510, 401.5pt x 401.5pt>
 File: Images/BallLaunch.png Graphic file (type png)
  <use Images/BallLaunch.png>
 Underfull \hbox (badness 10000) in paragraph at lines 174--186
@@ -571,13 +568,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 [18 <./Images/BallLaunch.png>]
-<Images/LOTTERY-BALLS-with-rfid.jpg, id=515, 317.185pt x 302.12875pt>
+<Images/LOTTERY-BALLS-with-rfid.jpg, id=525, 317.185pt x 302.12875pt>
 File: Images/LOTTERY-BALLS-with-rfid.jpg Graphic file (type jpg)
 
 <use Images/LOTTERY-BALLS-with-rfid.jpg> [19 <./Images/LOTTERY-BALLS-with-rfid.
 jpg>]
 Chapter 9.
-<Images/VolcanoBotConcept.pdf, id=525, 1195.10492pt x 845.07718pt>
+<Images/VolcanoBotConcept.pdf, id=535, 1195.10492pt x 845.07718pt>
 File: Images/VolcanoBotConcept.pdf Graphic file (type pdf)
 
 <use Images/VolcanoBotConcept.pdf>
@@ -585,13 +582,13 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-<Images/BoxBotConcept.pdf, id=527, 1195.10492pt x 845.07718pt>
+<Images/BoxBotConcept.pdf, id=537, 1195.10492pt x 845.07718pt>
 File: Images/BoxBotConcept.pdf Graphic file (type pdf)
 
 <use Images/BoxBotConcept.pdf> [20
 
  <./Images/VolcanoBotConcept.pdf>]
-<Images/TruckTeacherConcept.pdf, id=536, 1195.10492pt x 845.07718pt>
+<Images/TruckTeacherConcept.pdf, id=546, 1195.10492pt x 845.07718pt>
 File: Images/TruckTeacherConcept.pdf Graphic file (type pdf)
 
 <use Images/TruckTeacherConcept.pdf> [21 <./Images/BoxBotConcept.pdf> <./Images
@@ -684,7 +681,7 @@ Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
  [27]
 Chapter 13.
-<Images/logo_Tawi.png, id=575, 648.4225pt x 512.91624pt>
+<Images/logo_Tawi.png, id=585, 648.4225pt x 512.91624pt>
 File: Images/logo_Tawi.png Graphic file (type png)
 
 <use Images/logo_Tawi.png> [28
@@ -696,27 +693,31 @@ Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
 LaTeX Warning: Reference `figure:balltransport' on page 29 undefined on input l
-ine 350.
+ine 351.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--352
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 343--352
+Underfull \hbox (badness 10000) in paragraph at lines 346--352
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--352
+Underfull \hbox (badness 10000) in paragraph at lines 346--352
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--352
+Underfull \hbox (badness 10000) in paragraph at lines 346--352
 
  []
+
+Missing character: There is no ¬ in font cmr8!
+Missing character: There is no ≠ in font cmr8!
+[29
+
+]
+
+LaTeX Warning: Reference `sect: mechanical design: center of mass(or something 
+like that)' on page 30 undefined on input line 363.
 
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
@@ -724,17 +725,15 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-[29
-
-] <Images/VolcanoBot-Controllers.png, id=588, 1445.4pt x 682.55pt>
+<Images/VolcanoBot-Controllers.png, id=600, 1445.4pt x 682.55pt>
 File: Images/VolcanoBot-Controllers.png Graphic file (type png)
 
 <use Images/VolcanoBot-Controllers.png>
-<Images/VolcanoBot-Audio-Video.png, id=589, 1304.875pt x 642.4pt>
+<Images/VolcanoBot-Audio-Video.png, id=601, 1304.875pt x 642.4pt>
 File: Images/VolcanoBot-Audio-Video.png Graphic file (type png)
 
 <use Images/VolcanoBot-Audio-Video.png>
-<Images/VolcanoBot-ObjectScanning.png, id=590, 1184.425pt x 943.525pt>
+<Images/VolcanoBot-ObjectScanning.png, id=602, 1184.425pt x 943.525pt>
 File: Images/VolcanoBot-ObjectScanning.png Graphic file (type png)
 
 <use Images/VolcanoBot-ObjectScanning.png>
@@ -751,7 +750,7 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
 
-<Images/VolcanoBot-Motors.png, id=591, 1756.5625pt x 1104.125pt>
+<Images/VolcanoBot-Motors.png, id=603, 1756.5625pt x 1104.125pt>
 File: Images/VolcanoBot-Motors.png Graphic file (type png)
 
 <use Images/VolcanoBot-Motors.png> [30]
@@ -819,54 +818,54 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
  [36]
-<Images/ElectronicalDiagram.png, id=636, 1073.00874pt x 461.725pt>
+<Images/ElectronicalDiagram.png, id=649, 1073.00874pt x 461.725pt>
 File: Images/ElectronicalDiagram.png Graphic file (type png)
 
 <use Images/ElectronicalDiagram.png> [37 <./Images/ElectronicalDiagram.png (PNG
  copy)>]
 Chapter 15.
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--479
+Underfull \hbox (badness 10000) in paragraph at lines 452--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--479
+Underfull \hbox (badness 10000) in paragraph at lines 452--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--479
+Underfull \hbox (badness 10000) in paragraph at lines 452--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--479
+Underfull \hbox (badness 10000) in paragraph at lines 452--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--479
+Underfull \hbox (badness 10000) in paragraph at lines 452--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--479
+Underfull \hbox (badness 10000) in paragraph at lines 452--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--479
+Underfull \hbox (badness 10000) in paragraph at lines 452--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--479
+Underfull \hbox (badness 10000) in paragraph at lines 452--492
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--479
+Underfull \hbox (badness 10000) in paragraph at lines 452--492
 
  []
 
@@ -875,7 +874,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 439--479
 ] [39]
 Chapter 16.
 
-Underfull \hbox (badness 10000) in paragraph at lines 481--486
+Underfull \hbox (badness 10000) in paragraph at lines 494--499
 
  []
 
@@ -916,98 +915,109 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Overfull \hbox (16.08812pt too wide) in paragraph at lines 487--525
+Overfull \hbox (16.08812pt too wide) in paragraph at lines 500--541
 \OT1/cmr/m/n/10.95 from http://www.telegraph.co.uk/earth/earthnews/7897112/Brit
 ains-litter-epidemic-costs-almost-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Overfull \hbox (192.85783pt too wide) in paragraph at lines 500--541
+\OT1/cmr/m/n/10.95 from http://www.dyka.nl/nl/binaries/2010%20TD%20Drukleiding%
+20PVC%20en%20PE%20maart%202003%20nwe%20omslag[]tcm29-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--525
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--541
 
  []
 
@@ -1043,67 +1053,67 @@ Appendix F.
 ]
 Appendix G.
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 584--584
 []|\OT1/cmr/m/n/10.95 Maximum
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 584--584
 []|\OT1/cmr/m/n/10.95 Effective
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 584--584
 \OT1/cmr/m/n/10.95 Re-quired
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 584--584
 []|\OT1/cmr/m/n/10.95 Minimum
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 584--584
 []|\OT1/cmr/m/n/10.95 Effective
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 584--584
 \OT1/cmr/m/n/10.95 Re-quired
  []
 
 
-Underfull \hbox (badness 6995) in paragraph at lines 568--569
+Underfull \hbox (badness 6995) in paragraph at lines 584--585
 []|\OT1/cmr/m/n/10.95 Average Ef-fec-tive
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 570--570
+Underfull \hbox (badness 10000) in paragraph at lines 586--586
 []|\OT1/cmr/m/n/10.95 Shooting
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 570--570
+Underfull \hbox (badness 10000) in paragraph at lines 586--586
 []|\OT1/cmr/m/n/10.95 While
  []
 
 
-Underfull \hbox (badness 1924) in paragraph at lines 571--571
+Underfull \hbox (badness 1924) in paragraph at lines 587--587
 []|\OT1/cmr/m/n/10.95 Wheel mo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 572--572
+Underfull \hbox (badness 10000) in paragraph at lines 588--588
 []|\OT1/cmr/m/n/10.95 RFID
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 573--573
+Underfull \hbox (badness 10000) in paragraph at lines 589--589
 []|\OT1/cmr/m/n/10.95 Ultrasonic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 577--577
+Underfull \hbox (badness 10000) in paragraph at lines 593--593
 []|\OT1/cmr/m/n/10.95 While
  []
 
@@ -1113,7 +1123,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 577--577
 Appendix H.
 [52
 
-] <pdfdrawings/as_onderkaak.PDF, id=709, page=1, 845.0471pt x 597.50829pt>
+] <pdfdrawings/as_onderkaak.PDF, id=722, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/as_onderkaak.PDF Graphic file (type pdf)
 
 <use pdfdrawings/as_onderkaak.PDF, page 1>
@@ -1129,7 +1139,7 @@ File: pdfdrawings/as_onderkaak.PDF Graphic file (type pdf)
 File: pdfdrawings/as_onderkaak.PDF Graphic file (type pdf)
 
 <use pdfdrawings/as_onderkaak.PDF, page 1> [53 <./pdfdrawings/as_onderkaak.PDF>
-] <pdfdrawings/Axle.PDF, id=733, page=1, 845.0471pt x 597.50829pt>
+] <pdfdrawings/Axle.PDF, id=746, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/Axle.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Axle.PDF, page 1>
@@ -1143,7 +1153,7 @@ File: pdfdrawings/Axle.PDF Graphic file (type pdf)
 File: pdfdrawings/Axle.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Axle.PDF, page 1> [54 <./pdfdrawings/Axle.PDF>]
-<pdfdrawings/axle_to_pushrod.PDF, id=757, page=1, 597.50829pt x 845.0471pt>
+<pdfdrawings/axle_to_pushrod.PDF, id=770, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/axle_to_pushrod.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axle_to_pushrod.PDF, page 1>
@@ -1159,7 +1169,7 @@ File: pdfdrawings/axle_to_pushrod.PDF Graphic file (type pdf)
 File: pdfdrawings/axle_to_pushrod.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axle_to_pushrod.PDF, page 1> [55 <./pdfdrawings/axle_to_pushro
-d.PDF>] <pdfdrawings/axlemount.PDF, id=782, page=1, 597.50829pt x 845.0471pt>
+d.PDF>] <pdfdrawings/axlemount.PDF, id=795, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/axlemount.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axlemount.PDF, page 1>
@@ -1175,7 +1185,7 @@ File: pdfdrawings/axlemount.PDF Graphic file (type pdf)
 File: pdfdrawings/axlemount.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axlemount.PDF, page 1> [56 <./pdfdrawings/axlemount.PDF>]
-<pdfdrawings/axlemountRight.PDF, id=806, page=1, 597.50829pt x 845.0471pt>
+<pdfdrawings/axlemountRight.PDF, id=819, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/axlemountRight.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axlemountRight.PDF, page 1>
@@ -1191,7 +1201,7 @@ File: pdfdrawings/axlemountRight.PDF Graphic file (type pdf)
 File: pdfdrawings/axlemountRight.PDF Graphic file (type pdf)
 
 <use pdfdrawings/axlemountRight.PDF, page 1> [57 <./pdfdrawings/axlemountRight.
-PDF>] <pdfdrawings/BaseV2.PDF, id=830, page=1, 845.0471pt x 597.50829pt>
+PDF>] <pdfdrawings/BaseV2.PDF, id=843, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/BaseV2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BaseV2.PDF, page 1>
@@ -1205,7 +1215,7 @@ File: pdfdrawings/BaseV2.PDF Graphic file (type pdf)
 File: pdfdrawings/BaseV2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BaseV2.PDF, page 1> [58 <./pdfdrawings/BaseV2.PDF>]
-<pdfdrawings/BearingBlock.PDF, id=854, page=1, 597.50829pt x 845.0471pt>
+<pdfdrawings/BearingBlock.PDF, id=867, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/BearingBlock.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BearingBlock.PDF, page 1>
@@ -1221,7 +1231,7 @@ File: pdfdrawings/BearingBlock.PDF Graphic file (type pdf)
 File: pdfdrawings/BearingBlock.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BearingBlock.PDF, page 1> [59 <./pdfdrawings/BearingBlock.PDF>
-] <pdfdrawings/BijnaUBeugel.PDF, id=878, page=1, 597.50829pt x 845.0471pt>
+] <pdfdrawings/BijnaUBeugel.PDF, id=891, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/BijnaUBeugel.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BijnaUBeugel.PDF, page 1>
@@ -1237,7 +1247,7 @@ File: pdfdrawings/BijnaUBeugel.PDF Graphic file (type pdf)
 File: pdfdrawings/BijnaUBeugel.PDF Graphic file (type pdf)
 
 <use pdfdrawings/BijnaUBeugel.PDF, page 1> [60 <./pdfdrawings/BijnaUBeugel.PDF>
-] <pdfdrawings/containment_ring.PDF, id=902, page=1, 845.0471pt x 597.50829pt>
+] <pdfdrawings/containment_ring.PDF, id=915, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/containment_ring.PDF Graphic file (type pdf)
 
 <use pdfdrawings/containment_ring.PDF, page 1>
@@ -1254,7 +1264,7 @@ File: pdfdrawings/containment_ring.PDF Graphic file (type pdf)
 
 <use pdfdrawings/containment_ring.PDF, page 1> [61 <./pdfdrawings/containment_r
 ing.PDF>]
-<pdfdrawings/fixatie_pvc_onder.PDF, id=927, page=1, 845.0471pt x 597.50829pt>
+<pdfdrawings/fixatie_pvc_onder.PDF, id=940, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/fixatie_pvc_onder.PDF Graphic file (type pdf)
 
 <use pdfdrawings/fixatie_pvc_onder.PDF, page 1>
@@ -1271,7 +1281,7 @@ File: pdfdrawings/fixatie_pvc_onder.PDF Graphic file (type pdf)
 
 <use pdfdrawings/fixatie_pvc_onder.PDF, page 1> [62 <./pdfdrawings/fixatie_pvc_
 onder.PDF>]
-<pdfdrawings/GuideRail1.PDF, id=951, page=1, 845.0471pt x 597.50829pt>
+<pdfdrawings/GuideRail1.PDF, id=964, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/GuideRail1.PDF Graphic file (type pdf)
 
 <use pdfdrawings/GuideRail1.PDF, page 1>
@@ -1287,7 +1297,7 @@ File: pdfdrawings/GuideRail1.PDF Graphic file (type pdf)
 File: pdfdrawings/GuideRail1.PDF Graphic file (type pdf)
 
 <use pdfdrawings/GuideRail1.PDF, page 1> [63 <./pdfdrawings/GuideRail1.PDF>]
-<pdfdrawings/GuideRail2.PDF, id=975, page=1, 597.50829pt x 845.0471pt>
+<pdfdrawings/GuideRail2.PDF, id=988, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/GuideRail2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/GuideRail2.PDF, page 1>
@@ -1303,7 +1313,7 @@ File: pdfdrawings/GuideRail2.PDF Graphic file (type pdf)
 File: pdfdrawings/GuideRail2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/GuideRail2.PDF, page 1> [64 <./pdfdrawings/GuideRail2.PDF>]
-<pdfdrawings/Head.PDF, id=999, page=1, 845.0471pt x 1195.01462pt>
+<pdfdrawings/Head.PDF, id=1012, page=1, 845.0471pt x 1195.01462pt>
 File: pdfdrawings/Head.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Head.PDF, page 1>
@@ -1317,7 +1327,7 @@ File: pdfdrawings/Head.PDF Graphic file (type pdf)
 File: pdfdrawings/Head.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Head.PDF, page 1> [65 <./pdfdrawings/Head.PDF>]
-<pdfdrawings/Jaw_Head.PDF, id=1023, page=1, 845.0471pt x 597.50829pt>
+<pdfdrawings/Jaw_Head.PDF, id=1036, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/Jaw_Head.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Jaw_Head.PDF, page 1>
@@ -1331,7 +1341,7 @@ File: pdfdrawings/Jaw_Head.PDF Graphic file (type pdf)
 File: pdfdrawings/Jaw_Head.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Jaw_Head.PDF, page 1> [66 <./pdfdrawings/Jaw_Head.PDF>]
-<pdfdrawings/linkage_mouthplate.PDF, id=1047, page=1, 845.0471pt x 597.50829pt>
+<pdfdrawings/linkage_mouthplate.PDF, id=1060, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/linkage_mouthplate.PDF Graphic file (type pdf)
 <use pdfdrawings/linkage_mouthplate.PDF, page 1>
 File: pdfdrawings/linkage_mouthplate.PDF Graphic file (type pdf)
@@ -1347,7 +1357,7 @@ File: pdfdrawings/linkage_mouthplate.PDF Graphic file (type pdf)
 
 <use pdfdrawings/linkage_mouthplate.PDF, page 1> [67 <./pdfdrawings/linkage_mou
 thplate.PDF>]
-<pdfdrawings/mainframe.PDF, id=1072, page=1, 845.0471pt x 597.50829pt>
+<pdfdrawings/mainframe.PDF, id=1085, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/mainframe.PDF Graphic file (type pdf)
 
 <use pdfdrawings/mainframe.PDF, page 1>
@@ -1363,7 +1373,7 @@ File: pdfdrawings/mainframe.PDF Graphic file (type pdf)
 File: pdfdrawings/mainframe.PDF Graphic file (type pdf)
 
 <use pdfdrawings/mainframe.PDF, page 1> [68 <./pdfdrawings/mainframe.PDF>]
-<pdfdrawings/motordakje.PDF, id=1096, page=1, 845.0471pt x 597.50829pt>
+<pdfdrawings/motordakje.PDF, id=1109, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/motordakje.PDF Graphic file (type pdf)
 
 <use pdfdrawings/motordakje.PDF, page 1>
@@ -1379,7 +1389,7 @@ File: pdfdrawings/motordakje.PDF Graphic file (type pdf)
 File: pdfdrawings/motordakje.PDF Graphic file (type pdf)
 
 <use pdfdrawings/motordakje.PDF, page 1> [69 <./pdfdrawings/motordakje.PDF>]
-<pdfdrawings/motormount.PDF, id=1120, page=1, 597.50829pt x 845.0471pt>
+<pdfdrawings/motormount.PDF, id=1133, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/motormount.PDF Graphic file (type pdf)
 
 <use pdfdrawings/motormount.PDF, page 1>
@@ -1395,7 +1405,7 @@ File: pdfdrawings/motormount.PDF Graphic file (type pdf)
 File: pdfdrawings/motormount.PDF Graphic file (type pdf)
 
 <use pdfdrawings/motormount.PDF, page 1> [70 <./pdfdrawings/motormount.PDF>]
-<pdfdrawings/mouthplate.PDF, id=1144, page=1, 845.0471pt x 597.50829pt>
+<pdfdrawings/mouthplate.PDF, id=1157, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/mouthplate.PDF Graphic file (type pdf)
 
 <use pdfdrawings/mouthplate.PDF, page 1>
@@ -1411,7 +1421,7 @@ File: pdfdrawings/mouthplate.PDF Graphic file (type pdf)
 File: pdfdrawings/mouthplate.PDF Graphic file (type pdf)
 
 <use pdfdrawings/mouthplate.PDF, page 1> [71 <./pdfdrawings/mouthplate.PDF>]
-<pdfdrawings/pipe_catcher.PDF, id=1168, page=1, 597.50829pt x 845.0471pt>
+<pdfdrawings/pipe_catcher.PDF, id=1181, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/pipe_catcher.PDF Graphic file (type pdf)
 
 <use pdfdrawings/pipe_catcher.PDF, page 1>
@@ -1428,7 +1438,7 @@ File: pdfdrawings/pipe_catcher.PDF Graphic file (type pdf)
 
 <use pdfdrawings/pipe_catcher.PDF, page 1> [72 <./pdfdrawings/pipe_catcher.PDF>
 ]
-<pdfdrawings/plaatje_voorkant.PDF, id=1192, page=1, 845.0471pt x 597.50829pt>
+<pdfdrawings/plaatje_voorkant.PDF, id=1205, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/plaatje_voorkant.PDF Graphic file (type pdf)
 
 <use pdfdrawings/plaatje_voorkant.PDF, page 1>
@@ -1445,7 +1455,7 @@ File: pdfdrawings/plaatje_voorkant.PDF Graphic file (type pdf)
 
 <use pdfdrawings/plaatje_voorkant.PDF, page 1> [73 <./pdfdrawings/plaatje_voork
 ant.PDF>]
-<pdfdrawings/pulleyblock.PDF, id=1217, page=1, 597.50829pt x 845.0471pt>
+<pdfdrawings/pulleyblock.PDF, id=1230, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/pulleyblock.PDF Graphic file (type pdf)
 
 <use pdfdrawings/pulleyblock.PDF, page 1>
@@ -1461,7 +1471,7 @@ File: pdfdrawings/pulleyblock.PDF Graphic file (type pdf)
 File: pdfdrawings/pulleyblock.PDF Graphic file (type pdf)
 
 <use pdfdrawings/pulleyblock.PDF, page 1> [74 <./pdfdrawings/pulleyblock.PDF>]
-<pdfdrawings/pushrod.PDF, id=1241, page=1, 845.0471pt x 597.50829pt>
+<pdfdrawings/pushrod.PDF, id=1254, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/pushrod.PDF Graphic file (type pdf)
 
 <use pdfdrawings/pushrod.PDF, page 1>
@@ -1475,7 +1485,7 @@ File: pdfdrawings/pushrod.PDF Graphic file (type pdf)
 File: pdfdrawings/pushrod.PDF Graphic file (type pdf)
 
 <use pdfdrawings/pushrod.PDF, page 1> [75 <./pdfdrawings/pushrod.PDF>]
-<pdfdrawings/RackStopper.PDF, id=1265, page=1, 597.50829pt x 845.0471pt>
+<pdfdrawings/RackStopper.PDF, id=1278, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/RackStopper.PDF Graphic file (type pdf)
 
 <use pdfdrawings/RackStopper.PDF, page 1>
@@ -1491,7 +1501,7 @@ File: pdfdrawings/RackStopper.PDF Graphic file (type pdf)
 File: pdfdrawings/RackStopper.PDF Graphic file (type pdf)
 
 <use pdfdrawings/RackStopper.PDF, page 1> [76 <./pdfdrawings/RackStopper.PDF>]
-<pdfdrawings/ring.PDF, id=1289, page=1, 597.50829pt x 845.0471pt>
+<pdfdrawings/ring.PDF, id=1302, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/ring.PDF Graphic file (type pdf)
 
 <use pdfdrawings/ring.PDF, page 1>
@@ -1505,7 +1515,7 @@ File: pdfdrawings/ring.PDF Graphic file (type pdf)
 File: pdfdrawings/ring.PDF Graphic file (type pdf)
 
 <use pdfdrawings/ring.PDF, page 1> [77 <./pdfdrawings/ring.PDF>]
-<pdfdrawings/screenholderV2.PDF, id=1313, page=1, 845.0471pt x 597.50829pt>
+<pdfdrawings/screenholderV2.PDF, id=1326, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/screenholderV2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/screenholderV2.PDF, page 1>
@@ -1521,7 +1531,7 @@ File: pdfdrawings/screenholderV2.PDF Graphic file (type pdf)
 File: pdfdrawings/screenholderV2.PDF Graphic file (type pdf)
 
 <use pdfdrawings/screenholderV2.PDF, page 1> [78 <./pdfdrawings/screenholderV2.
-PDF>] <pdfdrawings/Shell.PDF, id=1337, page=1, 845.0471pt x 597.50829pt>
+PDF>] <pdfdrawings/Shell.PDF, id=1350, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/Shell.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Shell.PDF, page 1>
@@ -1535,7 +1545,7 @@ File: pdfdrawings/Shell.PDF Graphic file (type pdf)
 File: pdfdrawings/Shell.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Shell.PDF, page 1> [79 <./pdfdrawings/Shell.PDF>]
-<pdfdrawings/shell_fastener.PDF, id=1362, page=1, 845.0471pt x 597.50829pt>
+<pdfdrawings/shell_fastener.PDF, id=1375, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/shell_fastener.PDF Graphic file (type pdf)
 
 <use pdfdrawings/shell_fastener.PDF, page 1>
@@ -1552,7 +1562,7 @@ File: pdfdrawings/shell_fastener.PDF Graphic file (type pdf)
 
 <use pdfdrawings/shell_fastener.PDF, page 1> [80 <./pdfdrawings/shell_fastener.
 PDF>]
-<pdfdrawings/Slider_Platform.PDF, id=1386, page=1, 845.0471pt x 597.50829pt>
+<pdfdrawings/Slider_Platform.PDF, id=1399, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/Slider_Platform.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Slider_Platform.PDF, page 1>
@@ -1568,7 +1578,7 @@ File: pdfdrawings/Slider_Platform.PDF Graphic file (type pdf)
 File: pdfdrawings/Slider_Platform.PDF Graphic file (type pdf)
 
 <use pdfdrawings/Slider_Platform.PDF, page 1> [81 <./pdfdrawings/Slider_Platfor
-m.PDF>] <pdfdrawings/steun.PDF, id=1410, page=1, 597.50829pt x 845.0471pt>
+m.PDF>] <pdfdrawings/steun.PDF, id=1423, page=1, 597.50829pt x 845.0471pt>
 File: pdfdrawings/steun.PDF Graphic file (type pdf)
 
 <use pdfdrawings/steun.PDF, page 1>
@@ -1582,7 +1592,7 @@ File: pdfdrawings/steun.PDF Graphic file (type pdf)
 File: pdfdrawings/steun.PDF Graphic file (type pdf)
 
 <use pdfdrawings/steun.PDF, page 1> [82 <./pdfdrawings/steun.PDF>]
-<pdfdrawings/vierkantas.PDF, id=1434, page=1, 845.0471pt x 597.50829pt>
+<pdfdrawings/vierkantas.PDF, id=1447, page=1, 845.0471pt x 597.50829pt>
 File: pdfdrawings/vierkantas.PDF Graphic file (type pdf)
 
 <use pdfdrawings/vierkantas.PDF, page 1>
@@ -1604,23 +1614,25 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7107 strings out of 495061
- 109187 string characters out of 1182620
+ 7112 strings out of 495061
+ 109324 string characters out of 1182620
  194370 words of memory out of 3000000
- 9899 multiletter control sequences out of 15000+50000
+ 9902 multiletter control sequences out of 15000+50000
  10369 words of font info for 36 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 38i,16n,38p,892b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,16n,38p,1404b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public
-/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb
->
-Output written on "Process report 1.pdf" (83 pages, 3580299 bytes).
+xlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/t
+exmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "Process report 1.pdf" (83 pages, 3613409 bytes).
 PDF statistics:
- 1523 PDF objects out of 1728 (max. 8388607)
- 191 named destinations out of 1000 (max. 500000)
- 1182 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1546 PDF objects out of 1728 (max. 8388607)
+ 193 named destinations out of 1000 (max. 500000)
+ 1198 words of extra memory for PDF output out of 10000 (max. 10000000)
 
