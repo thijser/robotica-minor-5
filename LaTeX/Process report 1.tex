@@ -430,8 +430,8 @@ After deciding on the name a logo was designed. The logo (see figure \ref{fig:lo
 \subsection{The mouth}
 Opening the mouth is an operation for a servo. The servo would not fit directly next to the mouth though, so we needed to use some sort of transmission for the movement.\\
 Lucky for us, the mouth is not very heavy. We\rq{}re using the smallest servo we can find, which delivers 0.15Nm at 5V.\\
-According to our calculations, which were done with an exaggerated weight of the mouth and can be found in APPENDIX XXXX, we could use an arm attached to the mouth axle that is two-thirds the length of the servo arm. If it is bigger, this only gives us more advantage. Since the servo arm has several attachment points, we are using an arm that has the length of half the servo arm. We can then adjust the servo arm when needed.\\
-An overview of the mechanisms can be found in Figure \ref{fig:headmech}
+According to our calculations, which were done with an exaggerated weight of the mouth and can be found in Appendix \ref{appendix:calculations}, we could use an arm attached to the mouth axle that is two-thirds the length of the servo arm. If it is bigger, this only gives us more advantage. Since the servo arm has several attachment points, we are using an arm that has the length of half the servo arm. We can then adjust the servo arm when needed.\\
+An overview of the mechanisms can be found in Figure \ref{fig:headmech}.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width = 10cm]{Images/headmechanism.jpg}
@@ -472,7 +472,7 @@ We need a motor to drive a pinion, which in turn pulls a rack backward and that 
 
 With all this in mind, we thought about building a gearbox and locking mechanism ourselves, which is perfectly fine but just takes time. The idea came forward to use a worm gear as a locking mechanism and a gearbox. This suits our wishes perfectly, since it\rq{}s a self-locking mechanism, has a huge gear ratio (the worm gear is basically a gear with 1 tooth) and can be relatively small in size.\\
 Further investigation of this revealed that motors are being sold with an attached worm wheel gearbox. Perfect! There was however one problem: most of the motors we could find were sold from China. If you have months of time to wait for parts this is probably fine, but since we don\rq{}t have months to wait for our motor, we had to found a solution closer to home.\\
-We found a company near Delft that sells these motors for all sorts of purposes. Most of these purposes were automotive, such as windscreen wiper motors or adjustable seat motors. A sheet with specifications is attached as an APPENDIX.
+We found a company near Delft that sells these motors for all sorts of purposes. Most of these purposes were automotive, such as windscreen wiper motors or adjustable seat motors. A sheet with specifications is attached as an Appendix \ref{appendix:motor}.
 
 \subsection{Launching mechanism}
 
@@ -489,7 +489,7 @@ Also, it takes up quite a lot of room since it needs two spinning wheels with a 
 And last but not least, spinning up wheels with a considerable mass costs quite a bit of energy, not all of which is going to go into the launch but some of it will also remain in the wheels.\\
 Finally, a spring mechanism was chosen. The release however we were not sure of. We could make some sort of finger to hold the carriage as it travels, and make the finger release at the bottom. This is quite an intricate process with quite a lot of parts, and is therefore not ideal.\\
 Another option is to extend the springs with a rack and pinion. We would take off a couple of teeth of the gear to make the release. When the gear rotates and the rack gets to a point where there are no more teeth, it automatically shoots forward. It consists of little parts and is relatively easy to build. It needed some simple calculations to figure out the travel of the springs and the diameter of the gear, but this was not a problem.\\
-A picture of the final construction can be found in Figure \ref{fig:launmech}. Detailed part drawings can be found in APPENDIX XXXX.\\
+A picture of the final construction can be found in Figure \ref{fig:launmech}. Detailed part drawings can be found in Appendix \ref{appendix:drawings}.\\
 We used some plastic (POM) guiding rails to guide the rack is it\rq{}s being pulled back. POM is good for this use as it is a little bit wear resistant and has a low coefficient of friction on metal.\\
 
 \begin{figure}[H]
@@ -547,14 +547,10 @@ The maximum moment which the pipe can hold is:
 \[M=W*\sigma\]
 With
 \[\frac{\Pi}{32}*\frac{(D^{4}-d^{4})}{D}\]
-<<<<<<< HEAD
-The outer diameter $D$ is 63 mm, and the inner diameter $d$ is 59 mm. So $W$ is 5665 mm3. The maximum moment that can be imposed is $35*5665= 2.0*10^5$ Nmm. 
-The free neck length is 112 mm, so the maximum force to be imposed $2.0*10^5/112 = 1770$ N. This equals a pull force of 180 kg in perpendicular direction of the neck. Conclusion: this is enough to support a child pulling it. How much force the robot can sustain before it tips over will be calculated in  \ref{sect: mechanical design: center of mass(or something like that)} 
-=======
 The outer diameter $D$ is 63 mm, and the inner diameter $d$ is 59 mm. So $W$ is 5665 mm\textsuperscript{3}. The maximum moment that can be imposed is $35*5665= 2.0*10^5$ Nmm. 
 The free neck length is 112mm, so the maximum force to be imposed $2.0*10^5/112 = 1770$ N. This equals a pull force of 180kg in perpendicular direction of the neck. \\
 Conclusion: this is enough to support a child pulling it. How much force the robot can sustain before it tips over will be calculated in  \ref{sect: mechanical design: center of mass(or something like that)} 
->>>>>>> 1679d446598ed5aad0237c2b242b11fe94eacf22
+
 
 
 \section{SolidWorks model}
@@ -758,6 +754,8 @@ The balls would have different picture of animals on it and the robot would ask 
 The robot can practice words and letters with the child. The robot would have balls with letters on them and can ask for the word \lq\lq{}dog\rq\rq{} for example. The child would need to give the \lq\lq{}d\rq\rq{}, the \lq\lq{}o\rq\rq{} and the \lq\lq{}g\rq\rq{} to the robot to make the word \lq\lq{}dog\rq\rq{}. For younger children the robot could just practice individual letters. Older children could maybe even learn a foreign language with the robot by practicing words.
 \label{appendix:games}
 
+\appendix
+
 \chapter{Details software design}
 \begin{itemize}
 \item \textbf{Ball-scanning:} Offered balls should be recognized within 3 seconds
@@ -825,7 +823,15 @@ Total              & 6.172   &     -           & 3.086                   & 4.408
 \label{table:battery}
 \end{sidewaystable}
 \label{appendix:battery}
+\chapter{Calculations}
+\includepdf[pages={1}]{Images/calculations_mouth.pdf}
+\includepdf[pages={1}]{Images/truckproof.pdf}
+\includepdf[pages={1}]{Images/springproof.pdf}
+\label{appendix:calculations}
+\chapter{Motor specifications}
+\label{appendix:motor}
 \chapter{Drawings}
+\label{appendix:drawings}
 \includepdf[pages={1},landscape=true]{pdfdrawings/as_onderkaak.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/Axle.PDF}
 \includepdf[pages={1}]{pdfdrawings/axle_to_pushrod.PDF}
