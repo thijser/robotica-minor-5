@@ -106,7 +106,7 @@ This chapter will be about the field of application of the object requesting edu
 \section{Marketing}
 The market for autonomous robotic toys is not very big yet. There are some fully autonomous robots being sold for around \euro{}100. Most of these robotic toys are focused on older children, and focused on boys in particular, examples can be found in Appendix \ref{appendix:competitors}: Competitors. The indirect goal is to get an autonomous robot on the market for about the same amount of money, but it should target a different group of users, this group of users being younger children of both sexes.
 \section{Technological}
-The price of computer calculations (processing power) has dropped a lot over the recent years. CPUs, Central Processing Units, have become so cheap that they are now available in toys. The price will continue to go down in the future. This can be explained by Moore\rq{}s law: the power of a newly developed processor doubles every two years (\lq\lq{}Engineering Law. Moores, Rocks, Butters and others\rq\rq{}, 2012). And with Rock\rq{}s law that state that the cost of a given unit computational power will halve every 36 months. This has to do with the ever decreasing chip and component size, which makes it possible to get more components on the same surface. If you look at a chip with a certain processing power, it will become smaller and therefore cheaper every year. \\
+The price of computer calculations (processing power) has dropped a lot over the recent years. CPUs, Central Processing Units, have become so cheap that they are now available in toys. The price will continue to go down in the future. This can be explained by Moore\rq{}s law: the power of a newly developed processor doubles every two years (\lq\lq{}Engineering Laws - Moore\rq{}s, Rock\rq{}s, Butter\rq{}s and others\rq\rq{}, 2012). And with Rock\rq{}s law that state that the cost of a given unit computational power will halve every 36 months. This has to do with the ever decreasing chip and component size, which makes it possible to get more components on the same surface. If you look at a chip with a certain processing power, it will become smaller and therefore cheaper every year. \\
 Also, computer vision systems are up and coming because of this increased processing power. Vision systems needed a pretty hefty system a few years back. Now, it\rq{}s possible do vision processing with a much cheaper system and therefore it becomes more interesting for developers to use vision systems.
 \section{Social}
 
@@ -191,13 +191,14 @@ Finally, the available space for the loading cylinder is 180mm high and has a di
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width = 10cm]{Images/BallLaunch.png}
-\caption{This figure showed how the balls will be placed in the launching pipe.}
+\caption{This figure shows how the balls will fall in the launching pipe for 50mm balls.}
 \label{fig:balllaunch}
 \end{center}
 \end{figure}
 If the 60mm balls would be used though, it would decrease significantly to around 12-15 balls. 
 Since there is also storage space in the neck, the total storage would be around 30 balls. This is enough for the 26 letters of the alphabet and without using the neck it would be enough for 2 sets of the numbers 0-9. \\
 The 50mm balls would be most advantageous and will therefore also be used. 
+
 \subsubsection{Material}
 For the materials, the ball must not be able to hurt the child when it falls on the childs head. For this reason, a material like foam or styrofoam would be ideal 
 \newpage
@@ -210,8 +211,11 @@ The final decision is 50mm foam or styrofoam balls, depending on the availabilit
 \caption{A 50mm foam ball}
 \label{figure:lotteryball}
 \end{figure}
+
 \chapter{Initial design}
-The design of the robot will be decided by doing a brainstorm. The brainstorm consists of three stages: first a lot of ideas will be generated, then the ideas will be discussed and to conclude the brainstorm, the ideas will be narrowed down to three concepts. The brainstorm technique and the ideas can be found in appendix \ref{appendix:brainstorm}. The design of the game will not be elaborated here, this can be found in chapter \ref{chap:games}. The following are the three end concepts for the robot:
+The design of the robot will be decided by doing a brainstorm. The brainstorm consists of three stages: first a lot of ideas will be generated, then the ideas will be discussed and to conclude the brainstorm, the ideas will be narrowed down to three concepts. The brainstorm technique and the ideas can be found in Appendix \ref{appendix:brainstorm}: Brainstorm initial designs. \\
+The design of the game will not be elaborated here, this can be found in Chapter \ref{chap:games}: The game. The following are the three end concepts for the robot:
+
 \section{Volcanobot}
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
@@ -220,42 +224,69 @@ The design of the robot will be decided by doing a brainstorm. The brainstorm co
   \caption{Volcanobot}
   \label{figure:volcanobot}
 \end{wrapfigure}
-The Volcano robot is a robot in the form of a tortoise with a volcano on its back, see figure \ref{figure:volcanobot}. The main idea is to let it shoot the objects from the volcano on its back, ask for a certain object, let the child retrieve that object and put it in the mouth to scan if it is correct. When all the items are retrieved, a new game will start by shooting all the objects out again.
+The Volcanobot is a robot in the form of a tortoise with a volcano on its back, see figure \ref{figure:volcanobot}. The main idea is to let it shoot the objects from the volcano on its back, ask for a certain object, let the child retrieve that object and put it in the mouth to scan if it is correct. When all the items are retrieved, a new game will start by shooting all the objects out again.
 
 Example: Volcanobot shoots the objects, asks for the answer of 3x3. The child then retrieves the ball with 9 on it and puts it in the mouth. It should scan the ball and swallow it and it will ask a new question. If the child retrieved the ball with 8 on it, the ball should fall out of its mouth or be spat out by the robot.
 
-The robots shooting mechanism is based on a spring and would require a container for the objects with a radius of approximately 160mm and a height of 200 mm, for 20 balls with a 25mm radius. The container would be filled from a high point at a high angle, so that the objects can't be shot back into the filling mechanism or get stuck in the filling mechanism. Because a tortoise neck is generally very low, we will have to use a mechanism similar to a conveyor belt to transport the object to the main container in the middle.
+The robots shooting mechanism is based on a spring and would require a container for the objects with a radius of approximately 160mm and a height of 200 mm, for 20 balls with a 25mm radius. The container would be filled from a high point at a high angle, so that the objects can\rq{}t be shot back into the filling mechanism or get stuck in the filling mechanism. Because a tortoise neck is generally very low, we will have to use a mechanism similar to a conveyor belt to transport the object to the main container in the middle.
 
-The robot will give feedback to the child when the objective is correctly solved or when it’s not. Feedback is given on a screen (the robots eyes) and via movement and sound. When the child makes a mistake he/she will be encouraged to try again.
+The robot will give feedback to the child when the objective is correctly solved or when it\rq{}s not. Feedback is given on a screen in the robots eyes and via movement and sound. When the child makes a mistake he or she will be encouraged to try again.
+
 \section{Box-bot}
 \begin{wrapfigure}{l}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.48\textwidth]{Images/BoxBotConcept.pdf}
   \end{center}
-  \caption{Boxbot}
+  \caption{Box-bot}
   \label{figure:boxbot}
 \end{wrapfigure}
-The Box-bot is a square formed robot, see Figure \ref{figure:boxbot} . The game begins by shooting from the top of the robot and would ask for a certain object via sound and a screen. The child retrieves the object and puts it in a hole on the front side of the robot to scan it. If it's correct, it will be swallowed and kept in its container. If it is not right it would be dropped on the ground in front of the robot.
+The Box-bot is a square formed robot, see Figure \ref{figure:boxbot} . The game begins by shooting from the top of the robot and would ask for a certain object via sound and a screen. The child retrieves the object and puts it in a hole on the front side of the robot to scan it. If it\rq{}s correct, it will be swallowed and kept in its container. If it is not right it would be dropped on the ground in front of the robot.
 
-The shooting mechanism would be similar to the Volcano-bot, using a spring and a container for the objects with a radius of approximately 160mm and a height of 200mm, for balls with a 20mm radius. It would also have to be filled from a high point at a high angle, so the objects can't shoot back into the filling mechanism or get stuck in the filling mechanism. However, the exterior of the Box-bot won't require a low loading point, like the Volcano would, so it's possible to load from a higher point, without needing a conveyor belt mechanism.
-\section{Truck teacher}
+The shooting mechanism would be similar to the Volcano-bot, using a spring and a container for the objects with a radius of approximately 160mm and a height of 200mm, for balls with a 20mm radius. It would also have to be filled from a high point at a high angle, so the objects can\rq{}t shoot back into the filling mechanism or get stuck in the filling mechanism. However, the exterior of the Box-bot won\rq{}t require a low loading point, like the Volcano would, so it\rq{}s possible to load from a higher point, without needing a conveyor belt mechanism.
+
+\section{Truck Teacher}
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.48\textwidth]{Images/TruckTeacherConcept.pdf}
   \end{center}
-  \caption{TruckTeacher}
+  \caption{Truck Teacher}
   \label{figure:truckteacher}
 \end{wrapfigure}
-The Truck Teacher is a robot in the form of a shovel truck, that can be found in figure \ref{figure:truckteacher} . At the beginning of the game, it lets the balls roll off the truck by toppling the container. Then the robot will ask for a certain object. The child should then retrieve the object and scan it on the window or in the bucket of the truck. If it is the correct item, it will load the object into the container of the truck by rotating the arm of the bucket.
+The Truck Teacher is a robot in the form of a shovel truck, that can be found in figure \ref{figure:truckteacher}. At the beginning of the game, it lets the balls roll off the truck by toppling the container. Then the robot will ask for a certain object. The child should then retrieve the object and scan it on the window or in the bucket of the truck. If it is the correct item, it will load the object into the container of the truck by rotating the arm of the bucket.
 
 This robot would release the balls by toppling the container by using a screw spindle. The container would be the same size as the platform and the objects would have to be balls, since lower friction is needed to let the objects fall of the truck.
 
 \chapter{The game}
 \label{chap:games}
+
+\section{Initial Game Choice}
+The robots main purpose is to play a game or several games with a young child. Several games were designed. The following list consists of all considered games and a conclusion on how feasible and unique they are.
+\subsection{Tag}
+Playing \lq\lq{}Tag\rq\rq{} with the child. This consists of the child touching the robot, the child starts to run away, the robot will then try to touch the child, the robot will try to run away and so on.
+This game would give a lot of difficulties: the robot has to be very fast, the child needs to be detected and very important is that the robot would not be scary for the child, since the robot will run after them. This game was not chosen, since the robot will be quite heavy and fast, so it would be too dangerous for the child to be run over or bumped in to.
+\subsection{Ball shooting game 1}
+This was a spin-off of the \lq\lq{}Tag\rq\rq{} game. The robot would shoot a ball and then would drive away from the ball. The child would need to retrieve the ball and put it back in the robot. This gave the same complication as the \lq\lq{}Tag\rq\rq{} game and this idea was discarded in kind.
+\subsection{Hide and Seek}
+This game would have two variants, one where the robot seeks the child and one where the child looks for the robot. When the robot needs to hide, it would need excellent detection properties to see if it is hidden. The detection was considered to difficult to build in half a year so the idea was not considered feasible.
+\subsection{Tamagotchi}
+In this game the child would need to care for the robot, feeding it, playing with it and letting it sleep. This would teach the child caring for something. The robot would have to be excellent in reacting to the child and for this it would need touching sensors and multiple moving parts. A lot of caring robots are already on the market, like for example Pleo (see Appendix \ref{appendix:competitors}: competitors), so it would not be new or innovating. Considering this, the Tamagotchi game was not chosen.
+\subsection{Dancing}
+The design was to include a dancing feature in the Tamagotchi game, but it would also be very fun just to have an extra feature for the robot. The robot will begin to dance when it hears music. The robot would need music detection and would need to have several dance moves. This is quite easy to implement with easy sensors, so this feature is feasible.
+\subsection{Manual driving}
+Manual play with a controller can also be very fun, but it\rq{}s not part of the project, since it needs to be an autonomous robot. This feature might be implemented along the development for testing purposes, but is not deemed necessary for a successful product.
+\subsection{Ball shooting game 2}
+The ball shooting game was slightly adjusted to make it a feasible game. The ball would have a picture on it and the robot would ask for the correct ball. The child would then return the correct ball to the robot and the robot would somehow collect these in his body. When the robot has collected all the balls it will shoot them out of his body again, and the game will start over. This game can have several elements for different ages, for example by using colored balls, balls with letters, balls with numbers etc. \\
+\lq\lq{}Ball shooting game 2\rq\rq{} is considered feasible since it doesn\rq{}t involve the difficulties of \lq\lq{}ball shooting game 1\rq\rq{} , like fast driving and following an object anymore. \lq\lq{}Ball shooting game 2\rq\rq{} is considered more original and fun for a large span of age groups.
+\subsection{Conclusion}
+The robot will be used for ball shooting game 2 as explained above and as  and dancing to music could be implemented as an extra feature. This is considered a feasible game, which can entertain the child for a long time and keep it entertaining for several years if the robot and the game are designed correctly.
+
+
 \section{Game options}
+The selected ball shooting game is also very expandable. Following is a list of possibilities for the object requesting education robot. \\
+
 Forms of recognition:
 \begin{itemize}
-\item Colour recognition
+\item Colour
 \item Form
 \item Animals
 \item Food
@@ -263,42 +294,20 @@ Forms of recognition:
 Math:
 \begin{itemize}
 \item Multiplying
-\item Substracting
+\item Subtracting
 \item Adding
 \item Dividing
 \end{itemize}
-Driving manually. \\
-\\
 Alternate options:
 \begin{itemize}
-\item Dacing with music
-\item Tamagotchi
-\item Food
+\item Driving manually
+\item Dancing with music
+\item Tamagotchi 
 \item Walking autonomously
 \item Sleep
-\item Play + dance
-\item Hide and Seek
+\item Dance while playing
+
 \end{itemize}
-\section{Game Choice}
-The robot’s main purpose is to play a game or several games with a young child. Several games were designed. The following list consists of all considered games and a conclusion on how feasible and unique they are.
-\subsection{Tag}
-Playing “Tag” with the child. This consists of the child touching the robot, the child starts to run away, the robot will then try to touch the child, the robot will try to run away and so on.
-This game would give a lot of difficulties: the robot has to be very fast, the child needs to be detected and very important is that the robot would not be scary for the child, since the robot will run after them. This game was not chosen, since the robot will be quite heavy and fast, so it would be too dangerous for the child to be run over or bumped in to.
-\subsection{Ball shooting game 1}
-This was a spin-off of the “Tag” game. The robot would shoot a ball and then would drive away from the ball. The child would need to retrieve the ball and put it back in the robot. This gave the same complication as the “Tag” game and this idea was discarded in kind.
-\subsection{Hide and Seek}
-This game would have two variants, one where the robot seeks the child and one where the child looks for the robot. When the robot needs to hide, it would need excellent detection properties to see if it is hidden. The detection was considered to difficult to build in half a year so the idea was not considered feasible.
-\subsection{Tamagotchi}
-In this game the child would need to care for the robot, feeding it, playing with it and letting it sleep. This would teach the child caring for something. The robot would have to be excellent in reacting to the child and for this it would need touching sensors and multiple moving parts. A lot of caring robots are already on the market, like for example Pleo (see Appendix \ref{appendix:competitors}, competitors), so it would not be new or innovating. Considering this, the Tamagotchi game was not chosen.
-\subsection{Dancing}
-The design was to include a dancing feature in the Tamagotchi game, but it would also be very fun just to have an extra feature for the robot. The robot will begin to dance when it hears music. The robot would need music detection and would need to have several dance moves. This is quite easy to implement with easy sensors, so this feature is feasible.
-\subsection{Manual driving}
-Manual play with a controller can also be very fun, but it’s not part of the project, since it needs to be an autonomous robot. This feature might be implemented along the development for testing purposes, but is not deemed necessary for a successful product.
-\subsection{Ball shooting game 2}
-The ball shooting game was slightly adjusted to make it a feasible game. The ball would have a picture on it and the robot would ask for the correct ball. The child would then return the correct ball to the robot and the robot would somehow collect these in his body. When the robot has collected all the balls it will shoot them out of his body again, and the game will start over. This game can have several elements for different ages, for example by using colored balls, balls with letters, balls with numbers etc. \\
-The “ball shooting game 2” is considered feasible since it doesn’t involve the difficulties of “ball shooting game 1” , like fast driving and following an object anymore. “Ball shooting game 2” is considered more original and fun for a large span of age groups.
-\subsection{Conclusion}
-The robot will be used for ball shooting game 2 as explained above and dancing to music could be implemented as an extra feature. This is considered a feasible game, which can entertain the child for a long time and keep it entertaining for several years if the robot and the game are designed correctly.
 
 \chapter{Improve 3 initial designs}
 \section{Proof of concept calculations}
@@ -349,7 +358,7 @@ After deciding on the name a logo was designed. The logo (see figure \ref{fig:lo
 \end{figure}
 
 \chapter{Development prototype design}
-\section{Analysisof required parts}
+\section{Analysis of required parts}
 \section{Mechanical design}
 The ball transport system \\
  \\
@@ -521,7 +530,7 @@ Viola, N., Corpino, S., Fioriti, M. and Stesina. F.(2012) \textit{Functional Ana
 \\
 Choosing Safe Toys, (n.d.), Retrieved 29 September 2014, \\from http://kidshealth.org/parent/firstaid\_safe/home/safe\_toys.html \\
 \\
-Engineering “Laws” – Moore’s, Rock’s, Butter’s and others (2012), Retrieved 22 October 2014, \\from http://sourcetech411.com/2012/12/engineering-laws-moores-rocks-butters-and-others/ \\
+Engineering \lq\lq{}Laws\rq\rq{} - Moore\rq{}s, Rock\rq{}s, Butter\rq{}s and others (2012), Retrieved 22 October 2014, \\from http://sourcetech411.com/2012/12/engineering-laws-moores-rocks-butters-and-others/ \\
 \\
 Battery Discharge Methods, (n.d.), Retrieved 23 October 2014, \\from http://batteryuniversity.com/learn/article/discharge\_methods\\
 \\

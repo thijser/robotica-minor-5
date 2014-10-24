@@ -23,18 +23,18 @@
 \BOOKMARK [0][-]{chapter.9}{Initial design}{}% 23
 \BOOKMARK [1][-]{section.9.1}{Volcanobot}{chapter.9}% 24
 \BOOKMARK [1][-]{section.9.2}{Box-bot}{chapter.9}% 25
-\BOOKMARK [1][-]{section.9.3}{Truck teacher}{chapter.9}% 26
+\BOOKMARK [1][-]{section.9.3}{Truck Teacher}{chapter.9}% 26
 \BOOKMARK [0][-]{chapter.10}{The game}{}% 27
-\BOOKMARK [1][-]{section.10.1}{Game options}{chapter.10}% 28
-\BOOKMARK [1][-]{section.10.2}{Game Choice}{chapter.10}% 29
-\BOOKMARK [2][-]{subsection.10.2.1}{Tag}{section.10.2}% 30
-\BOOKMARK [2][-]{subsection.10.2.2}{Ball shooting game 1}{section.10.2}% 31
-\BOOKMARK [2][-]{subsection.10.2.3}{Hide and Seek}{section.10.2}% 32
-\BOOKMARK [2][-]{subsection.10.2.4}{Tamagotchi}{section.10.2}% 33
-\BOOKMARK [2][-]{subsection.10.2.5}{Dancing}{section.10.2}% 34
-\BOOKMARK [2][-]{subsection.10.2.6}{Manual driving}{section.10.2}% 35
-\BOOKMARK [2][-]{subsection.10.2.7}{Ball shooting game 2}{section.10.2}% 36
-\BOOKMARK [2][-]{subsection.10.2.8}{Conclusion}{section.10.2}% 37
+\BOOKMARK [1][-]{section.10.1}{Initial Game Choice}{chapter.10}% 28
+\BOOKMARK [2][-]{subsection.10.1.1}{Tag}{section.10.1}% 29
+\BOOKMARK [2][-]{subsection.10.1.2}{Ball shooting game 1}{section.10.1}% 30
+\BOOKMARK [2][-]{subsection.10.1.3}{Hide and Seek}{section.10.1}% 31
+\BOOKMARK [2][-]{subsection.10.1.4}{Tamagotchi}{section.10.1}% 32
+\BOOKMARK [2][-]{subsection.10.1.5}{Dancing}{section.10.1}% 33
+\BOOKMARK [2][-]{subsection.10.1.6}{Manual driving}{section.10.1}% 34
+\BOOKMARK [2][-]{subsection.10.1.7}{Ball shooting game 2}{section.10.1}% 35
+\BOOKMARK [2][-]{subsection.10.1.8}{Conclusion}{section.10.1}% 36
+\BOOKMARK [1][-]{section.10.2}{Game options}{chapter.10}% 37
 \BOOKMARK [0][-]{chapter.11}{Improve 3 initial designs}{}% 38
 \BOOKMARK [1][-]{section.11.1}{Proof of concept calculations}{chapter.11}% 39
 \BOOKMARK [1][-]{section.11.2}{Sketches of exterior}{chapter.11}% 40
@@ -48,7 +48,7 @@
 \BOOKMARK [1][-]{section.12.4}{Final concept choice}{chapter.12}% 48
 \BOOKMARK [0][-]{chapter.13}{Name and logo}{}% 49
 \BOOKMARK [0][-]{chapter.14}{Development prototype design}{}% 50
-\BOOKMARK [1][-]{section.14.1}{Analysisof required parts}{chapter.14}% 51
+\BOOKMARK [1][-]{section.14.1}{Analysis of required parts}{chapter.14}% 51
 \BOOKMARK [1][-]{section.14.2}{Mechanical design}{chapter.14}% 52
 \BOOKMARK [1][-]{section.14.3}{SolidWorks model}{chapter.14}% 53
 \BOOKMARK [1][-]{section.14.4}{Software architecture}{chapter.14}% 54

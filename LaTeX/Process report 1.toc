@@ -28,18 +28,18 @@
 \contentsline {chapter}{\numberline {9}Initial design}{20}{chapter.9}
 \contentsline {section}{\numberline {9.1}Volcanobot}{20}{section.9.1}
 \contentsline {section}{\numberline {9.2}Box-bot}{21}{section.9.2}
-\contentsline {section}{\numberline {9.3}Truck teacher}{21}{section.9.3}
+\contentsline {section}{\numberline {9.3}Truck Teacher}{21}{section.9.3}
 \contentsline {chapter}{\numberline {10}The game}{22}{chapter.10}
-\contentsline {section}{\numberline {10.1}Game options}{22}{section.10.1}
-\contentsline {section}{\numberline {10.2}Game Choice}{23}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}Tag}{23}{subsection.10.2.1}
-\contentsline {subsection}{\numberline {10.2.2}Ball shooting game 1}{23}{subsection.10.2.2}
-\contentsline {subsection}{\numberline {10.2.3}Hide and Seek}{23}{subsection.10.2.3}
-\contentsline {subsection}{\numberline {10.2.4}Tamagotchi}{23}{subsection.10.2.4}
-\contentsline {subsection}{\numberline {10.2.5}Dancing}{23}{subsection.10.2.5}
-\contentsline {subsection}{\numberline {10.2.6}Manual driving}{23}{subsection.10.2.6}
-\contentsline {subsection}{\numberline {10.2.7}Ball shooting game 2}{24}{subsection.10.2.7}
-\contentsline {subsection}{\numberline {10.2.8}Conclusion}{24}{subsection.10.2.8}
+\contentsline {section}{\numberline {10.1}Initial Game Choice}{22}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}Tag}{22}{subsection.10.1.1}
+\contentsline {subsection}{\numberline {10.1.2}Ball shooting game 1}{22}{subsection.10.1.2}
+\contentsline {subsection}{\numberline {10.1.3}Hide and Seek}{22}{subsection.10.1.3}
+\contentsline {subsection}{\numberline {10.1.4}Tamagotchi}{22}{subsection.10.1.4}
+\contentsline {subsection}{\numberline {10.1.5}Dancing}{23}{subsection.10.1.5}
+\contentsline {subsection}{\numberline {10.1.6}Manual driving}{23}{subsection.10.1.6}
+\contentsline {subsection}{\numberline {10.1.7}Ball shooting game 2}{23}{subsection.10.1.7}
+\contentsline {subsection}{\numberline {10.1.8}Conclusion}{23}{subsection.10.1.8}
+\contentsline {section}{\numberline {10.2}Game options}{23}{section.10.2}
 \contentsline {chapter}{\numberline {11}Improve 3 initial designs}{25}{chapter.11}
 \contentsline {section}{\numberline {11.1}Proof of concept calculations}{25}{section.11.1}
 \contentsline {section}{\numberline {11.2}Sketches of exterior}{25}{section.11.2}
@@ -53,7 +53,7 @@
 \contentsline {section}{\numberline {12.4}Final concept choice}{27}{section.12.4}
 \contentsline {chapter}{\numberline {13}Name and logo}{28}{chapter.13}
 \contentsline {chapter}{\numberline {14}Development prototype design}{29}{chapter.14}
-\contentsline {section}{\numberline {14.1}Analysisof required parts}{29}{section.14.1}
+\contentsline {section}{\numberline {14.1}Analysis of required parts}{29}{section.14.1}
 \contentsline {section}{\numberline {14.2}Mechanical design}{29}{section.14.2}
 \contentsline {section}{\numberline {14.3}SolidWorks model}{29}{section.14.3}
 \contentsline {section}{\numberline {14.4}Software architecture}{29}{section.14.4}
