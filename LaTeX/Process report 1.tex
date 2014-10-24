@@ -481,18 +481,41 @@ Choosing a mechanism to tension and then release energy to launch our balls up i
 \item A mechanism that works with air pressure and a set of valves
 \item A mechanism that works with spinning wheels (like those used in tennis ball launchers)
 \item A mechanism that works with springs and has a release of some sort
+\end{itemize}
+All of these seemed to have potential. We decided to find the ones with most cons and cross it off the list.\\
+First off, the air cannon would need some sort of compressor or a storage tank with compressed air in the platform. This is certainly possible but would cost us a little bit of room in the interior of the platform. Also, making the launch tube completely airtight so the launch goes according to the calculations is quite a difficult process and it\rq{}s susceptible to wear too as rubber rings wear out from rubbing the walls of the launching tube. The option with compressed air was therefore crossed off the list.\\
+Spinning wheels is a good option, as it would send balls flying up quite high. There\rq{}s a couple problems with this option though. First off, it can only launch one ball at a time. We want to launch about 20 and this could be done by firing all the balls quickly after one another, but doesn\rq{}t look as good as one big \lq{}explosion\rq{} of balls coming from a volcano.\\
+Also, it takes up quite a lot of room since it needs two spinning wheels with a diameter of twice the ball diameter each. This would equate to about 250mm in length for the total launch mechanism, which is almost the entire platform length.\\
+And last but not least, spinning up wheels with a considerable mass costs quite a bit of energy, not all of which is going to go into the launch but some of it will also remain in the wheels.\\
+Finally, a spring mechanism was chosen. The release however we were not sure of. We could make some sort of finger to hold the carriage as it travels, and make the finger release at the bottom. This is quite an intricate process with quite a lot of parts, and is therefore not ideal.\\
+Another option is to extend the springs with a rack and pinion. We would take off a couple of teeth of the gear to make the release. When the gear rotates and the rack gets to a point where there are no more teeth, it automatically shoots forward. It consists of little parts and is relatively easy to build. It needed some simple calculations to figure out the travel of the springs and the diameter of the gear, but this was not a problem.\\
+A picture of the final construction can be found in Figure \ref{fig:launmech}. Detailed part drawings can be found in APPENDIX XXXX.\\
+We used some plastic (POM) guiding rails to guide the rack is it\rq{}s being pulled back. POM is good for this use as it is a little bit wear resistant and has a low coefficient of friction on metal.\\
 
-All of these seemed to have potential. We decided to find the ones with most cons and cross it off the list.
-First off, the air cannon would need some sort of compressor or a storage tank with compressed air in the platform. This is certainly possible but would cost us a little bit of room in the interior of the platform. Also, making the launch tube completely airtight so the launch goes according to the calculations is quite a difficult process and it\rq{}s susceptible to wear too as rubber rings wear out from rubbing the walls of the launching tube. The option with compressed air was therefore crossed off the list.
-Spinning wheels is a good option, as it would send balls flying up quite high. There\rq{}s a couple problems with this option though. First off, it can only launch one ball at a time. We want to launch about 20 and this could be done by firing all the balls quickly after one another, but doesn\rq{}t look as good as one big \lq{}explosion\rq{} of balls coming from a volcano.
-Also, it takes up quite a lot of room since it needs two spinning wheels with a diameter of twice the ball diameter each. This would equate to about 250mm in length for the total launch mechanism, which is almost the entire platform length.
-And last but not least, spinning up wheels with a considerable mass costs quite a bit of energy, not all of which is going to go into the launch but some of it will also remain in the wheels.
-Finally, a spring mechanism was chosen. The release however we were not sure of. We could make some sort of finger to hold the carriage as it travels, and make the finger release at the bottom. This is quite an intricate process with quite a lot of parts, and is therefore not ideal.
-Another option is to extend the springs with a rack and pinion. We would take off a couple of teeth of the gear to make the release. When the gear rotates and the rack gets to a point where there are no more teeth, it automatically shoots forward. It consists of little parts and is relatively easy to build. It needed some simple calculations to figure out the travel of the springs and the diameter of the gear, but this was not a problem.
-A picture of the final construction can be found below. Detailed part drawings can be found in Appendix xxxxxxxx.
-We used some plastic (POM) guiding rails to guide the rack is it’s being pulled back. POM is good for this use as it is a little bit wear resistant and has a low coefficient of friction on metal.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width = 10cm]{Images/launchmech.jpg}
+\caption{Launching mechanism}
+\label{fig:launmech}
+\end{center}
+\end{figure}
 
-Figure 1: Launching mechanism
+\subsection{Calculating the glue bond}
+
+Calculations have been done on the glue bond that holds the ring on to the launching tube. These calculations have been performed because a combined force of 100N is exerted on to the ring and we want it to not slide on the launching tube.\\
+The shear stress on the glue bond is calculated as shown in Figure \ref{fig:gluebond}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width = 10cm]{Images/formule_lijm.jpg}
+\caption{Formula for calculating the glue bonds}
+\label{fig:gluebond}
+\end{center}
+\end{figure}
+
+Most glues have a shear yield stress larger than 10MPa, so there is nothing to worry about here.
+
+
 
 
 \subsection{The ball transport system}
@@ -501,19 +524,32 @@ It was considered to use a shooting system that shoots the balls through a pipe 
 \\
 Another solution was a conveyor belt to transport the spherical objects. This belt could be a V belt or a timing belt. V belt pulleys are bigger in diameter than timing belt pulleys, and the whole solution would also be more expensive than a timing belt setup. So the solution comes to a timing belt with pulley.\\
 \\
-In figure \ref{figure:balltransport} , a drawing is displayed which shows the timing belt pulley setup. Now, a calculation of the torque of the motor to transport the balls is made.\\
-\\The torque that needs to transmitted to the driving pulley (the upper pulley in picture xxx) is equal to: \[M=\frac{T_{e}*d_{p}}{2c}  \].
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width = 10cm]{Images/Ball_transport_system.png}
+\caption{The timing belt pulley setup for the transport of the ball}
+\label{fig:balltransport}
+\end{center}
+\end{figure}
+
+In Figure \ref{fig:balltransport}, a drawing is displayed which shows the timing belt pulley setup. Now, a calculation of the torque of the motor to transport the balls is made.\\
+
+The torque that needs to transmitted to the driving pulley (the upper pulley in Figure \ref{fig:balltransport}) is equal to: \[M=\frac{T_{e}*d_{p}}{2c}  \]
 The effective tension is equal to:
 \[T_{e}=F_{a}+F_{g}+F_{ab}+F_{ai}  \]
-$F_{a}$ is the resulting force from acceleration of the balls. $F_{g}$ is the resulting force of the weight of the balls. $F_{ab}$ is the force resulting from acceleration of the belt and $F_{­ai}$ the force required to accelerate the pulley.  There is also friction from the fact that the rubber strips that hold the balls are colliding with the launching pipe. It is now stated that the acceleration is almost zero and only the steady state situation is regarded. Then, only the weight of the balls is important. There is room for five balls at once, so the total weight is 10 grams. With the angle included (56.37 degrees) this results in a tension force of 0.1 N. The total moment the motor will have to deliver, with a pitch diameter of 0.02 meter is 1 Nmm. The friction from the flaps is hard to calculate. We will assume that the total moment to be delivered is 10 ten times this, so 1 Ncm. It is accepted that the balls will travel the 0.25 meter along the belt in 10 seconds. With the pitch diameter of the pulley, this results in axle speed 24 rpm. The selected motor which is properly available has a no load speed of 25 rpm, and a rated torque of 8 Ncm. This motor will operate at near no load speed, because the moment required is much lower than the rated torque, so the 24 rpm will most likely be reached and the ball will be transported in just over 10 seconds. 
+$F_{a}$ is the resulting force from acceleration of the balls. $F_{g}$ is the resulting force of the weight of the balls. $F_{ab}$ is the force resulting from acceleration of the belt and $F_{­ai}$ the force required to accelerate the pulley. There is also friction from the fact that the rubber strips that hold the balls are colliding with the launching pipe.\\
+It is now stated that the acceleration is almost zero and only the steady state situation is regarded. Then, only the weight of the balls is important. There is room for five balls at once, so the total weight is 10 grams. \\
+With the angle included (56.37 degrees) this results in a tension force of 0.1 N. The total moment the motor will have to deliver, with a pitch diameter of 0.02 meter is 1 Nmm. The friction from the flaps is hard to calculate. We will assume that the total moment to be delivered is 10 ten times this, so 1 Ncm. \\
+It is accepted that the balls will travel the 0.25 meter along the belt in 10 seconds. With the pitch diameter of the pulley, this results in axle speed 24 rpm. The selected motor which is properly available has a no load speed of 25 rpm, and a rated torque of 8 Ncm. This motor will operate at near no load speed, because the moment required is much lower than the rated torque, so the 24 rpm will most likely be reached and the ball will be transported in just over 10 seconds. 
 \subsection{Neck strength calculations}
 To check whether the neck is strong enough to support a child pulling on it, a strength calculation is necessary. The material used is pvc, with yield strength of 35 MPa (DYNA, 2003).
 The maximum moment which the pipe can hold is:
 \[M=W*\sigma\]
 With
 \[\frac{\Pi}{32}*\frac{(D^{4}-d^{4})}{D}\]
-The outer diameter $D$ is 63 mm, and the inner diameter $d$ is 59 mm. So $W$ is 5665 mm3. The maximum moment that can be imposed is $35*5665= 2.0*10^5$ Nmm. 
-The free neck length is $112 mm$, so the maximum force to be imposed $2.0*10^5/112 = 1770$ N. This equals a pull force of $180 kg$ in perpendicular direction of the neck. Conclusion: this is enough to support a child pulling it. How much force the robot can sustain before it tips over will be calculated in  \ref{sect: mechanical design: center of mass(or something like that)} 
+The outer diameter $D$ is 63 mm, and the inner diameter $d$ is 59 mm. So $W$ is 5665 mm\textsuperscript{3}. The maximum moment that can be imposed is $35*5665= 2.0*10^5$ Nmm. 
+The free neck length is 112mm, so the maximum force to be imposed $2.0*10^5/112 = 1770$ N. This equals a pull force of 180kg in perpendicular direction of the neck. \\
+Conclusion: this is enough to support a child pulling it. How much force the robot can sustain before it tips over will be calculated in  \ref{sect: mechanical design: center of mass(or something like that)} 
 
 
 \section{SolidWorks model}
