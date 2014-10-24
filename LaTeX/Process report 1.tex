@@ -106,25 +106,26 @@ This chapter will be about the field of application of the object requesting edu
 \section{Marketing}
 The market for autonomous robotic toys is not very big yet. There are some fully autonomous robots being sold for around \euro{}100. Most of these robotic toys are focused on older children, and focused on boys in particular, examples can be found in Appendix \ref{appendix:competitors}: Competitors. The indirect goal is to get an autonomous robot on the market for about the same amount of money, but it should target a different group of users, this group of users being younger children of both sexes.
 \section{Technological}
-The price of computer calculations (processing power) has dropped a lot over the recent years. CPUs, Central Processing Units, have become so cheap that they are now available in toys. The price will continue to go down in the future. This can be explained by Moore\rq{}s law: the power of a newly developed processor doubles every two years (Engineering Law. Moores, Rocks, Butters and others, 2012). And with Rock\rq{}s law that state that the cost of a given unit computational power will halve every 36 months. This has to do with the ever decreasing chip and component size, which makes it possible to get more components on the same surface. If you look at a chip with a certain processing power, it will become smaller and therefore cheaper every year. \\
+The price of computer calculations (processing power) has dropped a lot over the recent years. CPUs, Central Processing Units, have become so cheap that they are now available in toys. The price will continue to go down in the future. This can be explained by Moore\rq{}s law: the power of a newly developed processor doubles every two years (\lq\lq{}Engineering Law. Moores, Rocks, Butters and others\rq\rq{}, 2012). And with Rock\rq{}s law that state that the cost of a given unit computational power will halve every 36 months. This has to do with the ever decreasing chip and component size, which makes it possible to get more components on the same surface. If you look at a chip with a certain processing power, it will become smaller and therefore cheaper every year. \\
 Also, computer vision systems are up and coming because of this increased processing power. Vision systems needed a pretty hefty system a few years back. Now, it\rq{}s possible do vision processing with a much cheaper system and therefore it becomes more interesting for developers to use vision systems.
 \section{Social}
 
-XXXXXXXXX
+Over the past 20 years, more and more toys have become electrical rather than fully mechanical. This move from mechanical over to electrical has also affected children in the sense that they are getting used to electrical toys. \\
+The target group for the educational robot is children between 4 and 8 years old. Children from 6 to 8 years old create their own rules for games and create new games altogether. Once the children hit the age of 8 or 9, they tend to be playing outside more, without the supervision of their parents. (\lq\lq{}Child development: 6-9 years\rq\rq{}, n.d.)
 
 \section{Challenges}
 There are several challenges to be faced when developing and producing an autonomous robotic toy. \\
 The first challenge is that robots are expensive to develop and to prototype compared to non-robotic toys. This is because of the high cost of computer components and required level of knowledge of employees.\\
 Another challenge is to keep the robot interesting. Children tend to be bored quite quickly by a toy these days, and then the old toy makes way for a new one. It should have a high amount of options or expansions to make it interesting for a longer period of time, without making it too expensive. 
 \section{Competition}
-The toy industry is very large, so it it quite hard to determine which are most closely related to the robot. The key components to the robot are the autonomous operating and the learning aspect for children. An analysis on the competitors can be found in appendix \ref{appendix:competitors}, Competitors.
+The toy industry is very large, so it is quite hard to determine which are most closely related to the robot. The key components to the robot are the autonomous operating and the learning aspect for children. An analysis on the competitors can be found in Appendix \ref{appendix:competitors}: Competitors.
 
 \chapter{Use Cases}
 \chapter{Functional analysis}
-In this chapter a functional analysis of the robot will be made. All the functions and sub functions of the robot will be given and explained. It will be possible to make the morphologic overview using the contents of this chapter. 
-To make this functional analysis graphic, a flowchart has been made according to the example of (Viola et al., 2012). This flowchart can be found in figure \ref{fig:FuncAnal}.
-This has been constructed in the following way, on top the ultimate function has been placed: to entertain and educate the children. In the row beneath will be the sub functions to reach this goal. In the row beneath that sub function, will be the sub functions to reach the goal of the sub function, etc. 
-To conclude, the most important functions of the robot are that it is able to recognize an object, to shoot an object and to be attractive to children. The subfunctions of these functions are a base for the contents of the morphologic overview. 
+In this chapter a functional analysis of the robot will be made. All the functions and sub functions of the robot will be given and explained. It will be possible to make the morphologic overview using the contents of this chapter. \\
+To make this functional analysis graphic, a flowchart has been made according to the example of (Viola et al., 2012). This flowchart can be found in figure \ref{fig:FuncAnal}.\\
+This has been constructed in the following way, on top the ultimate function has been placed: to entertain and educate the children. In the row beneath will be the sub-functions to reach this goal. In the row beneath that sub-function, will be the sub-functions to reach the goal of the sub-function, etc. \\
+To conclude, the most important functions of the robot are that it is able to recognize an object, to shoot an object and to be attractive to children. The sub-functions of these functions are a base for the contents of the morphologic overview. 
 
 \begin{figure}[h]
 \begin{center}
@@ -161,7 +162,7 @@ Sensor (Shooting)  & Ultrasonic        & Infrared   & Camera       & Laser      
 Computing          & Arduino           & Laptop     & Raspberry Pi & Mobile phone &                   \\
 Recognition Object & RFID              & Camera     & Radio        & Magnetic     & Infrared          \\
 Obstacle avoidance & None              & Ultrasonic & Camera       & Laser        &                   \\
-Battery            & None (Plugged in) & Li-Ion     & LiPo         & NiMH         &                   \\
+Battery            & Plugged in & Li-Ion     & LiPo         & NiMH         &                   \\
 Display				& None & LCD & & & \\
 Speakers 			& Yes & No & & & 
 \end{tabular}
@@ -171,21 +172,22 @@ Speakers 			& Yes & No & & &
 \end{table}
 The Morphological Map is divided into two parts: the Mechanical parts and the Electronical parts. The Mechanical parts will be varied when making the initial designs, while the Electronical parts will remain constant, as the initial design of the robot will unlikely affect the electronical parts, since the overall electronics design of a small scale robot is usually the same. \\
 There are a few little things to note about the Morphological map. The first one being that sensor (shooting) is the sensor that is used to prevent the robot from shooting when the child is right above the shooting mechanism. This will ensure the safety of the child. \\
-This map will be used to create a certain amo heigth=10cm]unt of initial designs, of which three shall be selected to be improved and turned into full concepts.
+This map will be used to create a certain amount of initial designs, of which three shall be selected to be improved and turned into full concepts.
 
 
 \chapter{Object design}
 The objects that can be used in the robots come in different forms and sizes. The form and size of these objects will be decided in the following paragraphs. 
+
 \subsubsection{Form}
-Theoretically, one can consider all kinds of forms for the objects. However, this robot would need to transport the objects and shoot them into the air. This is realized in an easy way by taking spherical objects. Balls are able to roll with low friction and are easily transported through the robot. Square objects for example won’t be able to transport as easily as spherical objects would. \\
-For these reasons, we have decided on using spheres as the final form. 
+Theoretically, one can consider all kinds of forms for the objects. However, this robot would need to transport the objects and shoot them into the air. This is realized in an easy way by taking spherical objects. Balls are able to roll with low friction and are easily transported through the robot. Square objects for example won\rq{}t be able to transport as easily as spherical objects would. \\
+For these reasons, we have decided on using spheres as the final form.
+
 \subsubsection{Size}
-Safety is a big issue regarding the size of the balls. Children under 3 years of age can safely play with balls that are at least 44 mm of diameter (“Choosing Safe Toys”, n.d.). The specific age group will be given in the chapter \ref{chap:games}. \\
-Safety is a big issue regarding the size of the balls. Children under 3 years of age can safely play with balls that are at least 44 mm of diameter (“Choosing Safe Toys”, n.d.). The specific age group will be given in the chapter Games.\\
+Safety is a big issue regarding the size of the balls. Children under 3 years of age can safely play with balls that are at least 44 mm of diameter (\lq\lq{}Choosing Safe Toys\rq\rq{}, n.d.). The specific age group will be given in chapter \ref{chap:games}: The game. \\
 Because of this, the balls will have to be at least 44 mm. Besides this, the readability of the print on the ball, the availability of that certain size of balls and the amount of space used for the loading cylinder, where the balls are stored, should be considered. \\
 Balls should already be readable from 44mm, so this should be fine, but it would of course be more readable when selecting larger balls. \\
 The easiest available balls to get are balls with a diameter of 50 or 60mm. Other balls would probably have to be specifically fabricated. \\
-FInally, the available space for the loading cylinder is 180mm high and has a diameter of 155mm. When selecting 50mm, it would be enough space to store approximately 20-23 balls. Figure \ref{fig:balllaunch} shows how the balls are stacked. \\
+Finally, the available space for the loading cylinder is 180mm high and has a diameter of 155mm. When selecting 50mm, it would be enough space to store approximately 20-23 balls. Figure \ref{fig:balllaunch} shows how the balls are stacked. \\
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width = 10cm]{Images/BallLaunch.png}
@@ -546,8 +548,10 @@ Lithium Based Batteries, (n.d.), Retrieved 23 October 2014, \\from http://batter
 Nickel Based Batteries, (n.d.), Retrieved 23 October 2014, \\from 
 http://batteryuniversity.com/learn/article/nickel\_based\_batteries \\
 \\
-Nintendo (2014) Torkoal, Retrieved on 29 september 2014\\ from http://www.pokemon.com/nl/pokedex/torkoal
-
+Nintendo (2014) Torkoal, Retrieved on 29 september 2014\\ from http://www.pokemon.com/nl/pokedex/torkoal \\
+\\
+Child development: 6-9 years, (n.d.), Retrieved 24 October 2014, \\from http://www.cyh.com/HealthTopics/HealthTopicDetails.aspx?p=114\&np=122\&id=1867\\
+\\
 \begin{appendices}
 \chapter{Use Case}
 \label{appendix:usecase}
