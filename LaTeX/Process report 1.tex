@@ -379,12 +379,14 @@ Again, the mechanics for the Box-Bot and for Volcanobot are quite similar. The s
 
 \section{Initial software architecture}
 \begin{figure}
-\begin{center}
-\includegraphics[width=16cm]{Images/FunctionalAnalysis.png}
-\end{center}
+  \begin{center}
+    \includegraphics[width=16cm]{Images/FunctionalAnalysis.png}
+  \end{center}
+  \caption{The software structure diagram}
+  \label{figure:softdiag}
 \end{figure}
 At large there is little difference between these three designs from a software perspective. The actual difference is just how the motors are controlled and how emotions are expressed by the robots. 
-The software structure diagram(Figure X) shows the different subsystems found in the software on the second row. It further specifies the functionality of these subsystems in the row below. From this diagram we learn what the distribution of classes and namespaces should look like in the software. Each node in a row should implement the nodes it is linked to in the row below it. With the top node bringing everything together into the main operating function. This diagram holds for all three concept since they only differ on the lowest level of implementation, which is not covered in this scope.
+The software structure diagram in Figure \ref{figure:softdiag} shows the different subsystems found in the software on the second row. It further specifies the functionality of these subsystems in the row below. From this diagram we learn what the distribution of classes and namespaces should look like in the software. Each node in a row should implement the nodes it is linked to in the row below it. With the top node bringing everything together into the main operating function. This diagram holds for all three concept since they only differ on the lowest level of implementation, which is not covered in this scope.
 
 \section{Initial electronic and electrical design}
 For the electrical and electronic design, a few things will have to be decided. The following parts will have to be considered: 
@@ -398,7 +400,7 @@ For the electrical and electronic design, a few things will have to be decided. 
 \item Sensors -- Ultrasonic
 \end{itemize}
 
-The only difference between the three designs is the amount of motors. The final decisions will be made in the final Prototype electrical design.
+The only difference between the three designs is the amount of motors. The final decisions will be made in the final prototype electrical design.
 
 
 \chapter{Concept choice}
@@ -446,7 +448,7 @@ After deciding on the name a logo was designed. The logo (see figure \ref{fig:lo
 
 \section{Analysis of required parts}
 
-
+All parts that will need to be made can be found in Appendix \ref{appendix:drawings}: Drawings. 
 \section{Mechanical design}
 
 \subsection{The mouth}
