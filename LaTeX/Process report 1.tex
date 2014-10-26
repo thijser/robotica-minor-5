@@ -13,6 +13,7 @@
 \usepackage[section]{placeins}
 \usepackage{pdfpages}
 \usepackage[official]{eurosym}
+\usepackage{usecases}
 
 \begin{document}
 \title{Robotics process report 1}
@@ -121,6 +122,27 @@ Another challenge is to keep the robot interesting. Children tend to be bored qu
 The toy industry is very large, so it is quite hard to determine which are most closely related to the robot. The key components to the robot are the autonomous operating and the learning aspect for children. An analysis on the competitors can be found in Appendix \ref{appendix:competitors}: Competitors.
 
 \chapter{Use Cases}
+In this chapter, the use cases will be explained. The use cases can be found in Appendix A. 
+This is an example of a use case:
+
+\begin{usecase}
+\addtitle{Use Case 1}{Ask for objects}
+\addfield{Actor}{Robot}
+\addfield{Trigger}{The robot is switched on}
+\addscenario{Main Success Scenario:}{
+	\item The software decides what kind of object to ask for. 
+	\item The robot asks the child for the object through voice or picture.
+	\item The child gives the object to the robot.
+	}
+\addscenario{Extensions:}{
+\item[3.a] The child cannot find the object:
+	\begin{enumerate}
+	\item[1.] The robot waits a minute and repeats the question
+	\end{enumerate}
+}
+\end{usecase}
+In Use Case, there will be a description on what the Actor needs to do. This Use Case will be triggered by the Trigger. When the Use Case is triggered, it will follow the steps in the main success scenario. Any unsuccessful events are described in the extensions. 
+
 \chapter{Functional analysis}
 In this chapter a functional analysis of the robot will be made. All the functions and sub functions of the robot will be given and explained. It will be possible to make the morphologic overview using the contents of this chapter. \\
 To make this functional analysis graphic, a flowchart has been made according to the example of (Viola et al., 2012). This flowchart can be found in figure \ref{fig:FuncAnal}.\\
@@ -173,7 +195,7 @@ Speakers 			& Yes & No & & &
 The Morphological Map is divided into two parts: the Mechanical parts and the Electronical parts. The Mechanical parts will be varied when making the initial designs, while the Electronical parts will remain constant, as the initial design of the robot will unlikely affect the electronical parts, since the overall electronics design of a small scale robot is usually the same. \\
 There are a few little things to note about the Morphological map. The first one being that sensor (shooting) is the sensor that is used to prevent the robot from shooting when the child is right above the shooting mechanism. This will ensure the safety of the child. \\
 This map will be used to create a certain amount of initial designs, of which three shall be selected to be improved and turned into full concepts.
-
+\label{chap:morphological}
 
 \chapter{Object design}
 The objects that can be used in the robots come in different forms and sizes. The form and size of these objects will be decided in the following paragraphs. 
@@ -330,23 +352,24 @@ For the Truck Teacher concept, only the tipping mechanism needs some calculation
   \label{figure:boxbot2}
 \end{figure}
 \begin{figure}
-  \begin{center}
+  \begin{center}[h!]
     \includegraphics[width=0.48\textwidth]{Images/TruckTeacherConcept.pdf}
   \end{center}
   \caption{Truck Teacher}
   \label{figure:truckteacher2}
 \end{figure}
+\section{Sketches of exterior}
 
 \section{Sketches of mechanics}
 Again, the mechanics for the Box-Bot and for Volcanobot are quite similar. The spring launch mechanism applies to both the Box-Bot and Volcanobot.
-\begin{figure}[h!]
+\begin{figure}
   \begin{center}
     \includegraphics[width=0.4\textwidth]{Images/launchmechschematic.jpg}
   \end{center}
   \caption{Schematics for the launching mechanism of the Box-bot and Volcanobot}
   \label{figure:launchscheme}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[h]
   \begin{center}
     \includegraphics[width=0.4\textwidth]{Images/tipmechschematic.jpg}
   \end{center}
@@ -423,7 +446,6 @@ After deciding on the name a logo was designed. The logo (see figure \ref{fig:lo
 
 \section{Analysis of required parts}
 
-See Appendix \ref{appendix:drawings}: Drawings.
 
 \section{Mechanical design}
 
@@ -557,7 +579,7 @@ Conclusion: this is enough to support a child pulling it. How much force the rob
 \section{Software architecture}
 The most important scenario for the robot is that the robot can ask for a ball, then wait for the correct ball to be inserted and give positive or negative feedback depending on whether the given ball was correct. After repeating this process until the volcano fills up, the robot erupts, spreading the balls around himself again. \\
 The overall architecture of the robot is that one central node (“robot”), that delegates work towards several lower level nodes, that in turn each listen to an even lower level node, which either repeats to process or directly controls a device. \\
-With this structure in mind the classes can be defined. Figures \ref{fig:controllers} The first subsystem is the overarching group that contains the handlers for the lower level functions. Figure X+1 shows the handlers for each node in the first two rows of Figure \ref{fig:FuncAnal}. The Audio and Video are separated into their own classes to create a distinction of responsibility for each class. 
+With this structure in mind the classes can be defined. Figures \ref{fig:controllers} through \ref{fig:motors} show the implementation. The first subsystem is the overarching group that contains the handlers for the lower level functions. Figure X+1 shows the handlers for each node in the first two rows of Figure \ref{fig:FuncAnal}. The Audio and Video are separated into their own classes to create a distinction of responsibility for each class. 
 
 \begin{figure}[!htb]
 \begin{center}
@@ -728,15 +750,122 @@ Nintendo (2014) \textit{Torkoal}, Retrieved on 29 september 2014\\ from http://w
 Child development: 6-9 years, (n.d.), Retrieved 24 October 2014, \\from http://www.cyh.com/HealthTopics/HealthTopicDetails.aspx?p=114\&np=122\&id=1867\\
 \\
 \begin{appendices}
-\chapter{Use Case}
+\chapter{Use Cases}
+\begin{usecase}
+\addtitle{Use Case 2}{Give the object}
+\addfield{Actor}{Child}
+\addfield{Trigger}{The child has found the requessted object}
+\addscenario{Main Success Scenario:}{
+	\item The child offers the object to the robot. 
+	\item The robot accepts the object and stores it.
+	\item The robot makes a satisfied sound and displays pleased emotions.
+	}
+\addscenario{Extensions:}{
+\item[2.a] The child gives the wrong object:
+	\begin{enumerate}
+	\item[1.] The robot gives the object back or drops it.
+	\item[2.] The robot shows displeased emotions and repeats his request.
+	\end{enumerate}
+}
+\end{usecase}
+
+\begin{usecase}
+\addtitle{Use Case 3}{Scan the object.}
+\addfield{Actor}{Robot}
+\addfield{Trigger}{The child gives an object to the robot.}
+\addscenario{Main Success Scenario:}{
+	\item The child moves the object near the sensor.
+	\item The sensor checks whether the object corresponds with what was requested.
+	\item The robot accepts it and stores it.
+	}
+\addscenario{Extensions:}{
+\item[2.a] The child has given the wrong object:
+	\begin{enumerate}
+	\item[1.] Return the object to the child.
+	\end{enumerate}
+}
+\end{usecase}
+
+\begin{usecase}
+\addtitle{Use Case 4}{Scatter the objects.}
+\addfield{Actor}{Robot}
+\addfield{Trigger}{The container is full or the robot has just been started}
+\addscenario{Main Success Scenario:}{
+	\item Check if it is safe to launch or throw objects.
+	\item Scatter the objects around the room.
+	}
+\end{usecase}
+
+\begin{usecase}
+\addtitle{Use Case 5}{Gather the objects.}
+\addfield{Actor}{Child}
+\addfield{Trigger}{The robot scatters the objects.}
+\addscenario{Main Success Scenario:}{
+	\item The child sees objects fall around the room.
+	\item The child gathers the objects.
+	\item The child tries to find the object request by the robot.
+	}
+\end{usecase}
+
+\begin{usecase}
+\addtitle{Use Case 6}{Child has lost or broken an object.}
+\addfield{Actor}{Child}
+\addfield{Trigger}{The robot asks for an object that cannot be scanned anymore.}
+\addscenario{Main Success Scenario:}{
+	\item The robot notices that it is not receiving the correct object.
+	\item After waiting a while, the robot gives an option for skipping this object.
+	}
+\end{usecase}
 \label{appendix:usecase}
+
 \chapter{MoSCoW model}
-\label{appendix:moscow}
 \section{Musts}
+\begin{itemize}
+\item Safety --         Must not be able to hurt a child
+\item Price --             Prototype must have a budget of maximum 1000 euro
+\item Battery life --         Must be able to run for 30 minutes at least
+\item Design --        Must not be scary for children
+\item Measurements --     Must easily move through an open door (Width maximum 70 cm)
+\item Identification --        Robot must be able to identify objects
+\item Design --       Robot must be able to display approval/disapproval of object
+\item Shooting --        Robot must be able to shoot objects
+\item Energy --         Robot must be able to store and release energy for shooting objects
+\item Safety --        Robot must be able to detect if the child is not in the shooting path before shooting
+\item Design --         Robot must look attractive to children
+\end{itemize}
 \section{Shoulds}
+\begin{itemize}
+\item Sturdiness--        Robot should not be easily damaged when interacting with children
+\item Interface--         Should be easy to understand for children
+\item Difficulty--         Should have different levels for different ages
+\item Storage --       The robot should be able to store objects inside
+\item Cleanable --       Should be easy to clean the robot
+\end{itemize}
 \section{Coulds}
+\begin{itemize}
+\item Movement--         The robot could be able to move around
+\item Interface--         Could have an application for smartphone
+\item Fun--             The robot could be able to dance
+\end{itemize}
 \section{won'ts}
+\begin{itemize}
+\item Won’t be able to fly
+\item Won’t be able to make underwater explorations
+\item Won’t be able to be used as a vehicle     
+\item Won’t be able to battle
+\item Won't be able to move at great speed     
+\item Won’t be able to retrieve the blocks himself
+
+\end{itemize}
+\label{appendix:moscow}
 \chapter{Brainstorm initial designs}
+The brainstorm was held with post-its to give everybody the opportunity to generate ideas without having to wait for the person writing them down. This helped to generate a lot of ideas and helped the group to come to the best design. The ideas could be categorized in different groups.\\
+ \\
+The brainstorm for the main robot design could be categorized in archetype robotic shapes, animal shapes and motorized vehicle shapes. Some examples are: Wall-E for robotic shapes, a whale or turtle for animal shapes and dump truck or tank for vehicle shapes.\\
+ \\
+The brainstorm for the balls the robot shoots in the air mostly consisted of ideas for the design or material used. The design ideas consisted from shapes, what they can do and appearance. A couple examples are: poke balls, balls with light or noise, balls with lightning drawn on them or with extra attached material to make it look like for example a fish.\\
+ \\
+The mechanical brainstorm was a little more difficult. They were categorized in different aspects, which can be found in the morphological chart, see chapter \ref{chap:morphological}.
 \label{appendix:brainstorm}
 \chapter{Different games}
 \section{Colour recognition, age 3 to 4}
