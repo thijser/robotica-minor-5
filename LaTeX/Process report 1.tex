@@ -123,7 +123,7 @@ Another challenge is to keep the robot interesting. Children tend to be bored qu
 The toy industry is very large, so it is quite hard to determine which are most closely related to the robot. The key components to the robot are the autonomous operating and the learning aspect for children. An analysis on the competitors can be found in Appendix \ref{appendix:competitors}: Competitors.
 
 \chapter{Use Cases}
-In this chapter, the use cases will be explained. The use cases can be found in Appendix A. 
+In this chapter, the use cases will be explained. The use cases can be found in Appendix \ref{app:usecase}. 
 This is an example of a use case:
 
 \begin{usecase}
@@ -231,7 +231,7 @@ The final decision is 50mm foam or styrofoam balls, depending on the availabilit
 \begin{center}
 \includegraphics[width=10cm]{Images/LOTTERY-BALLS-with-rfid.jpg}
 \end{center}
-\caption{A 50mm foam ball}
+\caption{A 50mm foam ball with RFID sensor inside}
 \label{figure:lotteryball}
 \end{figure}
 
@@ -292,7 +292,7 @@ This was a spin-off of the \lq\lq{}Tag\rq\rq{} game. The robot would shoot a bal
 \subsection{Hide and Seek}
 This game would have two variants, one where the robot seeks the child and one where the child looks for the robot. When the robot needs to hide, it would need excellent detection properties to see if it is hidden. The detection was considered to difficult to build in half a year so the idea was not considered feasible.
 \subsection{Tamagotchi}
-In this game the child would need to care for the robot, feeding it, playing with it and letting it sleep. This would teach the child caring for something. The robot would have to be excellent in reacting to the child and for this it would need touching sensors and multiple moving parts. A lot of caring robots are already on the market, like for example Pleo (see Appendix \ref{appendix:competitors}: competitors), so it would not be new or innovating. Considering this, the Tamagotchi game was not chosen.
+In this game the child would need to care for the robot, feeding it, playing with it and letting it sleep. This would teach the child caring for something. The robot would have to be excellent in reacting to the child and for this it would need touching sensors and multiple moving parts. A lot of caring robots are already on the market, like for example Pleo (see Appendix \ref{appendix:competitors}: Competitors), so it would not be new or innovating. Considering this, the Tamagotchi game was not chosen.
 \subsection{Dancing}
 The design was to include a dancing feature in the Tamagotchi game, but it would also be very fun just to have an extra feature for the robot. The robot will begin to dance when it hears music. The robot would need music detection and would need to have several dance moves. This is quite easy to implement with easy sensors, so this feature is feasible.
 \subsection{Manual driving}
@@ -336,7 +336,7 @@ Alternate options:
 \section{Proof of concept calculations}
 For the box-bot and Volcanobot, we’re using similar launching systems with springs. Calculations will therefore be largely the same.
 All of the calculations on the spring launching mechanism can be found in Appendix \ref{appendix:calculations}. In short, the motor we need would have to deliver a minimum of 1.5Nm. This is quite large, but nothing we cannot work with.\\
-For the Truck Teacher concept, only the tipping mechanism needs some calculations. Again, the calculations can be found in Appendix \ref{appendix:calculations} but in short, we only need to have a lifting force of about 3N. This is easily solved with a screw spindle and a small motor.
+For the Truck Teacher concept, only the tipping mechanism needs some calculations. Again, the calculations can be found in Appendix \ref{appendix:calculations}, but in short, we only need to have a lifting force of about 3N. This is easily solved with a screw spindle and a small motor.
 \section{Sketches of exterior}
 \begin{figure}
   \begin{center}
@@ -353,7 +353,7 @@ For the Truck Teacher concept, only the tipping mechanism needs some calculation
   \label{figure:boxbot2}
 \end{figure}
 \begin{figure}
-  \begin{center}[h!]
+  \begin{center}
     \includegraphics[width=0.48\textwidth]{Images/TruckTeacherConcept.pdf}
   \end{center}
   \caption{Truck Teacher}
@@ -380,12 +380,14 @@ Again, the mechanics for the Box-Bot and for Volcanobot are quite similar. The s
 
 \section{Initial software architecture}
 \begin{figure}
-\begin{center}
-\includegraphics[width=16cm]{Images/FunctionalAnalysis.png}
-\end{center}
+  \begin{center}
+    \includegraphics[width=16cm]{Images/FunctionalAnalysis.png}
+  \end{center}
+  \caption{The software structure diagram}
+  \label{figure:softdiag}
 \end{figure}
 At large there is little difference between these three designs from a software perspective. The actual difference is just how the motors are controlled and how emotions are expressed by the robots. 
-The software structure diagram(Figure X) shows the different subsystems found in the software on the second row. It further specifies the functionality of these subsystems in the row below. From this diagram we learn what the distribution of classes and namespaces should look like in the software. Each node in a row should implement the nodes it is linked to in the row below it. With the top node bringing everything together into the main operating function. This diagram holds for all three concept since they only differ on the lowest level of implementation, which is not covered in this scope.
+The software structure diagram in Figure \ref{figure:softdiag} shows the different subsystems found in the software on the second row. It further specifies the functionality of these subsystems in the row below. From this diagram we learn what the distribution of classes and namespaces should look like in the software. Each node in a row should implement the nodes it is linked to in the row below it. With the top node bringing everything together into the main operating function. This diagram holds for all three concept since they only differ on the lowest level of implementation, which is not covered in this scope.
 
 \section{Initial electronic and electrical design}
 For the electrical and electronic design, a few things will have to be decided. The following parts will have to be considered: 
@@ -399,7 +401,7 @@ For the electrical and electronic design, a few things will have to be decided. 
 \item Sensors -- Ultrasonic
 \end{itemize}
 
-The only difference between the three designs is the amount of motors. The final decisions will be made in the final Prototype electrical design.
+The only difference between the three designs is the amount of motors. The final decisions will be made in the final prototype electrical design.
 
 
 \chapter{Concept choice}
@@ -447,7 +449,7 @@ After deciding on the name a logo was designed. The logo (see figure \ref{fig:lo
 
 \section{Analysis of required parts}
 
-
+All parts that will need to be made can be found in Appendix \ref{appendix:drawings}: Drawings. 
 \section{Mechanical design}
 
 \subsection{The mouth}
@@ -666,7 +668,7 @@ There\rq{}s a few things to note about the figure. The capacity of a battery is 
 The Time Type indicates when that part receives the current. This is important, since for example the Shooting motor uses 4A, which is a lot more than the other parts, but it only uses it for a short time period. Therefore there is a Maximum Capacity, in which the Shooting motor, the Wheel motors and the Speakers are always on, the Minimum Capacity, in which those objects are always off, and the Average Capacity, which is the average of those two. The Average Capacity is a slightly more realistic indication of how much capacity it will require. 
 
 \subsection{Battery decision}
-The options are lined up in Figure \ref{table:batteryOptions}. According to the Required Capacity paragraph, the robot would require at least 2633 mAh for half an hour. Also, the required voltage for the motors is 12V. Therefore, at least 3 of Option 1 would have to be bought for 11.1V. To reach the required capacity for Option 2, 2 of those would need to be bought. The other two options already fulfill the requirements. 
+The options are lined up in Figure \ref{table:batteryOptions}. According to the Required capacity paragraph, the robot would require at least 2633 mAh for half an hour. Also, the required voltage for the motors is 12V. Therefore, at least 3 of Option 1 would have to be bought for 11.1V. To reach the required capacity for Option 2, 2 of those would need to be bought. The other two options already fulfill the requirements. 
 In the end, Option 4 was the cheapest, also fulfills the 12V requirements, while the Li-Ion ones are only 11.1V. Option 3 would have been viable, but it was simply too expensive for a battery for a robot that doesn\rq{}t actually need that much capacity. 
 For these reasons, Option 4 was selected. 
  \newpage
@@ -722,28 +724,30 @@ Prepare presentation and poster\\
 Week 9 (19 January) Tentamenweek\\Week 10 (26 January) Tentamenweek
 
 \section{Software planning}
-For softwaredevelopment  the SCRUM methodology is used. With tasks rather than user stories,  tasks are sorted by which order we will execute them(most important first). This gives us the following backlog:\\
+For software development the SCRUM methodology is used. With tasks rather than user stories,  tasks are sorted by which order we will execute them(most important first). This gives us the following backlog:\\
 \\
-Task:robot must be able to request items by audio. \\
-Estimated effort: 2 \\
-Task: robot must be able to process food (open mouth and launch).\\
-Estimated effort 7  \\
-Task: robot must be able to identify food items by RFID. \\
-Estimated effort 3 \\
-Task: robot must be able to reject incorrect food.\\ 
-Estimated effort 2 \\
-Task: robot must be able to request items by display.\\
-Estimated effort 1 
-Task robot must be able to recognize music and dance to the beat 
-Estimated effort  7 \\
-Task robot must have suitable idle animations.\\ 
-Estimated effort 5\\
-Task robot must have animations for “waking up” after boot.\\ 
-Estimated effort 3 \\
-Task robot must be able to complain about it’s “needs” (low power ext.).\\
-Estimated effort 2 \\
-Task: robot must be able to react to voice commands (stop, dance, smile, turn, come ext.).\\
-Estimated effort 7 
+\begin{itemize}
+\item Task: robot must be able to request items by audio. \\
+Estimated effort: 2 
+\item Task: robot must be able to process food (open mouth and launch).\\
+Estimated effort: 7  
+\item Task: robot must be able to identify food items by RFID. \\
+Estimated effort: 3 
+\item Task: robot must be able to reject incorrect food.\\ 
+Estimated effort: 2 
+\item Task: robot must be able to request items by display.\\
+Estimated effort: 1 
+\item Task: robot must be able to recognize music and dance to the beat \\
+Estimated effort:  7 
+\item Task: robot must have suitable idle animations.\\ 
+Estimated effort: 5
+\item Task: robot must have animations for \lq\lq{}waking up\rq\rq{} after boot.\\ 
+Estimated effort: 3 
+\item Task: robot must be able to complain about its \lq\lq{}needs\rq\rq{} (for example low power).\\
+Estimated effort: 2 
+\item Task: robot must be able to react to voice commands.\\
+Estimated effort: 7 
+\end{itemize}
 \chapter{Conclusion}
 This report explained the design phase of this project. In the first phase of the design process several brainstorms were held. The first decision was to make a toy robot for a child. This would be an interesting branch to explore, since children find it fun to engage with a robot and this way it can be made fun to exercise or learn with a robot.
 Next, a brainstorm was held to come up with ideas for the design and purpose of the robot. It was decided that the robot would be used to help children learn several subjects from school at home. Three concepts were chosen to be further improved, which would come to a final concept. After considering the three concepts, the turtle robot was chosen, since this robot was more unique and would be more interesting for the user. \\
@@ -797,6 +801,7 @@ Child development: 6-9 years, (n.d.), Retrieved 24 October 2014, \\from http://w
 \\
 \begin{appendices}
 \chapter{Use Cases}
+\label{app:usecase}
 \begin{usecase}
 \addtitle{Use Case 2}{Give the object}
 \addfield{Actor}{Child}
@@ -865,6 +870,7 @@ Child development: 6-9 years, (n.d.), Retrieved 24 October 2014, \\from http://w
 \label{appendix:usecase}
 
 \chapter{MoSCoW model}
+\label{appendix:moscow}
 \section{Musts}
 \begin{itemize}
 \item Safety --         Must not be able to hurt a child
@@ -893,17 +899,17 @@ Child development: 6-9 years, (n.d.), Retrieved 24 October 2014, \\from http://w
 \item Interface--         Could have an application for smartphone
 \item Fun--             The robot could be able to dance
 \end{itemize}
-\section{won'ts}
+\section{Won\rq{}ts}
 \begin{itemize}
-\item Won’t be able to fly
-\item Won’t be able to make underwater explorations
-\item Won’t be able to be used as a vehicle     
-\item Won’t be able to battle
-\item Won't be able to move at great speed     
-\item Won’t be able to retrieve the blocks himself
+\item Won\rq{}t be able to fly
+\item Won\rq{}t be able to make underwater explorations
+\item Won\rq{}t be able to be used as a vehicle     
+\item Won\rq{}t be able to battle
+\item Won\rq{}t be able to move at great speed     
+\item Won\rq{}t be able to retrieve the blocks himself
 
 \end{itemize}
-\label{appendix:moscow}
+
 \chapter{Brainstorm initial designs}
 The brainstorm was held with post-its to give everybody the opportunity to generate ideas without having to wait for the person writing them down. This helped to generate a lot of ideas and helped the group to come to the best design. The ideas could be categorized in different groups.\\
  \\
