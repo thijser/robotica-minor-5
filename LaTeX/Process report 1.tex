@@ -334,8 +334,8 @@ Alternate options:
 \chapter{Improve 3 initial designs}
 \section{Proof of concept calculations}
 For the box-bot and Volcanobot, we’re using similar launching systems with springs. Calculations will therefore be largely the same.
-All of the calculations on the spring launching mechanism can be found in Appendix \ref{appendix:calcs}. In short, the motor we need would have to deliver a minimum of 1.5Nm. This is quite large, but nothing we cannot work with.\\
-For the Truck Teacher concept, only the tipping mechanism needs some calculations. Again, the calculations can be found in Appendix \ref{appendix:calcs} but in short, we only need to have a lifting force of about 3N. This is easily solved with a screw spindle and a small motor.
+All of the calculations on the spring launching mechanism can be found in Appendix \ref{appendix:calculations}. In short, the motor we need would have to deliver a minimum of 1.5Nm. This is quite large, but nothing we cannot work with.\\
+For the Truck Teacher concept, only the tipping mechanism needs some calculations. Again, the calculations can be found in Appendix \ref{appendix:calculations} but in short, we only need to have a lifting force of about 3N. This is easily solved with a screw spindle and a small motor.
 \section{Sketches of exterior}
 \begin{figure}
   \begin{center}
@@ -362,9 +362,9 @@ For the Truck Teacher concept, only the tipping mechanism needs some calculation
 
 \section{Sketches of mechanics}
 Again, the mechanics for the Box-Bot and for Volcanobot are quite similar. The spring launch mechanism applies to both the Box-Bot and Volcanobot.
-\begin{figure}
+\begin{figure}[h]
   \begin{center}
-    \includegraphics[width=0.4\textwidth]{Images/launchmechschematic.jpg}
+    \includegraphics[width=10cm]{Images/launchmechschematic.jpg}
   \end{center}
   \caption{Schematics for the launching mechanism of the Box-bot and Volcanobot}
   \label{figure:launchscheme}
@@ -570,11 +570,36 @@ The maximum moment which the pipe can hold is:
 With
 \[\frac{\Pi}{32}*\frac{(D^{4}-d^{4})}{D}\]
 The outer diameter $D$ is 63 mm, and the inner diameter $d$ is 59 mm. So $W$ is 5665 mm\textsuperscript{3}. The maximum moment that can be imposed is $35*5665= 2.0*10^5$ Nmm. 
-The free neck length is 112mm, so the maximum force to be imposed $2.0*10^5/112 = 1770$ N. This equals a pull force of 180kg in perpendicular direction of the neck. \\
-Conclusion: this is enough to support a child pulling it. How much force the robot can sustain before it tips over will be calculated in  \ref{sect: mechanical design: center of mass(or something like that)} 
+The free neck length is 112mm, so the maximum force to be imposed $2.0*10^5/112 = 1770$ N. This equals a pull force of 180kg in perpendicular direction of the neck. To further investigate whether the link between the neck and the rest of the robot is strong enough to support a child pulling on it, a simulation of this part of this has been done in section \ref{sect:NeckSim}.
+Conclusion: this is enough to support a child pulling it. How much force the robot can sustain before it tips over will be calculated in  the next section. 
+\section{Calculation of stability and tip-over effect}
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \begin{center}
+    \includegraphics[width=0.48\textwidth]{Images/Weight.png}
+  \end{center}
+  \caption{ }
+  \label{figure:weigth}
+\end{wrapfigure}
+As you can see in figure \ref{figure:weigth}, the robot has a design that is possibly vulnerable to tip over, when a child pulls on the neck of the robot. A calculation will be done see the severity of this problem. From the Solidworks model, the centre of mass can easily be calculated. The distances to the axes of rotation have also been displayed in figure \ref{figure:weigth}. The weight of the robot is 12,2 kg so the force of the kid required to let the robot tip over is equal to:
+\[F_{pull} = 63/400 *12.2*9,81 = 19 N \]  
+This translates to a mass of 1.9 kg. This is very low, even for a child, so the robot will easily be pulled over. To compensate for this, it is necessary to add weight to back (the left end in figure \ref{figure:weigth}) of the robot. Here, there is already a battery installed, but a second battery could give the pulling force needed a multiplication of 2. A last resort could be the installation of extra dead weight like scrap metal or brick at the back of the robot. This would of course lead to an increase in energy consumption by the driving motors, slow the robot down and would give no other benefit than stability, in comparison to the battery which would provide extra power. Concluding, adding extra batteries to the back of the robot would be best to prevent the robot from tipping over.
 
+\section{Calculating the mouth}
+The mouth needs a servo to operate, and servos have a limited torque. Therefore, some calculations need to be performed to see if it will close after opening. 
+The full calculations can be seen in Appendix \ref{appendix:calculations}. In short though, we need the arm on the axle of the mouth to be larger than two-thirds of the length of the servo arm. We chose to go with a ratio of 1:1, as to not load the servo to it’s maximum.
 
+\section{Simulating the neck}
+We did a simulation on the neck of the robot to see if it would hold under some stress. The chosen stress is a small child pulling on the neck of the robot. The neck of the robot is weakest like this, because it’s held in place on the bottom with only an 8mm thick mounting plate.\\
+Results of this simulation are below (Figure \ref{fig:simluation}). The simulation shows us that the neck can withstand a child hanging on it if the robot is tipped over, the worst situation imaginable because of the length of the neck. The chosen weight of the child is 30kg. The neck will yield when loaded with more than about 40kg, but then again, it’s not really designed to be able to suspend a child in the air.
 
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics[width=14cm]{Images/result_simulation.jpg}
+\caption{ }
+\label{fig:simluation}
+\end{center}
+\end{figure}
+\label{sect:NeckSim}
 \section{SolidWorks model}
 \section{Software architecture}
 The most important scenario for the robot is that the robot can ask for a ball, then wait for the correct ball to be inserted and give positive or negative feedback depending on whether the given ball was correct. After repeating this process until the volcano fills up, the robot erupts, spreading the balls around himself again. \\
@@ -687,17 +712,37 @@ Christmas break from the 22nd of December to 4th of January\\
 \\
 Week 7 (5 January)\\
 Report\\
-Prepare presentation\\
-Poster\\
+Prepare presentation and poster\\
 \\
 Week 8 (12 January)\\
 Report\\
-Prepare presentation
-Poster\\
+Prepare presentation and poster\\
 \\
-Week 9 (19 January) Tentamenweek\\
-Week 10 (26 January) Tentamenweek
+Week 9 (19 January) Tentamenweek\\Week 10 (26 January) Tentamenweek
 
+\section{Software planning}
+For softwaredevelopment  the SCRUM methodology is used. With tasks rather than user stories,  tasks are sorted by which order we will execute them(most important first). This gives us the following backlog:\\
+\\
+Task:robot must be able to request items by audio. \\
+Estimated effort: 2 \\
+Task: robot must be able to process food (open mouth and launch).\\
+Estimated effort 7  \\
+Task: robot must be able to identify food items by RFID. \\
+Estimated effort 3 \\
+Task: robot must be able to reject incorrect food.\\ 
+Estimated effort 2 \\
+Task: robot must be able to request items by display.\\
+Estimated effort 1 
+Task robot must be able to recognize music and dance to the beat 
+Estimated effort  7 \\
+Task robot must have suitable idle animations.\\ 
+Estimated effort 5\\
+Task robot must have animations for “waking up” after boot.\\ 
+Estimated effort 3 \\
+Task robot must be able to complain about it’s “needs” (low power ext.).\\
+Estimated effort 2 \\
+Task: robot must be able to react to voice commands (stop, dance, smile, turn, come ext.).\\
+Estimated effort 7 
 \chapter{Conclusion}
 This report explained the design phase of this project. In the first phase of the design process several brainstorms were held. The first decision was to make a toy robot for a child. This would be an interesting branch to explore, since children find it fun to engage with a robot and this way it can be made fun to exercise or learn with a robot.
 Next, a brainstorm was held to come up with ideas for the design and purpose of the robot. It was decided that the robot would be used to help children learn several subjects from school at home. Three concepts were chosen to be further improved, which would come to a final concept. After considering the three concepts, the turtle robot was chosen, since this robot was more unique and would be more interesting for the user. \\
@@ -1012,7 +1057,10 @@ Total              & 6.172   &     -           & 3.086                   & 4.408
 \label{appendix:motor}
 \chapter{Drawings}
 \label{appendix:drawings}
+\includepdf[pages={1},landscape=true]{pdfdrawings/Afschietbuis.PDF}
+\includepdf[pages={1},landscape=true]{pdfdrawings/as_pulley_beneden.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/as_onderkaak.PDF}
+\includepdf[pages={1},landscape=true]{pdfdrawings/axle_upper.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/Axle.PDF}
 \includepdf[pages={1}]{pdfdrawings/axle_to_pushrod.PDF}
 \includepdf[pages={1}]{pdfdrawings/axlemount.PDF}
@@ -1020,17 +1068,27 @@ Total              & 6.172   &     -           & 3.086                   & 4.408
 \includepdf[pages={1},landscape=true]{pdfdrawings/BaseV2.PDF}
 \includepdf[pages={1}]{pdfdrawings/BearingBlock.PDF}
 \includepdf[pages={1}]{pdfdrawings/BijnaUBeugel.PDF}
+\includepdf[pages={1}]{pdfdrawings/blokje.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/containment_ring.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/fixatie_pvc_onder.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/GuideRail1.PDF}
 \includepdf[pages={1}]{pdfdrawings/GuideRail2.PDF}
 \includepdf[pages={1}]{pdfdrawings/Head.PDF}
+\includepdf[pages={1},landscape=true]{pdfdrawings/Horizontal_bar_front.PDF}
+\includepdf[pages={1},landscape=true]{pdfdrawings/houder_as_boven.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/Jaw_Head.PDF}
+\includepdf[pages={1},landscape=true]{pdfdrawings/ligger_2.PDF}
+\includepdf[pages={1},landscape=true]{pdfdrawings/ligger_rechts.PDF}
+\includepdf[pages={1},landscape=true]{pdfdrawings/ligger.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/linkage_mouthplate.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/mainframe.PDF}
+\includepdf[pages={1},landscape=true]{pdfdrawings/motorbevestiging.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/motordakje.PDF}
+\includepdf[pages={1},landscape=true]{pdfdrawings/motorhouder_achter.PDF}
 \includepdf[pages={1}]{pdfdrawings/motormount.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/mouthplate.PDF}
+\includepdf[pages={1},landscape=true]{pdfdrawings/new_lagerhuis.PDF}
+\includepdf[pages={1}]{pdfdrawings/ondersteuningBuis.PDF}
 \includepdf[pages={1}]{pdfdrawings/pipe_catcher.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/plaatje_voorkant.PDF}
 \includepdf[pages={1}]{pdfdrawings/pulleyblock.PDF}
@@ -1041,9 +1099,14 @@ Total              & 6.172   &     -           & 3.086                   & 4.408
 \includepdf[pages={1},landscape=true]{pdfdrawings/Shell.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/shell_fastener.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/Slider_Platform.PDF}
+\includepdf[pages={1}]{pdfdrawings/staander_achter.PDF}
+\includepdf[pages={1}]{pdfdrawings/staander_voor_rechts.PDF}
+\includepdf[pages={1}]{pdfdrawings/staander_voor.PDF}
 \includepdf[pages={1}]{pdfdrawings/steun.PDF}
+\includepdf[pages={1}]{pdfdrawings/transportbuis.PDF}
+\includepdf[pages={1}]{pdfdrawings/T-stuk_afgesneden.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/vierkantas.PDF}
-\end{appendices}
 
+\end{appendices}
 
 \end{document}
