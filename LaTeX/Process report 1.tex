@@ -122,7 +122,7 @@ Another challenge is to keep the robot interesting. Children tend to be bored qu
 The toy industry is very large, so it is quite hard to determine which are most closely related to the robot. The key components to the robot are the autonomous operating and the learning aspect for children. An analysis on the competitors can be found in Appendix \ref{appendix:competitors}: Competitors.
 
 \chapter{Use Cases}
-In this chapter, the use cases will be explained. The use cases can be found in Appendix A. 
+In this chapter, the use cases will be explained. The use cases can be found in Appendix \ref{app:usecase}. 
 This is an example of a use case:
 
 \begin{usecase}
@@ -230,7 +230,7 @@ The final decision is 50mm foam or styrofoam balls, depending on the availabilit
 \begin{center}
 \includegraphics[width=10cm]{Images/LOTTERY-BALLS-with-rfid.jpg}
 \end{center}
-\caption{A 50mm foam ball}
+\caption{A 50mm foam ball with RFID sensor inside}
 \label{figure:lotteryball}
 \end{figure}
 
@@ -291,7 +291,7 @@ This was a spin-off of the \lq\lq{}Tag\rq\rq{} game. The robot would shoot a bal
 \subsection{Hide and Seek}
 This game would have two variants, one where the robot seeks the child and one where the child looks for the robot. When the robot needs to hide, it would need excellent detection properties to see if it is hidden. The detection was considered to difficult to build in half a year so the idea was not considered feasible.
 \subsection{Tamagotchi}
-In this game the child would need to care for the robot, feeding it, playing with it and letting it sleep. This would teach the child caring for something. The robot would have to be excellent in reacting to the child and for this it would need touching sensors and multiple moving parts. A lot of caring robots are already on the market, like for example Pleo (see Appendix \ref{appendix:competitors}: competitors), so it would not be new or innovating. Considering this, the Tamagotchi game was not chosen.
+In this game the child would need to care for the robot, feeding it, playing with it and letting it sleep. This would teach the child caring for something. The robot would have to be excellent in reacting to the child and for this it would need touching sensors and multiple moving parts. A lot of caring robots are already on the market, like for example Pleo (see Appendix \ref{appendix:competitors}: Competitors), so it would not be new or innovating. Considering this, the Tamagotchi game was not chosen.
 \subsection{Dancing}
 The design was to include a dancing feature in the Tamagotchi game, but it would also be very fun just to have an extra feature for the robot. The robot will begin to dance when it hears music. The robot would need music detection and would need to have several dance moves. This is quite easy to implement with easy sensors, so this feature is feasible.
 \subsection{Manual driving}
@@ -335,7 +335,7 @@ Alternate options:
 \section{Proof of concept calculations}
 For the box-bot and Volcanobot, we’re using similar launching systems with springs. Calculations will therefore be largely the same.
 All of the calculations on the spring launching mechanism can be found in Appendix \ref{appendix:calculations}. In short, the motor we need would have to deliver a minimum of 1.5Nm. This is quite large, but nothing we cannot work with.\\
-For the Truck Teacher concept, only the tipping mechanism needs some calculations. Again, the calculations can be found in Appendix \ref{appendix:calculations} but in short, we only need to have a lifting force of about 3N. This is easily solved with a screw spindle and a small motor.
+For the Truck Teacher concept, only the tipping mechanism needs some calculations. Again, the calculations can be found in Appendix \ref{appendix:calculations}, but in short, we only need to have a lifting force of about 3N. This is easily solved with a screw spindle and a small motor.
 \section{Sketches of exterior}
 \begin{figure}
   \begin{center}
@@ -352,7 +352,7 @@ For the Truck Teacher concept, only the tipping mechanism needs some calculation
   \label{figure:boxbot2}
 \end{figure}
 \begin{figure}
-  \begin{center}[h!]
+  \begin{center}
     \includegraphics[width=0.48\textwidth]{Images/TruckTeacherConcept.pdf}
   \end{center}
   \caption{Truck Teacher}
@@ -796,6 +796,7 @@ Child development: 6-9 years, (n.d.), Retrieved 24 October 2014, \\from http://w
 \\
 \begin{appendices}
 \chapter{Use Cases}
+\label{app:usecase}
 \begin{usecase}
 \addtitle{Use Case 2}{Give the object}
 \addfield{Actor}{Child}
@@ -893,7 +894,7 @@ Child development: 6-9 years, (n.d.), Retrieved 24 October 2014, \\from http://w
 \item Interface--         Could have an application for smartphone
 \item Fun--             The robot could be able to dance
 \end{itemize}
-\section{Won'ts}
+\section{Won\rq{}ts}
 \begin{itemize}
 \item Won\rq{}t be able to fly
 \item Won\rq{}t be able to make underwater explorations
