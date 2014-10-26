@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.3.27)  26 OCT 2014 15:52
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.3.27)  26 OCT 2014 15:58
 entering extended mode
 **C:/Users/Administrator/robotica/LaTeX/Process*report*1.tex
 ("C:/Users/Administrator/robotica/LaTeX/Process report 1.tex"
@@ -865,21 +865,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 687--724
 
  []
 
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no œ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no  in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no œ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no  in font cmr10!
 
 Underfull \hbox (badness 10000) in paragraph at lines 726--748
 
@@ -3485,7 +3470,7 @@ msfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on "Process report 1.pdf" (122 pages, 13354663 bytes).
+Output written on "Process report 1.pdf" (122 pages, 13354601 bytes).
 PDF statistics:
  2324 PDF objects out of 2487 (max. 8388607)
  299 named destinations out of 1000 (max. 500000)
