@@ -886,6 +886,7 @@ The robot can practice words and letters with the child. The robot would have ba
 \appendix
 
 \chapter{Details software design}
+\section{Non-functional requirements}
 \begin{itemize}
 \item \textbf{Ball-scanning:} Offered balls should be recognized within 3 seconds
 \item\textbf{Launchtime:}Launching has to be able to happen at least once every minute
@@ -893,6 +894,55 @@ The robot can practice words and letters with the child. The robot would have ba
 \item\textbf{Turning Speed:} The robot cannot turn with a speed higher than 0.5 m/s
 \item\textbf{Boottime:} The boot of the whole robot from off to functional should not exceed 20 seconds
 \end{itemize}
+
+\section{Use Cases}
+\begin{usecase}
+\addtitle{Use Case 1}{Child offers object to robot.}
+\addfield{Actor}{Child, Robot}
+\addfield{Trigger}{The child has found a ball.}
+\addscenario{Main Success Scenario:}{
+	\item The child offers the ball to the robot
+	\item The robot scans the ball
+	\item The robot swallows the ball
+	\item The robot shows positive emotions
+	}
+\addscenario{Extensions:}{
+\item[3.a] The child has given the wrong object:
+	\begin{enumerate}
+	\item[1.] The robot drops the ball
+	\item[2.] The robot shows negative emotions
+	\end{enumerate}
+}
+\end{usecase}
+
+\begin{usecase}
+\addtitle{Use Case 2}{Ask for ball.}
+\addfield{Actor}{Robot}
+\addfield{Trigger}{The robot just finished launching or just recieved a correct object}
+\addscenario{Main Success Scenario:}{
+	\item The Robot decides what ball to ask for
+	\item The robot asks the child for the object through voice or picture
+	\item The robot waits for the ball
+	}
+\addscenario{Extensions:}{
+\item[3.a] The ball is not given within 2 minutes:
+	\begin{enumerate}
+	\item[1.] Return to step 2
+	\end{enumerate}
+}
+\end{usecase}
+
+\begin{usecase}
+\addtitle{Use Case 3}{Launch balls}
+\addfield{Actor}{Robot}
+\addfield{Trigger}{The robot is filled up with balls}
+\addscenario{Main Success Scenario:}{
+	\item The robot makes sounds indicating it is about to launch
+	\item The robot checks if it safe to launch
+	\item The robot erupts and launches the balls upwards
+}
+\end{usecase}
+
 \label{appendix:software}
 
 \chapter{Competitors}
