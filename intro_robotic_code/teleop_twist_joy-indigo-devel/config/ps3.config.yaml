@@ -1,0 +1,33 @@
+axis_linear: 1
+scale_linear: 0.5
+scale_linear_turbo: 1
+
+axis_angular: 0
+scale_angular: 0.8
+
+enable_button: 8  # L2 shoulder button
+enable_turbo_button: 10  # L1 shoulder button
+toggle_button: 9 
+
+#axes(not buttons!) mapping for joy
+# 0 : LTrigger left-0-right
+# 1 : LTrigger up-0-down
+# 2 : RTrigger left-0-rigt
+# 3 : RTrigger up-0-down
+# 4 : 
+# 5 :
+# 6 : 
+# 7 :
+# 8 : dUP
+# 9 : dRight
+# 10 : dDown
+# 11 : dLeft? - broken
+# 12 : L2
+# 13 : R2
+# 14 : L1
+# 15 : R1
+# 16 : /\
+# 17 : O
+# 18 : X
+# 19 : []
+
