@@ -22,6 +22,49 @@
 \includepdf[pages={1}]{Voorkant_verslag.pdf}
 \tableofcontents
 
+\chapter{Summary}
+In this report the process of developing the object requesting educational robot ‘Tawi’ has been documented. A picture of Tawi can be seen in figure \ref{fig:summRender}. This robot plays a game with children by shooting twenty balls into the air almost like a volcanic eruption. Numbers are displayed on these balls. The robot then asks and displays a math question similar to: What is three + nine? The child then has to put the balls with numbers one and two on them, making twelve, into the mouth of the robot and the robot asks another question. When the child is done putting all the balls into the robot, the game restarts. \\
+ 
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{Images/RenderAnne1.JPG}
+\caption{ }
+\label{fig:summRender}
+\end{center}
+\end{figure}
+ 
+This robot idea was developed by completing a design process. First, several robot ideas have been graded on, among others, the ability to be realised, safety and innovation.  After this, a field analysis of the chosen object requesting educational robot has been done, to see what important trends there are in the field of robotic toys. The robot needs to be original to compete with competitors, the ultimate price of the robot should be around €100 and the robot needs to be interesting for children to play with.     \\
+\\
+
+ \begin{wrapfigure}{l}{0.48\textwidth}
+    \includegraphics[width=0.48\textwidth]{Images/VolcanoBotConcept.pdf}
+  \caption{Volcanobot}
+  \label{figure:volcanobot}
+\end{wrapfigure}
+Next, the use cases of the chosen concept have been explained, these include asking the child for objects. Based on the use cases, the functional analysis has been done. Functions like being attractive to children, shooting balls and recognizing the objects have been identified.  These function lead to “must haves”, “should haves”, “could haves” and “won’t haves”; concrete design requirements. With the MosCow model and the functional analysis in mind, the morphological map gives a clear overview of design options.\\
+ \\
+
+
+Three initial designs have been made: the volcano bot, the box-bot and the truck teacher. These design can be seen in pictures in this summary.\\
+ The volcano bot has already been described above, the box-bot lets children insert the objects in his hands and lifts them into his own shooting mechanism and the truck teacher does the same with a dump truck design. Furthermore, the choice of object form of balls size 50 mm has been chosen for safety reasons and ease of transportation in the robot itself. In addition, the game as described above has been chosen in favour of others, together with the game mode of dancing to music and manual control of robots driving system.
+ 
+\begin{wrapfigure}{r}{0.48\textwidth}
+    \includegraphics[width=0.48\textwidth]{Images/BoxBotConcept.pdf}
+  \caption{Box-bot}
+  \label{figure:boxbot}
+\end{wrapfigure}
+To see whether the initial designs were feasible, they have been further improved by doing initial mechanical calculations, making an initial software design and listing electrical components. Next, the choice for the volcano robot has been made. Per concept, this has been evaluated on difficulty to build, originality and the entertainment value for children. Also Maja Rudinac from the TU Delft, expert on robotic interaction with children, believed that the volcano robot was the best concept, because it was the most original.
+
+\begin{wrapfigure}{l}{0.48\textwidth}
+    \includegraphics[width=0.48\textwidth]{Images/TruckTeacherConcept.pdf}
+  \caption{Truck Teacher}
+  \label{figure:truckteacher}
+\end{wrapfigure} 
+ 
+The next step was the development prototype design, consisting of mechanical, programming and electrical design. The mechanical design consists of the following parts: the design of the mouth with a rod system, choice of re-using the Pioneer platform and the spring loaded launching mechanism that works with a worm gear motor. Further calculations have been done on the timing belt that transports balls from the lower part of the neck into the shooting pipe. Also, numerous strength calculations have been done. To conclude the mechanical design, a full SolidWorks 3D model of the robot has been made. The software architecture of the robot has been listed, using classes to avoid duplicate code. In the electrical design, a circuit has been designed and the choice for a NiMH battery has been made.  \\
+ \\
+A planning has been made for the next period in which the Tawi prototype will be built and tested, finishing it in the week of January 12th 2015.
+
 \chapter{Introduction}
 Currently, there are not many robots on the market, but since recent developments in technology, it will increase to become available for households and on the market. The goal of this report is to display the design steps taken and the decisions made for developing an autonomous educational robot.  \\ 
 The name of the report developed is: Tawi. Tawi will be used in households to help children learn different school subjects. A design process over the course of ten weeks will help develop this robot. This report will explain this design phase and substantiate the decisions made for the robot. The design process is divided in three stages: the idea development stage, the concept stage and the final stage. In the idea development stage several brainstorms will be held to develop an idea for the robot and to come to three different concepts. In the concept stage these concepts will be further improved and developed to full concepts. One concept will be chosen and this robot will be developed into a final blueprint for a prototype in the final stage. At the end of this report a final design for the robot can be seen.
@@ -364,7 +407,7 @@ For the Truck Teacher concept, only the tipping mechanism needs some calculation
   \caption{Truck Teacher}
   \label{figure:truckteacher2}
 \end{figure}
-
+\label{sect:conceptsketches}
 \section{Sketches of mechanics}
 Again, the mechanics for the Box-Bot and for Volcanobot are quite similar. The spring launch mechanism applies to both the Box-Bot and Volcanobot.
 \begin{figure}[h]
