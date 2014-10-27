@@ -749,38 +749,29 @@ In the end, Option 4 was the cheapest, also fulfills the 12V requirements, while
 For these reasons, Option 4 was selected. 
 
 \subsection{Computational options}
-Several options were considered considering the kind of computer, which is going to control the robot. The following options were considered. \\
-\\
-Arduino\\
+Several options were considered considering the kind of computer, which is going to control the robot. The following options were considered. 
+
+\subsubsection{Arduino}
 The Arduino is lightweight and needs less power in comparison to the rest of the option. It is also an easy option because there is one available. Another plus side to Arduino is that shipping data between in- and output is easier. \\
-Negative sides to using an Arduino are that it has very little computational power and has very little memory. Arduino also needs low level programming for almost everything.\\
-\\
-Arduino + desktop or laptop in base station\\
-Using an Arduino in combination with a desktop or laptop gives a lot more computational power and more memory. But of course this requires a base station, which needs to communicate wirelessly with the robot. \\
-\\
-Arduino + smartphone (Android)\\
-This combination has more computational power than an Arduino alone but less than an Arduino in combination with a desktop. It has decent memory and it is quite easy to connect an Arduino with a smartphone. The smartphone does need a power supply of its own and it adds an extra device to the whole construction, which will take up space.\\
-\\
-Arduino + Smartphone + laptop in base station\\
-This fixes the problem of the communication between the Arduino and the base station, because it can make use of the smartphone’s connection. It keeps all the plus sides of a base station like a lot of memory space and computational power. It also allows data pre-processing before sending it. The use of a lot of devices does make it more confusing and it is hard to keep track of everything, plus all the devices need their own power supply.\\ 
-\\
-Arduino + computer parts\\
-The Arduino is given more part to make up for its less optimal qualities, like more memory space and more computational power. This construction has a higher power consumption and probably needs cooling. This also requires a computer to deconstruct or ordering a lot of separate parts. This can be very expensive.\\
-\\
-Raspberry Pi\\
-A Raspberry Pi is easier to program but has little computational power. It has less IO then an Arduino and it requires more steps to interact with peripherals. The Raspberry Pi is more library-oriented than an Arduino.\\
-\\
-Raspberry Pi + Arduino\\
-This makes it easier to control the Arduino and makes it easier to control screens. The computational power remains small and it requires interfacing between Arduino and the Raspberry Pi, this will be more work. \\
-\\
-BeagleBone\\
-It is possible to replace the Raspberry Pi with a BeagleBone. The BeagleBone has a more powerful processor and better connectors. The Raspberry Pi can handle more powerful graphics and has better audio capabilities. The Raspberry also has a bigger community, which can be a higher supply when help is needed. \\
-\\
-Multiple Arduino’s or Arduino alternatives\\
-The Intelligence is distributed via more devices this makes it easier to track, since there is one device per task, but of course needs more electronic components. \\
-\\
-Final descision\\
-Because of the computational power required for a few functions and the useage of multimedia, the Arduino showed not powerful enough. The Arduino also does not have enough GPIO pins required for the robot. This means that we need more than just the Arduino. Because of the large number of GPIO pins and the better audio support on a single BeagleBone Black board, we decided to take the BeagleBone rather than multiple arduino’s or a Rasberry Pi.
+Negative sides to using an Arduino are that it has very little computational power and has very little memory. Arduino also needs low level programming for almost everything.
+\subsubsection{Arduino + desktop or laptop in base station}
+Using an Arduino in combination with a desktop or laptop gives a lot more computational power and more memory. But of course this requires a base station, which needs to communicate wirelessly with the robot. 
+\subsubsection{Arduino + smartphone (Android)}
+This combination has more computational power than an Arduino alone but less than an Arduino in combination with a desktop. It has decent memory and it is quite easy to connect an Arduino with a smartphone. The smartphone does need a power supply of its own and it adds an extra device to the whole construction, which will take up space.
+\subsubsection{Arduino + Smartphone + laptop in base station}
+This fixes the problem of the communication between the Arduino and the base station, because it can make use of the smartphone’s connection. It keeps all the plus sides of a base station like a lot of memory space and computational power. It also allows data pre-processing before sending it. The use of a lot of devices does make it more confusing and it is hard to keep track of everything, plus all the devices need their own power supply.
+\subsubsection{Arduino + computer parts}
+The Arduino is given more part to make up for its less optimal qualities, like more memory space and more computational power. This construction has a higher power consumption and probably needs cooling. This also requires a computer to deconstruct or ordering a lot of separate parts. This can be very expensive.
+\subsubsection{Raspberry Pi}
+A Raspberry Pi is easier to program but has little computational power. It has less IO than an Arduino and it requires more steps to interact with peripherals. The Raspberry Pi is more library-oriented than an Arduino.
+\subsubsection{Raspberry Pi + Arduino}
+This makes it easier to control the Arduino and makes it easier to control screens. The computational power remains small and it requires interfacing between Arduino and the Raspberry Pi, this will be more work. 
+\subsubsection{BeagleBone}
+It is possible to replace the Raspberry Pi with a BeagleBone. The BeagleBone has a more powerful processor and better connectors. The Raspberry Pi can handle more powerful graphics and has better audio capabilities. The Raspberry also has a bigger community, which can be a higher supply when help is needed. 
+\subsubsection{Multiple Arduinos or Arduino alternatives}
+The Intelligence is distributed via more devices this makes it easier to track, since there is one device per task, but of course needs more electronic components. 
+\subsubsection{Final decision}
+Because of the computational power required for a few functions and the usage of multimedia, the Arduino showed not powerful enough. The Arduino also does not have enough GPIO pins required for the robot. This means that we need more than just the Arduino. Because of the large number of GPIO pins and the better audio support on a single BeagleBone Black board, we decided to take the BeagleBone rather than multiple Arduinos or a Raspberry Pi.
 
 \newpage
 \subsection{Circuit design}
