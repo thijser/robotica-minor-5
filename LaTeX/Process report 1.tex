@@ -23,7 +23,7 @@
 \tableofcontents
 
 \chapter{Summary}
-In this report the process of developing the object requesting educational robot ‘Tawi’ has been documented. A picture of Tawi can be seen in figure \ref{fig:summRender}. This robot plays a game with children by shooting twenty balls into the air almost like a volcanic eruption. Numbers are displayed on these balls. The robot then asks and displays a math question similar to: What is three + nine? The child then has to put the balls with numbers one and two on them, making twelve, into the mouth of the robot and the robot asks another question. When the child is done putting all the balls into the robot, the game restarts. \\
+In this report the process of developing the object requesting educational robot \lq\lq{}Tawi\rq\rq{} has been documented. A picture of Tawi can be seen in figure \ref{fig:summRender}. This robot plays a game with children by shooting twenty balls into the air almost like a volcanic eruption. Numbers are displayed on these balls. The robot then asks and displays a math question similar to: What is three + nine? The child then has to put the balls with numbers one and two on them, making twelve, into the mouth of the robot and the robot asks another question. When the child is done putting all the balls into the robot, the game restarts. \\
  
 \begin{figure}[H]
 \begin{center}
@@ -42,12 +42,12 @@ This robot idea was developed by completing a design process. First, several rob
   \caption{Volcanobot}
   \label{figure:boxbot}
 \end{wrapfigure}
-Next, the use cases of the chosen concept have been explained, these include asking the child for objects. Based on the use cases, the functional analysis has been done. Functions like being attractive to children, shooting balls and recognizing the objects have been identified.  These function lead to “must haves”, “should haves”, “could haves” and “won’t haves”; concrete design requirements. With the MosCow model and the functional analysis in mind, the morphological map gives a clear overview of design options.\\
+Next, the use cases of the chosen concept have been explained, these include asking the child for objects. Based on the use cases, the functional analysis has been done. Functions like being attractive to children, shooting balls and recognizing the objects have been identified.  These function lead to \lq\lq{}must haves\rq\rq{}, \lq\lq{}should haves\rq\rq{}, \lq\lq{}could haves\rq\rq{} and \lq\lq{}won\rq{}t haves\rq\rq{}; concrete design requirements. With the MoSCoW model and the functional analysis in mind, the morphological map gives a clear overview of design options.\\
  \\
 
 
-Three initial designs have been made: the volcano bot, the box-bot and the truck teacher. These design can be seen in pictures in this summary.\\
- The volcano bot has already been described above, the box-bot lets children insert the objects in his hands and lifts them into his own shooting mechanism and the truck teacher does the same with a dump truck design. Furthermore, the choice of object form of balls size 50 mm has been chosen for safety reasons and ease of transportation in the robot itself. In addition, the game as described above has been chosen in favour of others, together with the game mode of dancing to music and manual control of robots driving system.
+Three initial designs have been made: the Volcanobot, the Box-bot and the Truck Teacher. These design can be seen in pictures in this summary.\\
+ The Volcanobot has already been described above, the Box-bot lets children insert the objects in his hands and lifts them into his own shooting mechanism and the truck teacher does the same with a dump truck design. Furthermore, the choice of object form of balls size 50 mm has been chosen for safety reasons and ease of transportation in the robot itself. In addition, the game as described above has been chosen in favor of others, together with the game mode of dancing to music and manual control of robots driving system.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=10cm]{Images/BoxBotConcept.pdf}
@@ -749,38 +749,29 @@ In the end, Option 4 was the cheapest, also fulfills the 12V requirements, while
 For these reasons, option 4 was selected: The NiMH battery.
 
 \subsection{Computational options}
-Several options were considered considering the kind of computer, which is going to control the robot. The following options were considered. \\
-\\
-Arduino\\
+Several options were considered considering the kind of computer, which is going to control the robot. The following options were considered. 
+
+\subsubsection{Arduino}
 The Arduino is lightweight and needs less power in comparison to the rest of the option. It is also an easy option because there is one available. Another plus side to Arduino is that shipping data between in- and output is easier. \\
-Negative sides to using an Arduino are that it has very little computational power and has very little memory. Arduino also needs low level programming for almost everything.\\
-\\
-Arduino + desktop or laptop in base station\\
-Using an Arduino in combination with a desktop or laptop gives a lot more computational power and more memory. But of course this requires a base station, which needs to communicate wirelessly with the robot. \\
-\\
-Arduino + smartphone (Android)\\
-This combination has more computational power than an Arduino alone but less than an Arduino in combination with a desktop. It has decent memory and it is quite easy to connect an Arduino with a smartphone. The smartphone does need a power supply of its own and it adds an extra device to the whole construction, which will take up space.\\
-\\
-Arduino + Smartphone + laptop in base station\\
-This fixes the problem of the communication between the Arduino and the base station, because it can make use of the smartphone’s connection. It keeps all the plus sides of a base station like a lot of memory space and computational power. It also allows data pre-processing before sending it. The use of a lot of devices does make it more confusing and it is hard to keep track of everything, plus all the devices need their own power supply.\\ 
-\\
-Arduino + computer parts\\
-The Arduino is given more part to make up for its less optimal qualities, like more memory space and more computational power. This construction has a higher power consumption and probably needs cooling. This also requires a computer to deconstruct or ordering a lot of separate parts. This can be very expensive.\\
-\\
-Raspberry Pi\\
-A Raspberry Pi is easier to program but has little computational power. It has less IO then an Arduino and it requires more steps to interact with peripherals. The Raspberry Pi is more library-oriented than an Arduino.\\
-\\
-Raspberry Pi + Arduino\\
-This makes it easier to control the Arduino and makes it easier to control screens. The computational power remains small and it requires interfacing between Arduino and the Raspberry Pi, this will be more work. \\
-\\
-BeagleBone\\
-It is possible to replace the Raspberry Pi with a BeagleBone. The BeagleBone has a more powerful processor and better connectors. The Raspberry Pi can handle more powerful graphics and has better audio capabilities. The Raspberry also has a bigger community, which can be a higher supply when help is needed. \\
-\\
-Multiple Arduino’s or Arduino alternatives\\
-The Intelligence is distributed via more devices this makes it easier to track, since there is one device per task, but of course needs more electronic components. \\
-\\
-Final descision\\
-Because of the computational power required for a few functions and the useage of multimedia, the Arduino showed not powerful enough. The Arduino also does not have enough GPIO pins required for the robot. This means that we need more than just the Arduino. Because of the large number of GPIO pins and the better audio support on a single BeagleBone Black board, we decided to take the BeagleBone rather than multiple arduino’s or a Rasberry Pi.
+Negative sides to using an Arduino are that it has very little computational power and has very little memory. Arduino also needs low level programming for almost everything.
+\subsubsection{Arduino + desktop or laptop in base station}
+Using an Arduino in combination with a desktop or laptop gives a lot more computational power and more memory. But of course this requires a base station, which needs to communicate wirelessly with the robot. 
+\subsubsection{Arduino + smartphone (Android)}
+This combination has more computational power than an Arduino alone but less than an Arduino in combination with a desktop. It has decent memory and it is quite easy to connect an Arduino with a smartphone. The smartphone does need a power supply of its own and it adds an extra device to the whole construction, which will take up space.
+\subsubsection{Arduino + Smartphone + laptop in base station}
+This fixes the problem of the communication between the Arduino and the base station, because it can make use of the smartphone’s connection. It keeps all the plus sides of a base station like a lot of memory space and computational power. It also allows data pre-processing before sending it. The use of a lot of devices does make it more confusing and it is hard to keep track of everything, plus all the devices need their own power supply.
+\subsubsection{Arduino + computer parts}
+The Arduino is given more part to make up for its less optimal qualities, like more memory space and more computational power. This construction has a higher power consumption and probably needs cooling. This also requires a computer to deconstruct or ordering a lot of separate parts. This can be very expensive.
+\subsubsection{Raspberry Pi}
+A Raspberry Pi is easier to program but has little computational power. It has less IO than an Arduino and it requires more steps to interact with peripherals. The Raspberry Pi is more library-oriented than an Arduino.
+\subsubsection{Raspberry Pi + Arduino}
+This makes it easier to control the Arduino and makes it easier to control screens. The computational power remains small and it requires interfacing between Arduino and the Raspberry Pi, this will be more work. 
+\subsubsection{BeagleBone}
+It is possible to replace the Raspberry Pi with a BeagleBone. The BeagleBone has a more powerful processor and better connectors. The Raspberry Pi can handle more powerful graphics and has better audio capabilities. The Raspberry also has a bigger community, which can be a higher supply when help is needed. 
+\subsubsection{Multiple Arduinos or Arduino alternatives}
+The Intelligence is distributed via more devices this makes it easier to track, since there is one device per task, but of course needs more electronic components. 
+\subsubsection{Final decision}
+Because of the computational power required for a few functions and the usage of multimedia, the Arduino showed not powerful enough. The Arduino also does not have enough GPIO pins required for the robot. This means that we need more than just the Arduino. Because of the large number of GPIO pins and the better audio support on a single BeagleBone Black board, we decided to take the BeagleBone rather than multiple Arduinos or a Raspberry Pi.
 
 \newpage
 \subsection{Circuit design}
@@ -798,6 +789,7 @@ From the mechanical and electronic designs a list of required parts can be const
 
 
 \chapter{Planning November to January}
+\section{Overall planning}
 Week 1 (10 November)\\
 Ordering Parts\\
 Building Parts\\
@@ -805,16 +797,16 @@ Programming\\
 \\
 Week 2 (17 November)\\
 Building Parts\\
-Programming\\
-\\
+Programming
+\begin{tabbing}
 Week 3 (24 November)\\
 Assembling robot\\
-	Mechanics\\
-	Electronics
-	Exterior design\\
-	Programming\\
-\\
-Week 4 (1 December)
+~~~Mechanics\\
+~~~Electronics\\
+~~~Exterior design\\
+~~~Programming
+\end{tabbing}
+Week 4 (1 December)\\
 Assembling robot\\
 Adjustments in prototype for safe test with user\\
 \\
@@ -851,7 +843,7 @@ Estimated effort: 2
 \item Task: robot must be able to request items by display.\\
 Estimated effort: 1 
 \item Task: robot must be able to recognize music and dance to the beat \\
-Estimated effort:  7 
+Estimated effort: 7 
 \item Task: robot must have suitable idle animations.\\ 
 Estimated effort: 5
 \item Task: robot must have animations for \lq\lq{}waking up\rq\rq{} after boot.\\ 
@@ -869,38 +861,42 @@ The concept design is the next phase in the designing process. The turtle robot 
 In the next part of this project the prototype of the robot will be build and tested.
 
 \chapter{References}
-Innvo Labs Corporation (2010), \textit{Pleoworld}, Retrieved 25 September 2014, \\from http://www.pleoworld.com/pleo\_rb/eng/index.php \\
-\\
-Spin Master (2014), \textit{Zoomer Pup}, Retrieved 25 September 2014, \\from http://www.zoomerpup.com/international/for\_parents.php?lang=nl\\
-\\
-Spin Master (2014), \textit{Zoomer Dino}, Retreived 25 September 2014, \\from http://www.zoomerdino.com/\#/home\\
-\\
 Anki (2014), \textit{Anki}, Retrieved 25 September 2014, \\from https://anki.com/en\#top \\
-\\
-LittleBits Electronics (2014), \textit{LittleBits}, Retrieved 25 September 2014,\\ from http://littlebits.cc/ \\
-\\
-Ubooly Inc. (2014), \textit{Ubooly}, Retrieved 25 September 2014,\\ from http://www.ubooly.com/ \\
-\\
-Kickstarter Inc. (2014), \textit{Kickstarter}, Retrieved 25 September 2014, \\from https://www.kickstarter.com/ \\
-\\
-Hasbro (2014) \textit{Hasbro}, Retrieved 25 September 2014, \\from http://www.hasbro.com/nl\_NL/ \\
-\\
-Hasbro (2014) \textit{Furby}, Retrieved 25 September 2014, \\from http://www.hasbro.com/furby/nl\_NL/ \\
-Sphere (2014), \textit{GoSphero}, Retrieved 25 September 2014,\\ from http://www.gosphero.com/ \\
-\\
-Gray, L.(2014), \textit{Britain\rq{}s \lq{}litter epidemic\rq{} costs almost 1bn pound every year} , Retrieved 15 October 2014, \\from http://www.telegraph.co.uk/earth/earthnews/7897112/Britains-litter-epidemic-costs-almost-1bn-every-year.html \\
-\\
-Viola, N., Corpino, S., Fioriti, M. and Stesina. F.(2012), \textit{Functional Analysis in Systems Engineering: Methodology and Applications}, Retrieved 10 September 2014, \\from http://cdn.intechopen.com/pdfs-wm/32617.pdf \\
-\\
-Choosing Safe Toys, (n.d.), Retrieved 29 September 2014, \\from http://kidshealth.org/parent/firstaid\_safe/home/safe\_toys.html \\
-\\
-Engineering \lq\lq{}Laws\rq\rq{} - Moore\rq{}s, Rock\rq{}s, Butter\rq{}s and others (2012), Retrieved 22 October 2014, \\from http://sourcetech411.com/2012/12/engineering-laws-moores-rocks-butters-and-others/ \\
 \\
 DYKA (2003), \textit{Technische Documentatie drukleiding PVC}, Retrieved 23 October 2014 \\
 from http://www.dyka.nl/nl/binaries/2010\%20TD\%20Drukleiding\%20PVC\%20en\%20PE\%20maart\%202003\%20nwe\%20omslag\_tcm29-6927.pdf \\
 \\
-Battery Discharge Methods, (n.d.), Retrieved 23 October 2014, \\from http://batteryuniversity.com/learn/article/discharge\_methods\\
+Gray, L.(2014), \textit{Britain\rq{}s \lq{}litter epidemic\rq{} costs almost 1bn pound every year} , Retrieved 15 October 2014, \\from http://www.telegraph.co.uk/earth/earthnews/7897112/Britains-litter-epidemic-costs-almost-1bn-every-year.html \\
 \\
+Hasbro (2014) \textit{Furby}, Retrieved 25 September 2014, \\from http://www.hasbro.com/furby/nl\_NL/ \\
+\\
+Hasbro (2014) \textit{Hasbro}, Retrieved 25 September 2014, \\from http://www.hasbro.com/nl\_NL/ \\
+\\
+Innvo Labs Corporation (2010), \textit{Pleoworld}, Retrieved 25 September 2014, \\from http://www.pleoworld.com/pleo\_rb/eng/index.php \\
+\\
+LittleBits Electronics (2014), \textit{LittleBits}, Retrieved 25 September 2014,\\ from http://littlebits.cc/ \\
+\\
+Kickstarter Inc. (2014), \textit{Kickstarter}, Retrieved 25 September 2014, \\from https://www.kickstarter.com/ \\
+\\
+Nintendo (2014) \textit{Torkoal}, Retrieved on 29 september 2014\\ from http://www.pokemon.com/nl/pokedex/torkoal \\
+\\
+Spin Master (2014), \textit{Zoomer Dino}, Retreived 25 September 2014, \\from http://www.zoomerdino.com/\#/home\\
+\\
+Spin Master (2014), \textit{Zoomer Pup}, Retrieved 25 September 2014, \\from http://www.zoomerpup.com/international/for\_parents.php?lang=nl\\
+\\
+Sphere (2014), \textit{GoSphero}, Retrieved 25 September 2014,\\ from http://www.gosphero.com/ \\
+\\
+Ubooly Inc. (2014), \textit{Ubooly}, Retrieved 25 September 2014,\\ from http://www.ubooly.com/ \\
+\\
+Viola, N., Corpino, S., Fioriti, M. and Stesina. F.(2012), \textit{Functional Analysis in Systems Engineering: Methodology and Applications}, Retrieved 10 September 2014, \\from http://cdn.intechopen.com/pdfs-wm/32617.pdf \\
+\\
+\textit{Battery Discharge Methods}, (n.d.), Retrieved 23 October 2014, \\from http://batteryuniversity.com/learn/article/discharge\_methods\\
+\\
+\textit{Child development: 6-9 years}, (n.d.), Retrieved 24 October 2014, \\from http://www.cyh.com/HealthTopics/HealthTopicDetails.aspx?p=114\&np=122\&id=1867\\
+\\
+\textit{Choosing Safe Toys}, (n.d.), Retrieved 29 September 2014, \\from http://kidshealth.org/parent/firstaid\_safe/home/safe\_toys.html \\
+\\
+\textit{Engineering \lq\lq{}Laws\rq\rq{} - Moore\rq{}s, Rock\rq{}s, Butter\rq{}s and others}, (2012), Retrieved 22 October 2014, \\from http://sourcetech411.com/2012/12/engineering-laws-moores-rocks-butters-and-others/ \\
 Lead Based Batteries, (n.d.), Retrieved 23 October 2014, \\from http://batteryuniversity.com/learn/article/lead\_based\_batteries \\
 \\
 Lithium Based Batteries, (n.d.), Retrieved 23 October 2014, \\from http://batteryuniversity.com/learn/article/lithium\_based\_batteries \\
@@ -908,17 +904,13 @@ Lithium Based Batteries, (n.d.), Retrieved 23 October 2014, \\from http://batter
 Nickel Based Batteries, (n.d.), Retrieved 23 October 2014, \\from 
 http://batteryuniversity.com/learn/article/nickel\_based\_batteries \\
 \\
-Nintendo (2014) \textit{Torkoal}, Retrieved on 29 september 2014\\ from http://www.pokemon.com/nl/pokedex/torkoal \\
-\\
-Child development: 6-9 years, (n.d.), Retrieved 24 October 2014, \\from http://www.cyh.com/HealthTopics/HealthTopicDetails.aspx?p=114\&np=122\&id=1867\\
-\\
 \begin{appendices}
 \chapter{Use Cases}
 \label{app:usecase}
 \begin{usecase}
 \addtitle{Use Case 2}{Give the object}
 \addfield{Actor}{Child}
-\addfield{Trigger}{The child has found the requessted object}
+\addfield{Trigger}{The child has found the requested object}
 \addscenario{Main Success Scenario:}{
 	\item The child offers the object to the robot. 
 	\item The robot accepts the object and stores it.
@@ -988,7 +980,7 @@ The MoSCoW Analysis will be used to pinpoint the requirements and differentiate 
 \section*{Musts}
 \begin{itemize}
 \item Safety --         Must not be able to hurt a child
-\item Price --             Prototype must have a budget of maximum 1000 euro
+\item Price --             Prototype must have a budget of maximum \euro1000,-
 \item Battery life --         Must be able to run for 30 minutes at least
 \item Design --        Must not be scary for children
 \item Measurements --     Must easily move through an open door (Width maximum 70 cm)
