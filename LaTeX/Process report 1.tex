@@ -36,7 +36,7 @@ The first stage of creating a concept is holding a brainstorm for a function of 
 \item{Toy clean-up robot}
 \item{Tag robot}
 \item{Volcano robot}
-\item{Volcano robot second iteration}
+\item{Object requesting educational robot}
 \end{itemize}
 
 \section{Underwater exploration robot}
@@ -124,6 +124,7 @@ The toy industry is very large, so it is quite hard to determine which are most 
 
 \chapter{Use Cases}
 In this chapter, the use cases will be explained. The use cases can be found in Appendix \ref{app:usecase}. 
+Use cases describe a sequence of events and actions that follow upon a certain interaction between the an actor and the software. This actor can be the child or the robot. The use cases turn offer a structure for functions necessary in the software.
 This is an example of a use case:
 
 \begin{usecase}
@@ -198,43 +199,6 @@ There are a few little things to note about the Morphological map. The first one
 This map will be used to create a certain amount of initial designs, of which three shall be selected to be improved and turned into full concepts.
 \label{chap:morphological}
 
-\chapter{Object design}
-The objects that can be used in the robots come in different forms and sizes. The form and size of these objects will be decided in the following paragraphs. 
-
-\subsubsection{Form}
-Theoretically, one can consider all kinds of forms for the objects. However, this robot would need to transport the objects and shoot them into the air. This is realized in an easy way by taking spherical objects. Balls are able to roll with low friction and are easily transported through the robot. Square objects for example won\rq{}t be able to transport as easily as spherical objects would. \\
-For these reasons, we have decided on using spheres as the final form.
-
-\subsubsection{Size}
-Safety is a big issue regarding the size of the balls. Children under 3 years of age can safely play with balls that are at least 44 mm of diameter (\lq\lq{}Choosing Safe Toys\rq\rq{}, n.d.). The specific age group will be given in chapter \ref{chap:games}: The game. \\
-Because of this, the balls will have to be at least 44 mm. Besides this, the readability of the print on the ball, the availability of that certain size of balls and the amount of space used for the loading cylinder, where the balls are stored, should be considered. \\
-Balls should already be readable from 44mm, so this should be fine, but it would of course be more readable when selecting larger balls. \\
-The easiest available balls to get are balls with a diameter of 50 or 60mm. Other balls would probably have to be specifically fabricated. \\
-Finally, the available space for the loading cylinder is 180mm high and has a diameter of 155mm. When selecting 50mm, it would be enough space to store approximately 20-23 balls. Figure \ref{fig:balllaunch} shows how the balls are stacked. \\
-\begin{figure}[H]
-\begin{center}
-\includegraphics[width = 10cm]{Images/BallLaunch.png}
-\caption{This figure shows how the balls will fall in the launching pipe for 50mm balls.}
-\label{fig:balllaunch}
-\end{center}
-\end{figure}
-If the 60mm balls would be used though, it would decrease significantly to around 12-15 balls. 
-Since there is also storage space in the neck, the total storage would be around 30 balls. This is enough for the 26 letters of the alphabet and without using the neck it would be enough for 2 sets of the numbers 0-9. \\
-The 50mm balls would be most advantageous and will therefore also be used. 
-
-\subsubsection{Material}
-For the materials, the ball must not be able to hurt the child when it falls on the childs head. For this reason, a material like foam or styrofoam would be ideal 
-\newpage
-\subsubsection{Conclusion}
-The final decision is 50mm foam or styrofoam balls, depending on the availability and price of both. An example is shown in figure \ref{figure:lotteryball}.
-\begin{figure}[H]
-\begin{center}
-\includegraphics[width=10cm]{Images/LOTTERY-BALLS-with-rfid.jpg}
-\end{center}
-\caption{A 50mm foam ball with RFID sensor inside}
-\label{figure:lotteryball}
-\end{figure}
-
 \chapter{Initial design}
 The design of the robot will be decided by doing a brainstorm. The brainstorm consists of three stages: first a lot of ideas will be generated, then the ideas will be discussed and to conclude the brainstorm, the ideas will be narrowed down to three concepts. The brainstorm technique and the ideas can be found in Appendix \ref{appendix:brainstorm}: Brainstorm initial designs. \\
 The design of the game will not be elaborated here, this can be found in Chapter \ref{chap:games}: The game. The following are the three end concepts for the robot:
@@ -278,6 +242,43 @@ The shooting mechanism would be similar to the Volcano-bot, using a spring and a
 The Truck Teacher is a robot in the form of a shovel truck, that can be found in figure \ref{figure:truckteacher}. At the beginning of the game, it lets the balls roll off the truck by toppling the container. Then the robot will ask for a certain object. The child should then retrieve the object and scan it on the window or in the bucket of the truck. If it is the correct item, it will load the object into the container of the truck by rotating the arm of the bucket.
 
 This robot would release the balls by toppling the container by using a screw spindle. The container would be the same size as the platform and the objects would have to be balls, since lower friction is needed to let the objects fall of the truck.
+
+\chapter{Object design}
+The objects that can be used in the robots come in different forms and sizes. The form and size of these objects will be decided in the following paragraphs. 
+
+\section*{Form}
+Theoretically, one can consider all kinds of forms for the objects. However, this robot would need to transport the objects and shoot them into the air. This is realized in an easy way by taking spherical objects. Balls are able to roll with low friction and are easily transported through the robot. Square objects for example won\rq{}t be able to transport as easily as spherical objects would. \\
+For these reasons, we have decided on using spheres as the final form.
+
+\section*{Size}
+Safety is a big issue regarding the size of the balls. Children under 3 years of age can safely play with balls that are at least 44 mm of diameter (\lq\lq{}Choosing Safe Toys\rq\rq{}, n.d.). The specific age group will be given in chapter \ref{chap:games}: The game. \\
+Because of this, the balls will have to be at least 44 mm. Besides this, the readability of the print on the ball, the availability of that certain size of balls and the amount of space used for the loading cylinder, where the balls are stored, should be considered. \\
+Balls should already be readable from 44mm, so this should be fine, but it would of course be more readable when selecting larger balls. \\
+The easiest available balls to get are balls with a diameter of 50 or 60mm. Other balls would probably have to be specifically fabricated. \\
+Finally, the available space for the loading cylinder is 180mm high and has a diameter of 155mm. When selecting 50mm, it would be enough space to store approximately 20-23 balls. Figure \ref{fig:balllaunch} shows how the balls are stacked. \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width = 10cm]{Images/BallLaunch.png}
+\caption{This figure shows how the balls will fall in the launching pipe for 50mm balls.}
+\label{fig:balllaunch}
+\end{center}
+\end{figure}
+If the 60mm balls would be used though, it would decrease significantly to around 12-15 balls. 
+Since there is also storage space in the neck, the total storage would be around 30 balls. This is enough for the 26 letters of the alphabet and without using the neck it would be enough for 2 sets of the numbers 0-9. \\
+The 50mm balls would be most advantageous and will therefore also be used. 
+
+\subsubsection{Material}
+For the materials, the ball must not be able to hurt the child when it falls on the childs head. For this reason, a material like foam or styrofoam would be ideal 
+\newpage
+\subsubsection{Conclusion}
+The final decision is 50mm foam or styrofoam balls, depending on the availability and price of both. An example is shown in figure \ref{figure:lotteryball}.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=10cm]{Images/LOTTERY-BALLS-with-rfid.jpg}
+\end{center}
+\caption{A 50mm foam ball with RFID sensor inside}
+\label{figure:lotteryball}
+\end{figure}
 
 \chapter{The game}
 \label{chap:games}
@@ -338,28 +339,27 @@ For the box-bot and Volcanobot, we’re using similar launching systems with spr
 All of the calculations on the spring launching mechanism can be found in Appendix \ref{appendix:calculations}. In short, the motor we need would have to deliver a minimum of 1.5Nm. This is quite large, but nothing we cannot work with.\\
 For the Truck Teacher concept, only the tipping mechanism needs some calculations. Again, the calculations can be found in Appendix \ref{appendix:calculations}, but in short, we only need to have a lifting force of about 3N. This is easily solved with a screw spindle and a small motor.
 \section{Sketches of exterior}
-\begin{figure}
+\begin{figure}[H]
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{Images/VolcanoBotConcept.pdf}
+    \includegraphics[width=0.70\textwidth]{Images/VolcanoBotConcept.pdf}
   \end{center}
   \caption{Volcanobot}
   \label{figure:volcanobot2}
 \end{figure}
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{Images/BoxBotConcept.pdf}
+    \includegraphics[width=0.70\textwidth]{Images/BoxBotConcept.pdf}
   \end{center}
   \caption{Box-bot}
   \label{figure:boxbot2}
 \end{figure}
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{Images/TruckTeacherConcept.pdf}
+    \includegraphics[width=0.70\textwidth]{Images/TruckTeacherConcept.pdf}
   \end{center}
   \caption{Truck Teacher}
   \label{figure:truckteacher2}
 \end{figure}
-\section{Sketches of exterior}
 
 \section{Sketches of mechanics}
 Again, the mechanics for the Box-Bot and for Volcanobot are quite similar. The spring launch mechanism applies to both the Box-Bot and Volcanobot.
@@ -604,6 +604,8 @@ Results of this simulation are below (Figure \ref{fig:simluation}). The simulati
 \end{figure}
 \label{sect:NeckSim}
 \section{SolidWorks model}
+The whole prototype was put into Solidworks. In figure XX to XX several renders of the model can be seen. In the next stage of this project this whole model will be build. The drawings of the parts, which will be produced, can be found in appendix XXX. An overview of all parts, which will be bought, can be found in the bill of materials in appendix XXX. 
+
 \section{Software architecture}
 The most important scenario for the robot is that the robot can ask for a ball, then wait for the correct ball to be inserted and give positive or negative feedback depending on whether the given ball was correct. After repeating this process until the volcano fills up, the robot erupts, spreading the balls around himself again. \\
 The overall architecture of the robot is that one central node (“robot”), that delegates work towards several lower level nodes, that in turn each listen to an even lower level node, which either repeats to process or directly controls a device. \\
@@ -671,7 +673,42 @@ The Time Type indicates when that part receives the current. This is important, 
 The options are lined up in Figure \ref{table:batteryOptions}. According to the Required capacity paragraph, the robot would require at least 2633 mAh for half an hour. Also, the required voltage for the motors is 12V. Therefore, at least 3 of Option 1 would have to be bought for 11.1V. To reach the required capacity for Option 2, 2 of those would need to be bought. The other two options already fulfill the requirements. 
 In the end, Option 4 was the cheapest, also fulfills the 12V requirements, while the Li-Ion ones are only 11.1V. Option 3 would have been viable, but it was simply too expensive for a battery for a robot that doesn\rq{}t actually need that much capacity. 
 For these reasons, Option 4 was selected. 
- \newpage
+
+\subsection{Computational options}
+Several options were considered considering the kind of computer, which is going to control the robot. The following options were considered. \\
+\\
+Arduino\\
+The Arduino is lightweight and needs less power in comparison to the rest of the option. It is also an easy option because there is one available. Another plus side to Arduino is that shipping data between in- and output is easier. \\
+Negative sides to using an Arduino are that it has very little computational power and has very little memory. Arduino also needs low level programming for almost everything.\\
+\\
+Arduino + desktop or laptop in base station\\
+Using an Arduino in combination with a desktop or laptop gives a lot more computational power and more memory. But of course this requires a base station, which needs to communicate wirelessly with the robot. \\
+\\
+Arduino + smartphone (Android)\\
+This combination has more computational power than an Arduino alone but less than an Arduino in combination with a desktop. It has decent memory and it is quite easy to connect an Arduino with a smartphone. The smartphone does need a power supply of its own and it adds an extra device to the whole construction, which will take up space.\\
+\\
+Arduino + Smartphone + laptop in base station\\
+This fixes the problem of the communication between the Arduino and the base station, because it can make use of the smartphone’s connection. It keeps all the plus sides of a base station like a lot of memory space and computational power. It also allows data pre-processing before sending it. The use of a lot of devices does make it more confusing and it is hard to keep track of everything, plus all the devices need their own power supply.\\ 
+\\
+Arduino + computer parts\\
+The Arduino is given more part to make up for its less optimal qualities, like more memory space and more computational power. This construction has a higher power consumption and probably needs cooling. This also requires a computer to deconstruct or ordering a lot of separate parts. This can be very expensive.\\
+\\
+Raspberry Pi\\
+A Raspberry Pi is easier to program but has little computational power. It has less IO then an Arduino and it requires more steps to interact with peripherals. The Raspberry Pi is more library-oriented than an Arduino.\\
+\\
+Raspberry Pi + Arduino\\
+This makes it easier to control the Arduino and makes it easier to control screens. The computational power remains small and it requires interfacing between Arduino and the Raspberry Pi, this will be more work. \\
+\\
+BeagleBone\\
+It is possible to replace the Raspberry Pi with a BeagleBone. The BeagleBone has a more powerful processor and better connectors. The Raspberry Pi can handle more powerful graphics and has better audio capabilities. The Raspberry also has a bigger community, which can be a higher supply when help is needed. \\
+\\
+Multiple Arduino’s or Arduino alternatives\\
+The Intelligence is distributed via more devices this makes it easier to track, since there is one device per task, but of course needs more electronic components. \\
+\\
+Final descision\\
+Because of the computational power required for a few functions and the useage of multimedia, the Arduino showed not powerful enough. The Arduino also does not have enough GPIO pins required for the robot. This means that we need more than just the Arduino. Because of the large number of GPIO pins and the better audio support on a single BeagleBone Black board, we decided to take the BeagleBone rather than multiple arduino’s or a Rasberry Pi.
+
+\newpage
 \subsection{Circuit design}
 The schematic of the final circuit can be found in Figure \ref{fig:electronics}. The LM7805 Circuit is used to transform the 12V of the battery to the 5V that the BeagleBone needs. MOSFETs are used to switch the Transport Motor and the Shoot Motor on and off when needed. The LED streams might also require MOSFETs. 
 \begin{figure}[H]
@@ -871,7 +908,7 @@ Child development: 6-9 years, (n.d.), Retrieved 24 October 2014, \\from http://w
 
 \chapter{MoSCoW model}
 \label{appendix:moscow}
-\section{Musts}
+\section*{Musts}
 \begin{itemize}
 \item Safety --         Must not be able to hurt a child
 \item Price --             Prototype must have a budget of maximum 1000 euro
@@ -885,7 +922,7 @@ Child development: 6-9 years, (n.d.), Retrieved 24 October 2014, \\from http://w
 \item Safety --        Robot must be able to detect if the child is not in the shooting path before shooting
 \item Design --         Robot must look attractive to children
 \end{itemize}
-\section{Shoulds}
+\section*{Shoulds}
 \begin{itemize}
 \item Sturdiness--        Robot should not be easily damaged when interacting with children
 \item Interface--         Should be easy to understand for children
@@ -893,13 +930,13 @@ Child development: 6-9 years, (n.d.), Retrieved 24 October 2014, \\from http://w
 \item Storage --       The robot should be able to store objects inside
 \item Cleanable --       Should be easy to clean the robot
 \end{itemize}
-\section{Coulds}
+\section*{Coulds}
 \begin{itemize}
 \item Movement--         The robot could be able to move around
 \item Interface--         Could have an application for smartphone
 \item Fun--             The robot could be able to dance
 \end{itemize}
-\section{Won\rq{}ts}
+\section*{Won\rq{}ts}
 \begin{itemize}
 \item Won\rq{}t be able to fly
 \item Won\rq{}t be able to make underwater explorations
@@ -920,18 +957,18 @@ The brainstorm for the balls the robot shoots in the air mostly consisted of ide
 The mechanical brainstorm was a little more difficult. They were categorized in different aspects, which can be found in the morphological chart, see chapter \ref{chap:morphological}.
 \label{appendix:brainstorm}
 \chapter{Different games}
-\section{Colour recognition, age 3 to 4}
+\section*{Colour recognition, age 3 to 4}
 The child can practice naming colours with a very young child. The robot would ask for the blue ball and the child would need to represent the correct ball. This game would only be interesting for very young children, but the balls are quite small to fit in the robot so it needs to be age 3 and up.
-\section{Form recognition, age 3 to 4}
+\section*{Form recognition, age 3 to 4}
 The balls would have different forms and shapes on it. The robot could then ask for the shape \lq\lq{}square\rq\rq{} and the child would need to give the ball with a square on it to the robot.\\
 This game was considered confusing, since the pictures are printed on balls and it would be difficult for them to recognize a shape of a ball. This game was considered to difficult, because of this and will not be used.
-\section{Food recognition, age 3 to 5}
+\section*{Food recognition, age 3 to 5}
 The child could play a feeding game with the robot. For example, the robot would ask for ice cream and the child would need to give the ice cream ball to the robot. Intuitively the child would try to give real food to the robot. There would need to be a plan for when this happens.
-\section{Math, age 4 to 9}
+\section*{Math, age 4 to 9}
 The child could practice math exercises with the robot with different difficulty settings. For very young children the robot would for example ask \lq\lq{}What is 2 plus 2?\rq\rq{} and the child would need to give the ball \lq\lq{}4\rq\rq{} to the robot. The robot would scan it and take it. For older children it could ask multiplying and even dividing questions.
-\section{Animal recognition, age 3 to 5}
+\section*{Animal recognition, age 3 to 5}
 The balls would have different picture of animals on it and the robot would ask for the correct animal. This could be in different forms like making the noise of the animal or asking for a specific type.
-\section{Alphabet, age 4 to 9}
+\section*{Alphabet, age 4 to 9}
 The robot can practice words and letters with the child. The robot would have balls with letters on them and can ask for the word \lq\lq{}dog\rq\rq{} for example. The child would need to give the \lq\lq{}d\rq\rq{}, the \lq\lq{}o\rq\rq{} and the \lq\lq{}g\rq\rq{} to the robot to make the word \lq\lq{}dog\rq\rq{}. For younger children the robot could just practice individual letters. Older children could maybe even learn a foreign language with the robot by practicing words.
 \label{appendix:games}
 
@@ -997,25 +1034,25 @@ The robot can practice words and letters with the child. The robot would have ba
 
 \chapter{Competitors}
 \label{appendix:competitors}
-\section{Innvo Labs}
+\section*{Innvo Labs}
 Innvo Labs (Innvo Labs Corporation, 2010) makes a robot dinosaur Pleo, which motivates a child to care for it. This teaches them to care for an animal in a playful way. Pleo operates autonomously and interacts with a child. It has several touch sensors and has different moods. It also needs to sleep and eat. Innvo Labs\rq{} target group is children from the age of 12.
-\section{Zoomer}
+\section*{Zoomer}
 Zoomer (Spin Masters, 2014) makes a dinosaur robot, Boomer, but unlike Innvo Labs\rq{} dinosaur, this one has a wild character. It moves fast on two legs and he can show emotions. It has several features like biting and roaring, which can make it exciting, but maybe a bit scary toy for children. It will react to several interactions like pulling his tail and following a moving object. \\
 Zoomer also makes a robot puppy (Spin Masters, 2014), that can do several tricks and shows puppy behaviour. This robot is for children of 5 years and above and is easy to operate. \\
 The company Zoomer is part of a bigger company SpinMasters. SpinMasters has several brands for different age groups and gender, but most are not related to robotics.
-\section{Orbotix}
+\section*{Orbotix}
 Orbotix (Sphero, 2014) makes two very simple looking robots: the Sphero and the Ollie. The robots are controlled with a smartphone or tablet. \\
 The Sphero changes colour, does challenges and learns tricks. Children can make it go through obstacle courses and can even use it to play videogames with. For older children there is an option to learn to program the robot. \\
 The robot Ollie is programmed to do more spectacular tricks like flips and drifting. It is much faster than the Sphero and more suited for navigating outside.
-\section{Anki}
+\section*{Anki}
 Anki (Anki, 2014) makes racing robots, each having their own tricks. The robots are operated by a smartphone and can race each other. The track is a foldable mat, which can be placed on any flat surface. \\
 Anki\rq{}s vision for their company is to use scientific research of the last years to make artificial intelligence accessible for everyone. Or as they put it on their website: They are dedicated to bringing consumer robotics into everyday life.
-\section{LittleBits Electronics}
+\section*{LittleBits Electronics}
 LittleBits (Little Bits Electronics, 2014) provides product for DIY projects. It is an easy way to learn to prototype with electronics. It ranges from very simple electronics to more complex electronics and is fun for younger and older children. It can be used from the age of 7 and up. The vision of LittleBits is to bring electronics to everyone and to inspire people to design and to learn problem solving.
-\section{Ubooly Inc.}
+\section*{Ubooly Inc.}
 Ubooly (Ubooly, 2014) uses an app and a specially designed soft case. It transforms an iPhone or iPad into a plush toy, which interacts through the app. Ubooly can entertain a child by reading stories or playing games with the child. It even helps with daily routines like brushing teeth and help with school. Ubooly has several expansion packs and is downloaded on the users phone. \\
 The company Ubooly was founded by a Kickstarter and the idea was to create make a fun and entertaining learning experience.
-\section{Hasbro}
+\section*{Hasbro}
 Hasbro (Hasbro, 2014) makes a robot toy called Furby (Hasbro, 2014). Furby is a soft colourful toy that makes noises and moves in his place. Furbies can interact with each other and their personality changes by how a child plays with it.\\
 Hasbro also makes other toys like Jenga, Play-Doh, transformers and much more. Hasbro is a large company, which is established over the whole world. They focus on safe toys, which inspire creativity and connect people.
 \chapter{Battery}
