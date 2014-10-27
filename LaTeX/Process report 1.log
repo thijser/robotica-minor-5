@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.3.27)  27 OCT 2014 10:02
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.3.27)  27 OCT 2014 10:12
 entering extended mode
 **C:/Users/Administrator/robotica/LaTeX/Process*report*1.tex
 ("C:/Users/Administrator/robotica/LaTeX/Process report 1.tex"
@@ -622,9 +622,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
 [23] [24]
 Chapter 11.
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
 File: Images/VolcanoBotConcept.pdf Graphic file (type pdf)
 <use Images/VolcanoBotConcept.pdf>
 Package pdftex.def Info: Images/VolcanoBotConcept.pdf used on input line 343.
@@ -3474,7 +3471,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1119.
 Here is how much of TeX's memory you used:
  9062 strings out of 494045
  143668 string characters out of 3148363
- 230473 words of memory out of 3000000
+ 229473 words of memory out of 3000000
  11815 multiletter control sequences out of 15000+200000
  9572 words of font info for 34 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
@@ -3488,7 +3485,7 @@ nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pf
 b>
-Output written on "Process report 1.pdf" (122 pages, 14349548 bytes).
+Output written on "Process report 1.pdf" (122 pages, 14351199 bytes).
 PDF statistics:
  2340 PDF objects out of 2487 (max. 8388607)
  300 named destinations out of 1000 (max. 500000)
