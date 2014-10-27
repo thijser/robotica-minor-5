@@ -40,8 +40,8 @@ qtcreator-*
 
 *~
 # LaTeX ignore files
-Process report.pdf
-Process report.log
+LaTeX/Process report 1.log
+LaTeX/Process report 1.log
 *.aux
 *.glo
 *.idx
