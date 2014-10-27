@@ -23,8 +23,8 @@
 \tableofcontents
 
 \chapter{Introduction}
-Currently, there are not a lot of robots on the market, but since recent developments in technology, it will increase to become relevant. The main idea of this project is to create an autonomous robot from scratch. \\
-This report will be about the conceptual design of the Tawi, a robot that will play an educational game with children. This will be told starting with the original brainstorm for ideas for a robot. After that, by making a Functional Analysis and a MoSCoW model, a Morphological Map will be created. By using the Morphological Map, the Initial Designs can be set up. After the Initial Designs are improved, a final concept will be chosen and a prototype can be designed. For the prototype, further calculations on the final concept and the motivations behind the decisions can be made.
+Currently, there are not many robots on the market, but since recent developments in technology, it will increase to become available for households and on the market. The goal of this report is to display the design steps taken and the decisions made for developing an autonomous educational robot.  \\ 
+The name of the report developed is: Tawi. Tawi will be used in households to help children learn different school subjects. A design process over the course of ten weeks will help develop this robot. This report will explain this design phase and substantiate the decisions made for the robot. The design process is divided in three stages: the idea development stage, the concept stage and the final stage. In the idea development stage several brainstorms will be held to develop an idea for the robot and to come to three different concepts. In the concept stage these concepts will be further improved and developed to full concepts. One concept will be chosen and this robot will be developed into a final blueprint for a prototype in the final stage. At the end of this report a final design for the robot can be seen.
 
 \chapter{Ideas and choice of the robot}
 The first stage of creating a concept is holding a brainstorm for a function of the robot. The following ideas were considered : 
@@ -124,7 +124,7 @@ The toy industry is very large, so it is quite hard to determine which are most 
 
 \chapter{Use Cases}
 In this chapter, the use cases will be explained. The use cases can be found in Appendix \ref{app:usecase}. 
-Use cases describe a sequence of events and actions that follow upon a certain interaction between the an actor and the software. This actor can be the child or the robot. The use cases turn offer a structure for functions necessary in the software.
+Use cases describe a sequence of events and actions that follow upon a certain interaction between the an actor and the product. This actor can be the child or the software. The use cases turn offer a structure for necessary requirements.
 This is an example of a use case:
 
 \begin{usecase}
@@ -145,8 +145,9 @@ This is an example of a use case:
 \end{usecase}
 In Use Case, there will be a description on what the Actor needs to do. This Use Case will be triggered by the Trigger. When the Use Case is triggered, it will follow the steps in the main success scenario. Any unsuccessful events are described in the extensions. 
 
+
 \chapter{Functional analysis}
-In this chapter a functional analysis of the robot will be made. All the functions and sub functions of the robot will be given and explained. It will be possible to make the morphologic overview using the contents of this chapter. \\
+With the use cases layed out, a functional analysis of the robot can be made. All the functions and sub functions of the robot will be given and explained. It will be possible to make the morphologic overview using the contents of this chapter. \\
 To make this functional analysis graphic, a flowchart has been made according to the example of (Viola et al., 2012). This flowchart can be found in figure \ref{fig:FuncAnal}.\\
 This has been constructed in the following way, on top the ultimate function has been placed: to entertain and educate the children. In the row beneath will be the sub-functions to reach this goal. In the row beneath that sub-function, will be the sub-functions to reach the goal of the sub-function, etc. \\
 To conclude, the most important functions of the robot are that it is able to recognize an object, to shoot an object and to be attractive to children. The sub-functions of these functions are a base for the contents of the morphologic overview. 
@@ -199,7 +200,7 @@ There are a few little things to note about the Morphological map. The first one
 This map will be used to create a certain amount of initial designs, of which three shall be selected to be improved and turned into full concepts.
 \label{chap:morphological}
 
-\chapter{Initial design}
+\chapter{Initial designs}
 The design of the robot will be decided by doing a brainstorm. The brainstorm consists of three stages: first a lot of ideas will be generated, then the ideas will be discussed and to conclude the brainstorm, the ideas will be narrowed down to three concepts. The brainstorm technique and the ideas can be found in Appendix \ref{appendix:brainstorm}: Brainstorm initial designs. \\
 The design of the game will not be elaborated here, this can be found in Chapter \ref{chap:games}: The game. The following are the three end concepts for the robot:
 
@@ -589,11 +590,11 @@ This translates to a mass of 1.9 kg. This is very low, even for a child, so the 
 
 \section{Calculating the mouth}
 The mouth needs a servo to operate, and servos have a limited torque. Therefore, some calculations need to be performed to see if it will close after opening. 
-The full calculations can be seen in Appendix \ref{appendix:calculations}. In short though, we need the arm on the axle of the mouth to be larger than two-thirds of the length of the servo arm. We chose to go with a ratio of 1:1, as to not load the servo to its maximum.
+The full calculations can be seen in Appendix \ref{appendix:calculations}. In short though, we need the arm on the axle of the mouth to be larger than two-thirds of the length of the servo arm. We chose to go with a ratio of 1:1, as to not load the servo to it’s maximum.
 
 \section{Simulating the neck}
-We did a simulation on the neck of the robot to see if it would hold under some stress. The chosen stress is a small child pulling on the neck of the robot. The neck of the robot is weakest like this, because it\rq{}s held in place on the bottom with only an 8mm thick mounting plate.\\
-Results of this simulation are below (Figure \ref{fig:simluation}). The simulation shows us that the neck can withstand a child hanging on it if the robot is tipped over, the worst situation imaginable because of the length of the neck. The chosen weight of the child is 30kg. The neck will yield when loaded with more than about 40kg, but then again, it\rq{}s not really designed to be able to suspend a child in the air.
+We did a simulation on the neck of the robot to see if it would hold under some stress. The chosen stress is a small child pulling on the neck of the robot. The neck of the robot is weakest like this, because it’s held in place on the bottom with only an 8mm thick mounting plate.\\
+Results of this simulation are below (Figure \ref{fig:simluation}). The simulation shows us that the neck can withstand a child hanging on it if the robot is tipped over, the worst situation imaginable because of the length of the neck. The chosen weight of the child is 30kg. The neck will yield when loaded with more than about 40kg, but then again, it’s not really designed to be able to suspend a child in the air.
 
 \begin{figure}[!htb]
 \begin{center}
@@ -604,12 +605,44 @@ Results of this simulation are below (Figure \ref{fig:simluation}). The simulati
 \end{figure}
 \label{sect:NeckSim}
 \section{SolidWorks model}
-The whole prototype was put into Solidworks. In figure XX to XX several renders of the model can be seen. In the next stage of this project this whole model will be build. The drawings of the parts, which will be produced, can be found in appendix XXX. An overview of all parts, which will be bought, can be found in the bill of materials in appendix XXX. 
+The whole prototype was put into Solidworks. In figure \ref{fig:extRender} to \ref{fig:livingroom} several renders of the model can be seen. In the next stage of this project this whole model will be build. The drawings of the parts, which will be produced, can be found in appendix \ref{appendix:drawings}. An overview of all parts, which will be bought, can be found in the bill of materials in appendix \ref{appendix:parts}. 
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{Images/RenderAnne1.JPG}
+\caption{Render of the exterior}
+\label{fig:extRender}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{Images/superawesomerender.png}
+\caption{The outside structure without the shell}
+\label{fig:extRender}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{Images/RenderAnne3_SectionView.JPG}
+\caption{Section view of the interior}
+\label{fig:sectionview}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{Images/RenderAnne2.JPG}
+\caption{Tawi placed in the user environment}
+\label{fig:livingroom}
+\end{center}
+\end{figure}
 
 \section{Software architecture}
+With requirements and concepts worked out in previous chapters. A clear design for the software can now be constructed. 
 The most important scenario for the robot is that the robot can ask for a ball, then wait for the correct ball to be inserted and give positive or negative feedback depending on whether the given ball was correct. After repeating this process until the volcano fills up, the robot erupts, spreading the balls around himself again. \\
-The overall architecture of the robot is that one central node (“robot”), that delegates work towards several lower level nodes, that in turn each listen to an even lower level node, which either repeats to process or directly controls a device. \\
-With this structure in mind the classes can be defined. Figures \ref{fig:controllers} through \ref{fig:motors} show the implementation. The first subsystem is the overarching group that contains the handlers for the lower level functions. Figure X+1 shows the handlers for each node in the first two rows of Figure \ref{fig:FuncAnal}. The Audio and Video are separated into their own classes to create a distinction of responsibility for each class. 
+The overall architecture of the robot is one central node (“robot”), that delegates work towards several lower level nodes, that in turn each listen to an even lower level node, which either repeats to process or directly controls a device. \\
+With this structure in mind the classes can be defined. Figures \ref{fig:controllers} through \ref{fig:motors} show the implementation. The first subsystem is the overarching group that contains the handlers for the lower level functions. Figure \ref{fig:controllers} shows the handlers for each node in the first two rows of Figure \ref{fig:FuncAnal}. The Audio and Video are separated into their own classes to create a distinction of responsibility for each class. 
 
 \begin{figure}[!htb]
 \begin{center}
@@ -722,7 +755,6 @@ The schematic of the final circuit can be found in Figure \ref{fig:electronics}.
 \section{Part list}
 
 \chapter{Planning November to January}
-\section {Overall planning}
 Week 1 (10 November)\\
 Ordering Parts\\
 Building Parts\\
@@ -730,16 +762,16 @@ Programming\\
 \\
 Week 2 (17 November)\\
 Building Parts\\
-Programming
-\begin{tabbing}
+Programming\\
+\\
 Week 3 (24 November)\\
 Assembling robot\\
-~~~Mechanics\\
-~~~Electronics\\
-~~~Exterior design\\
-~~~Programming
-\end{tabbing}
-Week 4 (1 December)\\
+	Mechanics\\
+	Electronics
+	Exterior design\\
+	Programming\\
+\\
+Week 4 (1 December)
 Assembling robot\\
 Adjustments in prototype for safe test with user\\
 \\
@@ -759,8 +791,7 @@ Week 8 (12 January)\\
 Report\\
 Prepare presentation and poster\\
 \\
-Week 9 (19 January) Tentamenweek\\
-Week 10 (26 January) Tentamenweek
+Week 9 (19 January) Tentamenweek\\Week 10 (26 January) Tentamenweek
 
 \section{Software planning}
 For software development the SCRUM methodology is used. With tasks rather than user stories,  tasks are sorted by which order we will execute them(most important first). This gives us the following backlog:\\
@@ -788,10 +819,10 @@ Estimated effort: 2
 Estimated effort: 7 
 \end{itemize}
 \chapter{Conclusion}
-This report explained the design phase of this project. In the first phase of the design process several brainstorms were held. The first decision was to make a toy robot for a child. This would be an interesting branch to explore, since children find it fun to engage with a robot and this way it can be made fun to exercise or learn with a robot.
-Next, a brainstorm was held to come up with ideas for the design and purpose of the robot. It was decided that the robot would be used to help children learn several subjects from school at home. Three concepts were chosen to be further improved, which would come to a final concept. After considering the three concepts, the turtle robot was chosen, since this robot was more unique and would be more interesting for the user. \\
-The concept design is the next phase in the designing process. The turtle robot was further improved and all the parts were designed and chosen. A model was put together for the prototype from these parts, which was used to design the robot and to get a good idea of how the prototype would look. Furthermore all aspects of the robot were further improved and enhanced to make a base for the prototype. A name was chosen for the robot: Tawi. Use cases were designed for the use of the robot and improved for a more fluent interaction with the user. \\
-\\
+This report explained the design phase of this project. In the first phase of the design process several brainstorms were held. The first decision was to make a toy robot for a child. This would be an interesting branch to explore, since children find it fun to engage with a robot and this way it can be made fun to exercise or learn with a robot. \\
+Next, a brainstorm was held to come up with ideas for the design and purpose of the robot. It was decided that the robot would be used to help children learn several subjects from school at home. Three concepts were chosen to be further improved so a choice could be made between the concepts. After considering the three concepts, the turtle robot was chosen, since this robot was more unique and would be more interesting for the user.
+The concept design is the next phase in the designing process. The turtle robot was further improved and all the parts were designed and chosen. A model was put together for the prototype from these parts, which was used to design the robot and to get a good idea of how the prototype would look. Furthermore all aspects of the robot were further improved and enhanced to make a base for the prototype. Finally a name was chosen for the robot: Tawi.\\
+ \\
 In the next part of this project the prototype of the robot will be build and tested.
 
 \chapter{References}
@@ -1091,6 +1122,12 @@ Total              & 6.172   &     -           & 3.086                   & 4.408
 \label{table:battery}
 \end{sidewaystable}
 \label{appendix:battery}
+
+\chapter{Parts}
+\includepdf[pages={1,2,3}, landscape=true]{Images/BOM.pdf}
+\includepdf[pages={1,2,3}]{Images/PartList.pdf}
+\label{appendix:parts}
+
 \chapter{Calculations}
 \includepdf[pages={1}]{Images/calculations_mouth.pdf}
 \includepdf[pages={1}]{Images/truckproof.pdf}
@@ -1099,7 +1136,7 @@ Total              & 6.172   &     -           & 3.086                   & 4.408
 \chapter{Motor specifications}
 \includepdf[pages={1}]{Images/Datasheet_motor.pdf}
 \label{appendix:motor}
-\chapter{Drawings}
+\chapter{Technical drawings}
 \label{appendix:drawings}
 \includepdf[pages={1},landscape=true]{pdfdrawings/Afschietbuis.PDF}
 \includepdf[pages={1},landscape=true]{pdfdrawings/as_pulley_beneden.PDF}
