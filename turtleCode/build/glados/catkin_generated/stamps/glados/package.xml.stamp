@@ -1,0 +1,21 @@
+<?xml version ="1.0"?>
+<package>
+<name>glados</name>
+<version>0.0.1</version>
+<description>
+evil robotic toyOS
+</description>
+<maintainer email="evilOverlord@cse.sc.edu">
+evil overlord Thijs
+</maintainer>
+<license >free to attack people</license >
+<buildtool_depend>catkin </buildtool_depend>
+<build_depend>geometry_msgs</build_depend>
+<run_depend>geometry_msgs</run_depend>
+<build_depend>std_msgs</build_depend>
+<run_depend>std_msgs</run_depend>
+<build_depend>turtlesim </build_depend>
+<run_depend>turtlesim </run_depend>
+<build_depend>roscpp</build_depend>
+<run_depend>roscpp</run_depend>
+</package>

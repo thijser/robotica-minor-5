@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC    -shared -Wl,-soname,libgtest.so -o libgtest.so CMakeFiles/gtest.dir/src/gtest-all.cc.o  -L/home/thijs/codes/robotica-minor-5/turtleCode/build/gtest/src -lpthread -Wl,-rpath,/home/thijs/codes/robotica-minor-5/turtleCode/build/gtest/src 

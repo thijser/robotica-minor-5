@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "glados")
+set(glados_MAINTAINER "evil overlord Thijs <evilOverlord@cse.sc.edu>")
+set(glados_DEPRECATED "")
+set(glados_VERSION "0.0.1")
+set(glados_BUILD_DEPENDS "geometry_msgs" "std_msgs" "turtlesim" "roscpp")
+set(glados_RUN_DEPENDS "geometry_msgs" "std_msgs" "turtlesim" "roscpp")
+set(glados_BUILDTOOL_DEPENDS "catkin")

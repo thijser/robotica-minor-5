@@ -1,0 +1,4 @@
+<launch>
+	<node name="core" pkg="glados" type="core" />
+
+</launch>

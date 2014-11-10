@@ -1,0 +1,8 @@
+prefix=/home/thijs/codes/robotica-minor-5/turtleCode/install
+
+Name: glados
+Description: Description of glados
+Version: 0.0.1
+Cflags: -I/home/thijs/codes/robotica-minor-5/turtleCode/install/include
+Libs: -L/home/thijs/codes/robotica-minor-5/turtleCode/install/lib 
+Requires: roscpp std_msgs geometry_msgs
