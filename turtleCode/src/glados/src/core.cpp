@@ -1,3 +1,4 @@
+/*core listens to the topic*/
 #include <ros/ros.h>
 #include <queue> 
 
@@ -55,17 +56,17 @@ private:
 
 public:
 	Core(int argc,char** argv):nh_("~"){
-		ros::init(argc,argv, "Core");
-	
+
+		
 		StatePriorities[0]= new EatState;
 		StatePriorities[1]= new DanceState;
 		StatePriorities[2]= new IdleState;	
-
-
+		
 		for(int i=0;i<StatePriorities.size();i++){
 			StatePriorities[i]->priority=i;
 		}		
 	};
+
 	void action(){
 		StateToDo.begin()->second->run();
 	}
@@ -82,6 +83,8 @@ public:
 *launch the node and create the core 
 */
 int main(int argc,char** argv){
+	ros::init(argc,argv, "Core");
 	Core c(argc,argv);	
+
 }
 
