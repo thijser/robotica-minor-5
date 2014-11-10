@@ -6,14 +6,14 @@ class State{
 public:
 	bool persist;
 	int pos;
+	int priority; 
 	void run();
 	void setPos(int position){
 		pos=position;
 	}
-
-
-
+	
 };
+
 class EatState:public State{
 	void run(){
 		std::cout<<"to be implemented"<<std::endl;
@@ -38,34 +38,43 @@ public:	IdleState(){
 		std::cout<<"to be implemented"<<std::endl;
 	}
 };
+
 class Core{
 
 private:
 	ros::Subscriber sub;
 	ros::NodeHandle nh_;
-  	std::priority_queue<int> StatesToDo;
 
-	const static int numberOfStates=3;
-   	State* states[numberOfStates] = {new EatState,new DanceState,new IdleState};
+
+  	std::map<int, State*> StatePriorities; 
+  	std::map<int, State*> StateToDo; 
+
+
+	
+	
 
 public:
 	Core(int argc,char** argv):nh_("~"){
 		ros::init(argc,argv, "Core");
-		for(int i=0;i<numberOfStates.size();i++){
-			(*states[i]).pos=i;
+	
+		StatePriorities[0]= new EatState;
+		StatePriorities[1]= new DanceState;
+		StatePriorities[2]= new IdleState;	
+
+
+		for(int i=0;i<StatePriorities.size();i++){
+			StatePriorities[i]->priority=i;
 		}		
 	};
 	void action(){
-		states[numberOfStates.first].run();
+		StateToDo.begin()->second->run();
 	}
 	void removeNonPersistant(){
-		for(int i=0;i<StatesToDo.size();i++){
-			if(states[numberOfStates.get(i)].persist==false){
-				StatesToDo.remove(numberOfStates.get(i));
-			}
+		for (std::map<int, State*>::iterator it=StateToDo.begin(); it!=StateToDo.end(); ++it){
+			
+			std::cout << it->first << " => " << it->second << '\n';
 		}
-	}
-	
+	}	
 };
 
 
