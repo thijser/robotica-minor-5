@@ -1,0 +1,8 @@
+prefix=/home/yuugo/Programming/robotica-minor-5/turtleCode/devel
+
+Name: glados
+Description: Description of glados
+Version: 0.0.1
+Cflags: -I/home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados/include
+Libs: -L/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib 
+Requires: roscpp std_msgs geometry_msgs
