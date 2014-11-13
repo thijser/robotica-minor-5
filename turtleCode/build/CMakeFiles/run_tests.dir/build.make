@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/thijs/codes/robotica-minor-5/turtleCode/src
+CMAKE_SOURCE_DIR = /home/yuugo/Programming/robotica-minor-5/turtleCode/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/thijs/codes/robotica-minor-5/turtleCode/build
+CMAKE_BINARY_DIR = /home/yuugo/Programming/robotica-minor-5/turtleCode/build
 
 # Utility rule file for run_tests.
 
@@ -60,6 +60,6 @@ CMakeFiles/run_tests.dir/clean:
 .PHONY : CMakeFiles/run_tests.dir/clean
 
 CMakeFiles/run_tests.dir/depend:
-	cd /home/thijs/codes/robotica-minor-5/turtleCode/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thijs/codes/robotica-minor-5/turtleCode/src /home/thijs/codes/robotica-minor-5/turtleCode/src /home/thijs/codes/robotica-minor-5/turtleCode/build /home/thijs/codes/robotica-minor-5/turtleCode/build /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yuugo/Programming/robotica-minor-5/turtleCode/src /home/yuugo/Programming/robotica-minor-5/turtleCode/src /home/yuugo/Programming/robotica-minor-5/turtleCode/build /home/yuugo/Programming/robotica-minor-5/turtleCode/build /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/run_tests.dir/depend
 

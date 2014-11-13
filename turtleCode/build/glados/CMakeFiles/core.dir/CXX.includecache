@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/thijs/codes/robotica-minor-5/turtleCode/src/glados/src/core.cpp
+/home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados/src/core.cpp
 ros/ros.h
 -
 queue
