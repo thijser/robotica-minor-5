@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yuugo/Programming/robotica-minor-5/turtleCode/src
+CMAKE_SOURCE_DIR = /home/thijs/codes/robotica-minor-5/turtleCode/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yuugo/Programming/robotica-minor-5/turtleCode/build
+CMAKE_BINARY_DIR = /home/thijs/codes/robotica-minor-5/turtleCode/build
 
 # Utility rule file for std_msgs_generate_messages_cpp.
 
@@ -56,10 +56,10 @@ glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/build: std_msgs_generate_me
 .PHONY : glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 
 glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
-	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build/glados && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/thijs/codes/robotica-minor-5/turtleCode/build/glados && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 
 glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend:
-	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yuugo/Programming/robotica-minor-5/turtleCode/src /home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados /home/yuugo/Programming/robotica-minor-5/turtleCode/build /home/yuugo/Programming/robotica-minor-5/turtleCode/build/glados /home/yuugo/Programming/robotica-minor-5/turtleCode/build/glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thijs/codes/robotica-minor-5/turtleCode/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thijs/codes/robotica-minor-5/turtleCode/src /home/thijs/codes/robotica-minor-5/turtleCode/src/glados /home/thijs/codes/robotica-minor-5/turtleCode/build /home/thijs/codes/robotica-minor-5/turtleCode/build/glados /home/thijs/codes/robotica-minor-5/turtleCode/build/glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
 

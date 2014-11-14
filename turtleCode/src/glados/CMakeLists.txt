@@ -13,3 +13,8 @@ add_executable(core src/core.cpp)
 target_link_libraries(core
    ${catkin_LIBRARIES}
 )
+
+add_executable(mathAsker src/mathAsker.cpp)
+target_link_libraries(mathAsker
+   ${catkin_LIBRARIES}
+)

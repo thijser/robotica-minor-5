@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/core.dir/src/core.cpp.o"
-  "/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core.pdb"
-  "/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core"
+  "/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core.pdb"
+  "/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,8 +1,8 @@
-# Install script for directory: /home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados
+# Install script for directory: /home/thijs/codes/robotica-minor-5/turtleCode/src/glados
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/yuugo/Programming/robotica-minor-5/turtleCode/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/thijs/codes/robotica-minor-5/turtleCode/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yuugo/Programming/robotica-minor-5/turtleCode/build/glados/catkin_generated/installspace/glados.pc")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/thijs/codes/robotica-minor-5/turtleCode/build/glados/catkin_generated/installspace/glados.pc")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/glados/cmake" TYPE FILE FILES
-    "/home/yuugo/Programming/robotica-minor-5/turtleCode/build/glados/catkin_generated/installspace/gladosConfig.cmake"
-    "/home/yuugo/Programming/robotica-minor-5/turtleCode/build/glados/catkin_generated/installspace/gladosConfig-version.cmake"
+    "/home/thijs/codes/robotica-minor-5/turtleCode/build/glados/catkin_generated/installspace/gladosConfig.cmake"
+    "/home/thijs/codes/robotica-minor-5/turtleCode/build/glados/catkin_generated/installspace/gladosConfig-version.cmake"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/glados" TYPE FILE FILES "/home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados/package.xml")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/glados" TYPE FILE FILES "/home/thijs/codes/robotica-minor-5/turtleCode/src/glados/package.xml")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

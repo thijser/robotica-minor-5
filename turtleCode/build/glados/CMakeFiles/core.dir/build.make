@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yuugo/Programming/robotica-minor-5/turtleCode/src
+CMAKE_SOURCE_DIR = /home/thijs/codes/robotica-minor-5/turtleCode/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yuugo/Programming/robotica-minor-5/turtleCode/build
+CMAKE_BINARY_DIR = /home/thijs/codes/robotica-minor-5/turtleCode/build
 
 # Include any dependencies generated for this target.
 include glados/CMakeFiles/core.dir/depend.make
@@ -50,18 +50,18 @@ include glados/CMakeFiles/core.dir/progress.make
 include glados/CMakeFiles/core.dir/flags.make
 
 glados/CMakeFiles/core.dir/src/core.cpp.o: glados/CMakeFiles/core.dir/flags.make
-glados/CMakeFiles/core.dir/src/core.cpp.o: /home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados/src/core.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles $(CMAKE_PROGRESS_1)
+glados/CMakeFiles/core.dir/src/core.cpp.o: /home/thijs/codes/robotica-minor-5/turtleCode/src/glados/src/core.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object glados/CMakeFiles/core.dir/src/core.cpp.o"
-	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build/glados && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/core.dir/src/core.cpp.o -c /home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados/src/core.cpp
+	cd /home/thijs/codes/robotica-minor-5/turtleCode/build/glados && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/core.dir/src/core.cpp.o -c /home/thijs/codes/robotica-minor-5/turtleCode/src/glados/src/core.cpp
 
 glados/CMakeFiles/core.dir/src/core.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/core.dir/src/core.cpp.i"
-	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build/glados && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados/src/core.cpp > CMakeFiles/core.dir/src/core.cpp.i
+	cd /home/thijs/codes/robotica-minor-5/turtleCode/build/glados && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/thijs/codes/robotica-minor-5/turtleCode/src/glados/src/core.cpp > CMakeFiles/core.dir/src/core.cpp.i
 
 glados/CMakeFiles/core.dir/src/core.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/core.dir/src/core.cpp.s"
-	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build/glados && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados/src/core.cpp -o CMakeFiles/core.dir/src/core.cpp.s
+	cd /home/thijs/codes/robotica-minor-5/turtleCode/build/glados && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/thijs/codes/robotica-minor-5/turtleCode/src/glados/src/core.cpp -o CMakeFiles/core.dir/src/core.cpp.s
 
 glados/CMakeFiles/core.dir/src/core.cpp.o.requires:
 .PHONY : glados/CMakeFiles/core.dir/src/core.cpp.o.requires
@@ -79,41 +79,41 @@ core_OBJECTS = \
 # External object files for target core
 core_EXTERNAL_OBJECTS =
 
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: glados/CMakeFiles/core.dir/src/core.cpp.o
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: glados/CMakeFiles/core.dir/build.make
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/libroscpp.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/librosconsole.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/librosconsole_log4cxx.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/librosconsole_backend_interface.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/liblog4cxx.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/libxmlrpcpp.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/libroscpp_serialization.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/librostime.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/libcpp_common.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core: glados/CMakeFiles/core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core"
-	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build/glados && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/core.dir/link.txt --verbose=$(VERBOSE)
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: glados/CMakeFiles/core.dir/src/core.cpp.o
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: glados/CMakeFiles/core.dir/build.make
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/libroscpp.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/librosconsole.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/librosconsole_log4cxx.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/librosconsole_backend_interface.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/liblog4cxx.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/libxmlrpcpp.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/libroscpp_serialization.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/librostime.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /opt/ros/indigo/lib/libcpp_common.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core: glados/CMakeFiles/core.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core"
+	cd /home/thijs/codes/robotica-minor-5/turtleCode/build/glados && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/core.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-glados/CMakeFiles/core.dir/build: /home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/glados/core
+glados/CMakeFiles/core.dir/build: /home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/glados/core
 .PHONY : glados/CMakeFiles/core.dir/build
 
 glados/CMakeFiles/core.dir/requires: glados/CMakeFiles/core.dir/src/core.cpp.o.requires
 .PHONY : glados/CMakeFiles/core.dir/requires
 
 glados/CMakeFiles/core.dir/clean:
-	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build/glados && $(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean.cmake
+	cd /home/thijs/codes/robotica-minor-5/turtleCode/build/glados && $(CMAKE_COMMAND) -P CMakeFiles/core.dir/cmake_clean.cmake
 .PHONY : glados/CMakeFiles/core.dir/clean
 
 glados/CMakeFiles/core.dir/depend:
-	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yuugo/Programming/robotica-minor-5/turtleCode/src /home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados /home/yuugo/Programming/robotica-minor-5/turtleCode/build /home/yuugo/Programming/robotica-minor-5/turtleCode/build/glados /home/yuugo/Programming/robotica-minor-5/turtleCode/build/glados/CMakeFiles/core.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/thijs/codes/robotica-minor-5/turtleCode/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/thijs/codes/robotica-minor-5/turtleCode/src /home/thijs/codes/robotica-minor-5/turtleCode/src/glados /home/thijs/codes/robotica-minor-5/turtleCode/build /home/thijs/codes/robotica-minor-5/turtleCode/build/glados /home/thijs/codes/robotica-minor-5/turtleCode/build/glados/CMakeFiles/core.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : glados/CMakeFiles/core.dir/depend
 

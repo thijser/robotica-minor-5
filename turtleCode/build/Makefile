@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yuugo/Programming/robotica-minor-5/turtleCode/src
+CMAKE_SOURCE_DIR = /home/thijs/codes/robotica-minor-5/turtleCode/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yuugo/Programming/robotica-minor-5/turtleCode/build
+CMAKE_BINARY_DIR = /home/thijs/codes/robotica-minor-5/turtleCode/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,9 +120,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -239,6 +239,19 @@ core: cmake_check_build_system
 core/fast:
 	$(MAKE) -f glados/CMakeFiles/core.dir/build.make glados/CMakeFiles/core.dir/build
 .PHONY : core/fast
+
+#=============================================================================
+# Target rules for targets named mathAsker
+
+# Build rule for target.
+mathAsker: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mathAsker
+.PHONY : mathAsker
+
+# fast build rule for target.
+mathAsker/fast:
+	$(MAKE) -f glados/CMakeFiles/mathAsker.dir/build.make glados/CMakeFiles/mathAsker.dir/build
+.PHONY : mathAsker/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
@@ -377,6 +390,7 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... core"
+	@echo "... mathAsker"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
