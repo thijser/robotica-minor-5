@@ -11,7 +11,7 @@ CATKIN_DEPENDS roscpp std_msgs geometry_msgs
 set(CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS}")
 add_executable(core src/core.cpp)
 target_link_libraries(core
-   ${catkin_LIBRARIES}
+   ${catkin_LIBRARIES}cd c
 )
 
 add_executable(mathAsker src/mathAsker.cpp)

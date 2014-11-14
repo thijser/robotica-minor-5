@@ -38,3 +38,19 @@ int* Addition1dig(){
 		result[0]=result[2]-result[1];
 	return result; 
 }
+
+int* substract1dig(){
+	int* ans=Addition1dig();
+	int temp=ans[0];
+	ans[0]=ans[2];
+	ans[2]=temp;
+	return ans; 
+}
+int* substract2dig(){
+	int* ans=Addition2dig();
+	int temp=ans[0];
+	ans[0]=ans[2];
+	ans[2]=temp;
+	return ans; 		
+	}
+

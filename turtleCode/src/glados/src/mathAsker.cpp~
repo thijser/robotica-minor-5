@@ -14,13 +14,6 @@ int main(){
 	 
 }
 
-int* CoverFunction(){
-    int* result =new int[3];
-    result[0]=1;
-    result[1]=2;
-    result[2]=3;
-    return result; 
-}
 
 /* returns array of 3 integers first 2 are the once being summed third is the answer*/
 int* Addition2dig(){
@@ -39,9 +32,25 @@ int* Addition2dig(){
 }
 
 int* Addition1dig(){
-	int result [3];
+	int* result =new int[3];
 	avaible_balls[rand()%avaible_balls.size()];
 	result[1]=rand()%result[2];
 		result[0]=result[2]-result[1];
 	return result; 
 }
+
+int* substract1dig(){
+	int* ans=Addition1dig();
+	int temp=ans[0];
+	ans[0]=ans[2];
+	ans[2]=temp;
+	return ans; 
+}
+int* substract2dig(){
+	int* ans=Addition2dig();
+	int temp=ans[0];
+	ans[0]=ans[2];
+	ans[2]=temp;
+	return ans; 		
+	}
+
