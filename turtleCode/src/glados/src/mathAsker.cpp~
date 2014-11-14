@@ -2,17 +2,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-
+#include <iostream>
 /**
 * listens to the "/questions" and "/balls" topics and sends messages to the "/makeSound", "/drive" and "/display" topic to make sounds, drive around and display various the question. 
 */ 
 int int_balls[] = {0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9};
 std::vector<int> avaible_balls (int_balls, int_balls + sizeof(int_balls) / sizeof(int) );
-
-int main(){
-	 srand (time(NULL));
-	 
-}
 
 
 /* returns array of 3 integers first 2 are the once being summed third is the answer*/
@@ -53,4 +48,16 @@ int* substract2dig(){
 	ans[2]=temp;
 	return ans; 		
 	}
+
+int main(){
+	 srand (time(NULL));
+	 int * print = Addition2dig();
+	std::cout<<print[0]<<"+"<<print[1]<<"="<<print[2]<<std::endl;
+	  print = Addition1dig();
+	std::cout<<print[0]<<"+"<<print[1]<<"="<<print[2]<<std::endl;
+	  print = substract2dig();
+	std::cout<<print[0]<<"-"<<print[1]<<"="<<print[2]<<std::endl;
+	print = substract1dig();
+	std::cout<<print[0]<<"-"<<print[1]<<"="<<print[2]<<std::endl;
+}
 
