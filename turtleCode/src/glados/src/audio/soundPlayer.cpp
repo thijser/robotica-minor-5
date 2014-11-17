@@ -10,19 +10,20 @@ Publishing on:
 #include <sound_play/sound_play.h>
 #include <std_msgs/String.h>
 #include <unistd.h>
+#include <ros/ros.h>
 
 void audioCallback(std_msgs::String msg)
 {
-	ros:NodeHandle publishHandle;
+	ros::NodeHandle publishHandle;
 	sound_play::SoundClient soundClient;
 
-	sc.say("Testing");
+	soundClient.play(1);
 }
 
 
 int main(int argc, char **argv)
 {
-	ros::init(Argc, argv, "soundPlayer");
+	ros::init(argc, argv, "soundPlayer");
 
 	ros::NodeHandle listenHandle;
 	
