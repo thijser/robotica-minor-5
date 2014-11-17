@@ -5,16 +5,8 @@
 # it emulates the modifications of the setup script without recurring computations
 
 # new environment variables
-export CATKIN_TEST_RESULTS_DIR="/home/yuugo/Programming/robotica-minor-5/turtleCode/build/test_results"
-export ROS_TEST_RESULTS_DIR="/home/yuugo/Programming/robotica-minor-5/turtleCode/build/test_results"
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/yuugo/Programming/robotica-minor-5/turtleCode/devel:$CMAKE_PREFIX_PATH"
-export CPATH="/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/include:$CPATH"
-export LD_LIBRARY_PATH="/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib:/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/x86_64-linux-gnu:/opt/ros/indigo/lib/x86_64-linux-gnu:/opt/ros/indigo/lib"
-export PATH="/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/bin:$PATH"
-export PKG_CONFIG_PATH="/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/pkgconfig:/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/x86_64-linux-gnu/pkgconfig:/opt/ros/indigo/lib/x86_64-linux-gnu/pkgconfig:/opt/ros/indigo/lib/pkgconfig"
+export LD_LIBRARY_PATH="/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/x86_64-linux-gnu:/opt/ros/indigo/lib/x86_64-linux-gnu:/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib:/opt/ros/indigo/lib"
+export PKG_CONFIG_PATH="/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/x86_64-linux-gnu/pkgconfig:/opt/ros/indigo/lib/x86_64-linux-gnu/pkgconfig:/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/pkgconfig:/opt/ros/indigo/lib/pkgconfig"
 export PWD="/home/yuugo/Programming/robotica-minor-5/turtleCode/build"
-export PYTHONPATH="/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/python2.7/dist-packages:$PYTHONPATH"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/yuugo/Programming/robotica-minor-5/turtleCode/src:$ROS_PACKAGE_PATH"

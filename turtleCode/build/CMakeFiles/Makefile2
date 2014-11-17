@@ -259,6 +259,7 @@ clean: gtest/CMakeFiles/gtest_main.dir/clean
 
 # Convenience name for "all" pass in the directory.
 glados/all: glados/CMakeFiles/core.dir/all
+glados/all: glados/CMakeFiles/sound_player.dir/all
 .PHONY : glados/all
 
 # Convenience name for "clean" pass in the directory.
@@ -269,6 +270,7 @@ glados/clean: glados/CMakeFiles/roscpp_generate_messages_py.dir/clean
 glados/clean: glados/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 glados/clean: glados/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 glados/clean: glados/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+glados/clean: glados/CMakeFiles/sound_player.dir/clean
 glados/clean: glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 glados/clean: glados/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 glados/clean: glados/CMakeFiles/std_msgs_generate_messages_py.dir/clean
@@ -497,6 +499,41 @@ glados/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
 
 # clean rule for target.
 clean: glados/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target glados/CMakeFiles/sound_player.dir
+
+# All Build rule for target.
+glados/CMakeFiles/sound_player.dir/all:
+	$(MAKE) -f glados/CMakeFiles/sound_player.dir/build.make glados/CMakeFiles/sound_player.dir/depend
+	$(MAKE) -f glados/CMakeFiles/sound_player.dir/build.make glados/CMakeFiles/sound_player.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles  4
+	@echo "Built target sound_player"
+.PHONY : glados/CMakeFiles/sound_player.dir/all
+
+# Include target in all.
+all: glados/CMakeFiles/sound_player.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+glados/CMakeFiles/sound_player.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/sound_player.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+.PHONY : glados/CMakeFiles/sound_player.dir/rule
+
+# Convenience name for target.
+sound_player: glados/CMakeFiles/sound_player.dir/rule
+.PHONY : sound_player
+
+# clean rule for target.
+glados/CMakeFiles/sound_player.dir/clean:
+	$(MAKE) -f glados/CMakeFiles/sound_player.dir/build.make glados/CMakeFiles/sound_player.dir/clean
+.PHONY : glados/CMakeFiles/sound_player.dir/clean
+
+# clean rule for target.
+clean: glados/CMakeFiles/sound_player.dir/clean
 .PHONY : clean
 
 #=============================================================================

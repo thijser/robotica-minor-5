@@ -248,6 +248,20 @@ rosgraph_msgs_generate_messages_py/fast:
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+glados/CMakeFiles/sound_player.dir/rule:
+	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build && $(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/sound_player.dir/rule
+.PHONY : glados/CMakeFiles/sound_player.dir/rule
+
+# Convenience name for target.
+sound_player: glados/CMakeFiles/sound_player.dir/rule
+.PHONY : sound_player
+
+# fast build rule for target.
+sound_player/fast:
+	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build && $(MAKE) -f glados/CMakeFiles/sound_player.dir/build.make glados/CMakeFiles/sound_player.dir/build
+.PHONY : sound_player/fast
+
+# Convenience name for target.
 glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
 	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build && $(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 .PHONY : glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
@@ -288,6 +302,30 @@ std_msgs_generate_messages_py: glados/CMakeFiles/std_msgs_generate_messages_py.d
 std_msgs_generate_messages_py/fast:
 	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build && $(MAKE) -f glados/CMakeFiles/std_msgs_generate_messages_py.dir/build.make glados/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
+
+src/audio/soundPlayer.o: src/audio/soundPlayer.cpp.o
+.PHONY : src/audio/soundPlayer.o
+
+# target to build an object file
+src/audio/soundPlayer.cpp.o:
+	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build && $(MAKE) -f glados/CMakeFiles/sound_player.dir/build.make glados/CMakeFiles/sound_player.dir/src/audio/soundPlayer.cpp.o
+.PHONY : src/audio/soundPlayer.cpp.o
+
+src/audio/soundPlayer.i: src/audio/soundPlayer.cpp.i
+.PHONY : src/audio/soundPlayer.i
+
+# target to preprocess a source file
+src/audio/soundPlayer.cpp.i:
+	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build && $(MAKE) -f glados/CMakeFiles/sound_player.dir/build.make glados/CMakeFiles/sound_player.dir/src/audio/soundPlayer.cpp.i
+.PHONY : src/audio/soundPlayer.cpp.i
+
+src/audio/soundPlayer.s: src/audio/soundPlayer.cpp.s
+.PHONY : src/audio/soundPlayer.s
+
+# target to generate assembly for a file
+src/audio/soundPlayer.cpp.s:
+	cd /home/yuugo/Programming/robotica-minor-5/turtleCode/build && $(MAKE) -f glados/CMakeFiles/sound_player.dir/build.make glados/CMakeFiles/sound_player.dir/src/audio/soundPlayer.cpp.s
+.PHONY : src/audio/soundPlayer.cpp.s
 
 src/core.o: src/core.cpp.o
 .PHONY : src/core.o
@@ -332,10 +370,14 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... sound_player"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... test"
+	@echo "... src/audio/soundPlayer.o"
+	@echo "... src/audio/soundPlayer.i"
+	@echo "... src/audio/soundPlayer.s"
 	@echo "... src/core.o"
 	@echo "... src/core.i"
 	@echo "... src/core.s"

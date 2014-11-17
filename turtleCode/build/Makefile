@@ -319,6 +319,19 @@ rosgraph_msgs_generate_messages_py/fast:
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named sound_player
+
+# Build rule for target.
+sound_player: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sound_player
+.PHONY : sound_player
+
+# fast build rule for target.
+sound_player/fast:
+	$(MAKE) -f glados/CMakeFiles/sound_player.dir/build.make glados/CMakeFiles/sound_player.dir/build
+.PHONY : sound_player/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -383,6 +396,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... sound_player"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
