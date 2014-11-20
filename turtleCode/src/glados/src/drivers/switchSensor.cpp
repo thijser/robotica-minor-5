@@ -31,5 +31,3 @@ int SwitchSensor::getState(){
 	state = readParse();
 	return state;
 }
-
-int main(int argc,char** argv){return 0;}

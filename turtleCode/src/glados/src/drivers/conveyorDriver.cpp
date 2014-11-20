@@ -37,5 +37,3 @@ bool ConveyorDriver::checkSwitch(){
 bool ConveyorDriver::drive(){
 	
 }
-
-int main(int argc,char** argv){return 0;}
