@@ -10,6 +10,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 include_directories(include ${catkin_INCLUDE_DIRS})
 include_directories(include ${roscpp_INCLUDE_DIRS})
+
 ######
 #CORE
 ######
@@ -56,5 +57,4 @@ target_link_libraries(launchDriver ${roscpp_LIBRARIES} switchSensor)
 #Ball ask
 add_executable(mathAsker src/mathAsker.cpp)
 target_link_libraries(mathAsker ${catkin_LIBRARIES})
-
 
