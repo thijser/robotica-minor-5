@@ -3,12 +3,12 @@
 <name>glados</name>
 <version>0.0.1</version>
 <description>
-evil robotic toyOS
+Volcano toy robot
 </description>
 <maintainer email="evilOverlord@cse.sc.edu">
-evil overlord Thijs
+Robotica Minor 2014 group 5
 </maintainer>
-<license >free to attack people</license >
+<license >MIT</license >
 <buildtool_depend>catkin </buildtool_depend>
 <build_depend>geometry_msgs</build_depend>
 <run_depend>geometry_msgs</run_depend>
