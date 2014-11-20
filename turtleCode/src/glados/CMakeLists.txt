@@ -10,6 +10,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 include_directories(include ${catkin_INCLUDE_DIRS})
 include_directories(include ${roscpp_INCLUDE_DIRS})
+
 ######
 #CORE
 ######
@@ -17,32 +18,25 @@ include_directories(include ${roscpp_INCLUDE_DIRS})
 add_executable(core src/core.cpp)
 target_link_libraries(core ${catkin_LIBRARIES})
 
-#AUDIO
-
-target_link_libraries(core
-   ${catkin_LIBRARIES}
-)
 #######
-#LOGIC
+#SENSORS
 #######
 
+#Switchsensor
+add_library(switchSensor src/sensors/switchSensor.cpp)
+target_link_libraries(switchSensor ${catkin_LIBRARIES})
 
-#Ball ask
-add_executable(mathAsker src/mathAsker.cpp)
-target_link_libraries(mathAsker
-   ${catkin_LIBRARIES}
-)
+#UltrasoneSensor
+add_library(UltrasoneSensor src/sensors/UltrasoneSensor.cpp)
+target_link_libraries(UltrasoneSensor ${catkin_LIBRARIES})
 
-
-target_link_libraries(mathAsker ${catkin_LIBRARIES})
+#RFIDSensor
+add_library(RFIDSensor src/sensors/RFIDSensor.cpp)
+target_link_libraries(RFIDSensor ${catkin_LIBRARIES})
 
 #########
 #DRIVERS
 #########
-
-#Switchsensor
-add_library(switchSensor src/drivers/switchSensor.cpp)
-target_link_libraries(switchSensor ${catkin_LIBRARIES})
 
 #Conveyor
 add_library(conveyorDriver src/drivers/conveyorDriver.cpp)
@@ -51,4 +45,16 @@ target_link_libraries(conveyorDriver ${roscpp_LIBRARIES} switchSensor)
 #Audio
 add_executable(sound_player src/drivers/audioDriver.cpp)
 target_link_libraries(sound_player ${catkin_LIBRARIES})
+
+#Launch
+add_library(launchDriver src/drivers/launchDriver.cpp)
+target_link_libraries(launchDriver ${roscpp_LIBRARIES} switchSensor)
+
+#######
+#LOGIC
+#######
+
+#Ball ask
+add_executable(mathAsker src/mathAsker.cpp)
+target_link_libraries(mathAsker ${catkin_LIBRARIES})
 

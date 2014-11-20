@@ -1,7 +1,7 @@
 # Ignored folders because catkin doesn't want to use relative paths...
-/turtleCode/build/
-/turtleCode/devel/
-/turtleCode/install/
+turtleCode/build/
+turtleCode/devel/
+turtleCode/install/
 
 build/
 
