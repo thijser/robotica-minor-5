@@ -7,6 +7,6 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH="/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/x86_64-linux-gnu:/opt/ros/indigo/lib/x86_64-linux-gnu:/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib:/opt/ros/indigo/lib"
-export PKG_CONFIG_PATH="/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/x86_64-linux-gnu/pkgconfig:/opt/ros/indigo/lib/x86_64-linux-gnu/pkgconfig:/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/pkgconfig:/opt/ros/indigo/lib/pkgconfig"
-export PWD="/home/yuugo/Programming/robotica-minor-5/turtleCode/build"
+export LD_LIBRARY_PATH="/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/x86_64-linux-gnu:/home/thijs/catkin_ws/devel/lib/x86_64-linux-gnu:/opt/ros/indigo/lib/x86_64-linux-gnu:/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib:/home/thijs/catkin_ws/devel/lib:/opt/ros/indigo/lib"
+export PKG_CONFIG_PATH="/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/x86_64-linux-gnu/pkgconfig:/home/thijs/catkin_ws/devel/lib/x86_64-linux-gnu/pkgconfig:/opt/ros/indigo/lib/x86_64-linux-gnu/pkgconfig:/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/pkgconfig:/home/thijs/catkin_ws/devel/lib/pkgconfig:/opt/ros/indigo/lib/pkgconfig"
+export PWD="/home/thijs/codes/robotica-minor-5/turtleCode/build"

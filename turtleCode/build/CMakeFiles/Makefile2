@@ -47,10 +47,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yuugo/Programming/robotica-minor-5/turtleCode/src
+CMAKE_SOURCE_DIR = /home/thijs/codes/robotica-minor-5/turtleCode/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yuugo/Programming/robotica-minor-5/turtleCode/build
+CMAKE_BINARY_DIR = /home/thijs/codes/robotica-minor-5/turtleCode/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/clean_test_results.dir
@@ -59,15 +59,15 @@ CMAKE_BINARY_DIR = /home/yuugo/Programming/robotica-minor-5/turtleCode/build
 CMakeFiles/clean_test_results.dir/all:
 	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/depend
 	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target clean_test_results"
 .PHONY : CMakeFiles/clean_test_results.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/clean_test_results.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/clean_test_results.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : CMakeFiles/clean_test_results.dir/rule
 
 # Convenience name for target.
@@ -90,15 +90,15 @@ clean: CMakeFiles/clean_test_results.dir/clean
 CMakeFiles/doxygen.dir/all:
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/depend
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target doxygen"
 .PHONY : CMakeFiles/doxygen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/doxygen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/doxygen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : CMakeFiles/doxygen.dir/rule
 
 # Convenience name for target.
@@ -121,15 +121,15 @@ clean: CMakeFiles/doxygen.dir/clean
 CMakeFiles/run_tests.dir/all:
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/depend
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target run_tests"
 .PHONY : CMakeFiles/run_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : CMakeFiles/run_tests.dir/rule
 
 # Convenience name for target.
@@ -152,15 +152,15 @@ clean: CMakeFiles/run_tests.dir/clean
 CMakeFiles/tests.dir/all:
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target tests"
 .PHONY : CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule
 
 # Convenience name for target.
@@ -199,15 +199,15 @@ gtest/preinstall:
 gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target gtest"
 .PHONY : gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : gtest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
@@ -227,18 +227,18 @@ clean: gtest/CMakeFiles/gtest.dir/clean
 # Target rules for target gtest/CMakeFiles/gtest_main.dir
 
 # All Build rule for target.
-gtest/CMakeFiles/gtest_main.dir/all: gtest/CMakeFiles/gtest.dir/all
+gtest/CMakeFiles/gtest_main.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles  3
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target gtest_main"
 .PHONY : gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : gtest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -259,11 +259,13 @@ clean: gtest/CMakeFiles/gtest_main.dir/clean
 
 # Convenience name for "all" pass in the directory.
 glados/all: glados/CMakeFiles/core.dir/all
+glados/all: glados/CMakeFiles/mathAsker.dir/all
 glados/all: glados/CMakeFiles/sound_player.dir/all
 .PHONY : glados/all
 
 # Convenience name for "clean" pass in the directory.
 glados/clean: glados/CMakeFiles/core.dir/clean
+glados/clean: glados/CMakeFiles/mathAsker.dir/clean
 glados/clean: glados/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 glados/clean: glados/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 glados/clean: glados/CMakeFiles/roscpp_generate_messages_py.dir/clean
@@ -287,7 +289,7 @@ glados/preinstall:
 glados/CMakeFiles/core.dir/all:
 	$(MAKE) -f glados/CMakeFiles/core.dir/build.make glados/CMakeFiles/core.dir/depend
 	$(MAKE) -f glados/CMakeFiles/core.dir/build.make glados/CMakeFiles/core.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target core"
 .PHONY : glados/CMakeFiles/core.dir/all
 
@@ -297,9 +299,9 @@ all: glados/CMakeFiles/core.dir/all
 
 # Build rule for subdir invocation for target.
 glados/CMakeFiles/core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/core.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : glados/CMakeFiles/core.dir/rule
 
 # Convenience name for target.
@@ -316,21 +318,56 @@ clean: glados/CMakeFiles/core.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target glados/CMakeFiles/mathAsker.dir
+
+# All Build rule for target.
+glados/CMakeFiles/mathAsker.dir/all:
+	$(MAKE) -f glados/CMakeFiles/mathAsker.dir/build.make glados/CMakeFiles/mathAsker.dir/depend
+	$(MAKE) -f glados/CMakeFiles/mathAsker.dir/build.make glados/CMakeFiles/mathAsker.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
+	@echo "Built target mathAsker"
+.PHONY : glados/CMakeFiles/mathAsker.dir/all
+
+# Include target in all.
+all: glados/CMakeFiles/mathAsker.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+glados/CMakeFiles/mathAsker.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/mathAsker.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
+.PHONY : glados/CMakeFiles/mathAsker.dir/rule
+
+# Convenience name for target.
+mathAsker: glados/CMakeFiles/mathAsker.dir/rule
+.PHONY : mathAsker
+
+# clean rule for target.
+glados/CMakeFiles/mathAsker.dir/clean:
+	$(MAKE) -f glados/CMakeFiles/mathAsker.dir/build.make glados/CMakeFiles/mathAsker.dir/clean
+.PHONY : glados/CMakeFiles/mathAsker.dir/clean
+
+# clean rule for target.
+clean: glados/CMakeFiles/mathAsker.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target glados/CMakeFiles/roscpp_generate_messages_cpp.dir
 
 # All Build rule for target.
 glados/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
 	$(MAKE) -f glados/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make glados/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
 	$(MAKE) -f glados/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make glados/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target roscpp_generate_messages_cpp"
 .PHONY : glados/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 glados/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : glados/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -353,15 +390,15 @@ clean: glados/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 glados/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
 	$(MAKE) -f glados/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make glados/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
 	$(MAKE) -f glados/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make glados/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target roscpp_generate_messages_lisp"
 .PHONY : glados/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 glados/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : glados/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -384,15 +421,15 @@ clean: glados/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 glados/CMakeFiles/roscpp_generate_messages_py.dir/all:
 	$(MAKE) -f glados/CMakeFiles/roscpp_generate_messages_py.dir/build.make glados/CMakeFiles/roscpp_generate_messages_py.dir/depend
 	$(MAKE) -f glados/CMakeFiles/roscpp_generate_messages_py.dir/build.make glados/CMakeFiles/roscpp_generate_messages_py.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target roscpp_generate_messages_py"
 .PHONY : glados/CMakeFiles/roscpp_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 glados/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/roscpp_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : glados/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -415,15 +452,15 @@ clean: glados/CMakeFiles/roscpp_generate_messages_py.dir/clean
 glados/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f glados/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make glados/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f glados/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make glados/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target rosgraph_msgs_generate_messages_cpp"
 .PHONY : glados/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 glados/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : glados/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -446,15 +483,15 @@ clean: glados/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 glados/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f glados/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make glados/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f glados/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make glados/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target rosgraph_msgs_generate_messages_lisp"
 .PHONY : glados/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 glados/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : glados/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -477,15 +514,15 @@ clean: glados/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 glados/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f glados/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make glados/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f glados/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make glados/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target rosgraph_msgs_generate_messages_py"
 .PHONY : glados/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 glados/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : glados/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -508,7 +545,7 @@ clean: glados/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 glados/CMakeFiles/sound_player.dir/all:
 	$(MAKE) -f glados/CMakeFiles/sound_player.dir/build.make glados/CMakeFiles/sound_player.dir/depend
 	$(MAKE) -f glados/CMakeFiles/sound_player.dir/build.make glados/CMakeFiles/sound_player.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles  4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target sound_player"
 .PHONY : glados/CMakeFiles/sound_player.dir/all
 
@@ -518,9 +555,9 @@ all: glados/CMakeFiles/sound_player.dir/all
 
 # Build rule for subdir invocation for target.
 glados/CMakeFiles/sound_player.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/sound_player.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : glados/CMakeFiles/sound_player.dir/rule
 
 # Convenience name for target.
@@ -543,15 +580,15 @@ clean: glados/CMakeFiles/sound_player.dir/clean
 glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target std_msgs_generate_messages_cpp"
 .PHONY : glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -574,15 +611,15 @@ clean: glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 glados/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f glados/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make glados/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f glados/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make glados/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target std_msgs_generate_messages_lisp"
 .PHONY : glados/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 glados/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : glados/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -605,15 +642,15 @@ clean: glados/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 glados/CMakeFiles/std_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f glados/CMakeFiles/std_msgs_generate_messages_py.dir/build.make glados/CMakeFiles/std_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f glados/CMakeFiles/std_msgs_generate_messages_py.dir/build.make glados/CMakeFiles/std_msgs_generate_messages_py.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
 	@echo "Built target std_msgs_generate_messages_py"
 .PHONY : glados/CMakeFiles/std_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 glados/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/std_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yuugo/Programming/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : glados/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.

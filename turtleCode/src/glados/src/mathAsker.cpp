@@ -14,10 +14,20 @@ Publishes to:
 	/drive
 	/display	
 */ 
+class mathasker{
+public: 
+ros::Subscriber sub
+ros::NodeHandle handle;
+ros::Publisher display( "/display", &range_msg);
+ros::Publisher sound( "/makeSound", &range_msg);
+ros::Publisher drive( "/drive", &range_msg);
+
 int int_balls[] = {0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9};
 std::vector<int> avaible_balls (int_balls, int_balls + sizeof(int_balls) / sizeof(int) );
 
-
+void questioncallback(){
+	
+}
 /* returns array of 3 integers first 2 are the once being summed third is the answer*/
 int* Addition2dig(){
 	int* result =new int[3];
@@ -57,7 +67,12 @@ int* substract2dig(){
 	return ans; 		
 	}
 
-int main(){
+int main(int argc, char **argv){
+	ros::init(argc, argv, "audioDriver");
+	handle.advertise(display);
+	handle.advertise(sound);
+	handle.advertise(drive);
+	sub = listenHandle.subscribe("/questions", 1000, audioCallback);
 	 srand (time(NULL));
 	 int * print = Addition2dig();
 	std::cout<<print[0]<<"+"<<print[1]<<"="<<print[2]<<std::endl;
@@ -67,5 +82,6 @@ int main(){
 	std::cout<<print[0]<<"-"<<print[1]<<"="<<print[2]<<std::endl;
 	print = substract1dig();
 	std::cout<<print[0]<<"-"<<print[1]<<"="<<print[2]<<std::endl;
+}
 }
 
