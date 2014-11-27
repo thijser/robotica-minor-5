@@ -9,11 +9,11 @@ public:
 	SwitchSensor(std::string tag);
 	int read();
 	bool setState(int s);
-protected:
-
-	int state;
-	std::string tag;
 	int getState();
+	std::string getTag();
+protected:
+	int state;
+	std::string tag;	
 	int readParse();
 };
 

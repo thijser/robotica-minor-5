@@ -4,14 +4,14 @@
 #include <string>
 
 class UltrasoneSensor{
-protected:
-	std::string tag;
-	int readParse();
 public:
+	std::string tag;
+	int read();
+protected:
 	UltrasoneSensor();
 	UltrasoneSensor(std::string tag);
 	std::string getTag();
-	int read();
+	int readParse();
 };
 
 #endif

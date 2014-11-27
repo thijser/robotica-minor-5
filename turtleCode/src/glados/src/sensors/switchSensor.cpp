@@ -13,6 +13,7 @@ SwitchSensor::SwitchSensor(string s){
 	state = 0;
 }
 
+//For extensibility issues
 int SwitchSensor::read(){
 	return getState();
 }
@@ -28,6 +29,10 @@ int SwitchSensor::readParse() {
 }
 
 int SwitchSensor::getState(){
-	state = readParse();
+	//state = readParse();
 	return state;
+}
+
+string SwitchSensor::getTag(){
+	return tag;
 }

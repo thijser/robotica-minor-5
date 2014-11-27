@@ -11,6 +11,10 @@ UltrasoneSensor::UltrasoneSensor(std::string t){
 	tag = t;
 }
 
+string UltrasoneSensor::getTag() {
+	return tag;
+}
+
 int UltrasoneSensor::read(){ //Just for extensiblility purposes.
 	return readParse();
 }
