@@ -1,14 +1,10 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(glados)
 include_directories(include ${catkin_INCLUDE_DIRS})
-find_package(catkin REQUIRED COMPONENTS 
-	roscpp 
-	std_msgs   
-	message_generation
-	rospy
-)
 	
-	
+find_package(catkin REQUIRED COMPONENTS roscpp message_generation threemxl std_msgs  rospy)
+catkin_package()
+
 catkin_package(
 INCLUDE_DIRS include
 CATKIN_DEPENDS roscpp std_msgs geometry_msgs)
@@ -34,7 +30,7 @@ add_library(switchSensor src/sensors/switchSensor.cpp)
 target_link_libraries(switchSensor ${catkin_LIBRARIES})
 
 #UltrasoneSensor
-add_library(UltrasoneSensor src/sensors/UltrasoneSensor.cpp)
+add_library(UltrasoneSensor src/sensors/UltrasoneSensor.cpp) 		
 target_link_libraries(UltrasoneSensor ${catkin_LIBRARIES})
 
 #RFIDSensor
@@ -50,22 +46,50 @@ add_library(conveyorDriver src/drivers/conveyorDriver.cpp)
 target_link_libraries(conveyorDriver ${roscpp_LIBRARIES} switchSensor)
 
 #Audio
-add_executable(sound_player src/drivers/audioDriver.cpp)
+add_library(sound_player src/drivers/audioDriver.cpp)
 target_link_libraries(sound_player ${catkin_LIBRARIES})
 
 #Launch
 add_library(launchDriver src/drivers/launchDriver.cpp)
 target_link_libraries(launchDriver ${roscpp_LIBRARIES} switchSensor)
 
+#Driving
+add_executable(drivingDriver src/drivers/drivingDriver.cpp)
+target_link_libraries(drivingDriver ${catkin_LIBRARIES})
+
 #######
 #LOGIC
 #######
 
 #Ball ask
-add_executable(mathAsker src/mathAsker.cpp)
-target_link_libraries(mathAsker ${catkin_LIBRARIES})
+#add_executable(mathAsker src/mathAsker.cpp)
+#target_link_libraries(mathAsker ${catkin_LIBRARIES})
+
+######
+#Tests
+######
+
+#Sensortests
+catkin_add_gtest(sensorutest src/sensors/test/utest.cpp)
+target_link_libraries(sensorutest ${roscpp_LIBRARIES} switchSensor RFIDSensor UltrasoneSensor)
 
 #dance 
 add_executable(dance src/dancer.cpp)
 target_link_libraries(dance ${catkin_LIBRARIES})
 
+
+#Drivertests
+#catkin_add_gtest(driverutest src/sensors/test/utest.cpp)
+#target_link_libraries(driverutest ${roscpp_LIBRARIES} conveyorDriver sound_player launchDriver)
+
+
+# Generate messages in the 'msg' folder
+add_message_files(
+   FILES
+   music.msg
+ )
+
+ generate_messages(
+   DEPENDENCIES
+   std_msgs
+ )

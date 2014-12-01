@@ -118,7 +118,7 @@ clean: CMakeFiles/doxygen.dir/clean
 # Target rules for target CMakeFiles/run_tests.dir
 
 # All Build rule for target.
-CMakeFiles/run_tests.dir/all:
+CMakeFiles/run_tests.dir/all: glados/CMakeFiles/_run_tests_glados.dir/all
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/depend
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
@@ -127,7 +127,7 @@ CMakeFiles/run_tests.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : CMakeFiles/run_tests.dir/rule
@@ -149,7 +149,7 @@ clean: CMakeFiles/run_tests.dir/clean
 # Target rules for target CMakeFiles/tests.dir
 
 # All Build rule for target.
-CMakeFiles/tests.dir/all:
+CMakeFiles/tests.dir/all: glados/CMakeFiles/sensorutest.dir/all
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
@@ -158,7 +158,7 @@ CMakeFiles/tests.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule
@@ -199,7 +199,7 @@ gtest/preinstall:
 gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles  7
 	@echo "Built target gtest"
 .PHONY : gtest/CMakeFiles/gtest.dir/all
 
@@ -230,7 +230,7 @@ clean: gtest/CMakeFiles/gtest.dir/clean
 gtest/CMakeFiles/gtest_main.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles  7
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles  8
 	@echo "Built target gtest_main"
 .PHONY : gtest/CMakeFiles/gtest_main.dir/all
 
@@ -263,8 +263,8 @@ glados/all: glados/CMakeFiles/UltrasoneSensor.dir/all
 glados/all: glados/CMakeFiles/conveyorDriver.dir/all
 glados/all: glados/CMakeFiles/core.dir/all
 glados/all: glados/CMakeFiles/dance.dir/all
+glados/all: glados/CMakeFiles/drivingDriver.dir/all
 glados/all: glados/CMakeFiles/launchDriver.dir/all
-glados/all: glados/CMakeFiles/mathAsker.dir/all
 glados/all: glados/CMakeFiles/sound_player.dir/all
 glados/all: glados/CMakeFiles/switchSensor.dir/all
 .PHONY : glados/all
@@ -272,17 +272,24 @@ glados/all: glados/CMakeFiles/switchSensor.dir/all
 # Convenience name for "clean" pass in the directory.
 glados/clean: glados/CMakeFiles/RFIDSensor.dir/clean
 glados/clean: glados/CMakeFiles/UltrasoneSensor.dir/clean
+glados/clean: glados/CMakeFiles/_run_tests_glados.dir/clean
+glados/clean: glados/CMakeFiles/_run_tests_glados_gtest.dir/clean
+glados/clean: glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/clean
 glados/clean: glados/CMakeFiles/conveyorDriver.dir/clean
 glados/clean: glados/CMakeFiles/core.dir/clean
 glados/clean: glados/CMakeFiles/dance.dir/clean
+glados/clean: glados/CMakeFiles/drivingDriver.dir/clean
 glados/clean: glados/CMakeFiles/launchDriver.dir/clean
-glados/clean: glados/CMakeFiles/mathAsker.dir/clean
 glados/clean: glados/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 glados/clean: glados/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 glados/clean: glados/CMakeFiles/roscpp_generate_messages_py.dir/clean
 glados/clean: glados/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 glados/clean: glados/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 glados/clean: glados/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+glados/clean: glados/CMakeFiles/run_tests_glados.dir/clean
+glados/clean: glados/CMakeFiles/run_tests_glados_gtest.dir/clean
+glados/clean: glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/clean
+glados/clean: glados/CMakeFiles/sensorutest.dir/clean
 glados/clean: glados/CMakeFiles/sound_player.dir/clean
 glados/clean: glados/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 glados/clean: glados/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
@@ -362,6 +369,101 @@ glados/CMakeFiles/UltrasoneSensor.dir/clean:
 
 # clean rule for target.
 clean: glados/CMakeFiles/UltrasoneSensor.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target glados/CMakeFiles/_run_tests_glados.dir
+
+# All Build rule for target.
+glados/CMakeFiles/_run_tests_glados.dir/all: glados/CMakeFiles/_run_tests_glados_gtest.dir/all
+	$(MAKE) -f glados/CMakeFiles/_run_tests_glados.dir/build.make glados/CMakeFiles/_run_tests_glados.dir/depend
+	$(MAKE) -f glados/CMakeFiles/_run_tests_glados.dir/build.make glados/CMakeFiles/_run_tests_glados.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
+	@echo "Built target _run_tests_glados"
+.PHONY : glados/CMakeFiles/_run_tests_glados.dir/all
+
+# Build rule for subdir invocation for target.
+glados/CMakeFiles/_run_tests_glados.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/_run_tests_glados.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
+.PHONY : glados/CMakeFiles/_run_tests_glados.dir/rule
+
+# Convenience name for target.
+_run_tests_glados: glados/CMakeFiles/_run_tests_glados.dir/rule
+.PHONY : _run_tests_glados
+
+# clean rule for target.
+glados/CMakeFiles/_run_tests_glados.dir/clean:
+	$(MAKE) -f glados/CMakeFiles/_run_tests_glados.dir/build.make glados/CMakeFiles/_run_tests_glados.dir/clean
+.PHONY : glados/CMakeFiles/_run_tests_glados.dir/clean
+
+# clean rule for target.
+clean: glados/CMakeFiles/_run_tests_glados.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target glados/CMakeFiles/_run_tests_glados_gtest.dir
+
+# All Build rule for target.
+glados/CMakeFiles/_run_tests_glados_gtest.dir/all: glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/all
+	$(MAKE) -f glados/CMakeFiles/_run_tests_glados_gtest.dir/build.make glados/CMakeFiles/_run_tests_glados_gtest.dir/depend
+	$(MAKE) -f glados/CMakeFiles/_run_tests_glados_gtest.dir/build.make glados/CMakeFiles/_run_tests_glados_gtest.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
+	@echo "Built target _run_tests_glados_gtest"
+.PHONY : glados/CMakeFiles/_run_tests_glados_gtest.dir/all
+
+# Build rule for subdir invocation for target.
+glados/CMakeFiles/_run_tests_glados_gtest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/_run_tests_glados_gtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
+.PHONY : glados/CMakeFiles/_run_tests_glados_gtest.dir/rule
+
+# Convenience name for target.
+_run_tests_glados_gtest: glados/CMakeFiles/_run_tests_glados_gtest.dir/rule
+.PHONY : _run_tests_glados_gtest
+
+# clean rule for target.
+glados/CMakeFiles/_run_tests_glados_gtest.dir/clean:
+	$(MAKE) -f glados/CMakeFiles/_run_tests_glados_gtest.dir/build.make glados/CMakeFiles/_run_tests_glados_gtest.dir/clean
+.PHONY : glados/CMakeFiles/_run_tests_glados_gtest.dir/clean
+
+# clean rule for target.
+clean: glados/CMakeFiles/_run_tests_glados_gtest.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir
+
+# All Build rule for target.
+glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/all: CMakeFiles/tests.dir/all
+glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/all: CMakeFiles/clean_test_results.dir/all
+glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/all: glados/CMakeFiles/sensorutest.dir/all
+	$(MAKE) -f glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/build.make glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/depend
+	$(MAKE) -f glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/build.make glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
+	@echo "Built target _run_tests_glados_gtest_sensorutest"
+.PHONY : glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/all
+
+# Build rule for subdir invocation for target.
+glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
+.PHONY : glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/rule
+
+# Convenience name for target.
+_run_tests_glados_gtest_sensorutest: glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/rule
+.PHONY : _run_tests_glados_gtest_sensorutest
+
+# clean rule for target.
+glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/clean:
+	$(MAKE) -f glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/build.make glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/clean
+.PHONY : glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/clean
+
+# clean rule for target.
+clean: glados/CMakeFiles/_run_tests_glados_gtest_sensorutest.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -470,13 +572,48 @@ clean: glados/CMakeFiles/dance.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target glados/CMakeFiles/drivingDriver.dir
+
+# All Build rule for target.
+glados/CMakeFiles/drivingDriver.dir/all:
+	$(MAKE) -f glados/CMakeFiles/drivingDriver.dir/build.make glados/CMakeFiles/drivingDriver.dir/depend
+	$(MAKE) -f glados/CMakeFiles/drivingDriver.dir/build.make glados/CMakeFiles/drivingDriver.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles  6
+	@echo "Built target drivingDriver"
+.PHONY : glados/CMakeFiles/drivingDriver.dir/all
+
+# Include target in all.
+all: glados/CMakeFiles/drivingDriver.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+glados/CMakeFiles/drivingDriver.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/drivingDriver.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
+.PHONY : glados/CMakeFiles/drivingDriver.dir/rule
+
+# Convenience name for target.
+drivingDriver: glados/CMakeFiles/drivingDriver.dir/rule
+.PHONY : drivingDriver
+
+# clean rule for target.
+glados/CMakeFiles/drivingDriver.dir/clean:
+	$(MAKE) -f glados/CMakeFiles/drivingDriver.dir/build.make glados/CMakeFiles/drivingDriver.dir/clean
+.PHONY : glados/CMakeFiles/drivingDriver.dir/clean
+
+# clean rule for target.
+clean: glados/CMakeFiles/drivingDriver.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target glados/CMakeFiles/launchDriver.dir
 
 # All Build rule for target.
 glados/CMakeFiles/launchDriver.dir/all: glados/CMakeFiles/switchSensor.dir/all
 	$(MAKE) -f glados/CMakeFiles/launchDriver.dir/build.make glados/CMakeFiles/launchDriver.dir/depend
 	$(MAKE) -f glados/CMakeFiles/launchDriver.dir/build.make glados/CMakeFiles/launchDriver.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles  8
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles  9
 	@echo "Built target launchDriver"
 .PHONY : glados/CMakeFiles/launchDriver.dir/all
 
@@ -502,41 +639,6 @@ glados/CMakeFiles/launchDriver.dir/clean:
 
 # clean rule for target.
 clean: glados/CMakeFiles/launchDriver.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target glados/CMakeFiles/mathAsker.dir
-
-# All Build rule for target.
-glados/CMakeFiles/mathAsker.dir/all:
-	$(MAKE) -f glados/CMakeFiles/mathAsker.dir/build.make glados/CMakeFiles/mathAsker.dir/depend
-	$(MAKE) -f glados/CMakeFiles/mathAsker.dir/build.make glados/CMakeFiles/mathAsker.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles  9
-	@echo "Built target mathAsker"
-.PHONY : glados/CMakeFiles/mathAsker.dir/all
-
-# Include target in all.
-all: glados/CMakeFiles/mathAsker.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-glados/CMakeFiles/mathAsker.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/mathAsker.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
-.PHONY : glados/CMakeFiles/mathAsker.dir/rule
-
-# Convenience name for target.
-mathAsker: glados/CMakeFiles/mathAsker.dir/rule
-.PHONY : mathAsker
-
-# clean rule for target.
-glados/CMakeFiles/mathAsker.dir/clean:
-	$(MAKE) -f glados/CMakeFiles/mathAsker.dir/build.make glados/CMakeFiles/mathAsker.dir/clean
-.PHONY : glados/CMakeFiles/mathAsker.dir/clean
-
-# clean rule for target.
-clean: glados/CMakeFiles/mathAsker.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -726,13 +828,141 @@ clean: glados/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target glados/CMakeFiles/run_tests_glados.dir
+
+# All Build rule for target.
+glados/CMakeFiles/run_tests_glados.dir/all: glados/CMakeFiles/run_tests_glados_gtest.dir/all
+	$(MAKE) -f glados/CMakeFiles/run_tests_glados.dir/build.make glados/CMakeFiles/run_tests_glados.dir/depend
+	$(MAKE) -f glados/CMakeFiles/run_tests_glados.dir/build.make glados/CMakeFiles/run_tests_glados.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
+	@echo "Built target run_tests_glados"
+.PHONY : glados/CMakeFiles/run_tests_glados.dir/all
+
+# Build rule for subdir invocation for target.
+glados/CMakeFiles/run_tests_glados.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/run_tests_glados.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
+.PHONY : glados/CMakeFiles/run_tests_glados.dir/rule
+
+# Convenience name for target.
+run_tests_glados: glados/CMakeFiles/run_tests_glados.dir/rule
+.PHONY : run_tests_glados
+
+# clean rule for target.
+glados/CMakeFiles/run_tests_glados.dir/clean:
+	$(MAKE) -f glados/CMakeFiles/run_tests_glados.dir/build.make glados/CMakeFiles/run_tests_glados.dir/clean
+.PHONY : glados/CMakeFiles/run_tests_glados.dir/clean
+
+# clean rule for target.
+clean: glados/CMakeFiles/run_tests_glados.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target glados/CMakeFiles/run_tests_glados_gtest.dir
+
+# All Build rule for target.
+glados/CMakeFiles/run_tests_glados_gtest.dir/all: glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/all
+	$(MAKE) -f glados/CMakeFiles/run_tests_glados_gtest.dir/build.make glados/CMakeFiles/run_tests_glados_gtest.dir/depend
+	$(MAKE) -f glados/CMakeFiles/run_tests_glados_gtest.dir/build.make glados/CMakeFiles/run_tests_glados_gtest.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
+	@echo "Built target run_tests_glados_gtest"
+.PHONY : glados/CMakeFiles/run_tests_glados_gtest.dir/all
+
+# Build rule for subdir invocation for target.
+glados/CMakeFiles/run_tests_glados_gtest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/run_tests_glados_gtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
+.PHONY : glados/CMakeFiles/run_tests_glados_gtest.dir/rule
+
+# Convenience name for target.
+run_tests_glados_gtest: glados/CMakeFiles/run_tests_glados_gtest.dir/rule
+.PHONY : run_tests_glados_gtest
+
+# clean rule for target.
+glados/CMakeFiles/run_tests_glados_gtest.dir/clean:
+	$(MAKE) -f glados/CMakeFiles/run_tests_glados_gtest.dir/build.make glados/CMakeFiles/run_tests_glados_gtest.dir/clean
+.PHONY : glados/CMakeFiles/run_tests_glados_gtest.dir/clean
+
+# clean rule for target.
+clean: glados/CMakeFiles/run_tests_glados_gtest.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir
+
+# All Build rule for target.
+glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/all: glados/CMakeFiles/sensorutest.dir/all
+	$(MAKE) -f glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/build.make glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/depend
+	$(MAKE) -f glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/build.make glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 
+	@echo "Built target run_tests_glados_gtest_sensorutest"
+.PHONY : glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/all
+
+# Build rule for subdir invocation for target.
+glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
+.PHONY : glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/rule
+
+# Convenience name for target.
+run_tests_glados_gtest_sensorutest: glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/rule
+.PHONY : run_tests_glados_gtest_sensorutest
+
+# clean rule for target.
+glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/clean:
+	$(MAKE) -f glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/build.make glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/clean
+.PHONY : glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/clean
+
+# clean rule for target.
+clean: glados/CMakeFiles/run_tests_glados_gtest_sensorutest.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target glados/CMakeFiles/sensorutest.dir
+
+# All Build rule for target.
+glados/CMakeFiles/sensorutest.dir/all: gtest/CMakeFiles/gtest_main.dir/all
+glados/CMakeFiles/sensorutest.dir/all: gtest/CMakeFiles/gtest.dir/all
+glados/CMakeFiles/sensorutest.dir/all: glados/CMakeFiles/switchSensor.dir/all
+glados/CMakeFiles/sensorutest.dir/all: glados/CMakeFiles/UltrasoneSensor.dir/all
+glados/CMakeFiles/sensorutest.dir/all: glados/CMakeFiles/RFIDSensor.dir/all
+	$(MAKE) -f glados/CMakeFiles/sensorutest.dir/build.make glados/CMakeFiles/sensorutest.dir/depend
+	$(MAKE) -f glados/CMakeFiles/sensorutest.dir/build.make glados/CMakeFiles/sensorutest.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles  10
+	@echo "Built target sensorutest"
+.PHONY : glados/CMakeFiles/sensorutest.dir/all
+
+# Build rule for subdir invocation for target.
+glados/CMakeFiles/sensorutest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 glados/CMakeFiles/sensorutest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles 0
+.PHONY : glados/CMakeFiles/sensorutest.dir/rule
+
+# Convenience name for target.
+sensorutest: glados/CMakeFiles/sensorutest.dir/rule
+.PHONY : sensorutest
+
+# clean rule for target.
+glados/CMakeFiles/sensorutest.dir/clean:
+	$(MAKE) -f glados/CMakeFiles/sensorutest.dir/build.make glados/CMakeFiles/sensorutest.dir/clean
+.PHONY : glados/CMakeFiles/sensorutest.dir/clean
+
+# clean rule for target.
+clean: glados/CMakeFiles/sensorutest.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target glados/CMakeFiles/sound_player.dir
 
 # All Build rule for target.
 glados/CMakeFiles/sound_player.dir/all:
 	$(MAKE) -f glados/CMakeFiles/sound_player.dir/build.make glados/CMakeFiles/sound_player.dir/depend
 	$(MAKE) -f glados/CMakeFiles/sound_player.dir/build.make glados/CMakeFiles/sound_player.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles  10
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles  11
 	@echo "Built target sound_player"
 .PHONY : glados/CMakeFiles/sound_player.dir/all
 
@@ -860,7 +1090,7 @@ clean: glados/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 glados/CMakeFiles/switchSensor.dir/all:
 	$(MAKE) -f glados/CMakeFiles/switchSensor.dir/build.make glados/CMakeFiles/switchSensor.dir/depend
 	$(MAKE) -f glados/CMakeFiles/switchSensor.dir/build.make glados/CMakeFiles/switchSensor.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles  11
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/thijs/codes/robotica-minor-5/turtleCode/build/CMakeFiles  12
 	@echo "Built target switchSensor"
 .PHONY : glados/CMakeFiles/switchSensor.dir/all
 
