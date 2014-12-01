@@ -1,8 +1,14 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(glados)
 include_directories(include ${catkin_INCLUDE_DIRS})
-find_package(catkin REQUIRED COMPONENTS roscpp std_msgs)
-
+find_package(catkin REQUIRED COMPONENTS 
+	roscpp 
+	std_msgs   
+	message_generation
+	rospy
+)
+	
+	
 catkin_package(
 INCLUDE_DIRS include
 CATKIN_DEPENDS roscpp std_msgs geometry_msgs)
@@ -17,6 +23,7 @@ include_directories(include ${roscpp_INCLUDE_DIRS})
 
 add_executable(core src/core.cpp)
 target_link_libraries(core ${catkin_LIBRARIES})
+
 
 #######
 #SENSORS
@@ -57,4 +64,8 @@ target_link_libraries(launchDriver ${roscpp_LIBRARIES} switchSensor)
 #Ball ask
 add_executable(mathAsker src/mathAsker.cpp)
 target_link_libraries(mathAsker ${catkin_LIBRARIES})
+
+#dance 
+add_executable(dance src/dancer.cpp)
+target_link_libraries(dance ${catkin_LIBRARIES})
 

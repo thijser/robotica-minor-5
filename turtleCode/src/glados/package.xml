@@ -8,6 +8,7 @@ Volcano toy robot
 <maintainer email="evilOverlord@cse.sc.edu">
 Robotica Minor 2014 group 5
 </maintainer>
+
 <license >MIT</license >
 <buildtool_depend>catkin </buildtool_depend>
 <build_depend>geometry_msgs</build_depend>
@@ -18,4 +19,17 @@ Robotica Minor 2014 group 5
 <run_depend>turtlesim </run_depend>
 <build_depend>roscpp</build_depend>
 <run_depend>roscpp</run_depend>
+<build_depend>message_generation</build_depend>
+<run_depend>message_runtime</run_depend>
+catkin_package(
+  CATKIN_DEPENDS message_runtime
+)
+add_message_files(
+  FILES
+  Num.msg
+)
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
 </package>
