@@ -6,17 +6,6 @@
 #include <geometry_msgs/Twist.h>
 
 class DrivingDriver{
-public:
-	DrivingDriver();
-	DrivingDriver(int id);
-	int getID();
-	int getState();
-	bool setPower(int level);
-	int getPower();
-	bool drive();
-	bool stop();
-	void spin();
-	int main(int argc, char **argv);
 protected:
 	int ID;
 	int currentPower;
@@ -36,6 +25,21 @@ protected:
 	double wheelBase;
 	void initMotors();
 	void driveCallback(const geometry_msgs::Twist::ConstPtr &msg);
+
+public:
+	DrivingDriver() : handle("~") {
+		init();
+	}
+	void init();
+	int getID();
+	int getState();
+	bool setPower(int level);
+	int getPower();
+	bool drive();
+	bool stop();
+	void spin();
+	int main(int argc, char **argv);
+
 
 };
 

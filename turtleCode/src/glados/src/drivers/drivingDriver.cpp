@@ -12,14 +12,9 @@ Publishing on:
 #include <geometry_msgs/Twist.h>
 #include "drivingDriver.h"
 
-DrivingDriver::DrivingDriver() {
-	DrivingDriver(99999);
-}
-
-DrivingDriver::DrivingDriver(int id){
-	ros::NodeHandle handle("~");
-	ID = id;
-	sub = handle.subscribe<geometry_msgs::Twist>("/base/cmd_vel", 10, &DrivingDriver::driveCallback, this);
+void DrivingDriver::init(){
+	ID = 436436436;
+	sub = handle.subscribe<geometry_msgs::Twist>("/tawi/motors/drive", 10, &DrivingDriver::driveCallback, this);
 
 	//Parameters set in launch file.
 	ROS_ASSERT(handle.getParam("motor_port", motor_port_name));
@@ -33,7 +28,10 @@ DrivingDriver::DrivingDriver(int id){
 	
 	DXL_SAFE_CALL(left_motor->set3MxlMode(motor_config_left.m3mxlMode));
 	DXL_SAFE_CALL(right_motor->set3MxlMode(motor_config_right.m3mxlMode));
+
+	ROS_INFO("Driver initialized");
 }
+
 
 void DrivingDriver::driveCallback(const geometry_msgs::Twist::ConstPtr &msg){
 
@@ -79,6 +77,8 @@ bool DrivingDriver::stop() {
 }
 
 void DrivingDriver::initMotors(){
+	ROS_INFO("gaaahhahahaha");
+
 	ros::Rate init_rate(1);
 	
 	motor_config_left.readConfig(motor_config_xml.root().section("left"));
@@ -101,11 +101,12 @@ void DrivingDriver::initMotors(){
 }
 
 void DrivingDriver::spin() {
-	ROS_INFO("Spinning");
+	ROS_INFO("Spinning da spin");
 
 	ros::Rate r(1000);
 
 	while(ros::ok()) {
+
 		ros::spinOnce();
 		r.sleep();
 	}
