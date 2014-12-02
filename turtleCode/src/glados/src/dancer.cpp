@@ -1,7 +1,7 @@
 //publishes on /tawi/motors/wheels
 //listens on /tawi/theBeat
 #include <geometry_msgs/Twist.h>
-#include "msg/num.msg"
+#include "msg/music.msg"
 
 #define drivespeed 1;
 #define rotspeed 1; 
@@ -79,10 +79,9 @@ class dancer{
 				
 	}
 
-	void 
-	mathasker(): handle("~"){
+	void mathasker(): handle("~"){
 		srand (time(NULL));
-		moveit=handle.advertise<geometry_msgs::Twist>("/tawi/motors/wheels",1000);
+		moveit=handle.advertise<geometry_msgs::Twist>("/tawi/motors/drive",1000);
 		subBeat = handle.subscribe("/tawi/theBeat", 1000, &dancer::beatcallback,this);
 	}
 }
@@ -95,5 +94,5 @@ int main(int argc, char **argv){
 		ros::spinOnce();
 		hz.sleep();
 	}
-)
+
 }
