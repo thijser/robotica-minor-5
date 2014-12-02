@@ -20,24 +20,14 @@ DrivingDriver::DrivingDriver(int id){
 	ros::NodeHandle handle("~");
 	ID = id;
 	sub = handle.subscribe<geometry_msgs::Twist>("/base/cmd_vel", 10, &DrivingDriver::driveCallback, this);
-	
 
-	//Stolen code to set some things. No idea where to find the parameters...	
-
+	//Parameters set in launch file.
 	ROS_ASSERT(handle.getParam("motor_port", motor_port_name));
 	ROS_ASSERT(handle.getParam("motor_config", motor_config_name));
 	ROS_ASSERT(handle.getParam("wheel_diameter", wheelDiameter));
 	ROS_ASSERT(handle.getParam("wheel_base", wheelBase));
-/*	
 
-	motor_port_name = "motor_comm";
-	motor_config_name = "wheels.xml";
-	wheelDiameter = 0.295;
-	wheelBase = 0.54;
-*/
 	ROS_ASSERT(motor_config_xml.loadFile(motor_config_name));
-
-	//End of stolen code
 
 	initMotors();
 	
@@ -80,8 +70,6 @@ int DrivingDriver::getPower(){
 
 bool DrivingDriver::drive(){
 	
-
-
 	return true;
 }
 
