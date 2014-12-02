@@ -14,9 +14,8 @@ generate_messages(
    DEPENDENCIES
    std_msgs
  )
-find_package(catkin REQUIRED COMPONENTS message_generation)
-catkin_package()
- )	
+#find_package(catkin REQUIRED COMPONENTS message_generation)
+#catkin_package()	
 
 
 catkin_package(
@@ -92,7 +91,6 @@ target_link_libraries(dance ${catkin_LIBRARIES})
 
 
 #Drivertests
-<<<<<<< HEAD
 catkin_add_gtest(driverutest src/sensors/test/utest.cpp)
 target_link_libraries(driverutest ${roscpp_LIBRARIES} conveyorDriver audioDriver launchDriver)
 
