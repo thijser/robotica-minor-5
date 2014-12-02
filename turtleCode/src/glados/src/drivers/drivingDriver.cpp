@@ -77,7 +77,6 @@ bool DrivingDriver::stop() {
 }
 
 void DrivingDriver::initMotors(){
-	ROS_INFO("gaaahhahahaha");
 
 	ros::Rate init_rate(1);
 	

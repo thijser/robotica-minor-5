@@ -1,13 +1,38 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(glados)
 include_directories(include ${catkin_INCLUDE_DIRS})
-	
+
 find_package(catkin REQUIRED COMPONENTS roscpp message_generation threemxl std_msgs  rospy)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55d193ce935323b852aff87ce557c79c3f67e341
+# Generate messages in the 'msg' folder
+add_message_files(
+   FILES
+   music.msg
+<<<<<<< HEAD
+ )
+
+generate_messages(
+   DEPENDENCIES
+   std_msgs
+ )
+find_package(catkin REQUIRED COMPONENTS message_generation)
 catkin_package()
+=======
+ )	
+
+generate_messages(
+   DEPENDENCIES
+   glados
+   std_msgs
+ )
+>>>>>>> 55d193ce935323b852aff87ce557c79c3f67e341
 
 catkin_package(
 INCLUDE_DIRS include
-CATKIN_DEPENDS roscpp std_msgs geometry_msgs)
+CATKIN_DEPENDS roscpp std_msgs geometry_msgs message_runtime)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 include_directories(include ${catkin_INCLUDE_DIRS})
@@ -19,7 +44,6 @@ include_directories(include ${roscpp_INCLUDE_DIRS})
 
 add_executable(core src/core.cpp)
 target_link_libraries(core ${catkin_LIBRARIES})
-
 
 #######
 #SENSORS
@@ -79,17 +103,13 @@ target_link_libraries(dance ${catkin_LIBRARIES})
 
 
 #Drivertests
+<<<<<<< HEAD
 catkin_add_gtest(driverutest src/sensors/test/utest.cpp)
 target_link_libraries(driverutest ${roscpp_LIBRARIES} conveyorDriver audioDriver launchDriver)
 
 
-# Generate messages in the 'msg' folder
-add_message_files(
-   FILES
-   music.msg
- )
 
-generate_messages(
-   DEPENDENCIES
-   std_msgs
- )
+=======
+#catkin_add_gtest(driverutest src/sensors/test/utest.cpp)
+#target_link_libraries(driverutest ${roscpp_LIBRARIES} conveyorDriver audioDriver launchDriver)
+>>>>>>> 55d193ce935323b852aff87ce557c79c3f67e341
