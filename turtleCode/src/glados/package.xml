@@ -21,6 +21,8 @@ Robotica Minor 2014 group 5
 <run_depend>roscpp</run_depend>
 <build_depend>message_generation</build_depend>
 <run_depend>message_runtime</run_depend>
+<build_depend>threemxl</build_depend>
+<run_depend>threemxl</run_depend>
 catkin_package(
   CATKIN_DEPENDS message_runtime
 )
