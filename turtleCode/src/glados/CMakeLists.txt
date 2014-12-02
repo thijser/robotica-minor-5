@@ -13,6 +13,7 @@ generate_messages(
    DEPENDENCIES
    std_msgs
  )
+find_package(catkin REQUIRED COMPONENTS message_generation)
 catkin_package()
 
 catkin_package(

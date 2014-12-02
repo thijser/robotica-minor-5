@@ -1,7 +1,7 @@
 //publishes on /tawi/motors/wheels
 //listens on /tawi/theBeat
 #include <geometry_msgs/Twist.h>
-#include "../msg/music.h"
+#include "glados/music.h"
 #include <ros/ros.h>
 
 #define drivespeed 1;
@@ -75,7 +75,7 @@ class dancer{
 		phase=time%(timePerMove*1000);
 	}
 
-	void beatcallback(music.msg msg){
+	void beatcallback(music msg){
 		setBeat(msg.beat);
 		setStarttime(msg.start);
 				
@@ -87,7 +87,7 @@ class dancer{
 		moveit=handle.advertise<geometry_msgs::Twist>("/tawi/motors/wheels",1000);
 		subBeat = handle.subscribe("/tawi/theBeat", 1000, &dancer::beatcallback,this);
 	}
-}
+};
 
 int main(int argc, char **argv){
 	ros::init(argc, argc,"lets_dance");
