@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(glados)
 include_directories(include ${catkin_INCLUDE_DIRS})
-find_package(catkin REQUIRED COMPONENTS roscpp message_generation threemxl std_msgs mecdssage_generation)
+	
+find_package(catkin REQUIRED COMPONENTS roscpp message_generation threemxl std_msgs  rospy)
 catkin_package()
+
 catkin_package(
 INCLUDE_DIRS include
 CATKIN_DEPENDS roscpp std_msgs geometry_msgs)
@@ -18,6 +20,7 @@ include_directories(include ${roscpp_INCLUDE_DIRS})
 add_executable(core src/core.cpp)
 target_link_libraries(core ${catkin_LIBRARIES})
 
+
 #######
 #SENSORS
 #######
@@ -27,7 +30,7 @@ add_library(switchSensor src/sensors/switchSensor.cpp)
 target_link_libraries(switchSensor ${catkin_LIBRARIES})
 
 #UltrasoneSensor
-add_library(UltrasoneSensor src/sensors/UltrasoneSensor.cpp)
+add_library(UltrasoneSensor src/sensors/UltrasoneSensor.cpp) 		
 target_link_libraries(UltrasoneSensor ${catkin_LIBRARIES})
 
 #RFIDSensor
@@ -70,6 +73,23 @@ target_link_libraries(drivingDriver ${catkin_LIBRARIES})
 catkin_add_gtest(sensorutest src/sensors/test/utest.cpp)
 target_link_libraries(sensorutest ${roscpp_LIBRARIES} switchSensor RFIDSensor UltrasoneSensor)
 
+#dance 
+add_executable(dance src/dancer.cpp)
+target_link_libraries(dance ${catkin_LIBRARIES})
+
+
 #Drivertests
 #catkin_add_gtest(driverutest src/sensors/test/utest.cpp)
 #target_link_libraries(driverutest ${roscpp_LIBRARIES} conveyorDriver sound_player launchDriver)
+
+
+# Generate messages in the 'msg' folder
+add_message_files(
+   FILES
+   music.msg
+ )
+
+ generate_messages(
+   DEPENDENCIES
+   std_msgs
+ )

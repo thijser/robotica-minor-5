@@ -17,8 +17,8 @@ void audioCallback(std_msgs::String msg)
 {
 	ros::NodeHandle publishHandle;
 	sound_play::SoundClient* soundClient = new sound_play::SoundClient();
-
-	soundClient->say("bakabakblablablabla", "voice_kal_diphone");
+	std::cout<<msg.data<<std::endl;
+	soundClient->say(msg.data);
 }
 
 

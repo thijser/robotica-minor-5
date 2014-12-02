@@ -1,4 +1,6 @@
 <launch>
 	<node name="core" pkg="glados" type="core" />
-
+	<node name="mathAsker" pkg="glados" type="mathAsker" />
+	<node name="sound_player" pkg="glados" type="sound_player" />
+	<node name="core" pkg="glados" type="core" />
 </launch>
