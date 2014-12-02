@@ -3,9 +3,10 @@
 #include <geometry_msgs/Twist.h>
 #include "glados/music.h"
 #include <ros/ros.h>
+#include <math.h>
 
-#define drivespeed 1;
-#define rotspeed 1; 
+#define drivespeed 1
+#define rotspeed 1
 
 class dancer{
 	public:
@@ -19,26 +20,31 @@ class dancer{
 	int beat=30; 
 	double phase; 
 	double timePerMove;	//seconds 
-	geometry_msgs::Twist::ConstPtr &msg;
+
 
 	int getWaittime(){
-		return timePerMove-((ros::Time::now()-phase)%timePerMove);
+		double now =ros::Time::now().toSec();
+		return timePerMove-fmod((now-phase),timePerMove);
 	}
 	void drivestraight(int speed){
-		msg->linear.x=speed;
-		msg->linear.y=0;
-		msg->linear.z=0;
-		msg->angular.x=0;
-		msg->angular.y=0;
-		msg->angular.z=0;
+		geometry_msgs::Twist msg;
+		msg.linear.x=speed;
+		msg.linear.y=0;
+		msg.linear.z=0;
+		msg.angular.x=0;
+		msg.angular.y=0;
+		msg.angular.z=0;
+		moveit.publish(msg);
 	}
-	void rotate(int speed){
-		msg->linear.x=0;
-		msg->linear.y=0;
-		msg->linear.z=0;
-		msg->angular.x=0;
-		msg->angular.y=0;
-		msg->angular.z=speed;
+	void rotate(int speed){	
+		geometry_msgs::Twist msg;
+		msg.linear.x=0;
+		msg.linear.y=0;
+		msg.linear.z=0;
+		msg.angular.x=0;
+		msg.angular.y=0;
+		msg.angular.z=speed;
+		moveit.publish(msg);
 	}
 
 	void backForward(){
@@ -57,7 +63,7 @@ class dancer{
 	}
 	void dance(){
 		while(dancing){
-			if(rand%2){
+			if(rand()%2){
 				spinRound();
 			}else{
 				backForward();
@@ -67,32 +73,32 @@ class dancer{
 
 	void setBeat(int bpm){
 		
-		beat=bpm;nu
-		timePerMove=60/(double)bpm
+		beat=bpm;
+		timePerMove=60/(double)bpm;
 	}
 
 	void setStarttime(long time){ //miniseconds since boot 
-		phase=time%(timePerMove*1000);
+		phase=time%(int)(timePerMove*1000);
 	}
 
-	void beatcallback(music msg){
-		setBeat(msg.beat);
-		setStarttime(msg.start);
+	void beatcallback(glados::music msg){
+		setBeat(msg.bpm);
+		setStarttime(msg.starttime);
 				
 	}
 
-	void mathasker(): handle("~"){
+	dancer(): handle("~"){
 		srand (time(NULL));
 		moveit=handle.advertise<geometry_msgs::Twist>("/tawi/motors/drive",1000);
 		subBeat = handle.subscribe("/tawi/theBeat", 1000, &dancer::beatcallback,this);
 	}
 };
 
-int main(int argc, char **argv){
-	ros::init(argc, argc,"lets_dance");
+int main(int argc, char** argv){
+	ros::init(argc, argv, "teleop_turtle");
 	dancer dance;
-	ros::rate hz(100);
-	while(rosLLok()){
+	ros::Rate hz(100);
+	while(ros::ok()){
 		ros::spinOnce();
 		hz.sleep();
 	}
