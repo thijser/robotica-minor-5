@@ -46,8 +46,8 @@ add_library(conveyorDriver src/drivers/conveyorDriver.cpp)
 target_link_libraries(conveyorDriver ${roscpp_LIBRARIES} switchSensor)
 
 #Audio
-add_library(sound_player src/drivers/audioDriver.cpp)
-target_link_libraries(sound_player ${catkin_LIBRARIES})
+add_library(audioDriver src/drivers/audioDriver.cpp)
+target_link_libraries(audioDriver ${catkin_LIBRARIES})
 
 #Launch
 add_library(launchDriver src/drivers/launchDriver.cpp)
@@ -74,22 +74,22 @@ catkin_add_gtest(sensorutest src/sensors/test/utest.cpp)
 target_link_libraries(sensorutest ${roscpp_LIBRARIES} switchSensor RFIDSensor UltrasoneSensor)
 
 #dance 
-add_executable(dance src/dancer.cpp)
-target_link_libraries(dance ${catkin_LIBRARIES})
+#add_executable(dance src/dancer.cpp)
+#target_link_libraries(dance ${catkin_LIBRARIES})
 
 
 #Drivertests
 #catkin_add_gtest(driverutest src/sensors/test/utest.cpp)
-#target_link_libraries(driverutest ${roscpp_LIBRARIES} conveyorDriver sound_player launchDriver)
+#target_link_libraries(driverutest ${roscpp_LIBRARIES} conveyorDriver audioDriver launchDriver)
 
 
 # Generate messages in the 'msg' folder
-add_message_files(
-   FILES
-   music.msg
- )
+#add_message_files(
+ #  FILES
+  # music.msg
+# )
 
- generate_messages(
-   DEPENDENCIES
-   std_msgs
- )
+# generate_messages(
+#   DEPENDENCIES
+#   std_msgs
+# )
