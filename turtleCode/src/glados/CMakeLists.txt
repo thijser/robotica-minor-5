@@ -3,6 +3,16 @@ project(glados)
 include_directories(include ${catkin_INCLUDE_DIRS})
 	
 find_package(catkin REQUIRED COMPONENTS roscpp message_generation threemxl std_msgs  rospy)
+# Generate messages in the 'msg' folder
+add_message_files(
+   FILES
+   music.msg
+ )
+
+generate_messages(
+   DEPENDENCIES
+   std_msgs
+ )
 catkin_package()
 
 catkin_package(
@@ -74,22 +84,13 @@ catkin_add_gtest(sensorutest src/sensors/test/utest.cpp)
 target_link_libraries(sensorutest ${roscpp_LIBRARIES} switchSensor RFIDSensor UltrasoneSensor)
 
 #dance 
-#add_executable(dance src/dancer.cpp)
-#target_link_libraries(dance ${catkin_LIBRARIES})
+add_executable(dance src/dancer.cpp)
+target_link_libraries(dance ${catkin_LIBRARIES})
 
 
 #Drivertests
-#catkin_add_gtest(driverutest src/sensors/test/utest.cpp)
-#target_link_libraries(driverutest ${roscpp_LIBRARIES} conveyorDriver audioDriver launchDriver)
+catkin_add_gtest(driverutest src/sensors/test/utest.cpp)
+target_link_libraries(driverutest ${roscpp_LIBRARIES} conveyorDriver audioDriver launchDriver)
 
 
-# Generate messages in the 'msg' folder
-#add_message_files(
- #  FILES
-  # music.msg
-# )
 
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )

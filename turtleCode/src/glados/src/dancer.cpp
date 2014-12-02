@@ -1,10 +1,12 @@
 //publishes on /tawi/motors/wheels
 //listens on /tawi/theBeat
 #include <geometry_msgs/Twist.h>
-#include "msg/num.msg"
+#include "../msg/music.h"
+#include <ros/ros.h>
 
 #define drivespeed 1;
 #define rotspeed 1; 
+
 class dancer{
 	public:
 		
@@ -17,7 +19,7 @@ class dancer{
 	int beat=30; 
 	double phase; 
 	double timePerMove;	//seconds 
-	geometry_msgs::Twist::ConstPtr &msg
+	geometry_msgs::Twist::ConstPtr &msg;
 
 	int getWaittime(){
 		return timePerMove-((ros::Time::now()-phase)%timePerMove);
@@ -65,7 +67,7 @@ class dancer{
 
 	void setBeat(int bpm){
 		
-		beat=bpm;
+		beat=bpm;nu
 		timePerMove=60/(double)bpm
 	}
 
@@ -73,7 +75,7 @@ class dancer{
 		phase=time%(timePerMove*1000);
 	}
 
-	void beatcallback(num.msg msg){
+	void beatcallback(music.msg msg){
 		setBeat(msg.beat);
 		setStarttime(msg.start);
 				
