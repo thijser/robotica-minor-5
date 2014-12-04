@@ -34,6 +34,14 @@ add_executable(core src/core.cpp)
 target_link_libraries(core ${catkin_LIBRARIES})
 
 #######
+#MIDLEVEL-LOGIC
+#######
+
+#dance 
+add_executable(dance src/dancer.cpp)
+target_link_libraries(dance ${catkin_LIBRARIES})
+
+#######
 #SENSORS
 #######
 
@@ -85,16 +93,10 @@ target_link_libraries(drivingDriver ${catkin_LIBRARIES})
 catkin_add_gtest(sensorutest src/sensors/test/utest.cpp)
 target_link_libraries(sensorutest ${roscpp_LIBRARIES} switchSensor RFIDSensor UltrasoneSensor)
 
-#dance 
-add_executable(dance src/dancer.cpp)
-target_link_libraries(dance ${catkin_LIBRARIES})
-
 
 #Drivertests
 catkin_add_gtest(driverutest src/sensors/test/utest.cpp)
 target_link_libraries(driverutest ${roscpp_LIBRARIES} conveyorDriver audioDriver launchDriver)
-
-
 
 #catkin_add_gtest(driverutest src/sensors/test/utest.cpp)
 #target_link_libraries(driverutest ${roscpp_LIBRARIES} conveyorDriver audioDriver launchDriver)
