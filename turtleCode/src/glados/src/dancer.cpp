@@ -18,7 +18,7 @@ class dancer{
 	
 	int dancing=0; 
 	int beat=30; 
-	double phase; 
+	double phase; 		//miliseconds 
 	double timePerMove;	//seconds 
 
 
