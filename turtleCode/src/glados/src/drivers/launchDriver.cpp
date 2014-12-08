@@ -1,23 +1,14 @@
 /**
 * Low level functions for handling the motors of the launching system.
 * Listens to:
-*	
+*	/tawi/motors/launch to std_msgs::Int16 (Launch when true)
+ 	/tawi/sensors/switch to std_msgs::Bool (Check if switch is ready)
 * Publishes on:
 *	
 */ 
-#include <ros/ros.h>
-#include "switchSensor.h"
+#include "launchDriver.h"
 
-class LaunchDriver{
-public:
-	LaunchDriver();
-	LaunchDriver(SwitchSensor *s, ros::NodeHandle h);
-	bool checkSwitch();
-	bool launch();
-protected:
-	SwitchSensor *sensor;
-	ros::NodeHandle handle;
-};
+using namespace std;
 
 LaunchDriver::LaunchDriver () {
 	sensor = new SwitchSensor("Rack");
@@ -30,10 +21,53 @@ LaunchDriver::LaunchDriver(SwitchSensor *s, ros::NodeHandle h){
 	handle = h;
 }
 
-bool LaunchDriver::checkSwitch(){
-	sensor->read();
+void LaunchDriver::init(){
+	switchSub = handle.subscribe<std_msgs::Bool>("/tawi/motors/launch", 10, &LaunchDriver::switchCallback, this);
+
+	launchSub = handle.subscribe<std_msgs::Int16>("/tawi/sensors/switch", 10, &LaunchDriver::launchCallback, this);
+}
+
+void LaunchDriver::switchCallback(const std_msgs::Bool::ConstPtr &msg){
+	switchReady = msg->data;
+}
+
+void LaunchDriver::launchCallback(const std_msgs::Int16::ConstPtr &msg){
+	if(msg->data == 1){
+		launch();
+	}
 }
 
 bool LaunchDriver::launch(){
-	
+	std::fstream fs;
+
+	fs.open("/sys/class/gpio/export");
+	fs << 30;
+	fs.close();
+	fs.open("/sys/class/gpio/gpio30/direction");
+   	fs << "out";
+   	fs.close();
+   	fs.open("/sys/class/gpio/gpio30/value");
+  	fs << "1"; // "0" for off
+   	fs.close();
+}
+
+void LaunchDriver::spin() {
+	ROS_INFO("Spinning launchDriver");
+
+	ros::Rate r(1000);
+
+	while(ros::ok()) {
+
+		ros::spinOnce();
+		r.sleep();
+	}
+}
+
+int main(int argc, char **argv)
+{
+	ros::init(argc, argv, "launchDriver");
+	LaunchDriver ld;
+	ld.spin();
+
+	return 0;
 }
