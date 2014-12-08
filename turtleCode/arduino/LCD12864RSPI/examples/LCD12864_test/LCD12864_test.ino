@@ -30,48 +30,91 @@ Method2:
 
 #define AR_SIZE( a ) sizeof( a ) / sizeof( a[0] )
 
-unsigned char wangzhi[]="4+4=";//
-
-unsigned char en_char1[]="ST7920 LCD12864 ";// 
-
-unsigned char en_char2[]="Test, Copyright ";// 
-
-unsigned char en_char3[]="by DFRobot ---> ";// 
-
 void setup()
 {
   LCDA.initDriverPin(2,7,10); 
   LCDA.Initialise(); // INIT SCREEN  
+   LCDA.CLEAR();
+  delay(1000);
+  displayfuse(angryFace);
+
+  delay(5000);
+   LCDA.CLEAR();
   delay(100);
-  LCDA.DrawFullScreen(logo);//LOGO
-  delay(5000);
-  LCDA.DrawFullScreen(angry);
-  delay(5000);
-  
 
 }
-int voidisplayfuse(int number){
-  unsigned char fuse[8192];
+unsigned char* fuse3(unsigned char* a ,unsigned char* b,unsigned char* c){
+ unsigned char* fused =(unsigned char*)malloc(sizeof(char)*1024);
+
+  int i=0;
+  int ac=0;//a counter 
+  int bc=0; //b counter 
+  int cc=0;//c counter 
+
+  for(int n=0;n<64;n++){
+    for(int k=0;k<5;k++){
+      fused[i]=a[ac];
+      ac++;
+       i++;
+    }
+        for(int k=0;k<5;k++){
+      fused[i]=b[bc];
+      bc++;
+       i++;
+    }
+        for(int k=0;k<5;k++){
+      fused[i]=c[cc];
+      cc++;
+       i++;
+    }
+    fused[i]=0x00;
+    i++;
+  }
+  return fused;
+}
+unsigned char* getMatch(int input){
+  input = input & 0x000f;
+  switch (input){
+   case 0: return g0;
+   case 1: return g1;
+   case 2: return g2;
+   case 3: return g3;
+   case 4: return g4;
+   case 5: return g5;
+   case 6: return g6;
+   case 7: return g7;
+   case 8: return g8;
+   case 9: return g9;
+   case 10: return plus;
+   case 11: return minus;
+   case 12: return times;
+   case 13: return g1;
+   case 14: return g1;
+   case 15: return g1;
+   default: return g1;
+  }
+}
+void displayfuse(int number){
+ LCDA.CLEAR();
+   delay(100);
+
+ unsigned char fuse[8192];
  int mask1 = 0xF000;
  int mask2 = 0x0F00;
  int mask3 = 0x00F0;
 
- int firstnumber = number&mask1;
- int operation = number&mask2;
- int secondnumber= number&mask3;
-
+ int firstnumber = number&mask1>>3;
+ int operation = number&mask2>>2;
+ int secondnumber= number&mask3>>1;
+  
+  LCDA.DrawFullScreen(fuse3(getMatch(firstnumber),getMatch(operation),getMatch(secondnumber)));
+  delay(5000);
 }
 void loop(){
-LCDA.CLEAR();
-//LCDA.DrawFullScreen(logo);//LOGO
-  delay(5000);
-  LCDA.CLEAR();//����
+  displayfuse(0x1234);
+  delay(1000);
+// LCDA.DrawFullScreen(angry);
 
- // LCDA.DrawFullScreen(angry);
-  delay(5000);
-LCDA.CLEAR();//����
-delay(100);
-  delay(5000);
 
 
 }
