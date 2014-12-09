@@ -23,7 +23,6 @@ public:
 	void launchCallback(const std_msgs::Int16::ConstPtr &msg);
 	void spin();
 protected:
-	
 
 	bool switchReady = false;
 	SwitchSensor *sensor;

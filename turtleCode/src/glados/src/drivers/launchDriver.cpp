@@ -14,41 +14,56 @@ LaunchDriver::LaunchDriver () {
 	sensor = new SwitchSensor("Rack");
 	ros::NodeHandle nh;
 	handle = nh;
+	LaunchDriver::init();
 } 
 
 LaunchDriver::LaunchDriver(SwitchSensor *s, ros::NodeHandle h){
 	sensor = s;
 	handle = h;
+	LaunchDriver::init();
 }
 
 void LaunchDriver::init(){
-	switchSub = handle.subscribe<std_msgs::Bool>("/tawi/motors/launch", 10, &LaunchDriver::switchCallback, this);
+	std::fstream fs;
+	fs.open("/sys/class/gpio/export");
+	fs << 30;  							// <<< PORT
+	fs.close();
 
-	launchSub = handle.subscribe<std_msgs::Int16>("/tawi/sensors/switch", 10, &LaunchDriver::launchCallback, this);
+	switchSub = handle.subscribe<std_msgs::Bool>("/tawi/sensors/switch", 10, &LaunchDriver::switchCallback, this);
+
+	launchSub = handle.subscribe<std_msgs::Int16>("/tawi/motors/launch", 10, &LaunchDriver::launchCallback, this);
+	ROS_INFO("launchDriver subscribers initialised");
 }
 
 void LaunchDriver::switchCallback(const std_msgs::Bool::ConstPtr &msg){
+	ROS_INFO("switchCallback");
 	switchReady = msg->data;
 }
 
 void LaunchDriver::launchCallback(const std_msgs::Int16::ConstPtr &msg){
+	ROS_INFO("launchCallback");
 	if(msg->data == 1){
 		launch();
 	}
+	else
+		ROS_INFO("msg->data not 1");
 }
 
 bool LaunchDriver::launch(){
-	std::fstream fs;
-	//When specifing port you have to change the path names too!
-	fs.open("/sys/class/gpio/export");
-	fs << 30;  //PORT
-	fs.close();
-	fs.open("/sys/class/gpio/gpio30/direction"); //PORT 
-   	fs << "out";
-   	fs.close();
-   	fs.open("/sys/class/gpio/gpio30/value"); //PORT
-  	fs << "0"; // "1" for off
-   	fs.close();
+	if(switchReady){
+		std::fstream fs;
+		//When specifing port you have to change the path names too!
+		
+		fs.open("/sys/class/gpio/gpio30/direction"); //PORT 
+	   	fs << "out";
+	   	fs.close();
+	   	fs.open("/sys/class/gpio/gpio30/value"); //PORT
+	  	fs << "0"; // "1" for off
+	   	fs.close();
+	   	ROS_INFO("Sent 0 to gpio30/value");
+   	}
+   	else
+   		ROS_INFO("switchReady == false. Launch system still preparing");
 }
 
 void LaunchDriver::spin() {
@@ -66,6 +81,7 @@ void LaunchDriver::spin() {
 int main(int argc, char **argv)
 {
 	ros::init(argc, argv, "launchDriver");
+	ROS_INFO("Started launchDriver");
 	LaunchDriver ld;
 	ld.spin();
 

@@ -7,6 +7,10 @@
 		<param name="wheel_base" value="0.54"/>
 	</node>
 
+	<node name="launchDriver" pkg="glados" type="launchDriver">
+	<!-- dingen -->
+	</node>
+
 	<node name="motor_comm" pkg="shared_serial" type="server" output="screen">
 		<param name="port_name" value="/dev/ttyUSB0"/>
 		<param name="port_type" value="RS485_FTDI"/>
