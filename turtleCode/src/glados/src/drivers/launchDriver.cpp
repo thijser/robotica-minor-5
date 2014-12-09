@@ -39,15 +39,15 @@ void LaunchDriver::launchCallback(const std_msgs::Int16::ConstPtr &msg){
 
 bool LaunchDriver::launch(){
 	std::fstream fs;
-
+	//When specifing port you have to change the path names too!
 	fs.open("/sys/class/gpio/export");
-	fs << 30;
+	fs << 30;  //PORT
 	fs.close();
-	fs.open("/sys/class/gpio/gpio30/direction");
+	fs.open("/sys/class/gpio/gpio30/direction"); //PORT 
    	fs << "out";
    	fs.close();
-   	fs.open("/sys/class/gpio/gpio30/value");
-  	fs << "1"; // "0" for off
+   	fs.open("/sys/class/gpio/gpio30/value"); //PORT
+  	fs << "0"; // "1" for off
    	fs.close();
 }
 
