@@ -26,7 +26,7 @@ LaunchDriver::LaunchDriver(SwitchSensor *s, ros::NodeHandle h){
 void LaunchDriver::init(){
 	std::fstream fs;
 	fs.open("/sys/class/gpio/export");
-	fs << 30;  							// <<< PORT
+	fs << 31;  							// <<< PORT
 	fs.close();
 
 	switchSub = handle.subscribe<std_msgs::Bool>("/tawi/sensors/switch", 10, &LaunchDriver::switchCallback, this);
@@ -54,10 +54,10 @@ bool LaunchDriver::launch(){
 		std::fstream fs;
 		//When specifing port you have to change the path names too!
 		
-		fs.open("/sys/class/gpio/gpio30/direction"); //PORT 
+		fs.open("/sys/class/gpio/gpio31/direction"); //PORT 
 	   	fs << "out";
 	   	fs.close();
-	   	fs.open("/sys/class/gpio/gpio30/value"); //PORT
+	   	fs.open("/sys/class/gpio/gpio31/value"); //PORT
 	  	fs << "0"; // "1" for off
 	   	fs.close();
 	   	ROS_INFO("Sent 0 to gpio30/value");
