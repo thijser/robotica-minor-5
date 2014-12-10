@@ -23,10 +23,12 @@ LaunchDriver::LaunchDriver(ros::NodeHandle h){
 
 void LaunchDriver::init(){
 	std::fstream fs;
-	/s.open("/sys/class/gpio/export");
+	fs.open("/sys/class/gpio/export");
 	fs << 31;  							// <<< PORT
 	fs.close();
-
+	fs.open("/sys/class/gpio/gpio31/direction"); //PORT 
+   	fs << "out";
+   	fs.close();
 	switchSub = handle.subscribe<std_msgs::Int16>("/tawi/sensors/switch", 10, &LaunchDriver::switchCallback, this);
 
 	launchSub = handle.subscribe<std_msgs::Int16>("/tawi/motors/launch", 10, &LaunchDriver::launchCallback, this);
@@ -34,7 +36,7 @@ void LaunchDriver::init(){
 }
 
 void LaunchDriver::switchCallback(const std_msgs::Int16::ConstPtr &msg){
-	ROS_INFO("switchCallback");
+//	ROS_INFO("switchCallback");
 	switchReady = msg->data;
 }
 
@@ -48,21 +50,22 @@ void LaunchDriver::launchCallback(const std_msgs::Int16::ConstPtr &msg){
 }
 
 bool LaunchDriver::launch(){
+	
 	if(switchReady){
-		std::fstream fs;
 		//When specifing port you have to change the path names too!
 		
-		fs.open("/sys/class/gpio/gpio31/direction"); //PORT 
-	   	fs << "out";
-	   	fs.close();
 	   	fs.open("/sys/class/gpio/gpio31/value"); //PORT
 	  	fs << "0"; // "1" for off
 	   	fs.close();
 	   	ROS_INFO("Sent 0 to gpio31/value");
 
    	}
-   	else
-   		ROS_INFO("switchReady == false. Launch system still preparing");
+  	else{
+		fs.open("/sys/class/gpio/gpio31/value");
+		fs << "1"; // "1" for off
+	   	fs.close();
+   		ROS_INFO("Sent 1 to gpio31/value");
+	}
 }
 
 void LaunchDriver::spin() {

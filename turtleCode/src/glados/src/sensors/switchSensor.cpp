@@ -45,7 +45,7 @@ int main(int argc, char **argv) {
 	fs.close();
 
 	fs.open("/sys/class/gpio/gpio60/direction"); //PORT 
-	fs << "out";
+	fs << "in";
 	fs.close();
 
 	ros::init(argc, argv, "switchSensor");
@@ -55,16 +55,16 @@ int main(int argc, char **argv) {
 	ros::Rate loop_Rate(5);
 
 	while(ros::ok()){
-		int stateRead = 1; 
+		int stateRead = 2; 
 		fs.open("/sys/class/gpio/gpio60/value");   // <<< PORT
 		fs >> stateRead;
 		fs.close();
 		if(stateRead == 2)
 			ROS_INFO("stateRead not set");
 		msg.data = 1-stateRead; //Inverting for BBB logic
-
+		
 		pub.publish(msg);
-
+		ROS_INFO("Switch broadcasts %d", msg.data);
 		loop_Rate.sleep();
 	}
 }
