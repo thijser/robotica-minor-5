@@ -23,6 +23,7 @@ LaunchDriver::LaunchDriver(ros::NodeHandle h){
 
 void LaunchDriver::init(){
 	std::fstream fs;
+
 	fs.open("/sys/class/gpio/export");
 	fs << 31;  							// <<< PORT
 	fs.close();
