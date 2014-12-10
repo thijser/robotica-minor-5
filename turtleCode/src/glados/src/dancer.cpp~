@@ -87,7 +87,7 @@ class dancer{
 				
 	}
 
-	void dancer(): handle("~"){
+	dancer(): handle("~"){
 		srand (time(NULL));
 		moveit=handle.advertise<geometry_msgs::Twist>("/tawi/motors/drive",1000);
 		subBeat = handle.subscribe("/tawi/theBeat", 1000, &dancer::beatcallback,this);

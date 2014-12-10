@@ -29,34 +29,37 @@ Method2:
 #include "DFrobot_char.h"
 
 unsigned char fuse[1024];
-void setup()
-{  Serial.begin(9600);
+void setup(){
+Serial.begin(9600);
 
-  delay(20000);
+  delay(7000);
 
-  Serial.write("7");
- // delay(100);
-//  Serial.write("5");
-  LCDA.initDriverPin(2,7,10); 
-
-
-
+  Serial.write("7\n");
+   LCDA.initDriverPin(2,7,10); 
   LCDA.Initialise(); // INIT SCREEN  
- 
+  Serial.write("8");
+
+
 }
-unsigned char* fuse3(unsigned char* a ,unsigned char* b,unsigned char* c){
+unsigned char* fuse3(const unsigned char* a ,const unsigned char* b,const unsigned char* c){
  unsigned char* fused =(unsigned char*)malloc(sizeof(char)*1024);
   int i=0;
   int ac=0;//a counter 
   int bc=0; //b counter 
   int cc=0;//c counter 
+  Serial.write("3");
 
   for(int n=0;n<64;n++){
+    Serial.print("i=");
+    Serial.print(i);
+    Serial.print("n=");
+    Serial.println(n);
     for(int k=0;k<5;k++){
       fused[i]=a[ac];
       ac++;
        i++;
     }
+
         for(int k=0;k<5;k++){
       fused[i]=b[bc];
       bc++;
@@ -70,66 +73,41 @@ unsigned char* fuse3(unsigned char* a ,unsigned char* b,unsigned char* c){
     fused[i]=0x00;
     i++;
   }
+    Serial.write("5");
+
   return fused;
 }
-unsigned char* getMatch(int input){
-
-  input = input & 0x000f;
-  Serial.write(input);
-
-if(input == 2)
-{
-  Serial.write("2");
+const unsigned char* getMatch(int input){
   return g1;
 }
-
-  unsigned char* ret =g0;
-  switch (input){
-   case 0: ret =g0; break;
-   case 1: ret =g1; break;
-   case 2: ret =g2;break;
-   case 3: ret =g3;break;
-   case 4: ret =g4;break;
-   case 5: ret =g5;break;
-   case 6: ret =g6;break;
-   case 7: ret =g7;break;
-   case 8: ret =g8;break;
-   case 9: ret =g9;break;
-   case 10: ret =plus;break;
-   case 11: ret =minus;break;
-   case 12: ret =times;break;
-   case 13: ret =g1;break;
-   case 14: ret =g1;break;
-   case 15: ret =g1;break;
-  }
-   return ret;
-  }
-
-void getMatch1()
-{
-  Serial.write("hello1\n");
-}
-
 void displayfuse(int number){
  LCDA.CLEAR();
    delay(100);
- Serial.write("fuse");
- int mask1 = 0xF000;
+ Serial.write("0");
+  int mask1 = 0xF000;
  int mask2 = 0x0F00;
  int mask3 = 0x00F0;
-
- int firstnumber = number&mask1>>12;
+int firstnumber = number&mask1>>12;
  int operation = number&mask2>>8;
  int secondnumber= number&mask3>>4;
-  getMatch(2);
-  LCDA.DrawFullScreen(fuse3(getMatch(firstnumber),getMatch(operation),getMatch(secondnumber)));
-  delay(1000);
+ Serial.print(firstnumber);
+ Serial.print(" ");
+ Serial.print(operation);
+ Serial.print(" ");
+ Serial.print(firstnumber);
+ Serial.println(" ");
+ const unsigned char* a = getMatch(firstnumber);
+ const unsigned char* b = getMatch(firstnumber);
+ const unsigned char* c = getMatch(firstnumber);
+
+ const unsigned char* d = fuse3(a,b,c);
+ Serial.write("drawing");
+  LCDA.DrawFullScreen(d);
+  delay(5000);
 }
+
 void loop(){
-  delay(100);
 displayfuse(0x1234);
-  //getMatch1();
-  Serial.write("\nlloo");
-  delay(1000);
+
 }
 

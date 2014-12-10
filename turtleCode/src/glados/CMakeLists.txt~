@@ -3,15 +3,11 @@ project(glados)
 include_directories(include ${catkin_INCLUDE_DIRS})
 
 find_package(catkin REQUIRED COMPONENTS roscpp message_generation threemxl std_msgs  rospy)
-<<<<<<< HEAD
-=======
 
->>>>>>> 55d193ce935323b852aff87ce557c79c3f67e341
 # Generate messages in the 'msg' folder
 add_message_files(
    FILES
    music.msg
-<<<<<<< HEAD
  )
 
 generate_messages(
@@ -19,16 +15,8 @@ generate_messages(
    std_msgs
  )
 find_package(catkin REQUIRED COMPONENTS message_generation)
-catkin_package()
-=======
- )	
+catkin_package()	
 
-generate_messages(
-   DEPENDENCIES
-   glados
-   std_msgs
- )
->>>>>>> 55d193ce935323b852aff87ce557c79c3f67e341
 
 catkin_package(
 INCLUDE_DIRS include
@@ -103,13 +91,11 @@ target_link_libraries(dance ${catkin_LIBRARIES})
 
 
 #Drivertests
-<<<<<<< HEAD
 catkin_add_gtest(driverutest src/sensors/test/utest.cpp)
 target_link_libraries(driverutest ${roscpp_LIBRARIES} conveyorDriver audioDriver launchDriver)
 
 
 
-=======
 #catkin_add_gtest(driverutest src/sensors/test/utest.cpp)
 #target_link_libraries(driverutest ${roscpp_LIBRARIES} conveyorDriver audioDriver launchDriver)
->>>>>>> 55d193ce935323b852aff87ce557c79c3f67e341
+

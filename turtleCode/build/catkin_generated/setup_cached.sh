@@ -7,6 +7,14 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH="/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/x86_64-linux-gnu:/opt/ros/indigo/lib/x86_64-linux-gnu:/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib:/opt/ros/indigo/lib"
-export PKG_CONFIG_PATH="/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/x86_64-linux-gnu/pkgconfig:/opt/ros/indigo/lib/x86_64-linux-gnu/pkgconfig:/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib/pkgconfig:/opt/ros/indigo/lib/pkgconfig"
-export PWD="/home/yuugo/Programming/robotica-minor-5/turtleCode/build"
+export CATKIN_TEST_RESULTS_DIR="/home/thijs/codes/robotica-minor-5/turtleCode/build/test_results"
+export CMAKE_PREFIX_PATH="/home/thijs/codes/robotica-minor-5/turtleCode/devel:$CMAKE_PREFIX_PATH"
+export CPATH="/home/thijs/codes/robotica-minor-5/turtleCode/devel/include:$CPATH"
+export LD_LIBRARY_PATH="/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib:/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/x86_64-linux-gnu:/home/thijs/catkin_ws/devel/lib/x86_64-linux-gnu:/opt/ros/indigo/lib/x86_64-linux-gnu:/home/thijs/catkin_ws/devel/lib:/opt/ros/indigo/lib"
+export PATH="/home/thijs/codes/robotica-minor-5/turtleCode/devel/bin:$PATH"
+export PKG_CONFIG_PATH="/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/pkgconfig:/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/x86_64-linux-gnu/pkgconfig:/home/thijs/catkin_ws/devel/lib/x86_64-linux-gnu/pkgconfig:/opt/ros/indigo/lib/x86_64-linux-gnu/pkgconfig:/home/thijs/catkin_ws/devel/lib/pkgconfig:/opt/ros/indigo/lib/pkgconfig"
+export PWD="/home/thijs/codes/robotica-minor-5/turtleCode/build"
+export PYTHONPATH="/home/thijs/codes/robotica-minor-5/turtleCode/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/thijs/codes/robotica-minor-5/turtleCode/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/thijs/codes/robotica-minor-5/turtleCode/src:/home/yuugo/Programming/robotica-minor-5/turtleCode/src:$ROS_PACKAGE_PATH"
+export ROS_TEST_RESULTS_DIR="/home/thijs/codes/robotica-minor-5/turtleCode/build/test_results"
