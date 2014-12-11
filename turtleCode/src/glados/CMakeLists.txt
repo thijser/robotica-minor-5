@@ -7,7 +7,7 @@ find_package(catkin REQUIRED COMPONENTS roscpp message_generation threemxl std_m
 # Generate messages in the 'msg' folder
 add_message_files(
    FILES
-   music.msg
+   #music.msg
  )
 
 generate_messages(
@@ -38,15 +38,15 @@ target_link_libraries(core ${catkin_LIBRARIES})
 #######
 
 #dance 
-add_executable(dance src/dancer.cpp)
-target_link_libraries(dance ${catkin_LIBRARIES})
+#add_executable(dance src/dancer.cpp)
+#target_link_libraries(dance ${catkin_LIBRARIES})
 
 #######
 #SENSORS
 #######
 
 #Switchsensor
-add_library(switchSensor src/sensors/switchSensor.cpp)
+add_executable(switchSensor src/sensors/switchSensor.cpp)
 target_link_libraries(switchSensor ${catkin_LIBRARIES})
 
 #UltrasoneSensor
@@ -63,7 +63,7 @@ target_link_libraries(RFIDSensor ${catkin_LIBRARIES})
 
 #Conveyor
 add_library(conveyorDriver src/drivers/conveyorDriver.cpp)
-target_link_libraries(conveyorDriver ${roscpp_LIBRARIES} switchSensor)
+target_link_libraries(conveyorDriver ${roscpp_LIBRARIES})
 
 #Audio
 add_library(audioDriver src/drivers/audioDriver.cpp)
@@ -71,7 +71,7 @@ target_link_libraries(audioDriver ${catkin_LIBRARIES})
 
 #Launch
 add_executable(launchDriver src/drivers/launchDriver.cpp)
-target_link_libraries(launchDriver ${roscpp_LIBRARIES} switchSensor)
+target_link_libraries(launchDriver ${roscpp_LIBRARIES})
 
 #Driving
 add_executable(drivingDriver src/drivers/drivingDriver.cpp)

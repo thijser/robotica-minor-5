@@ -2,4 +2,7 @@
 	<node name="launchDriver" pkg="glados" type="launchDriver" output="screen">
 	<!-- dingen -->
 	</node>
+
+	<node name="switchSensor" pkg="glados" type="switchSensor" output="screen">
+	</node>
 </launch>

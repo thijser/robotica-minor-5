@@ -22,7 +22,7 @@ public:
 	void launchCallback(const std_msgs::Int16::ConstPtr &msg);
 	void spin();
 protected:
-
+	std::fstream fs;
 	bool switchReady = false;
 	ros::NodeHandle handle;
 	ros::Subscriber switchSub;
