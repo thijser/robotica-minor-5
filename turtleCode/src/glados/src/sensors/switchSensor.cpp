@@ -44,21 +44,23 @@ int main(int argc, char **argv) {
 	fs << 60;  							// <<< PORT
 	fs.close();
 
-	fs.open("/sys/class/gpio/gpio30/direction"); //PORT 
-	fs << "in";
+	fs.open("/sys/class/gpio/gpio60/direction"); //PORT 
+	fs << "out";
 	fs.close();
 
 	ros::init(argc, argv, "switchSensor");
 	ros::NodeHandle handle;
 	ros::Publisher pub = handle.advertise<std_msgs::Int16>("/tawi/sensors/switch", 100);
 	std_msgs::Int16 msg;
-	ros::Rate loop_Rate(10);
+	ros::Rate loop_Rate(5);
 
 	while(ros::ok()){
-		int stateRead = 0; 
+		int stateRead = 1; 
 		fs.open("/sys/class/gpio/gpio60/value");   // <<< PORT
 		fs >> stateRead;
 		fs.close();
+		if(stateRead == 2)
+			ROS_INFO("stateRead not set");
 		msg.data = 1-stateRead; //Inverting for BBB logic
 
 		pub.publish(msg);
