@@ -1,0 +1,21 @@
+
+2->     SCK       clockPin(defined in the "initDriverPin" function)  port 2 
+3->     CS        latchPin(defined in the "initDriverPin" function)  port 3 
+4->     SID       dataPin (defined in the "initDriverPin" function)  port 4 
+5v->   	VCC                            5V
+gndd->  GND                           GND
+
+
+3.3v-> 	vcc(7)				3.3V
+gndd-> 	GND(5)				ground 
+9-> 	rst(6)				reset  
+10-> 	SDA(0)				SS pin 
+11->	MOS(2)				spi
+12-> 	IMI(4)				spi
+13-> 	sck(1)				click 
+
+note leave SOI (3) on the RFID reader unused! 
+
+
+0 -> reserved for beaglebone com
+1 -> reserved for beaglebone com 
