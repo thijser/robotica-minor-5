@@ -10,8 +10,6 @@
 
 class LCD12864RSPI {
 
-
-
 public:
 typedef unsigned char uchar;
 LCD12864RSPI();

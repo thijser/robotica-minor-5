@@ -50,6 +50,10 @@ byte cardUID;
 Servo mouthservo; //our servo
 int servo_pos = 0; //var to store servo position
 
+int answer;
+int input;
+int counter = 0;
+
 unsigned char fuse[1024];
 
 void setup(){ //////////////SETUP////////////////////////
@@ -119,7 +123,7 @@ const unsigned char* getMatch(int input){ //getmatch function
 
 void displayfuse(int firstnumber, int operation , int secondnumber ){
  LCDA.CLEAR();
- readloop(100);
+ readloop(100); //for refreshing delay?
 
  const unsigned char* a = getMatch(firstnumber);
  const unsigned char* b = getMatch(operation);
@@ -128,7 +132,55 @@ void displayfuse(int firstnumber, int operation , int secondnumber ){
 // const unsigned char* d = fuse3(a,b,c);
 // LCDA.DrawFullScreen(d);
   LCDA.DrawFullScreen_F3(a,b,c);
-  readloop(5000);
+  readloop(5000); //for refreshing delay?
+}
+
+int getAnswer(int firstnumber, int operation , int secondnumber){
+  int answer;
+  switch(operation){
+    case 10:
+      answer = firstnumber + secondnumber;
+      break;
+    case 11:
+      answer = firstnumber - secondnumber;
+      break;
+    case 12:
+      answer = firstnumber * secondnumber;
+      break;
+  }
+  return answer;
+}
+
+void checkInput(int input, int answer){
+  if (input == answer){
+    Serial.println("yippie");
+  }
+  else{
+    Serial.println("aaaaaah that is wrong u newb!");
+  }
+}
+
+void displayEyes(char mood){
+  LCDA.CLEAR();
+
+  switch(mood){
+    case 'a':
+      //LCDA.DrawFullScreen(Eyeez_Angry);
+      break;
+    case 's':
+      //LCDA.DrawFullScreen(Eyeez_Sad);
+      break;
+    case 'n':
+      //LCDA.DrawFullScreen(Eyeez_Neutral);
+      break;
+    case 'h':
+      //LCDA.DrawFullScreen(Eyeez_Happy);
+      break;
+    case 'x':
+      LCDA.DrawFullScreen(angryFace);
+      break;
+  }
+
 }
 
 
@@ -173,13 +225,36 @@ void readrfid(){ //read rfid ball!
     //Serial.print(F("Data in block "));
     //Serial.print(blockAddr);
     //Serial.println(F(":"));
-    dump_byte_array(buffer, 1);
-    Serial.println();
+
+    
+    //Serial.println(input);
+    //Serial.println(answer);
+
+    //dump_byte_array(buffer, 1);
+    //Serial.println();
     
         // Halt PICC
     mfrc522.PICC_HaltA();
     // Stop encryption on PCD
     mfrc522.PCD_StopCrypto1();
+
+    counter++;
+
+    if (answer > 9 && counter == 2){
+      input += buffer[0];
+      checkInput(input, answer);
+      counter = 0;
+    }
+    else if (answer > 9 && counter == 1){
+      input = 10*buffer[0];
+      return;
+    }
+    else{
+      input = buffer[0];
+      checkInput(input, answer);
+      counter = 0;
+    }
+    
 }
 
 
@@ -191,24 +266,32 @@ void dump_byte_array(byte *buffer, byte bufferSize) { //dump byte array function
 }
 
 void loop(){
+
+  if(Serial.available()==4){
+    byte b1,b2,b3,b4; 
+    b1=Serial.read();
+    b2=Serial.read();
+    b3=Serial.read();
+    b4=Serial.read();     
+    if(b1=='s'){ //indicates a math problem is coming
+      answer = getAnswer(b2-48, b3-48, b4-48);
+      //Serial.println(answer);
+      displayfuse(b2-48,b3-48,b4-48); //fuses the three numbers after the s to a math problem.
+    }
+  }
+
+  if(Serial.available()==2){
+    byte b1, b2;
+    b1=Serial.read();
+    b2=Serial.read();
+    if(b1=='e'){
+      displayEyes((char)b2);
+    }
+  }
+
+  readrfid();
   
- mouthservo.write(40);
-  
- int r1=0;
- int r2=0;
- int r3=0;
- int r4=0;
- byte b1,b2,b3,b4; 
- if(Serial.available()>3){
-   b1=Serial.read();
-   b2=Serial.read();
-   b3=Serial.read();
-   b4=Serial.read();     
-   if(b1=='s'){ //indicates a math problem is coming
-     displayfuse(b2-48,b3-48,b4-48); //fuses the three numbers after the s to a math problem.
-   }
- } 
- readrfid();
+
 }
 
 void readloop(int length){
