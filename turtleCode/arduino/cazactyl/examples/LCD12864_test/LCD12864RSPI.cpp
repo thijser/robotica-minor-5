@@ -12,7 +12,7 @@
 
 #include "LCD12864RSPI.h"
 #include <Arduino.h>
-
+#include <avr/pgmspace.h>
 //extern "C" 
 //{
 //#include <wiring.h> 
@@ -148,8 +148,58 @@ void LCD12864RSPI::DisplaySig(int M,int N,int sig)
   WriteData(sig); //��������ַ�
  }
 
+unsigned char get_F3(int index,const unsigned char *a,const unsigned char *b,const unsigned char *c){
+  unsigned char* ret=0x00;
+  if(index%16/5==0){
+    memcpy_P(ret,a+(5*((index)/16))+index%16,sizeof(char));
+    return *ret;
+  }
+  if(index%16/5==1){
+    memcpy_P(ret,b+(5*((index)/16))+index%16-5,sizeof(char));
+    return *ret;
+  }
+  if(index%16/5==2){
+   memcpy_P(ret,c+(5*((index)/16))+index%16-10,sizeof(char));
+    return *ret;
+  }
+  if(index%16/5==3){
+    return 0x00;
+  }
+  return *ret;
+}
 
-
+void LCD12864RSPI::DrawFullScreen_F3(const unsigned char *a, const unsigned char *b,   const unsigned char *c)
+{
+      int ygroup,x,y,i;
+      int temp;
+      int tmp;
+             
+      for(ygroup=0;ygroup<64;ygroup++)           //for each line on the screen 
+        {                           
+           if(ygroup<32)
+            {
+             x=0x80;
+             y=ygroup+0x80;
+            }
+           else 
+            {
+              x=0x88;
+              y=ygroup-32+0x80;    
+            }         
+           WriteCommand(0x34);        //clock 
+           WriteCommand(y);           //position y 
+           WriteCommand(x);           //position x 
+           WriteCommand(0x30);        //here comes a  pixel
+           tmp=ygroup*16;
+           for(i=0;i<16;i++)
+		 {
+		    temp=get_F3(tmp++,a,b,c);
+		    WriteData(temp);
+               }
+          }
+        WriteCommand(0x34);        //display 
+        WriteCommand(0x36);        //ready 
+}
 
 void LCD12864RSPI::DrawFullScreen(const uchar *p)
 {

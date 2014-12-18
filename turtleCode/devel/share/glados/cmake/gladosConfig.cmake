@@ -67,14 +67,14 @@ set(glados_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(glados_SOURCE_PREFIX /home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados)
-  set(glados_DEVEL_PREFIX /home/yuugo/Programming/robotica-minor-5/turtleCode/devel)
+  set(glados_SOURCE_PREFIX /home/thijs/codes/robotica-minor-5/turtleCode/src/glados)
+  set(glados_DEVEL_PREFIX /home/thijs/codes/robotica-minor-5/turtleCode/devel)
   set(glados_INSTALL_PREFIX "")
   set(glados_PREFIX ${glados_DEVEL_PREFIX})
 else()
   set(glados_SOURCE_PREFIX "")
   set(glados_DEVEL_PREFIX "")
-  set(glados_INSTALL_PREFIX /home/yuugo/Programming/robotica-minor-5/turtleCode/install)
+  set(glados_INSTALL_PREFIX /home/thijs/codes/robotica-minor-5/turtleCode/install)
   set(glados_PREFIX ${glados_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(glados_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados/include" STREQUAL "")
+if(NOT "/home/thijs/codes/robotica-minor-5/turtleCode/src/glados/include" STREQUAL "")
   set(glados_INCLUDE_DIRS "")
-  set(_include_dirs "/home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados/include")
+  set(_include_dirs "/home/thijs/codes/robotica-minor-5/turtleCode/src/glados/include")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -103,7 +103,7 @@ if(NOT "/home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados/include" 
         message(FATAL_ERROR "Project 'glados' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  Ask the maintainer 'Robotica Minor 2014 group 5 <evilOverlord@cse.sc.edu>' to fix it.")
       endif()
     else()
-      message(FATAL_ERROR "Project 'glados' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados/${idir}'.  Ask the maintainer 'Robotica Minor 2014 group 5 <evilOverlord@cse.sc.edu>' to fix it.")
+      message(FATAL_ERROR "Project 'glados' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/thijs/codes/robotica-minor-5/turtleCode/src/glados/${idir}'.  Ask the maintainer 'Robotica Minor 2014 group 5 <evilOverlord@cse.sc.edu>' to fix it.")
     endif()
     _list_append_unique(glados_INCLUDE_DIRS ${include})
   endforeach()
@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib;/home/yuugo/Programming/robotica-minor-5/turtleCode/devel/lib;/opt/ros/indigo/lib)
+    foreach(path /home/thijs/codes/robotica-minor-5/turtleCode/devel/lib;/home/thijs/catkin_ws/devel/lib;/opt/ros/indigo/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

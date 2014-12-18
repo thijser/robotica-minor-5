@@ -9,11 +9,11 @@
 
 
 class LCD12864RSPI {
-typedef unsigned char uchar;
+
 
 
 public:
-
+typedef unsigned char uchar;
 LCD12864RSPI();
 
 void Initialise(void);
@@ -28,7 +28,9 @@ void WriteData(int CMD);
 void CLEAR(void);
 void DisplayString(int X,int Y,uchar *ptr,int dat);
 void DisplaySig(int M,int N,int sig);
-void DrawFullScreen(const uchar *p);
+void DrawFullScreen_F3( const  unsigned char *a,const unsigned char *b, const unsigned char *c);
+
+void DrawFullScreen(const uchar  PROGMEM *p);
 void img1(uchar img[]);
 void img2(uchar img[]);
 
