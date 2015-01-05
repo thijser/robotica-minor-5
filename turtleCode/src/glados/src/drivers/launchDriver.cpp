@@ -75,7 +75,6 @@ void LaunchDriver::spin() {
 	ros::Rate r(5);
 
 	while(ros::ok()) {
-		launch();
 
 		ros::spinOnce();
 		r.sleep();
