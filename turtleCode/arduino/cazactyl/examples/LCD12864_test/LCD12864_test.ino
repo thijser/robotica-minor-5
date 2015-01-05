@@ -158,6 +158,15 @@ void dump_byte_array(byte *buffer, byte bufferSize) {
 void loop(){
  waiting();
 }
+
+void displaySingle(char a,char b , char c){
+  char str[] = {a,b,c,NULL};
+  Serial.write(str);
+  if(strcmp(str,"anr")==0){
+    Serial.write("anr123123");
+    LCDA.DrawFullScreen(angryFace); 
+  }
+}
 void waiting(){
 
    int r1=0;
@@ -172,6 +181,10 @@ void waiting(){
          b4=Serial.read();     
          if(b1=='s'){
             displayfuse(b2-48,b3-48,b4-48);   
+        }else{
+          if(b1=='f'){
+            displaySingle(b2,b3,b4);
+          }
         }
     }
  
