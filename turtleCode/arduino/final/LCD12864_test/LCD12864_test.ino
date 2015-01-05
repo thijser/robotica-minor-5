@@ -154,6 +154,9 @@ int getAnswer(int firstnumber, int operation , int secondnumber){
 void checkInput(int input, int answer){
   if (input == answer){
     Serial.println("yippie");
+    closeMouth();
+    delay(3000);
+    openMouth();
   }
   else{
     Serial.println("aaaaaah that is wrong u newb!");
