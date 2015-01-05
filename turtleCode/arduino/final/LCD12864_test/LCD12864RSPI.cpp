@@ -228,8 +228,8 @@ void LCD12864RSPI::DrawFullScreen(const uchar *p)
            tempp=(int*)malloc(sizeof(int));
            for(i=0;i<16;i++)
 		 {
-                    memcpy(tempp,p+(tmp++*sizeof(uchar)),sizeof(byte));
-                    //temp=p[temp++]
+                    memcpy_P(tempp,p+(tmp++*sizeof(uchar)),sizeof(byte));
+                    
 		    WriteData(*tempp);
                }
           }
