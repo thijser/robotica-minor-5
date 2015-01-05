@@ -240,18 +240,12 @@ void loop(){
           if(b1=='f'){
             displaySingle(b2,b3,b4);
           }
-  }
-
-  if(Serial.available()==2){
-    byte b1, b2;
-    b1=Serial.read();
-    b2=Serial.read();
-    if(b1=='e'){
-      displayEyes((char)b2);
     }
-  }
+    }
 
-  readrfid();
+    readrfid();
+  
+    
   
 
 }
