@@ -83,35 +83,6 @@ void closeMouth(){ //close the mouth
 }
 
 
-/*unsigned char* fuse3(const unsigned char* a ,const unsigned char* b,const unsigned char* c){ /////////////////////////////////// IS THIS OBSOLETE? /////////
- unsigned char* fused =(unsigned char*)malloc(sizeof(char)*1024);
- int i=0;
- int ac=0;//a counter 
- int bc=0; //b counter 
- int cc=0;//c counter 
-
- for(int n=0;n<64;n++){
-   for(int k=0;k<5;k++){
-     memcpy_P(&fused[i],&a[ac],sizeof(char)*5);
-     ac++;
-      i++;
-   }
-
-     for(int k=0;k<5;k++){
-      memcpy_P(&fused[i],&b[bc],sizeof(char)*5);
-      bc++;
-      i++;
-     }
-     for(int k=0;k<5;k++){
-      memcpy_P(&fused[i],&c[cc],sizeof(char)*5);
-      cc++;
-      i++;
-     }
-    fused[i]=0x00;
-    i++;
-  }
-  return fused;
-}*/
 
 const unsigned char* getMatch(int input){ //getmatch function
  if(input>0||input<13){
@@ -129,8 +100,7 @@ void displayfuse(int firstnumber, int operation , int secondnumber ){
  const unsigned char* b = getMatch(operation);
  const unsigned char* c = getMatch(secondnumber);
 
-// const unsigned char* d = fuse3(a,b,c);
-// LCDA.DrawFullScreen(d);
+
   LCDA.DrawFullScreen_F3(a,b,c);
   readloop(5000); //for refreshing delay?
 }
@@ -154,33 +124,22 @@ int getAnswer(int firstnumber, int operation , int secondnumber){
 void checkInput(int input, int answer){
   if (input == answer){
     Serial.println("yippie");
+    closeMouth();
+    delay(3000);
+    openMouth();
   }
   else{
     Serial.println("aaaaaah that is wrong u newb!");
   }
 }
 
-void displayEyes(char mood){
-  LCDA.CLEAR();
-
-  switch(mood){
-    case 'a':
-      //LCDA.DrawFullScreen(Eyeez_Angry);
-      break;
-    case 's':
-      //LCDA.DrawFullScreen(Eyeez_Sad);
-      break;
-    case 'n':
-      //LCDA.DrawFullScreen(Eyeez_Neutral);
-      break;
-    case 'h':
-      //LCDA.DrawFullScreen(Eyeez_Happy);
-      break;
-    case 'x':
-      LCDA.DrawFullScreen(angryFace);
-      break;
+void displaySingle(char a,char b , char c){
+  char str[] = {a,b,c,NULL};
+  Serial.write(str);
+  if(strcmp(str,"anr")==0){
+    Serial.write("anr123123");
+    LCDA.DrawFullScreen(angryFace); 
   }
-
 }
 
 
@@ -277,19 +236,16 @@ void loop(){
       answer = getAnswer(b2-48, b3-48, b4-48);
       //Serial.println(answer);
       displayfuse(b2-48,b3-48,b4-48); //fuses the three numbers after the s to a math problem.
+    }else{
+          if(b1=='f'){
+            displaySingle(b2,b3,b4);
+          }
     }
-  }
-
-  if(Serial.available()==2){
-    byte b1, b2;
-    b1=Serial.read();
-    b2=Serial.read();
-    if(b1=='e'){
-      displayEyes((char)b2);
     }
-  }
 
-  readrfid();
+    readrfid();
+  
+    
   
 
 }
@@ -300,5 +256,7 @@ void readloop(int length){
     readrfid();
   }
 }
+
+
 
 

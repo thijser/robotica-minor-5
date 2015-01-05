@@ -206,7 +206,8 @@ void LCD12864RSPI::DrawFullScreen(const uchar *p)
       int ygroup,x,y,i;
       int temp;
       int tmp;
-             
+      int* tempp;
+      
       for(ygroup=0;ygroup<64;ygroup++)           //д��Һ���ϰ�ͼ�󲿷�
         {                           //д������
            if(ygroup<32)
@@ -216,7 +217,7 @@ void LCD12864RSPI::DrawFullScreen(const uchar *p)
             }
            else 
             {
-              x=0x88;
+              x=0x88;    
               y=ygroup-32+0x80;    
             }         
            WriteCommand(0x34);        //д������ָ������
@@ -224,12 +225,15 @@ void LCD12864RSPI::DrawFullScreen(const uchar *p)
            WriteCommand(x);           //д��x������
            WriteCommand(0x30);        //д�����ָ������
            tmp=ygroup*16;
+           tempp=(int*)malloc(sizeof(int));
            for(i=0;i<16;i++)
 		 {
-		    temp=p[tmp++];
-		    WriteData(temp);
+                    memcpy_P(tempp,p+(tmp++*sizeof(uchar)),sizeof(byte));
+                    
+		    WriteData(*tempp);
                }
           }
+        free(tempp);
         WriteCommand(0x34);        //д������ָ������
         WriteCommand(0x36);        //��ʾͼ��
 }
