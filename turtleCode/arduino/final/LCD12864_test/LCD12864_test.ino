@@ -40,8 +40,8 @@ Manual for sending math stuff:
 #define SS_PIN		      10	
 #define servopin        6
 
-#define mouth_open_pos    120
-#define mouth_closed_pos  40
+#define mouth_open_pos    100
+#define mouth_closed_pos  30
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);	// Create MFRC522 instance
 MFRC522::MIFARE_Key key;
@@ -75,11 +75,17 @@ void setup(){ //////////////SETUP////////////////////////
 }
 
 void openMouth(){ //open the mouth
-  mouthservo.write(mouth_open_pos);
+  for(int i = mouthservo.read(); i < mouth_open_pos; i++){
+    mouthservo.write(i);
+    delay(15);
+  }
 }
 
 void closeMouth(){ //close the mouth
-  mouthservo.write(mouth_closed_pos);
+  for(int i = mouth_open_pos; i > mouth_closed_pos; i--){
+    mouthservo.write(i);
+    delay(15);
+  }
 }
 
 
