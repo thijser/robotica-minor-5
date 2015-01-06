@@ -69,7 +69,7 @@ void setup(){ //////////////SETUP////////////////////////
   LCDA.initDriverPin(2,3,4); 
   LCDA.Initialise(); // INIT SCREEN  
 
-  openMouth();
+  closeMouth();
 
   //Serial.println(F("boot completed"));
 }
@@ -82,7 +82,8 @@ void openMouth(){ //open the mouth
 }
 
 void closeMouth(){ //close the mouth
-  for(int i = mouth_open_pos; i > mouth_closed_pos; i--){
+  delay(750);
+  for(int i = mouthservo.read(); i > mouth_closed_pos; i--){
     mouthservo.write(i);
     delay(15);
   }
@@ -132,7 +133,8 @@ void checkInput(int input, int answer){
     Serial.println("yippie");
     closeMouth();
     delay(3000);
-    openMouth();
+//    openMouth();
+    Serial.flush();
   }
   else{
     Serial.println("aaaaaah that is wrong u newb!");
@@ -242,6 +244,7 @@ void loop(){
       answer = getAnswer(b2-48, b3-48, b4-48);
       //Serial.println(answer);
       displayfuse(b2-48,b3-48,b4-48); //fuses the three numbers after the s to a math problem.
+      openMouth();
     }else{
           if(b1=='f'){
             displaySingle(b2,b3,b4);
