@@ -31,7 +31,7 @@ void LaunchDriver::init(){
    	fs << "out";
    	fs.close();
 	switchSub = handle.subscribe<std_msgs::Int16>("/tawi/sensors/switch", 10, &LaunchDriver::switchCallback, this);
-
+	pub = handle.advertise<std_msgs::Int16>("/tawi/mngr/launch", 100);
 	launchSub = handle.subscribe<std_msgs::Int16>("/tawi/motors/launch", 10, &LaunchDriver::launchCallback, this);
 	ROS_INFO("launchDriver subscribers initialised");
 }
@@ -53,6 +53,8 @@ void LaunchDriver::launchCallback(const std_msgs::Int16::ConstPtr &msg){
 bool LaunchDriver::launch(){
 	
 	if(switchReady){
+		//safe to launch
+
 		//When specifing port you have to change the path names too!
 		
 	   	fs.open("/sys/class/gpio/gpio31/value"); //PORT
@@ -60,12 +62,21 @@ bool LaunchDriver::launch(){
 	   	fs.close();
 	   	ROS_INFO("Sent 0 to gpio31/value");
 
+	   	std_msgs::Int16 message;
+		message.data = 1;
+		pub.publish(message);
+
    	}
   	else{
+  		//Cannot launch
 		fs.open("/sys/class/gpio/gpio31/value");
 		fs << "1"; // "1" for off
 	   	fs.close();
    		ROS_INFO("Sent 1 to gpio31/value");
+
+   		std_msgs::Int16 message;
+		message.data = 0;
+		pub.publish(message);
 	}
 }
 
