@@ -40,8 +40,8 @@ Manual for sending math stuff:
 #define SS_PIN		      10	
 #define servopin        6
 
-#define mouth_open_pos    120
-#define mouth_closed_pos  40
+#define mouth_open_pos    100
+#define mouth_closed_pos  30
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);	// Create MFRC522 instance
 MFRC522::MIFARE_Key key;
@@ -69,17 +69,24 @@ void setup(){ //////////////SETUP////////////////////////
   LCDA.initDriverPin(2,3,4); 
   LCDA.Initialise(); // INIT SCREEN  
 
-  openMouth();
+  closeMouth();
 
   //Serial.println(F("boot completed"));
 }
 
 void openMouth(){ //open the mouth
-  mouthservo.write(mouth_open_pos);
+  for(int i = mouthservo.read(); i < mouth_open_pos; i++){
+    mouthservo.write(i);
+    delay(15);
+  }
 }
 
 void closeMouth(){ //close the mouth
-  mouthservo.write(mouth_closed_pos);
+  delay(750);
+  for(int i = mouthservo.read(); i > mouth_closed_pos; i--){
+    mouthservo.write(i);
+    delay(15);
+  }
 }
 
 
@@ -126,7 +133,8 @@ void checkInput(int input, int answer){
     Serial.println("yippie");
     closeMouth();
     delay(3000);
-    openMouth();
+//    openMouth();
+    Serial.flush();
   }
   else{
     Serial.println("aaaaaah that is wrong u newb!");
@@ -243,6 +251,7 @@ void loop(){
       answer = getAnswer(b2-48, b3-48, b4-48);
       //Serial.println(answer);
       displayfuse(b2-48,b3-48,b4-48); //fuses the three numbers after the s to a math problem.
+      openMouth();
     }else{
           if(b1=='f'){
             displaySingle(b2,b3,b4);

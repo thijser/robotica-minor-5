@@ -62,8 +62,8 @@ target_link_libraries(RFIDSensor ${catkin_LIBRARIES})
 #########
 
 #Conveyor
-add_library(conveyorDriver src/drivers/conveyorDriver.cpp)
-target_link_libraries(conveyorDriver ${roscpp_LIBRARIES})
+add_executable(conveyorDriver src/drivers/conveyorDriver.cpp)
+target_link_libraries(conveyorDriver ${catkin_LIBRARIES})
 
 #Audio
 add_library(audioDriver src/drivers/audioDriver.cpp)
