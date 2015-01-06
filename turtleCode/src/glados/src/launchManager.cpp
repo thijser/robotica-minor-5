@@ -11,6 +11,7 @@ ros::Publisher corePub;
 ros::Publisher launchPub;
 ros::Publisher conveyPub;
 bool launching = false;
+bool conveying = false;
 
 void init(){
 
@@ -24,13 +25,20 @@ void init(){
 }
 
 void coreCallback(const std_msgs::String::ConstPtr &msg){
-	if(strcmp("startconveyor", msg->data) != 0){
-		std_msgs::Int16 message;
-		message.data = 1;
-		conveyPub.publish(message);
+	if(strcmp("startconveyor", msg->data) == 0){
+		if(!conveying){
+			std_msgs::Int16 message;
+			message.data = 1;
+			conveyPub.publish(message);
+		}
+		else{
+			std_msgs::Int16 message;
+			message.data = 0;
+			conveyPub.publish(message);
+		}
 	}
 	if(!launching){
-		if(strcmp("startlaunch", msg->data) != 0){
+		if(strcmp("startlaunch", msg->data) == 0){
 			std_msgs::Int16 message;
 			message.data = 1;
 			launchPub.publish(message);
