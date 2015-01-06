@@ -3,6 +3,7 @@
         #include <fcntl.h>
         #include <termios.h>
         #include <stdio.h>
+	#include <stdlib.h>
 
         /* baudrate settings are defined in <asm/termbits.h>, which is
         included by <termios.h> */
@@ -16,11 +17,11 @@
 
         volatile int STOP=FALSE; 
 
-extern char* readline
+extern char* readline()
         {
           int fd,c, res;
           struct termios oldtio,newtio;
-          char buf[255];
+          char* buf = malloc(255*sizeof(char));
         /* 
           Open modem device for reading and writing and not as controlling tty
           because we don't want to get killed if linenoise sends CTRL-C.
@@ -111,3 +112,6 @@ extern char* readline
         }
 
       
+int main( int argc, const char* argv[] ){
+	return 42;
+}
