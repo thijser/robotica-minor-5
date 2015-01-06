@@ -16,7 +16,7 @@
 
         volatile int STOP=FALSE; 
 
-        main()
+extern char* readline
         {
           int fd,c, res;
           struct termios oldtio,newtio;
@@ -107,6 +107,7 @@
          }
          /* restore the old port settings */
          tcsetattr(fd,TCSANOW,&oldtio);
+	return buf; 
         }
 
       
