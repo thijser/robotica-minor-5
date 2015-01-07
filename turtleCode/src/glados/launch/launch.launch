@@ -10,7 +10,7 @@
 		<param name="wheel_base" value="0.54"/>
 	</node>
 
-	<node name="core" pkg="glados" type="core" />
+	<node name="newCore" pkg="glados" type="newCore
 	<node name="mathAsker" pkg="glados" type="mathAsker" />
 	<node name="sound_player" pkg="glados" type="sound_player" />
 
