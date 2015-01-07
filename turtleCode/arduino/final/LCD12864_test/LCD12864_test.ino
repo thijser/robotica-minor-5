@@ -48,7 +48,6 @@ MFRC522::MIFARE_Key key;
 byte cardUID;
 
 Servo mouthservo; //our servo
-int servo_pos = 0; //var to store servo position
 
 int answer;
 int input;
@@ -250,8 +249,9 @@ void loop(){
     if(b1=='s'){ //indicates a math problem is coming
       answer = getAnswer(b2-48, b3-48, b4-48);
       //Serial.println(answer);
-      displayfuse(b2-48,b3-48,b4-48); //fuses the three numbers after the s to a math problem.
       openMouth();
+      displayfuse(b2-48,b3-48,b4-48); //fuses the three numbers after the s to a math problem.
+
     }else{
           if(b1=='f'){
             displaySingle(b2,b3,b4);

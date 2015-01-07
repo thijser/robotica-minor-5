@@ -30,8 +30,8 @@ include_directories(include ${roscpp_INCLUDE_DIRS})
 #CORE
 ######
 
-add_executable(core src/core.cpp)
-target_link_libraries(core ${catkin_LIBRARIES})
+add_executable(newCore src/newCore.cpp)
+target_link_libraries(newCore ${catkin_LIBRARIES})
 
 #######
 #MIDLEVEL-LOGIC
