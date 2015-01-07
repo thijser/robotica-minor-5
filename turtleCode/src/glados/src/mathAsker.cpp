@@ -106,16 +106,16 @@ void questioncallback(std_msgs::String request){
 	std::stringstream ss;
 	ss<<questiondata[0];
 	switch (opperator){
-		case '+': ss<<" en ";break;
-		case '-': ss<<" min ";break;
-		case 'x': ss<<" keer ";break;
-		case '/': ss<<" gedeeld door ";break;
+		case '+': ss<<":";break;
+		case '-': ss<<";";break;
+		case 'x': ss<<"<";break;
+		case '/': ss<<"=";break;
 	}
 	ss<<questiondata[1];
 	soundmsg.data=ss.str();	
 	sound.publish(soundmsg);
 	std::stringstream ds;
-	ds<<questiondata[0]<<opperator<<questiondata[1]<<"=";
+	ds<<"s"<<questiondata[0]<<opperator<<questiondata[1];
 	displaymsg.data=ds.str();
 	display.publish(displaymsg);
 }
@@ -123,10 +123,10 @@ mathasker():handle("~")
 
 {
 	srand (time(NULL));
-	display=handle.advertise<std_msgs::String>("/display",1000);
-	sound=handle.advertise<std_msgs::String>("/tawi/media/audio",1000);
-	drive=handle.advertise<std_msgs::String>("/drive",1000);
-	sub = handle.subscribe("/questions", 1000, &mathasker::questioncallback,this);
+	display=handle.advertise<std_msgs::String>("/display",100);
+	sound=handle.advertise<std_msgs::String>("/tawi/media/audio",100);
+	drive=handle.advertise<std_msgs::String>("/drive",100);
+	sub = handle.subscribe<std_msgs::String>("/questions", 100, &mathasker::questioncallback,this);
 	for(int i=0;i<20;i++){
 		avaible_balls.push_back(balls[i]);
 	}
