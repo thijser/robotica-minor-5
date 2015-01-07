@@ -27,6 +27,7 @@ protected:
 	ros::NodeHandle handle;
 	ros::Subscriber switchSub;
 	ros::Subscriber launchSub;	
+	ros::Publisher pub;
 };
 
 

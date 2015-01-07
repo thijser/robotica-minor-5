@@ -2,7 +2,7 @@
 	<node name="drivingDriver" pkg="glados" type="drivingDriver" output="screen" respawn="false">
 		<!-- launch-prefix="gdb -ex run - -args" -->
 		<param name="motor_port" value="motor_comm"/>
-		<param name="motor_config" value="$(find glados)/cfg/wheels.xml"/>
+		<param name="motor_config" value="/home/yuugo/Programming/robotica-minor-5/turtleCode/src/glados/cfg/wheels.xml"/>
 		<param name="wheel_diameter" value="0.295"/>
 		<param name="wheel_base" value="0.54"/>
 	</node>
