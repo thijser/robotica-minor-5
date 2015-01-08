@@ -35,6 +35,7 @@ protected:
 	ros::Publisher pub;
 	ros::Subscriber ballSub;
 	int ballCount;
+	int launchCount = 0;
 };
 
 

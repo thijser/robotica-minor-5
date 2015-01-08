@@ -64,10 +64,9 @@ void LaunchDriver::launchCallback(const std_msgs::Int16::ConstPtr &msg){
 }
 
 bool LaunchDriver::launch(){
-	
 	//!launch and switch1.ok
 	//	echo 0
-	if(!launching && switch1_ok){
+	if(!launching && switch1_ok ){
 		setPort(0);
 	}
 	//elseif < HALF_BALLS && Switch1.ok
@@ -85,12 +84,18 @@ bool LaunchDriver::launch(){
 	else if(ballCount < MAX_BALLS && launching && switch2_ok){
 		setPort(0);
 	}
-	//elseif( MAXBALLS && launch && switch.ok) 
-	//	echo 1;
-	//	launch = false
+	
+	//Final action. This raised the platform!
 	else if(ballCount >= MAX_BALLS && launching && switch2_ok){
 		setPort(1);
-		launching = false;
+		if(launchCount < 2){
+			launchCount++;
+		}
+		else{
+			launchCount = 0;
+			setPort(0);
+			launching = false;
+		}
 	}
 }
 
