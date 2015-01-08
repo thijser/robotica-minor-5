@@ -27,10 +27,12 @@ ros::Publisher display;
 ros::Publisher sound;
 ros::Publisher drive;
 
-const int balls[20]={0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9};
+const int balls[20]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20;
 std::vector<int> avaible_balls;
 
-
+void removeBall(){
+	
+}
 /* returns array of 3 integers first 2 are the once being summed third is the answer*/
 int* addition2dig(){
 	int* result =new int[3];
