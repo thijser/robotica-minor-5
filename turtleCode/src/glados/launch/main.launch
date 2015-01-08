@@ -1,0 +1,5 @@
+<launch>
+	<include file="$(find glados)/launch/drivers.launch" />
+	<include file="$(find glados)/launch/sensors.launch" />
+	<include file="$(find glados)/launch/core.launch" />
+</launch>

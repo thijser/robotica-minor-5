@@ -1,0 +1,7 @@
+<launch>
+	<node name="switchSensor" pkg="glados" type="switchSensor" output="screen">
+	</node>
+
+	<node name="endSwitchSensor" pkg="glados" type="endSwitchSensor" output="screen">
+	</node>
+</launch>
