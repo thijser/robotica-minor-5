@@ -3,6 +3,7 @@
 
 #include <ros/ros.h>
 #include <std_msgs/String.h>
+#include <std_msgs/Int16.h>
 #include <string.h>
 
 #include <iostream>
@@ -13,6 +14,7 @@ using namespace std;
 
 class NewCore{
 public:
+	void acceptBall();
 	void launchCallback(const std_msgs::String::ConstPtr &msg);
 	void stopLaunch();
 	void stopConvey();
@@ -31,7 +33,7 @@ protected:
 	ros::Subscriber mathSub;
 	ros::Publisher mngrPub;
 	ros::Publisher mathPub;
-
+	ros::Publisher ballPub;
 	int ballCount = 0;
 
 };

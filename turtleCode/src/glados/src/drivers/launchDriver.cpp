@@ -10,6 +10,9 @@
 
 using namespace std;
 
+#define MAX_BALLS 20
+#define HALF_BALLS 10
+
 LaunchDriver::LaunchDriver () {
 	ros::NodeHandle nh;
 	handle = nh;
@@ -25,20 +28,30 @@ void LaunchDriver::init(){
 	std::fstream fs;
 
 	fs.open("/sys/class/gpio/export");
-	fs << 31;  							// <<< PORT
+	fs << 60;  							// <<< PORT
 	fs.close();
-	fs.open("/sys/class/gpio/gpio31/direction"); //PORT 
+	fs.open("/sys/class/gpio/gpio60/direction"); //PORT 
    	fs << "out";
    	fs.close();
 	switchSub = handle.subscribe<std_msgs::Int16>("/tawi/sensors/switch", 10, &LaunchDriver::switchCallback, this);
+	endSwitchSub = handle.subscribe<std_msgs::Int16>("/tawi/sensors/endswitch", 10, &LaunchDriver::endSwitchCallback, this);
 	pub = handle.advertise<std_msgs::Int16>("/tawi/mngr/launch", 100);
 	launchSub = handle.subscribe<std_msgs::Int16>("/tawi/motors/launch", 10, &LaunchDriver::launchCallback, this);
+	ballSub = handle.subscribe<std_msgs::Int16>("/tawi/core/ballcount", 10, &LaunchDriver::ballCallback, this);
 	ROS_INFO("launchDriver subscribers initialised");
+}
+
+void LaunchDriver::endSwitchCallback(const std_msgs::Int16::ConstPtr &msg){
+	switch2_ok = msg->data;
+}
+
+void LaunchDriver::ballCallback(const std_msgs::Int16::ConstPtr &msg){
+	ballCount = msg->data;
 }
 
 void LaunchDriver::switchCallback(const std_msgs::Int16::ConstPtr &msg){
 //	ROS_INFO("switchCallback");
-	switchReady = msg->data;
+	switch1_ok = msg->data;
 }
 
 void LaunchDriver::launchCallback(const std_msgs::Int16::ConstPtr &msg){
@@ -52,32 +65,39 @@ void LaunchDriver::launchCallback(const std_msgs::Int16::ConstPtr &msg){
 
 bool LaunchDriver::launch(){
 	
-	if(switchReady){
-		//safe to launch
-
-		//When specifing port you have to change the path names too!
-		
-	   	fs.open("/sys/class/gpio/gpio31/value"); //PORT
-	  	fs << "0"; // "1" for off
-	   	fs.close();
-	   	ROS_INFO("Sent 0 to gpio31/value");
-
-	   	std_msgs::Int16 message;
-		message.data = 1;
-		pub.publish(message);
-
-   	}
-  	else{
-  		//Cannot launch
-		fs.open("/sys/class/gpio/gpio31/value");
-		fs << "1"; // "1" for off
-	   	fs.close();
-   		ROS_INFO("Sent 1 to gpio31/value");
-
-   		std_msgs::Int16 message;
-		message.data = 0;
-		pub.publish(message);
+	//!launch and switch1.ok
+	//	echo 0
+	if(!launching && switch1_ok){
+		setPort(0);
 	}
+	//elseif < HALF_BALLS && Switch1.ok
+	//	launch = true
+	else if(ballCount >= HALF_BALLS && switch1_ok){
+		launching = true;
+	}
+	//elseif(launch)
+	//	echo 1
+	else if(launching){
+		setPort(1);
+	}
+	//elseif(< MAX_BALLS && launch && switch2.ok)
+	//	echo 0;
+	else if(ballCount < MAX_BALLS && launching && switch2_ok){
+		setPort(0);
+	}
+	//elseif( MAXBALLS && launch && switch.ok) 
+	//	echo 1;
+	//	launch = false
+	else if(ballCount >= MAX_BALLS && launching && switch2_ok){
+		setPort(1);
+		launching = false;
+	}
+}
+
+void LaunchDriver::setPort(int value){
+	fs.open("/sys/class/gpio/gpio60/value"); // <<<PORT
+	fs << to_string(value); // "1" for off
+	fs.close();   	
 }
 
 void LaunchDriver::spin() {

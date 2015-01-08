@@ -1,7 +1,6 @@
 #include "newCore.h"
 
 using namespace std;
-#define MAX_BALLS 14
 
 void NewCore::init(){
 	
@@ -10,6 +9,8 @@ void NewCore::init(){
 
 	mathSub = handle.subscribe<std_msgs::String>("/display", 10, &NewCore::launchCallback, this);
 	mathPub = handle.advertise<std_msgs::String>("/questions", 100);
+
+	ballPub = handle.advertise<std_msgs::Int16>("tawi/core/ballcount", 100);
 }
 
 void NewCore::launchCallback(const std_msgs::String::ConstPtr &msg){
@@ -47,8 +48,6 @@ void NewCore::spin(){
 	ros::Rate rate(100);
 
 	while(ros::ok()){
-		if(ballCount >= MAX_BALLS)
-			startLaunch();
 
 		readSerial();
 
@@ -57,10 +56,18 @@ void NewCore::spin(){
 	}
 }
 
+void NewCore::acceptBall(){
+	ballCount++;
+	std_msgs::Int16 balls;
+	balls.data = ballCount;
+	ballPub.publish(balls);
+}
+
 void NewCore::readSerial(){
 	//if ball accepted
 	//startConvey();
 	//but how..
+	acceptBall();
 }
 
 void NewCore::writeSerial(string shit){

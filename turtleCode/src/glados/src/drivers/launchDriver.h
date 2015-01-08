@@ -15,19 +15,26 @@ public:
 	LaunchDriver();
 	LaunchDriver(ros::NodeHandle h);
 	void init();
-	bool checkSwitch();
+	bool switch1_ok;
+	bool switch2_ok;
+	bool launching;
 	bool launch();
+	void setPort(int value);
 	int main(int argc, char **argv);
 	void switchCallback(const std_msgs::Int16::ConstPtr &msg);
+	void endSwitchCallback(const std_msgs::Int16::ConstPtr &msg);
 	void launchCallback(const std_msgs::Int16::ConstPtr &msg);
+	void ballCallback(const std_msgs::Int16::ConstPtr &msg);
 	void spin();
 protected:
 	std::fstream fs;
-	bool switchReady = false;
 	ros::NodeHandle handle;
 	ros::Subscriber switchSub;
+	ros::Subscriber endSwitchSub;
 	ros::Subscriber launchSub;	
 	ros::Publisher pub;
+	ros::Subscriber ballSub;
+	int ballCount;
 };
 
 
