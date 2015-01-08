@@ -41,10 +41,10 @@ string SwitchSensor::getTag(){
 int main(int argc, char **argv) {
 	std::fstream fs;
 	fs.open("/sys/class/gpio/export");
-	fs << 60;  							// <<< PORT
+	fs << 7;  							// <<< PORT
 	fs.close();
 
-	fs.open("/sys/class/gpio/gpio60/direction"); //PORT 
+	fs.open("/sys/class/gpio/gpio7/direction"); //PORT 
 	fs << "in";
 	fs.close();
 
@@ -56,7 +56,7 @@ int main(int argc, char **argv) {
 
 	while(ros::ok()){
 		int stateRead = 2; 
-		fs.open("/sys/class/gpio/gpio60/value");   // <<< PORT
+		fs.open("/sys/class/gpio/gpio7/value");   // <<< PORT
 		fs >> stateRead;
 		fs.close();
 		if(stateRead == 2)
