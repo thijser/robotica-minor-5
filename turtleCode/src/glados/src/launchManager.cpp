@@ -1,31 +1,19 @@
-#include <ros/ros.h>
-#include <std_msgs/String.h>
-#include <std_msgs/Int16.h>
-#include <string.h>
 
-ros::NodeHandle handle;
-ros::Subscriber coreSub;
-ros::Subscriber launchSub;
-ros::Subscriber conveySub;
-ros::Publisher corePub;
-ros::Publisher launchPub;
-ros::Publisher conveyPub;
-bool launching = false;
-bool conveying = false;
+#include "launchManager.h"
 
-void init(){
+void LaunchManager::init(){
 
-	coreSub = handle.subscribe<std_msgs::String>("/tawi/core/launch", 10, &coreCallback, this);
-	launchSub = handle.subscribe<std_msgs::Int16>("/tawi/mngr/launch", 10, &launchCallback, this);
-	conveySub = handle.subscribe<std_msgs::Int16>("/tawi/mngr/conveyor", 10, &conveyCallback, this);
+	coreSub = handle.subscribe<std_msgs::String>("/tawi/core/launch", 10, &LaunchManager::coreCallback, this);
+	launchSub = handle.subscribe<std_msgs::Int16>("/tawi/mngr/launch", 10, &LaunchManager::launchCallback, this);
+	conveySub = handle.subscribe<std_msgs::Int16>("/tawi/mngr/conveyor", 10, &LaunchManager::conveyCallback, this);
 
 	corePub = handle.advertise<std_msgs::String>("/tawi/core/launch", 100);
 	launchPub = handle.advertise<std_msgs::Int16>("/tawi/motors/launch", 100);
 	conveyPub = handle.advertise<std_msgs::Int16>("/tawi/motors/conveyor", 100);
 }
 
-void coreCallback(const std_msgs::String::ConstPtr &msg){
-	if(strcmp("startconveyor", msg->data) == 0){
+void LaunchManager::coreCallback(const std_msgs::String::ConstPtr &msg){
+	if("startconveyor" == msg->data){
 		if(!conveying){
 			std_msgs::Int16 message;
 			message.data = 1;
@@ -38,7 +26,7 @@ void coreCallback(const std_msgs::String::ConstPtr &msg){
 		}
 	}
 	if(!launching){
-		if(strcmp("startlaunch", msg->data) == 0){
+		if("startlaunch" == msg->data){
 			std_msgs::Int16 message;
 			message.data = 1;
 			launchPub.publish(message);
@@ -46,25 +34,29 @@ void coreCallback(const std_msgs::String::ConstPtr &msg){
 	}
 }
 
-void launchCallback(const std_msgs::Int16::ConstPtr &msg){
+void LaunchManager::launchCallback(const std_msgs::Int16::ConstPtr & msg){
 	if(msg->data == 1){ //currently launching
 		launching = true;
 	}
 	else if(launching){ //currently not launching
-		std_msgs::String donetocore;
-		donetocore.data = "donelaunching";
-		corePub.publish(donetocore);
+		std_msgs::String ldonetocore;
+		ldonetocore.data = "donelaunching";
+		corePub.publish(ldonetocore);
 		launching = false;
 	}
 }
 
-void conveyCallback(const std_msgs::Int16::ConstPtr &msg){
-
+void LaunchManager::conveyCallback(const std_msgs::Int16::ConstPtr & msg){
+	if(msg->data == 1){ //currently launching
+		std_msgs::String cdonetocore;
+		cdonetocore.data = "doneconveying";
+		corePub.publish(cdonetocore);
+	}
 }
 
-void spin(){
+void LaunchManager::spin(){
 	ros::Rate rate(100);
-
+	ROS_INFO("Spinning LaunchManager");
 	while(ros::ok()){
 		ros::spinOnce();
 		rate.sleep();
@@ -72,6 +64,9 @@ void spin(){
 }
 
 int main(int argc, char **argv){
-	ros::init(argc, argv, 'launchManager');
-	init();
+	ros::init(argc, argv, "launchManager");
+	LaunchManager lm;
+
+	lm.init();
+	lm.spin();
 }

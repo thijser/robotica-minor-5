@@ -33,7 +33,7 @@ void ConveyorDriver::init(){
 void ConveyorDriver::managerCallback(const std_msgs::Int16::ConstPtr &msg){
 	if(msg->data){
 		fs.open("/sys/class/gpio/gpio50/value"); //PORT
-	  	fs << "0"; // "1" for off
+	  	fs << "1"; // "1" for off
 	   	fs.close();
 	   	ROS_INFO("Sent 0 to gpio50/value");
 
@@ -42,7 +42,7 @@ void ConveyorDriver::managerCallback(const std_msgs::Int16::ConstPtr &msg){
 	   	msg.data = 1;
 	   	pub.publish(msg);
 	   	fs.open("/sys/class/gpio/gpio50/value"); //PORT
-	  	fs << "1"; // "1" for off
+	  	fs << "0"; // "1" for off
 	   	fs.close();
 	}
 }
