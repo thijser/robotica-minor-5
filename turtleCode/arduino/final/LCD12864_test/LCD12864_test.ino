@@ -129,14 +129,14 @@ int getAnswer(int firstnumber, int operation , int secondnumber){
 
 void checkInput(int input, int answer){
   if (input == answer){
-    Serial.println("yippie");
+    Serial.print(input);
     closeMouth();
     delay(3000);
 //    openMouth();
     Serial.flush();
   }
   else{
-    Serial.println("aaaaaah that is wrong u newb!");
+    Serial.print("w");
   }
 }
 
@@ -234,13 +234,6 @@ void dump_byte_array(byte *buffer, byte bufferSize) { //dump byte array function
 void loop(){
 
   if(Serial.available()==4){
-      digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);               // wait for a second
-  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);               // wait for a second
-  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
-
-  Serial.println("the cow has landed");
     byte b1,b2,b3,b4; 
     b1=Serial.read();
     b2=Serial.read();
