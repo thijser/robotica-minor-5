@@ -64,30 +64,20 @@ void LaunchDriver::launchCallback(const std_msgs::Int16::ConstPtr &msg){
 }
 
 bool LaunchDriver::launch(){
-	//!launch and switch1.ok
-	//	echo 0
-	if(!launching && switch1_ok ){
-		setPort(0);
-	}
-	//elseif < HALF_BALLS && Switch1.ok
-	//	launch = true
-	else if(ballCount >= HALF_BALLS && switch1_ok){
-		launching = true;
-	}
-	//elseif(launch)
-	//	echo 1
-	else if(launching){
-		setPort(1);
-	}
 	//elseif(< MAX_BALLS && launch && switch2.ok)
 	//	echo 0;
-	else if(ballCount < MAX_BALLS && launching && switch2_ok){
+	if(ballCount < MAX_BALLS && launching && switch2_ok == 1){
+		ROS_INFO("< MAX_BALLS && launch && switch2.ok");
 		setPort(0);
+		launching = false;
 	}
 	
-	//Final action. This raised the platform!
-	else if(ballCount >= MAX_BALLS && launching && switch2_ok){
+	//This raised the platform!
+	if(ballCount >= MAX_BALLS && !launching && switch2_ok == 1){
+		ROS_INFO("ballCount >= MAX_BALLS && launching && switch2_ok == 1)");
+
 		setPort(1);
+		launching = true;
 		if(launchCount < 2){
 			launchCount++;
 		}
@@ -97,12 +87,32 @@ bool LaunchDriver::launch(){
 			launching = false;
 		}
 	}
+	//!launch and switch1.ok
+	//	echo 0
+	if(!launching && switch1_ok == 1){
+		ROS_INFO("!launch and switch1.ok");
+		setPort(0);
+	}
+	//elseif < HALF_BALLS && Switch1.ok
+	//	launch = true
+	if(ballCount >= HALF_BALLS && switch1_ok == 1){
+		ROS_INFO(">= HALF_BALLS && Switch1.ok");
+		launching = true;
+	}
+	//elseif(launch)
+	//	echo 1
+	if(launching && switch2_ok == 0){
+		ROS_INFO("launching");
+		setPort(1);
+	}
+
 }
 
 void LaunchDriver::setPort(int value){
-	fs.open("/sys/class/gpio/gpio60/value"); // <<<PORT
-	fs << to_string(value); // "1" for off
-	fs.close();   	
+	ROS_INFO("Echoing %d to gpio60", value);
+	//fs.open("/sys/class/gpio/gpio60/value"); // <<<PORT
+	//fs << to_string(value); // "1" for off
+	//fs.close();   	
 }
 
 void LaunchDriver::spin() {

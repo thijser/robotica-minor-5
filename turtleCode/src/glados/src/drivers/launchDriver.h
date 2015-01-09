@@ -15,9 +15,9 @@ public:
 	LaunchDriver();
 	LaunchDriver(ros::NodeHandle h);
 	void init();
-	bool switch1_ok;
-	bool switch2_ok;
-	bool launching;
+	int switch1_ok = 0;
+	int  switch2_ok = 0;
+	bool launching = false;
 	bool launch();
 	void setPort(int value);
 	int main(int argc, char **argv);
