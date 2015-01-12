@@ -38,7 +38,7 @@ void LaunchManager::launchCallback(const std_msgs::Int16::ConstPtr & msg){
 	if(msg->data == 1){ //currently launching
 		launching = true;
 	}
-	if(mgs->data == 0){ //currently not launching
+	if(msg->data == 0){ //currently not launching
 		std_msgs::String ldonetocore;
 		ldonetocore.data = "donelaunching";
 		corePub.publish(ldonetocore);

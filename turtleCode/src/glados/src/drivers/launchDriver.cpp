@@ -101,7 +101,7 @@ bool LaunchDriver::launch(){
 }
 
 void LaunchDriver::secondLaunch(){
-	ros::Rate r(10)
+	ros::Rate r(10);
 	while(switch2_ok == 0){
 		setPort(1);
 		r.sleep();
@@ -109,6 +109,7 @@ void LaunchDriver::secondLaunch(){
 	while(switch1_ok == 0){
 		setPort(1);
 	}
+	setPort(0);
 	std_msgs::Int16 msg;
 	msg.data = 0;
 	pub.publish(msg);
