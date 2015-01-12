@@ -101,6 +101,7 @@ bool LaunchDriver::launch(){
 }
 
 void LaunchDriver::secondLaunch(){
+	ROS_INFO("secondLaunch");
 	ros::Rate r(10);
 	while(switch2_ok == 0){
 		setPort(1);
@@ -116,10 +117,10 @@ void LaunchDriver::secondLaunch(){
 }
 
 void LaunchDriver::setPort(int value){
-	ROS_INFO("Echoing %d to gpio60", value);
-	//fs.open("/sys/class/gpio/gpio60/value"); // <<<PORT
-	//fs << to_string(value); // "1" for off
-	//fs.close();   	
+	//ROS_INFO("Echoing %d to gpio60", value);
+	fs.open("/sys/class/gpio/gpio60/value"); // <<<PORT
+	fs << to_string(value); // "1" for off
+	fs.close();   	
 }
 
 void LaunchDriver::spin() {
