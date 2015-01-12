@@ -72,20 +72,13 @@ bool LaunchDriver::launch(){
 		launching = false;
 	}
 	
-	//This raised the platform!
+	//This raises the platform!
 	if(ballCount >= MAX_BALLS && !launching && switch2_ok == 1){
 		ROS_INFO("ballCount >= MAX_BALLS && launching && switch2_ok == 1)");
 
 		setPort(1);
 		launching = true;
-		if(launchCount < 2){
-			launchCount++;
-		}
-		else{
-			launchCount = 0;
-			setPort(0);
-			launching = false;
-		}
+		secondLaunch();
 	}
 	//!launch and switch1.ok
 	//	echo 0
@@ -105,7 +98,20 @@ bool LaunchDriver::launch(){
 		ROS_INFO("launching");
 		setPort(1);
 	}
+}
 
+void LaunchDriver::secondLaunch(){
+	ros::Rate r(10)
+	while(switch2_ok == 0){
+		setPort(1);
+		r.sleep();
+	}
+	while(switch1_ok == 0){
+		setPort(1);
+	}
+	std_msgs::Int16 msg;
+	msg.data = 0;
+	pub.publish(msg);
 }
 
 void LaunchDriver::setPort(int value){
@@ -119,7 +125,6 @@ void LaunchDriver::spin() {
 	ROS_INFO("Spinning launchDriver");
 
 	ros::Rate r(5);
-
 	while(ros::ok()) {
 
 		ros::spinOnce();
