@@ -64,8 +64,10 @@ void LaunchDriver::launchCallback(const std_msgs::Int16::ConstPtr &msg){
 }
 
 bool LaunchDriver::launch(){
-	//elseif(< MAX_BALLS && launch && switch2.ok)
-	//	echo 0;
+	//Good luck understanding this :D 
+	//....fuck my life
+
+	//rack has arrived at endswitch, but we're not full yet so we wait for more balls.
 	if(ballCount < MAX_BALLS && launching && switch2_ok == 1){
 		ROS_INFO("< MAX_BALLS && launch && switch2.ok");
 		setPort(0);
@@ -73,54 +75,58 @@ bool LaunchDriver::launch(){
 	}
 	
 	//This raises the platform!
+	//We're full, time to release for the platform.
 	if(ballCount >= MAX_BALLS && !launching && switch2_ok == 1){
 		ROS_INFO("ballCount >= MAX_BALLS && launching && switch2_ok == 1)");
 
 		setPort(1);
 		launching = true;
-		secondLaunch();
+		bSecondLaunch = true;
 	}
-	//!launch and switch1.ok
-	//	echo 0
+
+	// safetycheck for stopping when not yet at halfballs
 	if(!launching && switch1_ok == 1){
 		ROS_INFO("!launch and switch1.ok");
 		setPort(0);
 	}
-	//elseif < HALF_BALLS && Switch1.ok
-	//	launch = true
-	if(ballCount >= HALF_BALLS && switch1_ok == 1){
+	
+	// More than half-filled, lower the platform.
+	if(ballCount >= HALF_BALLS && switch1_ok == 1 && !stopLaunch){
 		ROS_INFO(">= HALF_BALLS && Switch1.ok");
 		launching = true;
 	}
-	//elseif(launch)
-	//	echo 1
+
+	//State after done second launch. Waiting for Core to send new ballcount.
+	if(ballCount >= HALF_BALLS && switch1_ok == 1 && stopLaunch){
+		//Tell core that launcing is done.
+		std_msgs::Int16 msg;
+		msg.data = 0;
+		pub.publish(msg);
+
+		ROS_INFO(">= HALF_BALLS && Switch1.ok");
+		setPort(0);
+		launching = false;
+	}
+
+	//We launched twice. Time to stop launching and reset.
+	if(ballCount < HALF_BALLS && switch1_ok){
+		stopLaunch = false;
+	}
+
+	// State between the two switches. Set port 1 to continue to switch 2.
 	if(launching && switch2_ok == 0){
+		if(bSecondLaunch)
+			stopLaunch = true;
 		ROS_INFO("launching");
 		setPort(1);
 	}
 }
 
-void LaunchDriver::secondLaunch(){
-	ROS_INFO("secondLaunch");
-	ros::Rate r(10);
-	while(switch2_ok == 0){
-		setPort(1);
-		r.sleep();
-	}
-	while(switch1_ok == 0){
-		setPort(1);
-	}
-	setPort(0);
-	std_msgs::Int16 msg;
-	msg.data = 0;
-	pub.publish(msg);
-}
-
 void LaunchDriver::setPort(int value){
-	//ROS_INFO("Echoing %d to gpio60", value);
-	fs.open("/sys/class/gpio/gpio60/value"); // <<<PORT
-	fs << to_string(value); // "1" for off
-	fs.close();   	
+	ROS_INFO("Echoing %d to gpio60", value);
+	//fs.open("/sys/class/gpio/gpio60/value"); // <<<PORT
+	//fs << to_string(value); // "1" for off
+	//fs.close();   	
 }
 
 void LaunchDriver::spin() {
