@@ -21,8 +21,10 @@ public:
 	bool launch();
 	void setPort(int value);
 	int main(int argc, char **argv);
-	bool bSecondLaunch;
+	bool bSecondLaunch = false;
 	bool stopLaunch = false;
+	bool endTransition = false;
+	int prevSwitch2 = 0;
 	void switchCallback(const std_msgs::Int16::ConstPtr &msg);
 	void endSwitchCallback(const std_msgs::Int16::ConstPtr &msg);
 	void launchCallback(const std_msgs::Int16::ConstPtr &msg);

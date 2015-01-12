@@ -69,7 +69,7 @@ bool LaunchDriver::launch(){
 
 	//rack has arrived at endswitch, but we're not full yet so we wait for more balls.
 	if(ballCount < MAX_BALLS && launching && switch2_ok == 1){
-		ROS_INFO("< MAX_BALLS && launch && switch2.ok");
+		ROS_INFO("Pausing untill 20 balls");
 		setPort(0);
 		launching = false;
 	}
@@ -77,49 +77,62 @@ bool LaunchDriver::launch(){
 	//This raises the platform!
 	//We're full, time to release for the platform.
 	if(ballCount >= MAX_BALLS && !launching && switch2_ok == 1){
-		ROS_INFO("ballCount >= MAX_BALLS && launching && switch2_ok == 1)");
+		ROS_INFO("We're full, time to release for the platform.");
 
 		setPort(1);
 		launching = true;
-		bSecondLaunch = true;
 	}
 
 	// safetycheck for stopping when not yet at halfballs
 	if(!launching && switch1_ok == 1){
-		ROS_INFO("!launch and switch1.ok");
+		ROS_INFO("safetycheck for stopping when not yet at halfballs");
 		setPort(0);
 	}
 	
 	// More than half-filled, lower the platform.
 	if(ballCount >= HALF_BALLS && switch1_ok == 1 && !stopLaunch){
-		ROS_INFO(">= HALF_BALLS && Switch1.ok");
+		ROS_INFO("More than half-filled, lower the platform.");
 		launching = true;
 	}
 
 	//State after done second launch. Waiting for Core to send new ballcount.
 	if(ballCount >= HALF_BALLS && switch1_ok == 1 && stopLaunch){
 		//Tell core that launcing is done.
+		ROS_INFO("Done second launch. Waiting for Core to send new ballcount.");
 		std_msgs::Int16 msg;
 		msg.data = 0;
 		pub.publish(msg);
 
-		ROS_INFO(">= HALF_BALLS && Switch1.ok");
 		setPort(0);
 		launching = false;
 	}
 
 	//We launched twice. Time to stop launching and reset.
-	if(ballCount < HALF_BALLS && switch1_ok){
+	if(ballCount < HALF_BALLS && switch1_ok && stopLaunch){
+		ROS_INFO("We launched twice. Time to reset.");
 		stopLaunch = false;
+		endTransition = false;
+		ROS_INFO("stopLaunch and endTransition set to false");
 	}
 
 	// State between the two switches. Set port 1 to continue to switch 2.
 	if(launching && switch2_ok == 0){
-		if(bSecondLaunch)
-			stopLaunch = true;
-		ROS_INFO("launching");
+		ROS_INFO("State between the two switches. Set port 1 to continue to switch 2.");
 		setPort(1);
 	}
+	//set a bool true on the first occurence of a transition from switch2.ok -> !switch.ok.
+	//the second time this happens, set stopLaunch true.
+	if(switch2_ok == 0 && prevSwitch2 == 1){
+		if(endTransition){
+			stopLaunch = true;
+			ROS_INFO("stopLaunch set to true");
+		}
+		else{
+			endTransition = true;
+			ROS_INFO("endTransition set to true");
+		}
+	}
+	prevSwitch2 = switch2_ok;
 }
 
 void LaunchDriver::setPort(int value){
