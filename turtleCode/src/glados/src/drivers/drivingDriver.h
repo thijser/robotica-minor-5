@@ -30,6 +30,7 @@ public:
 	DrivingDriver() : handle("~") {
 		init();
 	}
+	double fix_max_speed(double value);
 	void init();
 	int getID();
 	int getState();

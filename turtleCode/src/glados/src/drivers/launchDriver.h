@@ -15,12 +15,16 @@ public:
 	LaunchDriver();
 	LaunchDriver(ros::NodeHandle h);
 	void init();
-	bool switch1_ok;
-	bool switch2_ok;
-	bool launching;
+	int switch1_ok = 0;
+	int  switch2_ok = 0;
+	bool launching = false;
 	bool launch();
 	void setPort(int value);
 	int main(int argc, char **argv);
+	bool bSecondLaunch = false;
+	bool stopLaunch = false;
+	bool endTransition = false;
+	int prevSwitch2 = 0;
 	void switchCallback(const std_msgs::Int16::ConstPtr &msg);
 	void endSwitchCallback(const std_msgs::Int16::ConstPtr &msg);
 	void launchCallback(const std_msgs::Int16::ConstPtr &msg);
@@ -35,6 +39,7 @@ protected:
 	ros::Publisher pub;
 	ros::Subscriber ballSub;
 	int ballCount;
+	int launchCount = 0;
 };
 
 

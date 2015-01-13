@@ -21,6 +21,7 @@ public:
 	void startLaunch();
 	void startConvey();
 	void spin();
+	void deleteBall(const int ballnumber);
 	void readSerial();
 	void writeSerial(string shit);
 	void askMath();
@@ -32,6 +33,7 @@ protected:
 	ros::Subscriber mngrSub;
 	ros::Subscriber mathSub;
 	ros::Publisher mngrPub;
+	ros::Publisher nmbrPub;
 	ros::Publisher mathPub;
 	ros::Publisher ballPub;
 	int ballCount = 0;

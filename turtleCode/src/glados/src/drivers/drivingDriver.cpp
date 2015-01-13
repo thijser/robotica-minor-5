@@ -14,7 +14,7 @@ Publishing on:
 
 void DrivingDriver::init(){
 	ID = 436436436;
-	sub = handle.subscribe<geometry_msgs::Twist>("/tawi/motors/drive", 10, &DrivingDriver::driveCallback, this);
+	sub = handle.subscribe<geometry_msgs::Twist>("/tawi/motors/drive", 1, &DrivingDriver::driveCallback, this);
 
 	//Parameters set in launch file.
 	ROS_ASSERT(handle.getParam("motor_port", motor_port_name));
@@ -35,17 +35,17 @@ void DrivingDriver::init(){
 
 void DrivingDriver::driveCallback(const geometry_msgs::Twist::ConstPtr &msg){
 
-	ROS_INFO("driveCallback");
+	
 	double v_x = msg->linear.x/(wheelDiameter/2);
 	double v_theta = msg->angular.z * (wheelBase/wheelDiameter);
 
 	double leftMotorVelocity = v_x - v_theta;
 	double rightMotorVelocity = v_x + v_theta;
+	ROS_INFO("driveCallback %f", leftMotorVelocity);
+	
 
-	left_motor->set3MxlMode(SPEED_MODE);
-	left_motor->setSpeed(leftMotorVelocity);
-	right_motor->set3MxlMode(SPEED_MODE);
-	right_motor->setSpeed(rightMotorVelocity);
+	left_motor->setSpeed(fix_max_speed(leftMotorVelocity));	
+	right_motor->setSpeed(fix_max_speed(rightMotorVelocity));
 
 }
 
@@ -53,6 +53,15 @@ int DrivingDriver::getID() {
 	return ID;
 }
 
+double DrivingDriver::fix_max_speed(double value){
+	if(value > 1.35){
+		return 1.35;
+	}
+	if(value < -1.35){
+		return -1.35;
+	}
+	return value;
+}
 
 int DrivingDriver::getState(){
 	return state;
@@ -78,7 +87,7 @@ bool DrivingDriver::stop() {
 
 void DrivingDriver::initMotors(){
 
-	ros::Rate init_rate(1);
+	ros::Rate init_rate(10);
 	
 	motor_config_left.readConfig(motor_config_xml.root().section("left"));
 	left_motor = new C3mxlROS(motor_port_name.c_str());
@@ -97,12 +106,15 @@ void DrivingDriver::initMotors(){
 		ROS_WARN_ONCE("Couldn't initialize right wheel motor, will continue trying every second");
 		init_rate.sleep();
 	}
+
+	left_motor->set3MxlMode(SPEED_MODE);
+	right_motor->set3MxlMode(SPEED_MODE);
 }
 
 void DrivingDriver::spin() {
 	ROS_INFO("Spinning da spin");
 
-	ros::Rate r(1000);
+	ros::Rate r(10000);
 
 	while(ros::ok()) {
 

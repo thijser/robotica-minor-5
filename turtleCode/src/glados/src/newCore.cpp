@@ -10,7 +10,8 @@ void NewCore::init(){
 	mathSub = handle.subscribe<std_msgs::String>("/display", 10, &NewCore::launchCallback, this);
 	mathPub = handle.advertise<std_msgs::String>("/questions", 100);
 
-	ballPub = handle.advertise<std_msgs::Int16>("tawi/core/ballcount", 100);
+	ballPub = handle.advertise<std_msgs::Int16>("/tawi/core/ballcount", 100);
+	nmbrPub = handle.advertise<std_msgs::Int16>("/tawi/core/number", 100);
 }
 
 void NewCore::launchCallback(const std_msgs::String::ConstPtr &msg){
@@ -71,12 +72,16 @@ void NewCore::readSerial(){
 }
 
 void NewCore::writeSerial(string shit){
-	std::fstream fs;
+	std::stringstream sysCall;
+        sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial --port=/dev/ttyACM0 --send="<<shit; 
+	system(sysCall.str());
 
-	fs.open("/dev/ttyO4");
-	fs << shit;
-	fs.close();
+}
 
+void NewCore::deleteBall(const int ballnumber){ //written by bob, muchos bugs
+	std_msgs::Int16 number;
+	number.data = ballnumber;
+	nmbrPub.publish(number);
 }
 
 void NewCore::mathCallback(const std_msgs::String::ConstPtr &msg){

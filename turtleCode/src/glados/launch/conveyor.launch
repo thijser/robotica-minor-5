@@ -1,0 +1,8 @@
+<launch>
+	<node name="conveyorDriver" pkg="glados" type="conveyorDriver" output="screen">
+	<!-- dingen -->
+	</node>
+
+	<node name="launchManager" pkg="glados" type="launchManager" output="screen">
+	</node>
+</launch>

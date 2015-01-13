@@ -28,7 +28,7 @@ int main(int argc, char **argv) {
 		fs.close();
 		if(stateRead == 2)
 			ROS_INFO("stateRead not set");
-		msg.data = 1-stateRead; //Inverting for BBB logic
+		msg.data = stateRead; //Inverting for BBB logic no longer neccesary if you set port direction to in.
 		
 		pub.publish(msg);
 		ROS_INFO("EndSwitch broadcasts %d", msg.data);

@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(glados)
-include_directories(include ${catkin_INCLUDE_DIRS})
+#include_directories(include ${catkin_INCLUDE_DIRS})
 
-find_package(catkin REQUIRED COMPONENTS roscpp message_generation threemxl std_msgs  rospy)
+find_package(catkin REQUIRED COMPONENTS roscpp message_generation threemxl std_msgs geometry_msgs rospy)
+#find_package(catkin REQUIRED COMPONENTS roscpp message_generation threemxl std_msgs  rospy)
 
 # Generate messages in the 'msg' folder
 add_message_files(
@@ -23,8 +24,8 @@ INCLUDE_DIRS include
 CATKIN_DEPENDS roscpp std_msgs geometry_msgs message_runtime)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-include_directories(include ${catkin_INCLUDE_DIRS})
-include_directories(include ${roscpp_INCLUDE_DIRS})
+#include_directories(include ${catkin_INCLUDE_DIRS})
+#include_directories(include ${roscpp_INCLUDE_DIRS})
 
 ######
 #CORE
@@ -41,6 +42,10 @@ target_link_libraries(newCore ${catkin_LIBRARIES})
 #add_executable(dance src/dancer.cpp)
 #target_link_libraries(dance ${catkin_LIBRARIES})
 
+#launchManager
+add_executable(launchManager src/launchManager.cpp)
+target_link_libraries(launchManager ${catkin_LIBRARIES})
+
 #######
 #SENSORS
 #######
@@ -49,13 +54,13 @@ target_link_libraries(newCore ${catkin_LIBRARIES})
 add_executable(switchSensor src/sensors/switchSensor.cpp)
 target_link_libraries(switchSensor ${catkin_LIBRARIES})
 
-#UltrasoneSensor
-add_library(UltrasoneSensor src/sensors/UltrasoneSensor.cpp) 		
-target_link_libraries(UltrasoneSensor ${catkin_LIBRARIES})
+#EndSwitchSensor
+add_executable(endSwitchSensor src/sensors/endSwitchSensor.cpp)
+target_link_libraries(endSwitchSensor ${catkin_LIBRARIES})
 
-#RFIDSensor
-add_library(RFIDSensor src/sensors/RFIDSensor.cpp)
-target_link_libraries(RFIDSensor ${catkin_LIBRARIES})
+#UltrasoneSensor
+#add_library(UltrasoneSensor src/sensors/UltrasoneSensor.cpp) 		
+#target_link_libraries(UltrasoneSensor ${catkin_LIBRARIES})
 
 #########
 #DRIVERS
