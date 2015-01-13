@@ -66,7 +66,7 @@ void NewCore::acceptBall(){
 
 void NewCore::writeSerial(string shit){
 	std::stringstream sysCall;
-        sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial --port=/dev/ttyACM0 --send="<<shit; 
+        sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial/arduino-serial --port=/dev/ttyACM0 --send="<<shit; 
 	string temp= sysCall.str();
 	system(temp.c_str());
 

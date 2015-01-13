@@ -31,8 +31,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 #CORE
 ######
 
-#add_executable(newCore src/newCore.cpp)
-#target_link_libraries(newCore ${catkin_LIBRARIES})
+add_executable(newCore src/newCore.cpp)
+target_link_libraries(newCore ${catkin_LIBRARIES})
 
 #######
 #MIDLEVEL-LOGIC
