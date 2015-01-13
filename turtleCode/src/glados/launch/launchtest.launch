@@ -1,0 +1,14 @@
+<launch>
+	<node name="launchDriver" pkg="glados" type="launchDriver" output="screen">
+	<!-- dingen -->
+	</node>
+
+	<node name="launchManager" pkg="glados" type="launchManager" output="screen">
+	</node>
+
+	<node name="switchSensor" pkg="glados" type="switchSensor" output="screen">
+	</node>
+
+	<node name="endSwitchSensor" pkg="glados" type="endSwitchSensor" output="screen">
+	</node>
+</launch>

@@ -72,11 +72,9 @@ void NewCore::readSerial(){
 }
 
 void NewCore::writeSerial(string shit){
-	std::fstream fs;
-
-	fs.open("/dev/ttyO4");
-	fs << shit;
-	fs.close();
+	std::stringstream sysCall;
+        sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial --port=/dev/ttyACM0 --send="<<shit; 
+	system(sysCall.str());
 
 }
 
