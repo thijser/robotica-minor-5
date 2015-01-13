@@ -8,7 +8,7 @@
 
 # since this file is sourced either use the provided _CATKIN_SETUP_DIR
 # or fall back to the destination set at configure time
-: ${_CATKIN_SETUP_DIR:=/home/thijs/codes/robotica-minor-5/turtleCode/devel}
+: ${_CATKIN_SETUP_DIR:=/home/ubuntu/robotica-minor-5/turtleCode/devel}
 _SETUP_UTIL="$_CATKIN_SETUP_DIR/_setup_util.py"
 unset _CATKIN_SETUP_DIR
 
