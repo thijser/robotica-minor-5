@@ -97,7 +97,7 @@ void NewCore::askMath(){
 
 int main(int argc, char **argv){
 	
-	ros::init(argc, argv, "Core");
+	ros::init(argc, argv, "newCore");
 	NewCore nc;
 	nc.init();
 	nc.spin();
