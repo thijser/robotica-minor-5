@@ -26,16 +26,19 @@ public:
 	void writeSerial(string shit);
 	void askMath();
 	void mathCallback(const std_msgs::String::ConstPtr &msg);
+	void serialCallback(const std_msgs::String::ConstPtr &msg);
 	int main(int argc, char **argv);
 	void init();
 protected:
 	ros::NodeHandle handle;
 	ros::Subscriber mngrSub;
 	ros::Subscriber mathSub;
+	ros::Subscriber serSub;
 	ros::Publisher mngrPub;
 	ros::Publisher nmbrPub;
 	ros::Publisher mathPub;
 	ros::Publisher ballPub;
+	
 	int ballCount = 0;
 
 };

@@ -8,6 +8,7 @@ void NewCore::init(){
 	mngrPub = handle.advertise<std_msgs::String>("/tawi/core/launch", 100);
 
 	mathSub = handle.subscribe<std_msgs::String>("/display", 10, &NewCore::launchCallback, this);
+	serSub = handle.subscribe<std_msgs::String>("/tawi/arduino/serial", 100,&NewCore::serialCallback,this);
 	mathPub = handle.advertise<std_msgs::String>("/questions", 100);
 
 	ballPub = handle.advertise<std_msgs::Int16>("/tawi/core/ballcount", 100);
@@ -64,17 +65,13 @@ void NewCore::acceptBall(){
 	ballPub.publish(balls);
 }
 
-void NewCore::readSerial(){
-	//if ball accepted
-	//startConvey();
-	//but how..
-	acceptBall();
-}
+
 
 void NewCore::writeSerial(string shit){
 	std::stringstream sysCall;
         sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial --port=/dev/ttyACM0 --send="<<shit; 
-	system(sysCall.str());
+	string temp= sysCall.str();
+	system(temp.c_str());
 
 }
 
@@ -87,7 +84,10 @@ void NewCore::deleteBall(const int ballnumber){ //written by bob, muchos bugs
 void NewCore::mathCallback(const std_msgs::String::ConstPtr &msg){
 	writeSerial(msg->data);
 }
-
+void NewCore::serialCallback(const std_msgs::String::ConstPtr &msg){
+	acceptBall();
+	
+}
 void NewCore::askMath(){
 	std_msgs::String question;
 	question.data = "1digitAddition";
