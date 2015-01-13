@@ -50,9 +50,6 @@ void NewCore::spin(){
 	ros::Rate rate(100);
 
 	while(ros::ok()){
-
-		readSerial();
-
 		ros::spinOnce();
 		rate.sleep();
 	}
@@ -81,12 +78,16 @@ void NewCore::deleteBall(const int ballnumber){ //written by bob, muchos bugs
 	nmbrPub.publish(number);
 }
 
-void NewCore::mathCallback(const std_msgs::String::ConstPtr &msg){
+void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
 	writeSerial(msg->data);
 }
-void NewCore::serialCallback(const std_msgs::String::ConstPtr &msg){
+
+void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
+	const char* data = msg->data.c_str();
+	if(strcmp(data,"cor")==0){
 	acceptBall();
-	
+	NewCore::startConvey();
+	}
 }
 void NewCore::askMath(){
 	std_msgs::String question;
