@@ -60,6 +60,9 @@ target_link_libraries(RFIDSensor ${catkin_LIBRARIES})
 #########
 #DRIVERS
 #########
+#serial
+add_executable(serial src/drivers/serialListener)
+target_link_libraries(serial ${catkin_LIBRARIES})
 
 #Conveyor
 add_executable(conveyorDriver src/drivers/conveyorDriver.cpp)
