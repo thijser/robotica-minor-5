@@ -6,6 +6,7 @@
 #include <ros/ros.h>
 #include <std_msgs/String.h>
 #include <string>
+#include <std_msgs/Int16.h>
 /**
 * listens to the "/questions" and "/balls" topics and sends messages to the "/makeSound", "/drive" and "/display" topic to make sounds, drive around and display various the question. 
 Subscribes to:
@@ -33,30 +34,31 @@ class mathasker{
 	const int balls[20]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
 	std::vector<int> available_balls;
 
-
-	//written by bob, muchos bugs
-	void removecallback(std_msgs::Int16::ConstPtr &number){
-		int index = std::find(available_balls.begin(), available_balls.end(), number->data);
-		if (index != available_balls.end()){
-			available_balls.erase(index-available_balls.begin());	
+	//written by bob, muchos bugs but working.
+	void removecallback(std_msgs::Int16 number){
+		int lel = number.data;
+		printf("removing number: %d \n", lel);
+		//int index = find(balls, lel);
+		available_balls.erase(std::remove(available_balls.begin(), available_balls.end(), lel), available_balls.end());
+		/*if (index != -1){
+			available_balls.erase(index);	
+		}*/
+		for (int i=0; i<available_balls.size(); i++){
+			printf("%d, ", available_balls[i]);
 		}
-		else{
-			return;
-		}			
+		printf("\n");
 	}
 
-	//written by bob, muchos bugs
-	void donelaunchingcallback(std_msgs::String::ConstPtr &msg){
-		if (msg->data == "donelaunching"){
+	//written by bob, muchos bugs but working.
+	void donelaunchcallback(std_msgs::String msg){
+		if (msg.data == "donelaunching"){
+			available_balls.clear();
 			for(int i=1;i<20;i++){
 				available_balls.push_back(balls[i]);
 			}
 		}
-		else{
-			return;
-		}
 	}
-
+	
 
 	/* returns array of 3 integers first 2 are the once being summed third is the answer*/
 	int* addition2dig(){
@@ -155,7 +157,7 @@ class mathasker{
 		sound=handle.advertise<std_msgs::String>("/tawi/media/audio",100);
 		drive=handle.advertise<std_msgs::String>("/drive",100);
 		sub = handle.subscribe<std_msgs::String>("/questions", 100, &mathasker::questioncallback,this); //question TRIGGER
-		numberball = handle.subscribe<std_msgs::Int16>("/tawi/core/number", 10, &mathasker::removecallback,this); //remove ball subscription
+		numberball = handle.subscribe<std_msgs::Int16>("/tawi/core/number", 1, &mathasker::removecallback,this); //remove ball subscription
 		launch = handle.subscribe<std_msgs::String>("/tawi/core/launch", 100, &mathasker::donelaunchcallback,this); //done with launching subscription
 		for(int i=1;i<20;i++){
 			available_balls.push_back(balls[i]);

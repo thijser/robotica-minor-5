@@ -66,8 +66,8 @@ target_link_libraries(endSwitchSensor ${catkin_LIBRARIES})
 #DRIVERS
 #########
 #serial
-add_executable(serial src/drivers/serialListener)
-target_link_libraries(serial ${catkin_LIBRARIES})
+add_executable(serialListener src/drivers/serialListener.cpp)
+target_link_libraries(serialListener ${catkin_LIBRARIES})
 
 #Conveyor
 add_executable(conveyorDriver src/drivers/conveyorDriver.cpp)
@@ -90,8 +90,8 @@ target_link_libraries(drivingDriver ${catkin_LIBRARIES})
 #######
 
 #Ball ask
-#add_executable(mathAsker src/mathAsker.cpp)
-#target_link_libraries(mathAsker ${catkin_LIBRARIES})
+add_executable(mathAsker src/mathAsker.cpp)
+target_link_libraries(mathAsker ${catkin_LIBRARIES})
 
 ######
 #Tests

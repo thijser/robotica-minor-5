@@ -21,4 +21,8 @@
 
 	<node name="conveyorDriver" pkg="glados" type="conveyorDriver" output="screen">
 	</node>
+
+	<node name="serialListener" pkg="glados" type="serialListener" output="screen">
+	</node>
+
 </launch>
