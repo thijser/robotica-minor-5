@@ -48,10 +48,13 @@ void NewCore::startConvey(){
 
 void NewCore::spin(){
 	ros::Rate rate(10);
-	askMath();
-	while(ros::ok()){
-		ros::spinOnce();
 
+	int first =1;
+	while(ros::ok()){
+
+		if (first){			
+			askMath();first=0;}
+		ros::spinOnce();
 		rate.sleep();
 	}
 }
