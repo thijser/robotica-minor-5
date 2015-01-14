@@ -2,5 +2,6 @@
 
 	<node name="mathAsker" pkg="glados" type="mathAsker" />
 	<node name="newCore" pkg="glados" type="newCore" />
+	<node name="dance" pkg="glados" type="dance" />
 </launch>
 
