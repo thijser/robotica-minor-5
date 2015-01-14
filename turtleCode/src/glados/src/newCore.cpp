@@ -47,9 +47,13 @@ void NewCore::startConvey(){
 }
 
 void NewCore::spin(){
-	ros::Rate rate(100);
+	ros::Rate rate(10);
 
+	int first =1;
 	while(ros::ok()){
+
+		if (first){			
+			askMath();first=0;}
 		ros::spinOnce();
 		rate.sleep();
 	}
@@ -66,7 +70,7 @@ void NewCore::acceptBall(){
 
 void NewCore::writeSerial(string shit){
 	std::stringstream sysCall;
-        sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial --port=/dev/ttyACM0 --send="<<shit; 
+        sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial/arduino-serial --port=/dev/ttyACM0 --send="<<shit; 
 	string temp= sysCall.str();
 	system(temp.c_str());
 
@@ -87,9 +91,11 @@ void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 	if(strcmp(data,"cor")==0){
 	acceptBall();
 	NewCore::startConvey();
+	NewCore::askMath();
 	}
 }
 void NewCore::askMath(){
+	ROS_INFO("addition1d<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
 	std_msgs::String question;
 	question.data = "1digitAddition";
 	mathPub.publish(question);
@@ -100,5 +106,6 @@ int main(int argc, char **argv){
 	ros::init(argc, argv, "newCore");
 	NewCore nc;
 	nc.init();
+
 	nc.spin();
 }

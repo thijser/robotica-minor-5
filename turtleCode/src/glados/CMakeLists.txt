@@ -8,7 +8,7 @@ find_package(catkin REQUIRED COMPONENTS roscpp message_generation threemxl std_m
 # Generate messages in the 'msg' folder
 add_message_files(
    FILES
-   #music.msg
+   music.msg
  )
 
 generate_messages(
@@ -39,8 +39,8 @@ target_link_libraries(newCore ${catkin_LIBRARIES})
 #######
 
 #dance 
-#add_executable(dance src/dancer.cpp)
-#target_link_libraries(dance ${catkin_LIBRARIES})
+add_executable(dance src/dancer.cpp)
+target_link_libraries(dance ${catkin_LIBRARIES})
 
 #launchManager
 add_executable(launchManager src/launchManager.cpp)

@@ -55,7 +55,7 @@ void LaunchManager::conveyCallback(const std_msgs::Int16::ConstPtr & msg){
 }
 
 void LaunchManager::spin(){
-	ros::Rate rate(100);
+	ros::Rate rate(10);
 	ROS_INFO("Spinning LaunchManager");
 	while(ros::ok()){
 		ros::spinOnce();
