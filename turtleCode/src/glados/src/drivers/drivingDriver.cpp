@@ -114,7 +114,7 @@ void DrivingDriver::initMotors(){
 void DrivingDriver::spin() {
 	ROS_INFO("Spinning da spin");
 
-	ros::Rate r(10000);
+	ros::Rate r(10);
 
 	while(ros::ok()) {
 

@@ -52,7 +52,7 @@ int main(int argc, char **argv) {
 	ros::NodeHandle handle;
 	ros::Publisher pub = handle.advertise<std_msgs::Int16>("/tawi/sensors/switch", 10);
 	std_msgs::Int16 msg;
-	ros::Rate loop_Rate(100);
+	ros::Rate loop_Rate(30);
 
 	while(ros::ok()){
 		int stateRead = 2; 

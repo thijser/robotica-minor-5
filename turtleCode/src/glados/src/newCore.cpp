@@ -47,7 +47,7 @@ void NewCore::startConvey(){
 }
 
 void NewCore::spin(){
-	ros::Rate rate(100);
+	ros::Rate rate(10);
 
 	while(ros::ok()){
 		ros::spinOnce();
