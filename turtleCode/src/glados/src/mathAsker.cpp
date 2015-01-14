@@ -112,7 +112,7 @@ class mathasker{
 		std_msgs::String displaymsg;
 		char opperator='0';
 
-		if(request.data.compare("1digitAdditionfs")==0){
+		if(request.data.compare("1digitAddition")==0){
 
 			questiondata=addition1dig();	
 			opperator='+';

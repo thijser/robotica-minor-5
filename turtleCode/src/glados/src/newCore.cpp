@@ -48,9 +48,10 @@ void NewCore::startConvey(){
 
 void NewCore::spin(){
 	ros::Rate rate(10);
-
+	askMath();
 	while(ros::ok()){
 		ros::spinOnce();
+
 		rate.sleep();
 	}
 }
@@ -87,9 +88,11 @@ void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 	if(strcmp(data,"cor")==0){
 	acceptBall();
 	NewCore::startConvey();
+	NewCore::askMath();
 	}
 }
 void NewCore::askMath(){
+	ROS_INFO("addition1d<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
 	std_msgs::String question;
 	question.data = "1digitAddition";
 	mathPub.publish(question);
@@ -100,5 +103,6 @@ int main(int argc, char **argv){
 	ros::init(argc, argv, "newCore");
 	NewCore nc;
 	nc.init();
+
 	nc.spin();
 }
