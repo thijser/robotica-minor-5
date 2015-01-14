@@ -8,7 +8,7 @@ find_package(catkin REQUIRED COMPONENTS roscpp message_generation threemxl std_m
 # Generate messages in the 'msg' folder
 add_message_files(
    FILES
-   #music.msg
+   music.msg
  )
 
 generate_messages(
