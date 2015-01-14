@@ -1,7 +1,7 @@
 #include "newCore.h"
 
 using namespace std;
-
+int ask =1; 
 void NewCore::init(){
 	
 	mngrSub = handle.subscribe<std_msgs::String>("/tawi/core/launch", 10, &NewCore::launchCallback, this);
@@ -49,11 +49,11 @@ void NewCore::startConvey(){
 void NewCore::spin(){
 	ros::Rate rate(10);
 
-	int first =1;
+
 	while(ros::ok()){
 
-		if (first){			
-			askMath();first=0;}
+		if (ask){			
+			askMath();}
 		ros::spinOnce();
 		rate.sleep();
 	}
@@ -69,6 +69,7 @@ void NewCore::acceptBall(){
 
 
 void NewCore::writeSerial(string shit){
+ROS_INFO("writing shit");
 	std::stringstream sysCall;
         sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial/arduino-serial --port=/dev/ttyACM0 --send="<<shit; 
 	string temp= sysCall.str();
@@ -83,15 +84,17 @@ void NewCore::deleteBall(const int ballnumber){ //written by bob, muchos bugs
 }
 
 void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
+	if(ask>0)
+	ask--;
 	writeSerial(msg->data);
 }
 
 void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 	const char* data = msg->data.c_str();
 	if(strcmp(data,"cor")==0){
-	acceptBall();
-	NewCore::startConvey();
-	NewCore::askMath();
+		acceptBall();
+		NewCore::startConvey();
+		ask++;
 	}
 }
 void NewCore::askMath(){

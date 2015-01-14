@@ -30,8 +30,9 @@ class mathasker{
 
 	ros::Subscriber numberball;
 	ros::Subscriber launch;
+	const int balls[20]={0,1,2,3,4,5,6,7,8,9};
 
-	const int balls[20]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+//	const int balls[20]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
 	std::vector<int> available_balls;
 
 	//written by bob, muchos bugs but working.
@@ -133,6 +134,7 @@ class mathasker{
 			std::cout<<"/question:"<<request<<"is not understanable for the mathasker"<<std::endl;
 			return;
 		}
+
 		std::stringstream ss;
 		ss<<questiondata[0];
 		switch (opperator){
@@ -145,7 +147,15 @@ class mathasker{
 		soundmsg.data=ss.str();	
 		sound.publish(soundmsg);
 		std::stringstream ds;
-		ds<<"s"<<questiondata[0]<<opperator<<questiondata[1];
+		ds<<"s"<<questiondata[0]<<
+		switch (opperator){
+			case '+': ds<<":";break;
+			case '-': ds<<";";break;
+			case 'x': ds<<"<";break;
+			case '/': ds<<"=";break;
+		}
+		ds<<questiondata[1];
+		std::cout<<ds<<std::endl;
 		displaymsg.data=ds.str();
 		display.publish(displaymsg);
 	}
