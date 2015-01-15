@@ -84,9 +84,12 @@ void NewCore::deleteBall(const int ballnumber){ //written by bob, muchos bugs
 }
 
 void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
-	if(ask>0)
-	ask--;
-	writeSerial(msg->data);
+	rOS_INFO("ask= %d",ask);
+	if(ask>0){
+		printf("newSum%s",msg->data.c_str());
+		ask--;
+		writeSerial(msg->data);
+	}
 }
 
 void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
@@ -98,7 +101,6 @@ void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 	}
 }
 void NewCore::askMath(){
-	ROS_INFO("addition1d<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
 	std_msgs::String question;
 	question.data = "1digitAddition";
 	mathPub.publish(question);

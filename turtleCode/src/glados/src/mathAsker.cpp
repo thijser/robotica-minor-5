@@ -147,7 +147,7 @@ class mathasker{
 		soundmsg.data=ss.str();	
 		sound.publish(soundmsg);
 		std::stringstream ds;
-		ds<<"s"<<questiondata[0]<<
+		ds<<"s"<<questiondata[0];
 		switch (opperator){
 			case '+': ds<<":";break;
 			case '-': ds<<";";break;
