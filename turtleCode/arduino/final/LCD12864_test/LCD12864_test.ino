@@ -206,7 +206,14 @@ void readrfid(){ //read rfid ball!
     // Stop encryption on PCD
     mfrc522.PCD_StopCrypto1();
 
-   input = buffer[0];
+//Best workaround ever
+   if(buffer[0] > 9){
+     input = buffer[0] - 6;
+   }
+   else{
+     input = buffer[0];
+   }
+   
    Serial.println(input);
    checkInput(input, answer);
 
