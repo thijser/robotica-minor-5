@@ -43,6 +43,7 @@ Manual for sending math stuff:
 
 #define mouth_open_pos    100
 #define mouth_closed_pos  30
+#define mouth_wait_pos    77
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);	// Create MFRC522 instance
 MFRC522::MIFARE_Key key;
@@ -82,6 +83,10 @@ void openMouth(){ //open the mouth
   }
 }
 
+void waitMouth(){ //open the mouth
+  mouthservo.write(mouth_wait_pos);
+}
+
 void closeMouth(){ //close the mouth
   delay(750);
   for(int i = mouthservo.read(); i > mouth_closed_pos; i--){
@@ -114,15 +119,15 @@ void displayfuse(int firstnumber, int operation , int secondnumber ){
 }
 
 int getAnswer(int firstnumber, int operation , int secondnumber){
-  int answer;
+  
   switch(operation){
-    case 10:
+    case 'D':
       answer = firstnumber + secondnumber;
       break;
-    case 11:
+    case 'E':
       answer = firstnumber - secondnumber;
       break;
-    case 12:
+    case 'F':
       answer = firstnumber * secondnumber;
       break;
   }
@@ -131,14 +136,19 @@ int getAnswer(int firstnumber, int operation , int secondnumber){
 
 void checkInput(int input, int answer){
   if (input == answer){
-    Serial.print("cor");
+    Serial.println("cor");
+    
     closeMouth();
+    //displaySingle("h", "a", "p"); //show happy face (when implemented)
     delay(3000);
 //    openMouth();
     Serial.flush();
   }
   else{
-    Serial.print("w");
+    Serial.println("wro");
+    openMouth();
+    delay(2000);
+    waitMouth();
   }
 }
 
@@ -146,7 +156,6 @@ void displaySingle(char a,char b , char c){
   char str[] = {a,b,c,NULL};
   Serial.write(str);
   if(strcmp(str,"anr")==0){
-    Serial.write("anr123123");
     LCDA.DrawFullScreen(angryFace); 
   }
 }
@@ -214,7 +223,6 @@ void readrfid(){ //read rfid ball!
      input = buffer[0];
    }
    
-   Serial.println(input);
    checkInput(input, answer);
 
     
@@ -240,9 +248,9 @@ void loop(){
         b2=Serial.read();
         b3=Serial.read();
         b4=Serial.read();    
-      answer = getAnswer(b2-48, b3-48, b4-48);
+      answer = getAnswer(b2-48, b3, b4-48);
 
-      openMouth();
+      waitMouth();
       displayfuse(b2-48,b3-48,b4-48); //fuses the three numbers after the s to a math problem.
 
     }else{
