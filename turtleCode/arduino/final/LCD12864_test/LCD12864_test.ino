@@ -1,3 +1,4 @@
+
 /***********************************************
 1. SPI Interface Inatruction
       clockPin --> SCK(EN)
@@ -56,6 +57,8 @@ int counter = 0;
 unsigned char fuse[1024];
 
 void setup(){ //////////////SETUP////////////////////////
+    pinMode(12, OUTPUT);     
+digitalWrite(12, HIGH); 
   Serial.begin(9600);
   mouthservo.attach(servopin);
   SPI.begin();
@@ -129,7 +132,7 @@ int getAnswer(int firstnumber, int operation , int secondnumber){
 
 void checkInput(int input, int answer){
   if (input == answer){
-    Serial.print(input);
+    Serial.print("cor");
     closeMouth();
     delay(3000);
 //    openMouth();
@@ -232,22 +235,30 @@ void dump_byte_array(byte *buffer, byte bufferSize) { //dump byte array function
 }
 
 void loop(){
-
-  if(Serial.available()==4){
+  delay(250);
+  if(Serial.available()>=4){
+  digitalWrite(12, LOW);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);               // wait for a second
+  digitalWrite(12, HIGH);
     byte b1,b2,b3,b4; 
     b1=Serial.read();
-    b2=Serial.read();
-    b3=Serial.read();
-    b4=Serial.read();     
     if(b1=='s'){ //indicates a math problem is coming
+        b2=Serial.read();
+        b3=Serial.read();
+        b4=Serial.read();    
       answer = getAnswer(b2-48, b3-48, b4-48);
-      //Serial.println(answer);
+
       openMouth();
       displayfuse(b2-48,b3-48,b4-48); //fuses the three numbers after the s to a math problem.
 
     }else{
           if(b1=='f'){
+                b2=Serial.read();
+                b3=Serial.read();
+                b4=Serial.read();    
             displaySingle(b2,b3,b4);
+          }else{
+            
           }
     }
     }
