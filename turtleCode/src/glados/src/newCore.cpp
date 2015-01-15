@@ -1,13 +1,13 @@
 #include "newCore.h"
 
 using namespace std;
-int ask =1; 
+int ask =10; 
 void NewCore::init(){
 	
 	mngrSub = handle.subscribe<std_msgs::String>("/tawi/core/launch", 10, &NewCore::launchCallback, this);
 	mngrPub = handle.advertise<std_msgs::String>("/tawi/core/launch", 100);
 
-	mathSub = handle.subscribe<std_msgs::String>("/display", 10, &NewCore::launchCallback, this);
+	mathSub = handle.subscribe<std_msgs::String>("/display", 10, &NewCore::mathCallback, this);
 	serSub = handle.subscribe<std_msgs::String>("/tawi/arduino/serial", 100,&NewCore::serialCallback,this);
 	mathPub = handle.advertise<std_msgs::String>("/questions", 100);
 
@@ -49,7 +49,6 @@ void NewCore::startConvey(){
 void NewCore::spin(){
 	ros::Rate rate(10);
 
-
 	while(ros::ok()){
 
 		if (ask){			
@@ -66,10 +65,8 @@ void NewCore::acceptBall(){
 	ballPub.publish(balls);
 }
 
-
-
 void NewCore::writeSerial(string shit){
-ROS_INFO("writing shit");
+	ROS_INFO("writing shit");
 	std::stringstream sysCall;
         sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial/arduino-serial --port=/dev/ttyACM0 --send="<<shit; 
 	string temp= sysCall.str();
@@ -84,7 +81,7 @@ void NewCore::deleteBall(const int ballnumber){ //written by bob, muchos bugs
 }
 
 void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
-	rOS_INFO("ask= %d",ask);
+	ROS_INFO("ask= %d",ask);
 	if(ask>0){
 		printf("newSum%s",msg->data.c_str());
 		ask--;
