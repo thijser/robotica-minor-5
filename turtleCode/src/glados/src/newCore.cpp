@@ -1,7 +1,7 @@
 #include "newCore.h"
 
 using namespace std;
-int ask =10; 
+int ask =1; 
 void NewCore::init(){
 	
 	mngrSub = handle.subscribe<std_msgs::String>("/tawi/core/launch", 10, &NewCore::launchCallback, this);
