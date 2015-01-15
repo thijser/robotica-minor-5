@@ -52,7 +52,6 @@ Servo mouthservo; //our servo
 
 int answer;
 int input;
-int counter = 0;
 
 unsigned char fuse[1024];
 
@@ -207,24 +206,12 @@ void readrfid(){ //read rfid ball!
     // Stop encryption on PCD
     mfrc522.PCD_StopCrypto1();
 
-    counter++;
+   input = buffer[0];
+   Serial.println(input);
+   checkInput(input, answer);
 
-    if (answer > 9 && counter == 2){
-      input += buffer[0];
-      checkInput(input, answer);
-      counter = 0;
-    }
-    else if (answer > 9 && counter == 1){
-      input = 10*buffer[0];
-      return;
-    }
-    else{
-      input = buffer[0];
-      checkInput(input, answer);
-      counter = 0;
-    }
     
-}
+} 
 
 
 void dump_byte_array(byte *buffer, byte bufferSize) { //dump byte array function
