@@ -18,6 +18,7 @@ Publishes to:
 	/drive
 	/display	
 */ 
+#define NUMBEROFBALLS 20 
 class mathasker{
 	public: 
 
@@ -30,7 +31,8 @@ class mathasker{
 
 	ros::Subscriber numberball;
 	ros::Subscriber launch;
-	const int balls[20]={0,1,2,3,4,5,6,7,8,9};
+	
+	const int balls[NUMBEROFBALLS]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
 
 //	const int balls[20]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
 	std::vector<int> available_balls;
@@ -136,25 +138,31 @@ class mathasker{
 		}
 
 		std::stringstream ss;
-		ss<<questiondata[0];
+		char dig = (char)(((int)'0')+questiondata[0]);;
+		dig=dig+questiondata[0];
+		ss<<dig;
 		switch (opperator){
-			case '+': ss<<":";break;
-			case '-': ss<<";";break;
-			case 'x': ss<<"<";break;
-			case '/': ss<<"=";break;
+			case '+': ss<<"D";break;
+			case '-': ss<<"E";break;
+			case 'x': ss<<"F";break;
+			case '/': ss<<"G";break;
 		}
-		ss<<questiondata[1];
+		dig = (char)(((int)'0')+questiondata[1]);
+		ss<<dig;
 		soundmsg.data=ss.str();	
 		sound.publish(soundmsg);
 		std::stringstream ds;
-		ds<<"s"<<questiondata[0]<<
+		 dig = (char)(((int)'0')+questiondata[0]);;
+
+		ds<<"s"<<dig;
 		switch (opperator){
-			case '+': ds<<":";break;
-			case '-': ds<<";";break;
-			case 'x': ds<<"<";break;
-			case '/': ds<<"=";break;
+			case '+': ds<<'D';break;
+			case '-': ds<<"E";break;
+			case 'x': ds<<"F";break;
+			case '/': ds<<"G";break;
 		}
-		ds<<questiondata[1];
+		 dig = (char)(((int)'0')+questiondata[1]);;
+		ds<<dig;
 		std::cout<<ds<<std::endl;
 		displaymsg.data=ds.str();
 		display.publish(displaymsg);
