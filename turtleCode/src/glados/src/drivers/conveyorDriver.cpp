@@ -35,7 +35,6 @@ void ConveyorDriver::managerCallback(const std_msgs::Int16::ConstPtr &msg){
 		fs.open("/sys/class/gpio/gpio50/value"); //PORT
 	  	fs << "1"; // "1" for off
 	   	fs.close();
-	   	ROS_INFO("Sent 0 to gpio50/value");
 
 	   	ros::Duration(ROTATIONTIME).sleep();
 	   	std_msgs::Int16 msg;
