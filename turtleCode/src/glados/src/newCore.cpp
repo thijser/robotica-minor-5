@@ -98,6 +98,7 @@ void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 	}
 }
 void NewCore::askMath(){
+	ROS_INFO("asking for something");
 	std_msgs::String question;
 	question.data = "1digitAddition";
 	mathPub.publish(question);
