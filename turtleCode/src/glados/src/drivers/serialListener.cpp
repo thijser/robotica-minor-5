@@ -26,6 +26,7 @@ class serialListener{
 
 		if(read.str()[0]!=0&&read.str()[0]!=10){
 			serialmsg.data=read.str();
+			ROS_INFO("SerialListener:received data: %s" , read.str());
 			if(checklastln(read.str().c_str(),255)){
 				arduino.publish(serialmsg);
 				ROS_INFO("SerialListener: Read %s", read.str());
