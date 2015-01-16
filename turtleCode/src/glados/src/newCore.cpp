@@ -67,7 +67,7 @@ void NewCore::acceptBall(){
 }
 
 void NewCore::writeSerial(string shit){
-	ROS_INFO("writing shit");
+	ROS_INFO("NewCore: Writing on serial through system call");
 	std::stringstream sysCall;
         sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial/arduino-serial --port=/dev/ttyACM0 --send="<<shit; 
 	string temp= sysCall.str();
@@ -92,14 +92,13 @@ void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
 
 void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 	const char* data = msg->data.c_str();
-	if(strcmp(data,"cor")==0){
-		ROS_INFO("Core: SerialCallback: Received cor");
+	if(strcmp(data,"c")==0){
 		acceptBall();
 		NewCore::startConvey();
 		ask++;
 	}
 	else{
-		ROS_INFO("Core: SerialCallback: message was not cor");
+		ROS_INFO("NewCore: SerialCallback: message was not c");
 	}
 }
 void NewCore::askMath(){
