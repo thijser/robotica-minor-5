@@ -23,10 +23,12 @@ class serialListener{
 	void poll(){
 		ROS_INFO("polling");
 		read<<(char*)readline();
+
 		if(read.str()[0]!=0&&read.str()[0]!=10){
 			serialmsg.data=read.str();
 			if(checklastln(read.str().c_str(),255)){
 				arduino.publish(serialmsg);
+				ROS_INFO("SerialListener: Read %s", read.str());
 				read.str("");	
 			}
 		}
