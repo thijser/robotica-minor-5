@@ -91,8 +91,7 @@ void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
 }
 
 void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
-	const char* data = msg->data.c_str();
-	if(strcmp(data,"c")==0){
+	if("c" == msg->data){
 		acceptBall();
 		NewCore::startConvey();
 		ask++;
