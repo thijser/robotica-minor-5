@@ -90,7 +90,16 @@ void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
 	}
 }
 
+int stringToAscii(string s){
+	int sum = 0;
+  	for (unsigned int i = 0; i < s.size(); i++) {
+    	sum += s[i];
+  	}
+  	return sum;
+}
+
 void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
+
 	if("c" == msg->data){
 		acceptBall();
 		NewCore::startConvey();
