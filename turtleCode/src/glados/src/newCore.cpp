@@ -93,9 +93,13 @@ void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
 void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 	const char* data = msg->data.c_str();
 	if(strcmp(data,"cor")==0){
+		ROS_INFO("Core: SerialCallback: Received cor");
 		acceptBall();
 		NewCore::startConvey();
 		ask++;
+	}
+	else{
+		ROS_INFO("Core: SerialCallback: message was not cor");
 	}
 }
 void NewCore::askMath(){

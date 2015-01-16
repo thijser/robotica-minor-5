@@ -11,6 +11,7 @@ class serialListener{
 	void poll(){
 		ROS_INFO("polling");
 		char* read=(char*)readline();
+		ROS_INFO("SerialListener: Read %s", read);
 		if(read[0]!=0&&read[0]!=10){
 			serialmsg.data=read;
 			arduino.publish(serialmsg);
