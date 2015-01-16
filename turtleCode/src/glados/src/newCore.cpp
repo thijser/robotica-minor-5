@@ -99,7 +99,7 @@ int stringToAscii(string s){
 }
 
 void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
-
+	ROS_INFO("msg-data is %d. Looking for %d", stringToAscii(msg->data), stringToAscii("c"));
 	if("c" == msg->data){
 		acceptBall();
 		NewCore::startConvey();
