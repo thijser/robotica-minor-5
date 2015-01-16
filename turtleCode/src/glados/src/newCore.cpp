@@ -59,6 +59,7 @@ void NewCore::spin(){
 }
 
 void NewCore::acceptBall(){
+	ROS_INFO("Ball accepted. Publishing to LaunchManager");
 	ballCount++;
 	std_msgs::Int16 balls;
 	balls.data = ballCount;
