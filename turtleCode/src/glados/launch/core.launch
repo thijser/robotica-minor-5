@@ -1,7 +1,7 @@
 <launch>
 
-	<node name="mathAsker" pkg="glados" type="mathAsker" />
-	<node name="newCore" pkg="glados" type="newCore" />
-	<node name="dance" pkg="glados" type="dance" />
+	<node name="mathAsker" pkg="glados" type="mathAsker" output="screen"/>
+	<node name="newCore" pkg="glados" type="newCore" output="screen"/>
+	<node name="dance" pkg="glados" type="dance" output="screen"/>
 </launch>
 
