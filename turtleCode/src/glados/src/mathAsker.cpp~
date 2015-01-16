@@ -108,7 +108,7 @@ class mathasker{
 		}
 
 	void questioncallback(std_msgs::String request){
-
+		ROS_INFO("request received");
 
 		int* questiondata;
 		std_msgs::String soundmsg;
@@ -166,6 +166,7 @@ class mathasker{
 		std::cout<<ds<<std::endl;
 		displaymsg.data=ds.str();
 		display.publish(displaymsg);
+		ROS_INFO("sending: %S" , ds.str().c_str());
 	}
 
 

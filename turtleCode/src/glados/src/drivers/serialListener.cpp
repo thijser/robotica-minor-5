@@ -2,18 +2,33 @@
 #include <std_msgs/String.h>
 #include <string>
 #include "serialDriver.c"
+#include <sstream>      // std::stringstream
 
 class serialListener{
 	public:
 	ros::NodeHandle handle;
 	ros::Publisher arduino;
 	std_msgs::String serialmsg;
+	int checklastln(const char* toCheck , int maxLength){
+		for(int i=0;i<maxLength;i++){
+			if(toCheck[i]==10){
+				return 1;
+			}
+			if(toCheck[i]==0){
+				return 0;
+			}
+		}
+	}
+	std::stringstream read;
 	void poll(){
 		ROS_INFO("polling");
-		char* read=(char*)readline();
-		if(read[0]!=0&&read[0]!=10){
-			serialmsg.data=read;
-			arduino.publish(serialmsg);
+		read<<(char*)readline();
+		if(read.str()[0]!=0&&read.str()[0]!=10){
+			serialmsg.data=read.str();
+			if(checklastln(read.str().c_str(),255)){
+				arduino.publish(serialmsg);
+				read.str("");	
+			}
 		}
 	}
 
