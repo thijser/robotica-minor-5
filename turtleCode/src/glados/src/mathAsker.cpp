@@ -49,7 +49,7 @@ class mathasker{
 		for (int i=0; i<available_balls.size(); i++){
 			printf("%d, ", available_balls[i]);
 		}
-		printf("\n");
+		printf("\n");FF
 	}
 
 	//written by bob, muchos bugs but working.
@@ -166,6 +166,7 @@ class mathasker{
 		std::cout<<ds<<std::endl;
 		displaymsg.data=ds.str();
 		display.publish(displaymsg);
+		ROS_INFO("sending: %S" , ds.str().c_str());
 	}
 
 
