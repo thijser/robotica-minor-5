@@ -139,7 +139,7 @@ void checkInput(int input, int answer){
     Serial.println("cor");
     
     closeMouth();
-    //displaySingle("h", "a", "p"); //show happy face (when implemented)
+    //displaySingle('h', 'a', 'p'); //show happy face (when implemented)
     delay(3000);
 //    openMouth();
     Serial.flush();
@@ -237,11 +237,7 @@ void dump_byte_array(byte *buffer, byte bufferSize) { //dump byte array function
 }
 
 void loop(){
-  delay(250);
   if(Serial.available()>=4){
-  digitalWrite(12, LOW);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);               // wait for a second
-  digitalWrite(12, HIGH);
     byte b1,b2,b3,b4; 
     b1=Serial.read();
     if(b1=='s'){ //indicates a math problem is coming
