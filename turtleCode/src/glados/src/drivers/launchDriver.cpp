@@ -55,7 +55,6 @@ void LaunchDriver::switchCallback(const std_msgs::Int16::ConstPtr &msg){
 }
 
 void LaunchDriver::launchCallback(const std_msgs::Int16::ConstPtr &msg){
-	ROS_INFO("launchCallback");
 	if(msg->data == 1){
 		launch();
 	}

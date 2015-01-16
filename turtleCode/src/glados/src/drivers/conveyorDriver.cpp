@@ -32,14 +32,15 @@ void ConveyorDriver::init(){
 
 void ConveyorDriver::managerCallback(const std_msgs::Int16::ConstPtr &msg){
 	if(msg->data){
+		ROS_INFO("ConveyorDriver: mngrCallback: starting conveyor");
 		fs.open("/sys/class/gpio/gpio50/value"); //PORT
 	  	fs << "1"; // "1" for off
 	   	fs.close();
-	   	ROS_INFO("Sent 0 to gpio50/value");
 
 	   	ros::Duration(ROTATIONTIME).sleep();
+	   	ROS_INFO("ConveyorDriver: mngrCallback: stopping conveyor");
 	   	std_msgs::Int16 msg;
-	   	msg.data = 1;
+	   	msg.data = 0;
 	   	pub.publish(msg);
 	   	fs.open("/sys/class/gpio/gpio50/value"); //PORT
 	  	fs << "0"; // "1" for off

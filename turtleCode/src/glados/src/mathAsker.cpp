@@ -108,7 +108,7 @@ class mathasker{
 		}
 
 	void questioncallback(std_msgs::String request){
-
+		ROS_INFO("request received");
 
 		int* questiondata;
 		std_msgs::String soundmsg;

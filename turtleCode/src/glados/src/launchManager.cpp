@@ -15,6 +15,7 @@ void LaunchManager::init(){
 void LaunchManager::coreCallback(const std_msgs::String::ConstPtr &msg){
 	if("startconveyor" == msg->data){
 		if(!conveying){
+			ROS_INFO("Launchmanager: coreCallback: pusblish 1 to conveyorDriver");
 			std_msgs::Int16 message;
 			message.data = 1;
 			conveyPub.publish(message);
@@ -47,7 +48,7 @@ void LaunchManager::launchCallback(const std_msgs::Int16::ConstPtr & msg){
 }
 
 void LaunchManager::conveyCallback(const std_msgs::Int16::ConstPtr & msg){
-	if(msg->data == 1){ //currently launching
+	if(msg->data == 1){ //currently working
 		std_msgs::String cdonetocore;
 		cdonetocore.data = "doneconveying";
 		corePub.publish(cdonetocore);
