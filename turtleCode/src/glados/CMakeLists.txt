@@ -39,8 +39,8 @@ target_link_libraries(newCore ${catkin_LIBRARIES})
 #######
 
 #dance 
-add_executable(dance src/dancer.cpp)
-target_link_libraries(dance ${catkin_LIBRARIES})
+#add_executable(dance src/dancer.cpp)
+#target_link_libraries(dance ${catkin_LIBRARIES})
 
 #launchManager
 add_executable(launchManager src/launchManager.cpp)
