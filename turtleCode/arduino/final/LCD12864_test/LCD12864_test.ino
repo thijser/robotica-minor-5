@@ -53,7 +53,6 @@ Servo mouthservo; //our servo
 
 int answer;
 int input;
-
 unsigned char fuse[1024];
 
 void setup(){ //////////////SETUP////////////////////////
@@ -136,7 +135,7 @@ int getAnswer(int firstnumber, int operation , int secondnumber){
 
 void checkInput(int input, int answer){
   if (input == answer){
-    Serial.println("cor");
+    writeserial("c");
     
     closeMouth();
     //displaySingle('h', 'a', 'p'); //show happy face (when implemented)
@@ -145,7 +144,7 @@ void checkInput(int input, int answer){
     Serial.flush();
   }
   else{
-    Serial.println("wro");
+    writeserial("w");
     openMouth();
     delay(2000);
     waitMouth();
@@ -236,6 +235,29 @@ void dump_byte_array(byte *buffer, byte bufferSize) { //dump byte array function
     }
 }
 
+boolean confirmed;
+String lastmsg; 
+
+void writeserial(char* input){
+    lastmsg=input;
+    while(1){
+    Serial.println(input);
+    delay(200);
+    if(Serial.available()>=4){
+      byte b1,b2,b3,b4; 
+      b1=Serial.read();
+      if(b1='c'){
+      b2=Serial.read();
+      b3=Serial.read();
+      b4=Serial.read();
+        if(b2=='o'&&b3=='n'&&b4=='f'){
+          return;
+        }
+      }
+     
+    }
+  }
+}
 void loop(){
   if(Serial.available()>=4){
     byte b1,b2,b3,b4; 
@@ -244,6 +266,7 @@ void loop(){
         b2=Serial.read();
         b3=Serial.read();
         b4=Serial.read();    
+        Serial.write("yo");
       answer = getAnswer(b2-48, b3, b4-48);
 
       waitMouth();
