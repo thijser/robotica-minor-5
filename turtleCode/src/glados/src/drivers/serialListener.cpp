@@ -19,7 +19,21 @@ class serialListener{
 			}
 		}
 	}
+	int validatemsg(std::string msg){
+		if(msg[0]=='c'||msg[0]=='w')
+			return 1;
+		return 0;
+	}
+	void writeSerial(std::string shit){
+		ROS_INFO("confirming");
+		std::stringstream sysCall;
+	        sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial/arduino-serial --port=/dev/ttyACM0 --send="<<shit; 	
+		std::string temp= sysCall.str();
+		system(temp.c_str());
+	}
+
 	std::stringstream read;
+
 	void poll(){
 		ROS_INFO("polling");
 		read<<(char*)readline();
@@ -28,9 +42,12 @@ class serialListener{
 			serialmsg.data=read.str();
 			ROS_INFO("SerialListener:received data: %s" , read.str().c_str());
 			if(checklastln(read.str().c_str(),255)){
-				arduino.publish(serialmsg);
-				ROS_INFO("SerialListener: Read %s", read.str().c_str());
-				read.str("");	
+				if(validatemsg(read.str())){	
+					writeSerial("conf");				
+					arduino.publish(serialmsg);
+					ROS_INFO("SerialListener: Read %s", read.str().c_str());
+					read.str("");	
+				}
 			}
 		}
 	}
