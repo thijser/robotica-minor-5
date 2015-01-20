@@ -21,7 +21,7 @@ int UltrasoneSensor::init(void) {
 	/* Get pointers to PRU local memory */
 	void *pruDataMem;
 	prussdrv_map_prumem(PRUSS0_PRU0_DATARAM, &pruDataMem);
-	unsigned int *pruData = (unsigned int *) pruDataMem;
+	pruData = (unsigned int *) pruDataMem;
 
 	/* Execute code on PRU */
 	printf(">> Executing HCSR-04 code\n");
@@ -42,18 +42,18 @@ void UltrasoneSensor::spin(){
 		// Print the distance received from the sonar
 		// At 20 degrees in dry air the speed of sound is 342.2 cm/sec
 		// so it takes 29.12 us to make 1 cm, i.e. 58.44 us for a roundtrip of 1 cm
-		printf("%3d: Distance = %.2f cm\n", i, (float) pruData[0] / 58.44);
+		printf("Distance = %.2f cm\n",  (float) (pruData[0] / 58.44));
 
 		std_msgs::Float32 msg;
-		msg.data = (float) pruData[0] / 58.44);
-		corePub.publish(msg);
+		msg.data = (float) (pruData[0] / 58.44);
+		pub.publish(msg);
 
 		rate.sleep();
 	}
 }
 
 int main(int argc, char **argv){
-	ros::init(argc, argv, "ultraSone");
+	ros::init(argc, argv, "UltrasoneSensor");
 	UltrasoneSensor us;
 	us.init();
 	us.spin();

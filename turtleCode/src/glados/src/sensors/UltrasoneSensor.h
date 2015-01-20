@@ -11,10 +11,10 @@ class UltrasoneSensor{
 public:
 	void spin();
 	int init(void);
-	UltrasoneSensor();
 protected:
 	ros::NodeHandle handle ;
 	ros::Publisher pub;
+	unsigned int * pruData;
 };
 
 #endif

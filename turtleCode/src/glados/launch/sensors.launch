@@ -4,4 +4,7 @@
 
 	<node name="endSwitchSensor" pkg="glados" type="endSwitchSensor" output="screen">
 	</node>
+
+	<!--node name="UltrasoneSensor" pkg="glados" type="UltrasoneSensor" output="screen">
+	</node-->
 </launch>

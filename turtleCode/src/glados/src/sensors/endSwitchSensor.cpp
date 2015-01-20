@@ -27,7 +27,7 @@ int main(int argc, char **argv) {
 		fs >> stateRead;
 		fs.close();
 		if(stateRead == 2)
-			//ROS_INFO("stateRead not set");
+			ROS_INFO("stateRead not set");
 		msg.data = stateRead; //Inverting for BBB logic no longer neccesary if you set port direction to in.
 		
 		pub.publish(msg);

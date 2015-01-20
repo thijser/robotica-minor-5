@@ -6,7 +6,7 @@ void LaunchManager::init(){
 	coreSub = handle.subscribe<std_msgs::String>("/tawi/core/launch", 10, &LaunchManager::coreCallback, this);
 	launchSub = handle.subscribe<std_msgs::Int16>("/tawi/mngr/launch", 10, &LaunchManager::launchCallback, this);
 	conveySub = handle.subscribe<std_msgs::Int16>("/tawi/mngr/conveyor", 10, &LaunchManager::conveyCallback, this);
-	usPub = handle.subscribe<std_msgs::Float32>("/tawi/mngr/ussensor", 10, &LaunchManager::usCallback, this);
+	usSub = handle.subscribe<std_msgs::Float32>("/tawi/mngr/ussensor", 10, &LaunchManager::usCallback, this);
 
 	corePub = handle.advertise<std_msgs::String>("/tawi/core/launch", 100);
 	launchPub = handle.advertise<std_msgs::Int16>("/tawi/motors/launch", 100);
@@ -14,6 +14,7 @@ void LaunchManager::init(){
 }
 
 void LaunchManager::usCallback(const std_msgs::Float32::ConstPtr &msg){
+	ROS_INFO("ultrasone callback: %f", msg->data);
 	if(msg->data > 40){
 		ultrasoneSafe = true;
 	}
@@ -37,7 +38,7 @@ void LaunchManager::coreCallback(const std_msgs::String::ConstPtr &msg){
 		}
 	}
 	if("startlaunch" == msg->data){	
-		if(ultrasoneSafe{
+		if(ultrasoneSafe){
 			std_msgs::Int16 message;
 			message.data = 1;
 			launchPub.publish(message);
