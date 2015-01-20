@@ -2,6 +2,7 @@
 
 int UltrasoneSensor::init(void) {
 
+	pub = handle.advertise<std_msgs::Float32>("/tawi/mngr/ussensor", 100);
 	/* Initialize the PRU */
 	printf(">> Initializing PRU\n");
 	tpruss_intc_initdata pruss_intc_initdata = PRUSS_INTC_INITDATA;
@@ -42,6 +43,11 @@ void UltrasoneSensor::spin(){
 		// At 20 degrees in dry air the speed of sound is 342.2 cm/sec
 		// so it takes 29.12 us to make 1 cm, i.e. 58.44 us for a roundtrip of 1 cm
 		printf("%3d: Distance = %.2f cm\n", i, (float) pruData[0] / 58.44);
+
+		std_msgs::Float32 msg;
+		msg.data = (float) pruData[0] / 58.44);
+		corePub.publish(msg);
+
 		rate.sleep();
 	}
 }

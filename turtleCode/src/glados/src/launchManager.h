@@ -4,6 +4,7 @@
 #include <ros/ros.h>
 #include <std_msgs/String.h>
 #include <std_msgs/Int16.h>
+#include <std_msgs/Float32.h>
 #include <string.h>
 //Ultrasonic
 #include <prussdrv.h>
@@ -17,7 +18,7 @@ public:
 	void conveyCallback(const std_msgs::Int16::ConstPtr & msg);
 	void init();
 	void spin();
-	bool ultrasoneSafe();
+	void usCallback(const std_msgs::Float32::ConstPtr & msg);
 protected:
 	ros::NodeHandle handle;
 	ros::Subscriber coreSub;
@@ -26,9 +27,10 @@ protected:
 	ros::Publisher corePub;
 	ros::Publisher launchPub;
 	ros::Publisher conveyPub;
+	ros::Subscriber usSub;
 	bool launching = false;
 	bool conveying = false;
-
+	bool ultrasoneSafe = false;
 };
 
 #endif 

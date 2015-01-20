@@ -1,6 +1,8 @@
 #ifndef ULTRASONESENSOR_H
 #define ULTRASONESENSOR_H
 
+#include <ros/ros.h>
+#include <std_msgs/Float32.h>
 #include <string>
 #include <prussdrv.h>
 #include <pruss_intc_mapping.h>
@@ -11,8 +13,8 @@ public:
 	int init(void);
 	UltrasoneSensor();
 protected:
-	ros::NodeHandle;
-	ros::Publisher;
+	ros::NodeHandle handle ;
+	ros::Publisher pub;
 };
 
 #endif
