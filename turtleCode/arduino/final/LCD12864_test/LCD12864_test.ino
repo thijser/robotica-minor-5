@@ -43,7 +43,7 @@ Manual for sending math stuff:
 
 #define mouth_open_pos    142
 #define mouth_closed_pos  77
-#define mouth_wait_pos    115
+#define mouth_wait_pos    120
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);	// Create MFRC522 instance
 MFRC522::MIFARE_Key key;
@@ -69,8 +69,9 @@ digitalWrite(12, HIGH);
   readloop(100);
   LCDA.initDriverPin(2,3,4); 
   LCDA.Initialise(); // INIT SCREEN  
-
-  closeMouth();
+  openMouth();
+  delay(500);
+  waitMouth();
 
   //Serial.println(F("boot completed"));
 }
@@ -78,20 +79,47 @@ digitalWrite(12, HIGH);
 void openMouth(){ //open the mouth
   for(int i = mouthservo.read(); i < mouth_open_pos; i++){
     mouthservo.write(i);
-    delay(15);
+    delay(8);
   }
 }
 
 void waitMouth(){ //open the mouth
-  mouthservo.write(mouth_wait_pos);
-}
 
-void closeMouth(){ //close the mouth
+  for(int i = mouthservo.read(); i < mouth_wait_pos; i++){
+    mouthservo.write(i);
+     delay(15);
+  }
+    for(int i = mouthservo.read(); i > mouth_wait_pos; i--){
+    mouthservo.write(i);
+     delay(15);
+  }
+
+}
+void semiclose(){
+    for(int i = mouthservo.read(); i < mouth_closed_pos+20; i++){
+    mouthservo.write(i);
+     delay(15);
+  }
+    for(int i = mouthservo.read(); i > mouth_closed_pos+20; i--){
+    mouthservo.write(i);
+     delay(15);
+  }
+}
+void fullcloseMouth(){
   delay(750);
   for(int i = mouthservo.read(); i > mouth_closed_pos; i--){
     mouthservo.write(i);
     delay(15);
   }
+
+}
+void closeMouth(){ //close the mouth
+ int repeat= random(1,5);
+for(int i=0;i<repeat;i++){
+    fullcloseMouth();
+    semiclose();
+  }
+  fullcloseMouth();
 }
 
 
@@ -118,7 +146,6 @@ void displayfuse(int firstnumber, int operation , int secondnumber ){
 }
 
 int getAnswer(int firstnumber, int operation , int secondnumber){
-  
   switch(operation){
     case 'D':
       answer = firstnumber + secondnumber;
@@ -130,6 +157,7 @@ int getAnswer(int firstnumber, int operation , int secondnumber){
       answer = firstnumber * secondnumber;
       break;
   }
+  Serial.println();
   return answer;
 }
 
@@ -144,7 +172,7 @@ void checkInput(int input, int answer){
     Serial.flush();
   }
   else{
-    erial("w");
+    writeserial("w");
     openMouth();
     delay(2000);
     waitMouth();
@@ -215,12 +243,8 @@ void readrfid(){ //read rfid ball!
     mfrc522.PCD_StopCrypto1();
 
 //Best workaround ever
-   if(buffer[0] > 9){
-     input = buffer[0] - 6;
-   }
-   else{
+
      input = buffer[0];
-   }
    
    checkInput(input, answer);
 
