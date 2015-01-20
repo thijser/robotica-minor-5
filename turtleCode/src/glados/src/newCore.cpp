@@ -85,7 +85,7 @@ void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
 	ROS_INFO("ask= %d",ask);
 	if(ask>0){
 		printf("newSum%s",msg->data.c_str());
-		ask--;
+		ask=0;
 		writeSerial(msg->data);
 	}
 }
@@ -103,7 +103,7 @@ void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 	if('c' == msg->data[0]){
 		acceptBall();
 		NewCore::startConvey();
-		ask++;
+		ask=1;
 	}
 	else{
 		ROS_INFO("NewCore: SerialCallback: message was not c");

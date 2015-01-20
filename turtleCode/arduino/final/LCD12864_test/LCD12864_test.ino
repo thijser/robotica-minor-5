@@ -144,7 +144,7 @@ void checkInput(int input, int answer){
     Serial.flush();
   }
   else{
-    writeserial("w");
+    erial("w");
     openMouth();
     delay(2000);
     waitMouth();
