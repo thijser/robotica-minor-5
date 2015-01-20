@@ -2,16 +2,17 @@
 #define ULTRASONESENSOR_H
 
 #include <string>
+#include <prussdrv.h>
+#include <pruss_intc_mapping.h>
 
 class UltrasoneSensor{
 public:
-	std::string tag;
-	int read();
-protected:
+	void spin();
+	int init(void);
 	UltrasoneSensor();
-	UltrasoneSensor(std::string tag);
-	std::string getTag();
-	int readParse();
+protected:
+	ros::NodeHandle;
+	ros::Publisher;
 };
 
 #endif
