@@ -45,7 +45,7 @@ void LaunchManager::coreCallback(const std_msgs::String::ConstPtr &msg){
 		}
 		else{
 			std_msgs::Int16 message;
-			message.data = 0;
+			message.data = 2;
 			launchPub.publish(message);
 		}
 	}
