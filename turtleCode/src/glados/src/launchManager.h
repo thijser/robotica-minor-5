@@ -5,6 +5,11 @@
 #include <std_msgs/String.h>
 #include <std_msgs/Int16.h>
 #include <string.h>
+//Ultrasonic
+#include <prussdrv.h>
+#include <pruss_intc_mapping.h>
+
+
 class LaunchManager{
 public:
 	void coreCallback(const std_msgs::String::ConstPtr &msg);
@@ -12,6 +17,7 @@ public:
 	void conveyCallback(const std_msgs::Int16::ConstPtr & msg);
 	void init();
 	void spin();
+	bool ultrasoneSafe();
 protected:
 	ros::NodeHandle handle;
 	ros::Subscriber coreSub;

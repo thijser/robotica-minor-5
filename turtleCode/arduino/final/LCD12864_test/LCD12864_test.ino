@@ -41,9 +41,9 @@ Manual for sending math stuff:
 #define SS_PIN		      10	
 #define servopin        6
 
-#define mouth_open_pos    100
-#define mouth_closed_pos  30
-#define mouth_wait_pos    77
+#define mouth_open_pos    142
+#define mouth_closed_pos  77
+#define mouth_wait_pos    115
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);	// Create MFRC522 instance
 MFRC522::MIFARE_Key key;
