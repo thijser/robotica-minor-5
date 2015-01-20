@@ -89,8 +89,6 @@ bool LaunchDriver::launch(){
 	// safetycheck for stopping when not yet at halfballs
 	if(!launching && switch1_ok == 1){
 		ROS_INFO("safetycheck for stopping when not yet at halfballs");
-		stopLaunch = false;
-		endTransition = false;
 		setPort(0);
 	}
 	
