@@ -47,7 +47,7 @@ class serialListener{
 		ROS_INFO("SerialListener: Ping before readline");
 		read<<(char*)readline(); // what are you reading?
 		ROS_INFO("SerialListener: poll: Read some line");
-		if(read.str()[0]!=0&&read.str()[0]!=10){ //what is even going on here
+//		if(read.str()[0]!=0&&read.str()[0]!=10){ //what is even going on here
 	//		ROS_INFO("SerialListener: poll: weird ass if statement fullfilled");
 			serialmsg.data=read.str();
 			ROS_INFO("SerialListener:received data: %s" , read.str().c_str());
