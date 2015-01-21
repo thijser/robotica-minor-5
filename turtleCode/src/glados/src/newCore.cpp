@@ -86,7 +86,7 @@ void NewCore::deleteBall(const int ballnumber){ //written by bob, muchos bugs
 void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
 	ROS_INFO("ask= %d",ask);
 	if(ask>0){
-		printf("newSum%s",msg->data.c_str());
+		ROS_INFO("NewCore: mathCallback: 	newSum: %s",msg->data.c_str());
 		ask=0;
 		writeSerial(msg->data);
 	}
@@ -111,6 +111,7 @@ void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 		ROS_INFO("NewCore: SerialCallback: message was not c");
 	}
 }
+
 void NewCore::askMath(){
 	ROS_INFO("asking for something");
 	std_msgs::String question;
