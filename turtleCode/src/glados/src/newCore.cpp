@@ -4,7 +4,7 @@
 using namespace std;
 int ask =1; 
 void NewCore::init(){
-	
+
 	mngrSub = handle.subscribe<std_msgs::String>("/tawi/core/launch", 10, &NewCore::launchCallback, this);
 	mngrPub = handle.advertise<std_msgs::String>("/tawi/core/launch", 100);
 
@@ -52,7 +52,7 @@ void NewCore::spin(){
 
 	while(ros::ok()){
 
-		if (ask){			
+		if (ask){
 			askMath();}
 		ros::spinOnce();
 		rate.sleep();
@@ -68,10 +68,11 @@ void NewCore::acceptBall(){
 }
 
 void NewCore::writeSerial(string shit){
-	ROS_INFO("NewCore: Writing on serial through system call");
+	ROS_INFO("NewCore: Writing on serial through system call:%s", shit.c_str());
 	std::stringstream sysCall;
         sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial/arduino-serial --port=/dev/ttyACM0 --send="<<shit; 
 	string temp= sysCall.str();
+	ROS_INFO("NewCOre: syscall: %s", temp.c_str());
 	system(temp.c_str());
 
 }

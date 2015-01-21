@@ -20,6 +20,7 @@ class serialListener{
 		}
 	}
 	int validatemsg(std::string msg){
+		ROS_INFO("SerialListener: validatemsg: %c", msg[0]);
 		if(msg[0]=='c'||msg[0]=='w')
 			return 1;
 		return 0;
@@ -29,6 +30,7 @@ class serialListener{
 		std::stringstream sysCall;
 	        sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial/arduino-serial --port=/dev/ttyACM0 --send="<<shit; 	
 		std::string temp= sysCall.str();
+		ROS_INFO("serialListener: syscall: %s", temp.c_str());
 		system(temp.c_str());
 	}
 
