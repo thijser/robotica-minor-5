@@ -47,6 +47,7 @@ void LaunchDriver::endSwitchCallback(const std_msgs::Int16::ConstPtr &msg){
 
 void LaunchDriver::ballCallback(const std_msgs::Int16::ConstPtr &msg){
 	ballCount = msg->data;
+	ROS_INFO("Ballcount set to: %d", ballCount); 
 }
 
 void LaunchDriver::switchCallback(const std_msgs::Int16::ConstPtr &msg){
@@ -58,14 +59,17 @@ void LaunchDriver::launchCallback(const std_msgs::Int16::ConstPtr &msg){
 	if(msg->data == 1){
 		launch();
 	}
+	else if(msg->data == 2){
+		setPort(0);
+	}
 	else
-		ROS_INFO("msg->data not 1");
+		ROS_INFO("msg->data not 1 or 2");
 }
 
 bool LaunchDriver::launch(){
 	//Good luck understanding this :D 
 	//....fuck my life
-
+	ROS_INFO("Ballcount: %d || endswitch: %d || beginswitch: %d || launching: %d", ballCount, switch2_ok, switch1_ok, launching);
 	//rack has arrived at endswitch, but we're not full yet so we wait for more balls.
 	if(ballCount < MAX_BALLS && launching && switch2_ok == 1){
 		ROS_INFO("Pausing untill 20 balls");

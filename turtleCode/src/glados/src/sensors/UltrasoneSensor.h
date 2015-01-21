@@ -1,17 +1,20 @@
 #ifndef ULTRASONESENSOR_H
 #define ULTRASONESENSOR_H
 
+#include <ros/ros.h>
+#include <std_msgs/Float32.h>
 #include <string>
+#include <prussdrv.h>
+#include <pruss_intc_mapping.h>
 
 class UltrasoneSensor{
 public:
-	std::string tag;
-	int read();
+	void spin();
+	int init(void);
 protected:
-	UltrasoneSensor();
-	UltrasoneSensor(std::string tag);
-	std::string getTag();
-	int readParse();
+	ros::NodeHandle handle ;
+	ros::Publisher pub;
+	unsigned int * pruData;
 };
 
 #endif
