@@ -1,4 +1,5 @@
 #include "newCore.h"
+#include <stdlib.h>
 
 using namespace std;
 int ask =1; 
@@ -112,7 +113,12 @@ void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 void NewCore::askMath(){
 	ROS_INFO("asking for something");
 	std_msgs::String question;
-	question.data = "1digitAddition";
+	if (rand() %2){ 
+		question.data = "1digitAddition";
+	}
+	else{
+		question.data = "1digitSubstraction";
+	}
 	mathPub.publish(question);
 }
 
