@@ -55,6 +55,18 @@ int answer;
 int input;
 unsigned char fuse[1024];
 
+void longboot(){
+    waitMouth();
+  delay(500);
+  openMouth();
+  delay(1000);
+  waitMouth();
+  delay(500);
+  openMouth();
+  delay(1000);
+  waitMouth();
+  delay(1000);
+}
 void setup(){ //////////////SETUP////////////////////////
     pinMode(12, OUTPUT);     
 digitalWrite(12, HIGH); 
@@ -69,10 +81,9 @@ digitalWrite(12, HIGH);
   readloop(100);
   LCDA.initDriverPin(2,3,4); 
   LCDA.Initialise(); // INIT SCREEN  
-  openMouth();
-  delay(500);
-  waitMouth();
-
+  
+  //longboot();
+  closeMouth();
   //Serial.println(F("boot completed"));
 }
 
