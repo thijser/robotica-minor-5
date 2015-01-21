@@ -301,7 +301,6 @@ void loop(){
         b2=Serial.read();
         b3=Serial.read();
         b4=Serial.read();    
-        Serial.write("yo");
       answer = getAnswer(b2-48, b3, b4-48);
 
       waitMouth();
