@@ -22,18 +22,14 @@ class serialListener{
 		}
 	}
 	int validatemsg(std::string msg){
-<<<<<<< HEAD
 		ROS_INFO("SerialListener: validatemsg: %c", msg[0]);
-		if(msg[0]=='c'||msg[0]=='w')
-=======
 		if(msg[0]=='c'||msg[0]=='w'){
-			ROS_INFO("SerialListener: Valid message received");
->>>>>>> 570983e3ce93bf9a4a32ee15ba877617ac291a58
 			return 1;
 		}
 		ROS_INFO("SerialListener: Invalid message received");
 		return 0;
 	}
+
 	void writeSerial(std::string shit){
 		ROS_INFO("SerialListener: Writing to serial line");
 		std::stringstream sysCall;
