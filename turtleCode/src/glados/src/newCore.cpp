@@ -121,6 +121,7 @@ int stringToAscii(string s){
 
 void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 	ROS_INFO("msg-data is %d. Looking for %d", stringToAscii(msg->data), stringToAscii("c"));
+	ROS_INFO("NewCore:SerialCallback: Recieved string: %s", msg->data.c_str());
 	if(msg->data.find('c') != std::string::npos){
 		acceptBall();
 		NewCore::startConvey();
