@@ -172,6 +172,7 @@ int getAnswer(int firstnumber, int operation , int secondnumber){
   return answer;
 }
 
+int wrong =0;
 void checkInput(int input, int answer){
   if (input == answer){
     writeserial("c");
@@ -183,7 +184,12 @@ void checkInput(int input, int answer){
     Serial.flush();
   }
   else{
+    wrong++;
     writeserial("w");
+    if(wrong>5){
+      writeserial("n");
+      //displaysingle('e','s','d');
+    }
     openMouth();
     delay(2000);
     waitMouth();
