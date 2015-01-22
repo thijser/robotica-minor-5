@@ -97,7 +97,7 @@ class mathasker{
 		int* result =new int[3];
 		result[2]=available_balls[rand()%available_balls.size()];
 		result[0] = rand()%(20-result[2])+result[2];
-		result[1]=result[2]-result[1];
+		result[1]=result[0]-result[2];
 		return result; 
 	}
 	int* substract2dig(){

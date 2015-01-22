@@ -62,7 +62,6 @@ void NewCore::stopConvey(){
 
 void NewCore::sendLaunch(){
 	if(goLaunch){
-		ROS_INFO("NewCore: SendLaunch: goLaunch is true so sending startlaunch");
 		std_msgs::String launchmsg;
 		launchmsg.data = "startlaunch";
 		mngrPub.publish(launchmsg);
