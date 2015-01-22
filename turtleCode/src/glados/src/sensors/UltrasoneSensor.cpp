@@ -25,7 +25,7 @@ int UltrasoneSensor::init(void) {
 
 	/* Execute code on PRU */
 	printf(">> Executing HCSR-04 code\n");
-	prussdrv_exec_program(0, "hcsr04.bin");
+	prussdrv_exec_program(0, "/home/ubuntu/ultraSone/hcsr04/hcsr04.bin");
 	
 	return (0);
 
