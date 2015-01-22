@@ -41,7 +41,7 @@ protected:
 	ros::Publisher mathPub;
 	ros::Publisher ballPub;
 	bool goLaunch = false;	
-	int ballCount = 0;
+	int ballCount = 20;
 
 };
 #endif 

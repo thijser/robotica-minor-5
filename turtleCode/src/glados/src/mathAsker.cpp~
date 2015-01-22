@@ -55,9 +55,17 @@ class mathasker{
 
 	//written by bob, muchos bugs but working.
 	void donelaunchcallback(std_msgs::String msg){
+        std::stringstream sysCall;
+	syscall<<"aplay ";
+	syscall<<baselocation;
+	if(c=='D'){
+		syscall<<"plus.wav";
+		system(sysCall.str().c_str());
+		return;
+	}
 		if (msg.data == "donelaunching"){
 			available_balls.clear();
-			for(int i=1;i<20;i++){
+			for(int i=1;i<NUMBEROFBALLS;i++){
 				available_balls.push_back(balls[i]);
 			}
 		}
@@ -96,8 +104,13 @@ class mathasker{
 	int* substract1dig(){
 		int* result =new int[3];
 		result[2]=available_balls[rand()%available_balls.size()];
-		result[0] = rand()%(20-result[2])+result[2];
-		result[1]=result[2]-result[1];
+		if((20-result[2])==0){
+			result[0]=result[2];
+			result[1]=0;
+		}else{
+			result[0] = rand()%(20-result[2])+result[2];
+			result[1]=result[2]-result[1];
+		}
 		return result; 
 	}
 	int* substract2dig(){
@@ -109,7 +122,7 @@ class mathasker{
 		}
 
 	void questioncallback(std_msgs::String request){
-		ROS_INFO("request received");
+		ROS_INFO("Mathasker: request received: %s", request.data.c_str());
 
 		int* questiondata;
 		std_msgs::String soundmsg;
