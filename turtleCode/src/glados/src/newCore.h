@@ -18,6 +18,8 @@ public:
 	void launchCallback(const std_msgs::String::ConstPtr &msg);
 	void stopLaunch();
 	void stopConvey();
+	void stopLaunch();
+	void NewCore::sendLaunch();
 	void startLaunch();
 	void startConvey();
 	void spin();
