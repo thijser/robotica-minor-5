@@ -48,6 +48,9 @@ void NewCore::launchCallback(const std_msgs::String::ConstPtr &msg){
 	if("doneconveying" == msg->data){
 		startLaunch();
 	}
+	if("donepreparing" == msg->data){
+		goLaunch=false; //yolo
+	}
 }
 
 void NewCore::stopLaunch(){
@@ -92,7 +95,8 @@ void NewCore::spin(){
 
 void NewCore::acceptBall(){
 	ROS_INFO("Ball accepted. Publishing to LaunchManager");
-	ballCount++;
+	//ballCount++;
+	ballCount += 2;
 	std_msgs::Int16 balls;
 	balls.data = ballCount;
 	ballPub.publish(balls);
