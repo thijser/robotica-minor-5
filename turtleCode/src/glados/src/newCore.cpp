@@ -3,6 +3,7 @@
 
 using namespace std;
 int ask =1; 
+int answer=0;
 void NewCore::init(){
 
 	mngrSub = handle.subscribe<std_msgs::String>("/tawi/core/launch", 10, &NewCore::launchCallback, this);
@@ -82,9 +83,27 @@ void NewCore::deleteBall(const int ballnumber){ //written by bob, muchos bugs
 	number.data = ballnumber;
 	nmbrPub.publish(number);
 }
+int getAnsweri(int firstnumber, int operation , int secondnumber){
+  switch(operation){
+    case 'D':
+      answer = firstnumber + secondnumber;
+      break;
+    case 'E':
+      answer = firstnumber - secondnumber;
+      break;
+    case 'F':
+      answer = firstnumber * secondnumber;
+      break;
+  }
+  return answer;
+}
+int getAnswer(string s){
+	return getAnsweri(s[1]-48,s[2]-48,s[3]-48);
+}
 
 void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
 	ROS_INFO("ask= %d",ask);
+	answer=getAnswer(msg->data);
 	if(ask>0){
 		ROS_INFO("NewCore: mathCallback: 	newSum: %s",msg->data.c_str());
 		ask=0;
@@ -109,6 +128,11 @@ void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 		ask=1;
 	}
 	else{
+		if('n' == msg->data[0]){
+			
+			ask=1;
+			NewCore::deleteBall(answer);
+		}
 		ROS_INFO("NewCore: SerialCallback: message was not c");
 	}
 }

@@ -27,7 +27,7 @@ class serialListener{
 	int validatemsg(std::string msg){
 		ROS_INFO("SerialListener: validatemsg: %c", msg[0]);
 		//if(msg[0]=='c'||msg[0]=='w'){
-		if(msg.find('c') != std::string::npos || msg.find('w') != std::string::npos){
+		if(msg.find('c') != std::string::npos || msg.find('w') != std::string::npos|| msg.find('n') != std::string::npos){
 			return 1;
 		}
 		ROS_INFO("SerialListener: Invalid message received");
@@ -53,20 +53,18 @@ class serialListener{
 			ROS_INFO("SerialListener:received data: %s" , read.str().c_str());
 			if(checklastln(read.str().c_str(),255)){
 				if(validatemsg(read.str())){	
-					writeSerial("conf");				
-					arduino.publish(serialmsg);
-					read.str("");	
+						writeSerial("conf");				
+						arduino.publish(serialmsg);
+						read.str("");	
+					}
 				}
-			}
-	//	}
+		//	}
+		}
 	}
-
 	serialListener():handle("~"){
 		arduino=handle.advertise<std_msgs::String>("/tawi/arduino/serial",100);
 	}
 };
-
-
 int main (int argc, char **argv){
 	ros::init(argc, argv, "serialListener");
 	serialListener serial;
@@ -77,3 +75,4 @@ int main (int argc, char **argv){
 		hz.sleep();
 	}
 }
+
