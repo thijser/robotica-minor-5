@@ -3,9 +3,8 @@
 
 using namespace std;
 int ask =1; 
-int answer=0;
 void NewCore::init(){
-
+	
 	mngrSub = handle.subscribe<std_msgs::String>("/tawi/core/launch", 10, &NewCore::launchCallback, this);
 	mngrPub = handle.advertise<std_msgs::String>("/tawi/core/launch", 100);
 
@@ -15,28 +14,6 @@ void NewCore::init(){
 
 	ballPub = handle.advertise<std_msgs::Int16>("/tawi/core/ballcount", 100);
 	nmbrPub = handle.advertise<std_msgs::Int16>("/tawi/core/number", 100);
-}
-void  speak(string say){
-        std::stringstream sysCall;
-        char buffer [6];
-        char buffer2[12];
-        say.copy(buffer,6,1);
-	int k=0;
-        for(int i=0;i<6;i++){
-        buffer2[k]=buffer[i];
-	if(buffer2[k]=='D')
-		buffer2[k]='+';
-	if(buffer2[k]='E')
-		buffer2[k]='-';
-        k++;
-        buffer2[k]=' ';
-        k++;
-	}
-	system("aplay /home/ubuntu/Pokemon.wav");
-        sysCall<<"espeak "<<buffer;
-	ROS_INFO("speaking: %s", sysCall.str().c_str());
-//        system(sysCall.str().c_str());
-
 }
 
 void NewCore::launchCallback(const std_msgs::String::ConstPtr &msg){
@@ -75,7 +52,7 @@ void NewCore::spin(){
 
 	while(ros::ok()){
 
-		if (ask){
+		if (ask){			
 			askMath();}
 		ros::spinOnce();
 		rate.sleep();
@@ -91,12 +68,11 @@ void NewCore::acceptBall(){
 }
 
 void NewCore::writeSerial(string shit){
-	speak(shit);
-	ROS_INFO("NewCore: Writing on serial through system call:%s", shit.c_str());
+	ROS_INFO("NewCore: Writing on serial through system call : 
+");
 	std::stringstream sysCall;
-        sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial/arduino-serial --port=/dev/ttyACM0 --send=\""<<shit<<"\""; 
+        sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial/arduino-serial --port=/dev/ttyACM0 --send="<<shit; 
 	string temp= sysCall.str();
-	ROS_INFO("NewCOre: syscall: %s", temp.c_str());
 	system(temp.c_str());
 
 }
@@ -106,29 +82,11 @@ void NewCore::deleteBall(const int ballnumber){ //written by bob, muchos bugs
 	number.data = ballnumber;
 	nmbrPub.publish(number);
 }
-int getAnsweri(int firstnumber, int operation , int secondnumber){
-  switch(operation){
-    case 'D':
-      answer = firstnumber + secondnumber;
-      break;
-    case 'E':
-      answer = firstnumber - secondnumber;
-      break;
-    case 'F':
-      answer = firstnumber * secondnumber;
-      break;
-  }
-  return answer;
-}
-int getAnswer(string s){
-	return getAnsweri(s[1]-48,s[2]-48,s[3]-48);
-}
 
 void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
 	ROS_INFO("ask= %d",ask);
-	answer=getAnswer(msg->data);
 	if(ask>0){
-		ROS_INFO("NewCore: mathCallback: 	newSum: %s",msg->data.c_str());
+		printf("newSum%s",msg->data.c_str());
 		ask=0;
 		writeSerial(msg->data);
 	}
@@ -144,23 +102,15 @@ int stringToAscii(string s){
 
 void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 	ROS_INFO("msg-data is %d. Looking for %d", stringToAscii(msg->data), stringToAscii("c"));
-	ROS_INFO("NewCore:SerialCallback: Recieved string: %s", msg->data.c_str());
-	if(msg->data.find('c') != std::string::npos){
-		ROS_INFO("Accepting ball and starting conveyor");
+	if('c' == msg->data[0]){
 		acceptBall();
 		NewCore::startConvey();
 		ask=1;
 	}
 	else{
-		if('n' == msg->data[0]){
-			
-			ask=1;
-			NewCore::deleteBall(answer);
-		}
 		ROS_INFO("NewCore: SerialCallback: message was not c");
 	}
 }
-
 void NewCore::askMath(){
 	ROS_INFO("asking for something");
 	std_msgs::String question;
