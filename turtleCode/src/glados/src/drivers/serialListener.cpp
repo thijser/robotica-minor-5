@@ -47,11 +47,7 @@ class serialListener{
 		ROS_INFO("SerialListener: Ping before readline");
 		read<<(char*)readline(); // what are you reading? This is locking the program
 		ROS_INFO("SerialListener: poll: Read some line");
-<<<<<<< HEAD
-//		if(read.str()[0]!=0&&read.str()[0]!=10){ //what is even going on here
-=======
 	//	if(read.str()[0]!=0&&read.str()[0]!=10){ //what is even going on here
->>>>>>> 3f0fd9ed6a60f5251b32ab747e4e0c2b6f215c56
 	//		ROS_INFO("SerialListener: poll: weird ass if statement fullfilled");
 			serialmsg.data=read.str();
 			ROS_INFO("SerialListener:received data: %s" , read.str().c_str());
