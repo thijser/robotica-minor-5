@@ -108,6 +108,7 @@ void NewCore::deleteBall(const int ballnumber){ //written by bob, muchos bugs
 	nmbrPub.publish(number);
 }
 int getAnsweri(int firstnumber, int operation , int secondnumber){
+	ROS_INFO("NewCore: getAnsweri: %d, %d, %d", firstnumber, operation, secondnumber);
   switch(operation){
     case 'D':
       answer = firstnumber + secondnumber;
@@ -127,8 +128,8 @@ int getAnswer(string s){
 
 void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
 	ROS_INFO("ask= %d",ask);
-	answer=getAnswer(msg->data);
 	if(ask>0){
+		answer=getAnswer(msg->data);
 		ROS_INFO("NewCore: mathCallback: 	newSum: %s",msg->data.c_str());
 		ask=0;
 		writeSerial(msg->data);
