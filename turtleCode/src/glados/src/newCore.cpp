@@ -70,7 +70,7 @@ void NewCore::acceptBall(){
 void NewCore::writeSerial(string shit){
 	ROS_INFO("NewCore: Writing on serial through system call:%s", shit.c_str());
 	std::stringstream sysCall;
-        sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial/arduino-serial --port=/dev/ttyACM0 --send="<<shit; 
+        sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial/arduino-serial --port=/dev/ttyACM0 --send=\""<<shit<<"\""; 
 	string temp= sysCall.str();
 	ROS_INFO("NewCOre: syscall: %s", temp.c_str());
 	system(temp.c_str());
