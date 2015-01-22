@@ -150,7 +150,7 @@ void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 		ROS_INFO("Accepting ball and starting conveyor");
 		acceptBall();
 		NewCore::startConvey();
-		NewCore::startlaunch();
+		NewCore::startLaunch();
 		ask=1;
 		deleteBall(answer);
 	}
