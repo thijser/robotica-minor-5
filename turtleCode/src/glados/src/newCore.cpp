@@ -150,6 +150,7 @@ void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 		acceptBall();
 		NewCore::startConvey();
 		ask=1;
+		deleteBall(answer);
 	}
 	else{
 		if('n' == msg->data[0]){
