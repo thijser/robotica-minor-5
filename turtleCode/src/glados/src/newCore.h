@@ -29,6 +29,7 @@ public:
 	void serialCallback(const std_msgs::String::ConstPtr &msg);
 	int main(int argc, char **argv);
 	void init();
+
 protected:
 	ros::NodeHandle handle;
 	ros::Subscriber mngrSub;
