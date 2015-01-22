@@ -40,10 +40,10 @@ class serialListener{
 	}
 
 	void poll(){
-		ROS_INFO("polling");
 		read<<(char*)readline();
-
-		if(read.str()[0]!=0&&read.str()[0]!=10){
+		ROS_INFO("SerialListener: poll: Read some line");
+		if(read.str()[0]!=0&&read.str()[0]!=10){ //what is even going on here
+			ROS_INFO("SerialListener: poll: weird ass if statement fullfilled")
 			serialmsg.data=read.str();
 			ROS_INFO("SerialListener:received data: %s" , read.str().c_str());
 			if(checklastln(read.str().c_str(),255)){
