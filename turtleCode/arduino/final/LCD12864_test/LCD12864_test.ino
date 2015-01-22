@@ -281,23 +281,24 @@ String lastmsg;
 
 void writeserial(char* input){
     lastmsg=input;
-    while(1){
-    Serial.println(input);
-    delay(200);
-    if(Serial.available()>=4){
-      byte b1,b2,b3,b4; 
-      b1=Serial.read();
-      if(b1='c'){
-      b2=Serial.read();
-      b3=Serial.read();
-      b4=Serial.read();
-        if(b2=='o'&&b3=='n'&&b4=='f'){
-          return;
+    Serial.println(input); //Took print out of the while loop to prevent overflow of information towards BBB
+    //delay(200); 
+    while(1){ 
+    
+      if(Serial.available()>=4){
+        byte b1,b2,b3,b4; 
+        b1=Serial.read();
+        if(b1='c'){
+        b2=Serial.read();
+        b3=Serial.read();
+        b4=Serial.read();
+          if(b2=='o'&&b3=='n'&&b4=='f'){
+            return;
+          }
         }
+       
       }
-     
     }
-  }
 }
 void loop(){
   if(Serial.available()>=4){
@@ -337,7 +338,3 @@ void readloop(int length){
     readrfid();
   }
 }
-
-
-
-
