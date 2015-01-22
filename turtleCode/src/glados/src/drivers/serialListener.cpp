@@ -25,7 +25,7 @@ class serialListener{
 	/*Now checks whether string contains the character, rather than if it is located at the first position.
 	More sensitive to anomalies, but so be it. */
 	int validatemsg(std::string msg){
-		ROS_INFO("SerialListener: validatemsg: %c", msg[0]);
+		ROS_INFO("SerialListener: validatemsg: %s", msg.c_str());
 		//if(msg[0]=='c'||msg[0]=='w'){
 		if(msg.find('c') != std::string::npos || msg.find('w') != std::string::npos|| msg.find('n') != std::string::npos){
 			return 1;
@@ -48,7 +48,6 @@ class serialListener{
 		read<<(char*)readline(); // what are you reading? This is locking the program
 		ROS_INFO("SerialListener: poll: Read some line");
 	//	if(read.str()[0]!=0&&read.str()[0]!=10){ //what is even going on here
-			ROS_INFO("SerialListener: poll: weird ass if statement fullfilled");
 			serialmsg.data=read.str();
 			ROS_INFO("SerialListener:received data: %s" , read.str().c_str());
 			if(checklastln(read.str().c_str(),255)){
