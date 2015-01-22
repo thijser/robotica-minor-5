@@ -16,7 +16,7 @@ void NewCore::init(){
 	ballPub = handle.advertise<std_msgs::Int16>("/tawi/core/ballcount", 100);
 	nmbrPub = handle.advertise<std_msgs::Int16>("/tawi/core/number", 100);
 }
-void  speak(string say){
+void speak(string say){
         std::stringstream sysCall;
         char buffer [6];
         char buffer2[12];
@@ -83,7 +83,7 @@ void NewCore::spin(){
 	ros::Rate rate(10);
 
 	while(ros::ok()){
-		NewCore::sendlaunch();
+		NewCore::sendLaunch();
 		if (ask){
 			askMath();}
 		ros::spinOnce();
