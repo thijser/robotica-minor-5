@@ -74,7 +74,7 @@ void NewCore::spin(){
 	ros::Rate rate(10);
 
 	while(ros::ok()){
-		NewCore::startlaunch();
+		NewCore::startLaunch();
 		if (ask){
 			askMath();}
 		ros::spinOnce();
