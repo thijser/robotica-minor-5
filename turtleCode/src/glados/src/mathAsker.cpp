@@ -93,11 +93,11 @@ class mathasker{
 	}
 
 	int* substract1dig(){
-		int* ans=addition1dig();
-		int temp=ans[0];
-		ans[0]=ans[2];
-		ans[2]=temp;
-		return ans; 
+		int* result =new int[3];
+		result[2]=available_balls[rand()%available_balls.size()];
+		result[0] = rand()%(20-result[2])+result[2];
+		result[1]=result[2]-result[1];
+		return result; 
 	}
 	int* substract2dig(){
 		int* ans=addition2dig();
