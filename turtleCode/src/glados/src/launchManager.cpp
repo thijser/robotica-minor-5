@@ -4,7 +4,7 @@
 void LaunchManager::init(){
 
 	coreSub = handle.subscribe<std_msgs::String>("/tawi/core/launch", 10, &LaunchManager::coreCallback, this);
-	launchSub = handle.subscribe<std_msgs::Int16>("/tawi/mngr/launch", 10, &LaunchMangoed genoeg. Te diep in je whisky glas gekeken? ager::launchCallback, this);
+	launchSub = handle.subscribe<std_msgs::Int16>("/tawi/mngr/launch", 10, &LaunchManager::launchCallback, this);
 	conveySub = handle.subscribe<std_msgs::Int16>("/tawi/mngr/conveyor", 10, &LaunchManager::conveyCallback, this);
 	usSub = handle.subscribe<std_msgs::Float32>("/tawi/mngr/ussensor", 10, &LaunchManager::usCallback, this);
 

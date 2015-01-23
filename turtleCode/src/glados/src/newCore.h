@@ -18,7 +18,6 @@ public:
 	void launchCallback(const std_msgs::String::ConstPtr &msg);
 	void stopLaunch();
 	void stopConvey();
-	void stopLaunch();
 	void sendLaunch();
 	void startLaunch();
 	void startConvey();
@@ -41,7 +40,7 @@ protected:
 	ros::Publisher nmbrPub;
 	ros::Publisher mathPub;
 	ros::Publisher ballPub;
-	
+	bool goLaunch = false;	
 	int ballCount = 0;
 
 };
