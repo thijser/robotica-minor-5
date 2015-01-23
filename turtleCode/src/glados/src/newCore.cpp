@@ -29,11 +29,12 @@ void  speak(string say){
 	if(buffer2[k]='E')
 		buffer2[k]='-';
         k++;
+        sysCall<<"aplay "<<buffer<<".wav";
         buffer2[k]=' ';
         k++;
 	}
 	system("aplay /home/ubuntu/Pokemon.wav");
-        sysCall<<"espeak "<<buffer;
+
 	ROS_INFO("speaking: %s", sysCall.str().c_str());
 //        system(sysCall.str().c_str());
 
