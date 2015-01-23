@@ -30,6 +30,7 @@ Manual for sending math stuff:
 
 #include "LCD12864RSPI.h"
 #include "DFrobot_bmp.h"
+#include "LCD12864_test.h"
 #include "DFrobot_char.h"
 #include <avr/pgmspace.h>
 #include <SPI.h>
@@ -83,7 +84,7 @@ digitalWrite(12, HIGH);
   LCDA.Initialise(); // INIT SCREEN  
   
   //longboot();
-  closeMouth();
+  semiclose();
   //Serial.println(F("boot completed"));
 }
 
@@ -197,7 +198,7 @@ void checkInput(int input, int answer){
 }
 
 void displaySingle(char a,char b , char c){
-  char str[] = {a,b,c,NULL};
+  char str[] = {a,b,c,(char)NULL};
   Serial.write(str);
   if(strcmp(str,"anr")==0){
     LCDA.DrawFullScreen(angryFace); 
@@ -288,7 +289,7 @@ void writeserial(char* input){
       if(Serial.available()>=4){
         byte b1,b2,b3,b4; 
         b1=Serial.read();
-        if(b1='c'){
+        if(b1=='c'){
         b2=Serial.read();
         b3=Serial.read();
         b4=Serial.read();
