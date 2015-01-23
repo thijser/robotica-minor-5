@@ -74,7 +74,7 @@ void NewCore::spin(){
 	ros::Rate rate(10);
 
 	while(ros::ok()){
-
+		NewCore::startlaunch();
 		if (ask){
 			askMath();}
 		ros::spinOnce();
@@ -122,7 +122,7 @@ int getAnsweri(int firstnumber, int operation , int secondnumber){
   return answer;
 }
 int getAnswer(string s){
-	return getAnsweri(s[1]-48,s[2]-48,s[3]-48);
+	return getAnsweri(s[1]-48,s[2],s[3]-48);
 }
 
 void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
@@ -150,7 +150,7 @@ void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 		ROS_INFO("Accepting ball and starting conveyor");
 		acceptBall();
 		NewCore::startConvey();
-		NewCore::startlaunch();
+		
 		ask=1;
 		deleteBall(answer);
 	}
