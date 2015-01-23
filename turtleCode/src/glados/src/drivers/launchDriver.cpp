@@ -76,7 +76,7 @@ bool LaunchDriver::launch(){
 		setPort(0);
 		launching = false;
 		std_msgs::Int16 msg;
-		msg.data = 0;
+		msg.data = 2;
 		pub.publish(msg);
 	}
 	

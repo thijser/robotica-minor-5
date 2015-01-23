@@ -61,6 +61,12 @@ void LaunchManager::launchCallback(const std_msgs::Int16::ConstPtr & msg){
 		corePub.publish(ldonetocore);
 		launching = false;
 	}
+	if(msg->data == 2){
+		std_msgs::String ldonetocore;
+		ldonetocore.data = "donepreparing";
+		corePub.publish(ldonetocore);
+		launching = false;
+	}
 }
 
 void LaunchManager::conveyCallback(const std_msgs::Int16::ConstPtr & msg){
