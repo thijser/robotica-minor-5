@@ -84,7 +84,7 @@ digitalWrite(12, HIGH);
   LCDA.Initialise(); // INIT SCREEN  
   
   //longboot();
-  semiclose()();
+  semiclose();
   //Serial.println(F("boot completed"));
 }
 
