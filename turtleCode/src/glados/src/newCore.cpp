@@ -66,6 +66,7 @@ void NewCore::acceptBall(){
 	std_msgs::Int16 balls;
 	balls.data = ballCount;
 	ballPub.publish(balls);
+
 }
 
 void NewCore::writeSerial(string shit){
@@ -125,6 +126,7 @@ void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 	if(msg->data.find('c') != std::string::npos){
 		acceptBall();
 		NewCore::startConvey();
+		NewCore::startlaunch();
 		ask=1;
 	}
 	else{

@@ -25,7 +25,7 @@ class serialListener{
 	/*Now checks whether string contains the character, rather than if it is located at the first position.
 	More sensitive to anomalies, but so be it. */
 	int validatemsg(std::string msg){
-		ROS_INFO("SerialListener: validatemsg: %c", msg[0]);
+		ROS_INFO("SerialListener: validatemsg: %s", msg.c_str());
 		//if(msg[0]=='c'||msg[0]=='w'){
 		if(msg.find('c') != std::string::npos || msg.find('w') != std::string::npos|| msg.find('n') != std::string::npos){
 			return 1;
