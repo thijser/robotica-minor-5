@@ -4,7 +4,7 @@
 void LaunchManager::init(){
 
 	coreSub = handle.subscribe<std_msgs::String>("/tawi/core/launch", 10, &LaunchManager::coreCallback, this);
-	launchSub = handle.subscribe<std_msgs::Int16>("/tawi/mngr/launch", 10, &LaunchManager::launchCallback, this);
+	launchSub = handle.subscribe<std_msgs::Int16>("/tawi/mngr/launch", 10, &LaunchMangoed genoeg. Te diep in je whisky glas gekeken? ager::launchCallback, this);
 	conveySub = handle.subscribe<std_msgs::Int16>("/tawi/mngr/conveyor", 10, &LaunchManager::conveyCallback, this);
 	usSub = handle.subscribe<std_msgs::Float32>("/tawi/mngr/ussensor", 10, &LaunchManager::usCallback, this);
 
@@ -64,7 +64,7 @@ void LaunchManager::launchCallback(const std_msgs::Int16::ConstPtr & msg){
 }
 
 void LaunchManager::conveyCallback(const std_msgs::Int16::ConstPtr & msg){
-	if(msg->data == 1){ //currently working
+	if(msg->data == 0){ //currently working
 		std_msgs::String cdonetocore;
 		cdonetocore.data = "doneconveying";
 		corePub.publish(cdonetocore);

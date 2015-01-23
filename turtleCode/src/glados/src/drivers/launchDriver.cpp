@@ -75,6 +75,9 @@ bool LaunchDriver::launch(){
 		ROS_INFO("Pausing untill 20 balls");
 		setPort(0);
 		launching = false;
+		std_msgs::Int16 msg;
+		msg.data = 0;
+		pub.publish(msg);
 	}
 	
 	//This raises the platform!

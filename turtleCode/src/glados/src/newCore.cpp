@@ -45,12 +45,13 @@ void NewCore::launchCallback(const std_msgs::String::ConstPtr &msg){
 	}
 
 	if("doneconveying" == msg->data){
-		stopConvey();
+		startLaunch();
 	}
 }
 
 void NewCore::stopLaunch(){
 	ballCount = 0;
+	goLaunch = false;
 }
 
 void NewCore::stopConvey(){
@@ -58,10 +59,17 @@ void NewCore::stopConvey(){
 	//This method is currently not used
 }
 
+void NewCore::sendLaunch(){
+	if(goLaunch){
+		ROS_INFO("NewCore: SendLaunch: goLaunch is true so sending startlaunch");
+		std_msgs::String launchmsg;
+		launchmsg.data = "startlaunch";
+		mngrPub.publish(launchmsg);
+	}	
+}
+
 void NewCore::startLaunch(){
-	std_msgs::String launchmsg;
-	launchmsg.data = "startlaunch";
-	mngrPub.publish(launchmsg);
+	goLaunch = true;
 }
 
 void NewCore::startConvey(){
@@ -74,7 +82,7 @@ void NewCore::spin(){
 	ros::Rate rate(10);
 
 	while(ros::ok()){
-		NewCore::startlaunch();
+		NewCore::sendlaunch();
 		if (ask){
 			askMath();}
 		ros::spinOnce();
