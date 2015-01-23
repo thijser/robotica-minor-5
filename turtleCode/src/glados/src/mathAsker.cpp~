@@ -34,7 +34,8 @@ class mathasker{
 	
 	const int balls[NUMBEROFBALLS]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
 
-//	const int balls[20]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+//	const int balls[20]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19s whole CPU
+//,20};
 	std::vector<int> available_balls;
 
 	//written by bob, muchos bugs but working.
@@ -93,11 +94,11 @@ class mathasker{
 	}
 
 	int* substract1dig(){
-		int* ans=addition1dig();
-		int temp=ans[0];
-		ans[0]=ans[2];
-		ans[2]=temp;
-		return ans; 
+		int* result =new int[3];
+		result[2]=available_balls[rand()%available_balls.size()];
+		result[0] = rand()%(20-result[2])+result[2];
+		result[1]=result[2]-result[1];
+		return result; 
 	}
 	int* substract2dig(){
 		int* ans=addition2dig();
@@ -165,6 +166,7 @@ class mathasker{
 		ds<<dig;
 		std::cout<<ds<<std::endl;
 		displaymsg.data=ds.str();
+		ROS_INFO("publishing /display msg");
 		display.publish(displaymsg);
 	//	ROS_INFO("sending: %S" , ds.str().c_str());
 	}
