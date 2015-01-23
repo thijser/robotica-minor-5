@@ -60,7 +60,7 @@ target_link_libraries(endSwitchSensor ${catkin_LIBRARIES})
 
 #UltrasoneSensor
 #add_library(UltrasoneSensor src/sensors/UltrasoneSensor.cpp) 		
-#target_link_libraries(UltrasoneSensor ${catkin_LIBRARIES})
+#target_link_libraries(UltrasoneSensor ${catkin_LIBRARIES} prussdrv)
 
 #########
 #DRIVERS
