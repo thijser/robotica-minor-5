@@ -75,7 +75,7 @@ void NewCore::spin(){
 	ros::Rate rate(10);
 
 	while(ros::ok()){
-
+		NewCore::startlaunch();
 		if (ask){
 			askMath();}
 		ros::spinOnce();
@@ -89,10 +89,11 @@ void NewCore::acceptBall(){
 	std_msgs::Int16 balls;
 	balls.data = ballCount;
 	ballPub.publish(balls);
+
 }
 
 void NewCore::writeSerial(string shit){
-	speak(shit);
+//	speak(shit);
 	ROS_INFO("NewCore: Writing on serial through system call:%s", shit.c_str());
 	std::stringstream sysCall;
         sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial/arduino-serial --port=/dev/ttyACM0 --send=\""<<shit<<"\""; 
@@ -108,6 +109,7 @@ void NewCore::deleteBall(const int ballnumber){ //written by bob, muchos bugs
 	nmbrPub.publish(number);
 }
 int getAnsweri(int firstnumber, int operation , int secondnumber){
+	ROS_INFO("NewCore: getAnsweri: %d, %d, %d", firstnumber, operation, secondnumber);
   switch(operation){
     case 'D':
       answer = firstnumber + secondnumber;
@@ -122,13 +124,13 @@ int getAnsweri(int firstnumber, int operation , int secondnumber){
   return answer;
 }
 int getAnswer(string s){
-	return getAnsweri(s[1]-48,s[2]-48,s[3]-48);
+	return getAnsweri(s[1]-48,s[2],s[3]-48);
 }
 
 void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
 	ROS_INFO("ask= %d",ask);
-	answer=getAnswer(msg->data);
 	if(ask>0){
+		answer=getAnswer(msg->data);
 		ROS_INFO("NewCore: mathCallback: 	newSum: %s",msg->data.c_str());
 		ask=0;
 		writeSerial(msg->data);
@@ -150,6 +152,7 @@ void NewCore::serialCallback(const std_msgs::String::ConstPtr& msg){
 		ROS_INFO("Accepting ball and starting conveyor");
 		acceptBall();
 		NewCore::startConvey();
+		
 		ask=1;
 		deleteBall(answer);
 	}
