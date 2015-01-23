@@ -19,7 +19,7 @@ public:
 	void stopLaunch();
 	void stopConvey();
 	void stopLaunch();
-	void NewCore::sendLaunch();
+	void sendLaunch();
 	void startLaunch();
 	void startConvey();
 	void spin();
