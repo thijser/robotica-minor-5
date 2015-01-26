@@ -36,7 +36,9 @@ void NewCore::launchCallback(const std_msgs::String::ConstPtr &msg){
 		startLaunch();
 	}
 	if("donepreparing" == msg->data){
-		goLaunch=false; //yolo
+		if(ballCount < 20){
+			goLaunch=false; //yolo
+		}
 	}
 }
 
@@ -74,6 +76,7 @@ void NewCore::spin(){
 	ros::Rate rate(10);
 
 	while(ros::ok()){
+
 		NewCore::sendLaunch();
 		if (ask){
 			askMath();}
