@@ -14,7 +14,7 @@ Publishing on:
 
 void DrivingDriver::init(){
 	ID = 436436436;
-	sub = handle.subscribe<geometry_msgs::Twist>("/tawi/motors/drive", 1, &DrivingDriver::driveCallback, this);
+	sub = handle.subscribe<geometry_msgs::Twist>("/tawi/motors/drive", 1, &DrivingDriver::driveCaecho "nameserver 8.8.8.8" >> /etc/resolv.confllback, this);
 
 	//Parameters set in launch file.
 	ROS_ASSERT(handle.getParam("motor_port", motor_port_name));
@@ -36,8 +36,8 @@ void DrivingDriver::init(){
 void DrivingDriver::driveCallback(const geometry_msgs::Twist::ConstPtr &msg){
 
 	
-	double v_x = msg->linear.x/(wheelDiameter/2);
-	double v_theta = msg->angular.z * (wheelBase/wheelDiameter);
+	double v_x = msg->linear.x*0.1;//(wheelDiameter/2);
+	double v_theta = msg->angular.z * 0.1; //(wheelBase/wheelDiameter);
 
 	double leftMotorVelocity = v_x - v_theta;
 	double rightMotorVelocity = v_x + v_theta;
