@@ -16,9 +16,9 @@ class dancer{
 	ros::NodeHandle handle;
 	ros::Publisher moveit;
 	
-	int dancing=0; 
+	int dancing=1; 
 	int beat=30; 
-	double phase; 
+	double phase; 		//miliseconds 
 	double timePerMove;	//seconds 
 
 
@@ -62,7 +62,7 @@ class dancer{
 
 	}
 	void dance(){
-		while(dancing){
+		while(ros::ok() && dancing){
 			if(rand()%2){
 				spinRound();
 			}else{
@@ -97,6 +97,7 @@ class dancer{
 int main(int argc, char** argv){
 	ros::init(argc, argv, "teleop_turtle");
 	dancer dance;
+	dance.dance();
 	ros::Rate hz(100);
 	while(ros::ok()){
 		ros::spinOnce();
