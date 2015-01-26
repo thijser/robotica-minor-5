@@ -42,9 +42,9 @@
 #define SS_PIN		      10	
 #define servopin        6
 
-#define mouth_open_pos    142
-#define mouth_closed_pos  77
-#define mouth_wait_pos    120
+#define mouth_open_pos    0
+#define mouth_wait_pos    30
+#define mouth_closed_pos  50
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);	// Create MFRC522 instance
 MFRC522::MIFARE_Key key;
@@ -83,9 +83,9 @@ void setup(){ //////////////SETUP////////////////////////
   LCDA.initDriverPin(2,3,4); 
   LCDA.Initialise(); // INIT SCREEN  
 
-  //longboot();
+  longboot();
   semiclose();
-  //Serial.println(F("boot completed"));
+  Serial.println(F("boot completed"));
 }
 
 void openMouth(){ //open the mouth
