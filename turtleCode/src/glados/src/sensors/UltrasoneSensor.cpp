@@ -42,7 +42,6 @@ void UltrasoneSensor::spin(){
 		// Print the distance received from the sonar
 		// At 20 degrees in dry air the speed of sound is 342.2 cm/sec
 		// so it takes 29.12 us to make 1 cm, i.e. 58.44 us for a roundtrip of 1 cm
-		printf("Distance = %.2f cm\n",  (float) (pruData[0] / 58.44));
 
 		std_msgs::Float32 msg;
 		msg.data = (float) (pruData[0] / 58.44);

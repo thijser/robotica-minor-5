@@ -178,7 +178,6 @@ int main(int argc, char **argv){
 	
 	ros::init(argc, argv, "newCore");
 	NewCore nc;
-	nc.dance();	
 	nc.init();
 
 	nc.spin();
