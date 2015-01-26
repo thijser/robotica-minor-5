@@ -5,8 +5,8 @@
 #include <ros/ros.h>
 #include <math.h>
 
-#define drivespeed 0.3
-#define rotspeed 0.3
+#define drivespeed 0.1
+#define rotspeed 0000.1
 
 class dancer{
 	public:
