@@ -52,6 +52,11 @@ class mathasker{
 		}
 		printf("\n");
 	}
+	void printballs(){
+		for(int i=0;i<available_balls.size();i++){
+			ROS_INFO("ball= %d ", available_balls[i]);
+		}
+	}
 
 	//written by bob, muchos bugs but working.
 	void donelaunchcallback(std_msgs::String msg){
@@ -95,16 +100,23 @@ class mathasker{
 	}
 
 	int* substract1dig(){
+
 		int* result =new int[3];
 		result[2]=available_balls[rand()%available_balls.size()];
+		ROS_INFO("question should be : %d , " , result[2] );
 		if((20-result[2])==0){
 			result[0]=result[2];
 			result[1]=0;
 		}else{
-			result[0] = rand()%(20-result[2])+result[2];
-			result[1]=result[2]-result[1];
+			int num = rand()%(20-result[2]);
+			result[0] = num+result[2];
+			ROS_INFO("num = %d" , num);
+			result[1]=result[0]-result[2];
 		}
+
+		ROS_INFO("which is %d - %d" , result[0] , result[1]);
 		return result; 
+
 	}
 	int* substract2dig(){
 		int* ans=addition2dig();
@@ -199,6 +211,7 @@ int main(int argc, char **argv){
 	ros::Rate hz(100);
 
 	while(ros::ok()){	
+
 		ros::spinOnce();
 		hz.sleep();
 	} 	
