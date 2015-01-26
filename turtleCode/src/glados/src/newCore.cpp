@@ -45,6 +45,9 @@ void NewCore::launchCallback(const std_msgs::String::ConstPtr &msg){
 
 void NewCore::stopLaunch(){
 	ballCount = 0;
+	std_msgs::Int16 balls;
+	balls.data = ballCount;
+	ballPub.publish(balls);
 	goLaunch = false;
 }
 
