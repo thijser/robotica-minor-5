@@ -1,6 +1,7 @@
 #include "newCore.h"
 #include <stdlib.h>
 #include "speak.cpp"
+#include "glados/music.h"
 using namespace std;
 int ask =1; 
 int answer=0;
@@ -12,11 +13,18 @@ void NewCore::init(){
 	mathSub = handle.subscribe<std_msgs::String>("/display", 10, &NewCore::mathCallback, this);
 	serSub = handle.subscribe<std_msgs::String>("/tawi/arduino/serial", 100,&NewCore::serialCallback,this);
 	mathPub = handle.advertise<std_msgs::String>("/questions", 100);
-
+	beatPub = handle.advertise<std_msgs::String>("/tawi/theBeat", 100);
 	ballPub = handle.advertise<std_msgs::Int16>("/tawi/core/ballcount", 100);
 	nmbrPub = handle.advertise<std_msgs::Int16>("/tawi/core/number", 100);
 }
 
+void NewCore::dance(){
+	glados::music msg;
+	msg.duration=9999999;
+	msg.bpm=30;
+	msg.starttime=ros::Time::now().sec;
+	beatPub.publish(msg);
+}
 
 void NewCore::launchCallback(const std_msgs::String::ConstPtr &msg){
 	if("donelaunching" == msg->data){
@@ -171,6 +179,7 @@ int main(int argc, char **argv){
 	
 	ros::init(argc, argv, "newCore");
 	NewCore nc;
+	nc.dance();	
 	nc.init();
 
 	nc.spin();
