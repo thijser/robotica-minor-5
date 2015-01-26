@@ -57,7 +57,7 @@ class mathasker{
 	void donelaunchcallback(std_msgs::String msg){
 		if (msg.data == "donelaunching"){
 			available_balls.clear();
-			for(int i=1;i<20;i++){
+			for(int i=1;i<NUMBEROFBALLS;i++){
 				available_balls.push_back(balls[i]);
 			}
 		}
@@ -96,8 +96,13 @@ class mathasker{
 	int* substract1dig(){
 		int* result =new int[3];
 		result[2]=available_balls[rand()%available_balls.size()];
-		result[0] = rand()%(20-result[2])+result[2];
-		result[1]=result[2]-result[1];
+		if((20-result[2])==0){
+			result[0]=result[2];
+			result[1]=0;
+		}else{
+			result[0] = rand()%(20-result[2])+result[2];
+			result[1]=result[2]-result[1];
+		}
 		return result; 
 	}
 	int* substract2dig(){
