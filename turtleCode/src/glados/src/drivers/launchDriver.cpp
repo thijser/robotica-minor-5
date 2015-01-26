@@ -78,6 +78,7 @@ bool LaunchDriver::launch(){
 		std_msgs::Int16 msg;
 		msg.data = 2;
 		pub.publish(msg);
+		launching = false;
 	}
 	
 	//This raises the platform!

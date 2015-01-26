@@ -37,6 +37,7 @@ void NewCore::launchCallback(const std_msgs::String::ConstPtr &msg){
 	}
 	if("donepreparing" == msg->data){
 		if(ballCount < 20){
+			ROS_INFO("NewCore: goLaunch set to false");
 			goLaunch=false; //yolo
 		}
 	}
