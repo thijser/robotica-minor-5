@@ -208,7 +208,7 @@ class mathasker{
 int main(int argc, char **argv){
 	ros::init(argc, argv, "audioDriver");
 	mathasker math;
-	ros::Rate hz(100);
+	ros::Rate hz(10);
 
 	while(ros::ok()){	
 

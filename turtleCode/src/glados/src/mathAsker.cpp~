@@ -111,7 +111,7 @@ class mathasker{
 			int num = rand()%(20-result[2]);
 			result[0] = num+result[2];
 			ROS_INFO("num = %d" , num);
-			result[1]=result[2]-result[0];
+			result[1]=result[0]-result[2];
 		}
 
 		ROS_INFO("which is %d - %d" , result[0] , result[1]);

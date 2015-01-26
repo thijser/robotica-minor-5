@@ -6,7 +6,7 @@
 #include <math.h>
 
 #define drivespeed 0.1
-#define rotspeed 0.1
+#define rotspeed 0000.1
 
 class dancer{
 	public:

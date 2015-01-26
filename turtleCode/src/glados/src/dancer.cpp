@@ -98,7 +98,7 @@ int main(int argc, char** argv){
 	ros::init(argc, argv, "teleop_turtle");
 	dancer dance;
 	dance.dance();
-	ros::Rate hz(100);
+	ros::Rate hz(10);
 	while(ros::ok()){
 		ros::spinOnce();
 		hz.sleep();
