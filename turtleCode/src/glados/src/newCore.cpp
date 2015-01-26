@@ -20,7 +20,7 @@ void NewCore::init(){
 
 void NewCore::dance(){
 	glados::music msg;
-	msg.duration=9999999;
+	msg.duration=5;
 	msg.bpm=180;
 	msg.starttime=ros::Time::now().sec;
 	beatPub.publish(msg);
@@ -28,6 +28,7 @@ void NewCore::dance(){
 
 void NewCore::launchCallback(const std_msgs::String::ConstPtr &msg){
 	if("donelaunching" == msg->data){
+		ROS_INFO("NewCore: Recieved donelaunching");
 		stopLaunch();
 	}
 
@@ -68,6 +69,8 @@ void NewCore::startConvey(){
 }
 
 void NewCore::spin(){
+	NewCore::startLaunch();
+
 	ros::Rate rate(10);
 
 	while(ros::ok()){

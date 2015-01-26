@@ -56,6 +56,7 @@ void LaunchManager::launchCallback(const std_msgs::Int16::ConstPtr & msg){
 		launching = true;
 	}
 	if(msg->data == 0){ //currently not launching
+		ROS_INFO("LaunchManager: Done launching. Sending to core.");
 		std_msgs::String ldonetocore;
 		ldonetocore.data = "donelaunching";
 		corePub.publish(ldonetocore);
