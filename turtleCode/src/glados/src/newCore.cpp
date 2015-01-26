@@ -20,7 +20,7 @@ void NewCore::init(){
 
 void NewCore::dance(){
 	glados::music msg;
-	msg.duration=9999999;
+	msg.duration=5;
 	msg.bpm=180;
 	msg.starttime=ros::Time::now().sec;
 	beatPub.publish(msg);
@@ -28,6 +28,7 @@ void NewCore::dance(){
 
 void NewCore::launchCallback(const std_msgs::String::ConstPtr &msg){
 	if("donelaunching" == msg->data){
+		ROS_INFO("NewCore: Recieved donelaunching");
 		stopLaunch();
 	}
 
@@ -35,12 +36,18 @@ void NewCore::launchCallback(const std_msgs::String::ConstPtr &msg){
 		startLaunch();
 	}
 	if("donepreparing" == msg->data){
-		goLaunch=false; //yolo
+		if(ballCount < 20){
+			ROS_INFO("NewCore: goLaunch set to false");
+			goLaunch=false; //yolo
+		}
 	}
 }
 
 void NewCore::stopLaunch(){
 	ballCount = 0;
+	std_msgs::Int16 balls;
+	balls.data = ballCount;
+	ballPub.publish(balls);
 	goLaunch = false;
 }
 
@@ -68,9 +75,12 @@ void NewCore::startConvey(){
 }
 
 void NewCore::spin(){
+	NewCore::startLaunch();
+
 	ros::Rate rate(10);
 
 	while(ros::ok()){
+
 		NewCore::sendLaunch();
 		if (ask){
 			askMath();}
@@ -178,7 +188,6 @@ int main(int argc, char **argv){
 	
 	ros::init(argc, argv, "newCore");
 	NewCore nc;
-	nc.dance();	
 	nc.init();
 
 	nc.spin();

@@ -55,6 +55,7 @@ Servo mouthservo; //our servo
 int answer;
 int input;
 unsigned char fuse[1024];
+int wrong = 0;
 
 void longboot(){
   waitMouth();
@@ -173,14 +174,14 @@ int getAnswer(int firstnumber, int operation , int secondnumber){
   return answer;
 }
 
-int wrong =0;
+
 void checkInput(int input, int answer){
   if (input == answer){
     writeserial("c");
-
+    wrong = 0;
     closeMouth();
     //displaySingle('h', 'a', 'p'); //show happy face (when implemented)
-    delay(3000);
+    delay(1000);
     //    openMouth();
     Serial.flush();
   }

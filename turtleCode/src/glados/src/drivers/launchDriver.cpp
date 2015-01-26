@@ -82,11 +82,10 @@ bool LaunchDriver::launch(){
 	
 	//This raises the platform!
 	//We're full, time to release for the platform.
-	if(ballCount >= MAX_BALLS && !launching && switch2_ok == 1){
+	if(ballCount >= MAX_BALLS && launching && switch2_ok == 1){
 		ROS_INFO("We're full, time to release for the platform.");
 
 		setPort(1);
-		launching = true;
 	}
 
 	// safetycheck for stopping when not yet at halfballs
