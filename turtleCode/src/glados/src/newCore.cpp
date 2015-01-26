@@ -21,7 +21,7 @@ void NewCore::init(){
 void NewCore::dance(){
 	glados::music msg;
 	msg.duration=9999999;
-	msg.bpm=30;
+	msg.bpm=180;
 	msg.starttime=ros::Time::now().sec;
 	beatPub.publish(msg);
 }
