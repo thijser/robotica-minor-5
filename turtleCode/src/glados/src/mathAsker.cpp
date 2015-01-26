@@ -55,6 +55,7 @@ class mathasker{
 
 	//written by bob, muchos bugs but working.
 	void donelaunchcallback(std_msgs::String msg){
+
 		if (msg.data == "donelaunching"){
 			available_balls.clear();
 			for(int i=1;i<NUMBEROFBALLS;i++){
@@ -114,7 +115,7 @@ class mathasker{
 		}
 
 	void questioncallback(std_msgs::String request){
-		ROS_INFO("Mathasker: request received: ", request.c_str());
+		ROS_INFO("Mathasker: request received: %s", request.data.c_str());
 
 		int* questiondata;
 		std_msgs::String soundmsg;

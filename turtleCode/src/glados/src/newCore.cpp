@@ -1,6 +1,6 @@
 #include "newCore.h"
 #include <stdlib.h>
-
+#include "speak.cpp"
 using namespace std;
 int ask =1; 
 int answer=0;
@@ -16,29 +16,7 @@ void NewCore::init(){
 	ballPub = handle.advertise<std_msgs::Int16>("/tawi/core/ballcount", 100);
 	nmbrPub = handle.advertise<std_msgs::Int16>("/tawi/core/number", 100);
 }
-void speak(string say){
-        std::stringstream sysCall;
-        char buffer [6];
-        char buffer2[12];
-        say.copy(buffer,6,1);
-	int k=0;
-        for(int i=0;i<6;i++){
-        buffer2[k]=buffer[i];
-	if(buffer2[k]=='D')
-		buffer2[k]='+';
-	if(buffer2[k]='E')
-		buffer2[k]='-';
-        k++;
-        sysCall<<"aplay "<<buffer<<".wav";
-        buffer2[k]=' ';
-        k++;
-	}
-	system("aplay /home/ubuntu/Pokemon.wav");
 
-	ROS_INFO("speaking: %s", sysCall.str().c_str());
-//        system(sysCall.str().c_str());
-
-}
 
 void NewCore::launchCallback(const std_msgs::String::ConstPtr &msg){
 	if("donelaunching" == msg->data){
@@ -105,7 +83,7 @@ void NewCore::acceptBall(){
 }
 
 void NewCore::writeSerial(string shit){
-//	speak(shit);
+	speak(shit.c_str());
 	ROS_INFO("NewCore: Writing on serial through system call:%s", shit.c_str());
 	std::stringstream sysCall;
         sysCall<<"/home/ubuntu/robotica-minor-5/com/arduino-serial/arduino-serial --port=/dev/ttyACM0 --send=\""<<shit<<"\""; 
