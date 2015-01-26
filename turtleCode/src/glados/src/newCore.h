@@ -30,6 +30,7 @@ public:
 	void serialCallback(const std_msgs::String::ConstPtr &msg);
 	int main(int argc, char **argv);
 	void init();
+	void dance();
 
 protected:
 	ros::NodeHandle handle;
@@ -37,6 +38,7 @@ protected:
 	ros::Subscriber mathSub;
 	ros::Subscriber serSub;
 	ros::Publisher mngrPub;
+	ros::Publisher beatPub;
 	ros::Publisher nmbrPub;
 	ros::Publisher mathPub;
 	ros::Publisher ballPub;
