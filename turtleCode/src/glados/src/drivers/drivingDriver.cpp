@@ -14,8 +14,7 @@ Publishing on:
 
 void DrivingDriver::init(){
 	ID = 436436436;
-	sub = handle.subscribe<geometry_msgs::Twist>("/tawi/motors/drive", 1, &DrivingDriver::driveCaecho "nameserver 8.8.8.8" >> /etc/resolv.confllback, this);
-
+	sub = handle.subscribe<geometry_msgs::Twist>("/tawi/motors/drive", 1, &DrivingDriver::driveCallback, this);
 	//Parameters set in launch file.
 	ROS_ASSERT(handle.getParam("motor_port", motor_port_name));
 	ROS_ASSERT(handle.getParam("motor_config", motor_config_name));
