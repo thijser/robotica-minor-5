@@ -63,11 +63,11 @@ class dancer{
 	}
 	void dance(){
 		while(ros::ok() && dancing){
-			if(rand()%2){
+			//if(rand()%2){
 				spinRound();
-			}else{
-				backForward();
-			}
+			//}else{
+			//	backForward();
+			//}
 		}
 	}
 
