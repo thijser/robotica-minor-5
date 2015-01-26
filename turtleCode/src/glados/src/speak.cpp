@@ -6,7 +6,7 @@ void sayc(const char c, int pos){
 
 	std::stringstream sysCall;
 	sysCall<<"aplay ";
-	sysCall<<"/home/thijs/tawisound/";
+	sysCall<<"/home/ubuntu/tawisound/";
 	if(c=='D'){
 		sysCall<<"plus.wav";
 		system(sysCall.str().c_str());
@@ -35,7 +35,7 @@ void sayc(const char c, int pos){
 
 void opening(){
         std::stringstream sysCall;
-	sysCall<<"aplay /home/thijs/tawisound/wat_is.wav";
+	sysCall<<"aplay /home/ubuntu/tawisound/wat_is.wav";
 	system(sysCall.str().c_str());
 }
 
