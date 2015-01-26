@@ -1,32 +1,32 @@
 
 /***********************************************
-1. SPI Interface Inatruction
-      clockPin --> SCK(EN)
-      latchPin --> CS(RS)
-      dataPin --> SID(RW)
- 2. Connection:
-    1)Turn the BL_ON Switch to the "ON" side;
-    2)Turn the PBS_ON Switch to the "SPI" side
-
-
-      LCD                          Arduino
-      SCK       clockPin(defined in the "initDriverPin" function)  port 2 
-      CS        latchPin(defined in the "initDriverPin" function)  port 3 
-      SID       dataPin (defined in the "initDriverPin" function)  port 4 
-      VCC                            5V
-      GND                           GND
-      
-
-***********************************************/
+ * 1. SPI Interface Inatruction
+ * clockPin --> SCK(EN)
+ * latchPin --> CS(RS)
+ * dataPin --> SID(RW)
+ * 2. Connection:
+ * 1)Turn the BL_ON Switch to the "ON" side;
+ * 2)Turn the PBS_ON Switch to the "SPI" side
+ * 
+ * 
+ * LCD                          Arduino
+ * SCK       clockPin(defined in the "initDriverPin" function)  port 2 
+ * CS        latchPin(defined in the "initDriverPin" function)  port 3 
+ * SID       dataPin (defined in the "initDriverPin" function)  port 4 
+ * VCC                            5V
+ * GND                           GND
+ * 
+ * 
+ ***********************************************/
 
 /*********************************
-Manual for sending math stuff:
-
-1: Serial receives an "s" as the first character to indicate a sum is coming.
-2:  first number after the s can be anything from 0 up to and including 9.
-    second number after the s should be either ":", ";" or "<". these signal +, - and * respectively.
-    third number after the s can be anything from 0 up to and including 9.
-*********************************/
+ * Manual for sending math stuff:
+ * 
+ * 1: Serial receives an "s" as the first character to indicate a sum is coming.
+ * 2:  first number after the s can be anything from 0 up to and including 9.
+ * second number after the s should be either ":", ";" or "<". these signal +, - and * respectively.
+ * third number after the s can be anything from 0 up to and including 9.
+ *********************************/
 
 #include "LCD12864RSPI.h"
 #include "DFrobot_bmp.h"
@@ -57,7 +57,7 @@ int input;
 unsigned char fuse[1024];
 
 void longboot(){
-    waitMouth();
+  waitMouth();
   delay(500);
   openMouth();
   delay(1000);
@@ -69,8 +69,8 @@ void longboot(){
   delay(1000);
 }
 void setup(){ //////////////SETUP////////////////////////
-    pinMode(12, OUTPUT);     
-digitalWrite(12, HIGH); 
+  pinMode(12, OUTPUT);     
+  digitalWrite(12, HIGH); 
   Serial.begin(9600);
   mouthservo.attach(servopin);
   SPI.begin();
@@ -78,11 +78,11 @@ digitalWrite(12, HIGH);
   for (byte i = 0; i < 6; i++) {
     key.keyByte[i] = 0xFF;
   }
-    
+
   readloop(100);
   LCDA.initDriverPin(2,3,4); 
   LCDA.Initialise(); // INIT SCREEN  
-  
+
   //longboot();
   semiclose();
   //Serial.println(F("boot completed"));
@@ -97,24 +97,24 @@ void openMouth(){ //open the mouth
 
 void waitMouth(){ //open the mouth
 
-  for(int i = mouthservo.read(); i < mouth_wait_pos; i++){
+    for(int i = mouthservo.read(); i < mouth_wait_pos; i++){
     mouthservo.write(i);
-     delay(15);
+    delay(15);
   }
-    for(int i = mouthservo.read(); i > mouth_wait_pos; i--){
+  for(int i = mouthservo.read(); i > mouth_wait_pos; i--){
     mouthservo.write(i);
-     delay(15);
+    delay(15);
   }
 
 }
 void semiclose(){
-    for(int i = mouthservo.read(); i < mouth_closed_pos+20; i++){
+  for(int i = mouthservo.read(); i < mouth_closed_pos+20; i++){
     mouthservo.write(i);
-     delay(15);
+    delay(15);
   }
-    for(int i = mouthservo.read(); i > mouth_closed_pos+20; i--){
+  for(int i = mouthservo.read(); i > mouth_closed_pos+20; i--){
     mouthservo.write(i);
-     delay(15);
+    delay(15);
   }
 }
 void fullcloseMouth(){
@@ -126,8 +126,8 @@ void fullcloseMouth(){
 
 }
 void closeMouth(){ //close the mouth
- int repeat= random(1,5);
-for(int i=0;i<repeat;i++){
+  int repeat= random(1,5);
+  for(int i=0;i<repeat;i++){
     fullcloseMouth();
     semiclose();
   }
@@ -137,20 +137,20 @@ for(int i=0;i<repeat;i++){
 
 
 const unsigned char* getMatch(int input){ //getmatch function
- if(input>0||input<13){
-  return index[input];
- }  
- return index[0];
+  if(input>0||input<13){
+    return index[input];
+  }  
+  return index[0];
 }
 
 
 void displayfuse(int firstnumber, int operation , int secondnumber ){
- LCDA.CLEAR();
- readloop(100); //for refreshing delay?
+  LCDA.CLEAR();
+  readloop(100); //for refreshing delay?
 
- const unsigned char* a = getMatch(firstnumber);
- const unsigned char* b = getMatch(operation);
- const unsigned char* c = getMatch(secondnumber);
+  const unsigned char* a = getMatch(firstnumber);
+  const unsigned char* b = getMatch(operation);
+  const unsigned char* c = getMatch(secondnumber);
 
 
   LCDA.DrawFullScreen_F3(a,b,c);
@@ -159,15 +159,15 @@ void displayfuse(int firstnumber, int operation , int secondnumber ){
 
 int getAnswer(int firstnumber, int operation , int secondnumber){
   switch(operation){
-    case 'D':
-      answer = firstnumber + secondnumber;
-      break;
-    case 'E':
-      answer = firstnumber - secondnumber;
-      break;
-    case 'F':
-      answer = firstnumber * secondnumber;
-      break;
+  case 'D':
+    answer = firstnumber + secondnumber;
+    break;
+  case 'E':
+    answer = firstnumber - secondnumber;
+    break;
+  case 'F':
+    answer = firstnumber * secondnumber;
+    break;
   }
   Serial.println();
   return answer;
@@ -177,11 +177,11 @@ int wrong =0;
 void checkInput(int input, int answer){
   if (input == answer){
     writeserial("c");
-    
+
     closeMouth();
     //displaySingle('h', 'a', 'p'); //show happy face (when implemented)
     delay(3000);
-//    openMouth();
+    //    openMouth();
     Serial.flush();
   }
   else{
@@ -198,7 +198,8 @@ void checkInput(int input, int answer){
 }
 
 void displaySingle(char a,char b , char c){
-  char str[] = {a,b,c,(char)NULL};
+  char str[] = {
+    a,b,c,(char)NULL  };
   Serial.write(str);
   if(strcmp(str,"anr")==0){
     LCDA.DrawFullScreen(angryFace); 
@@ -207,135 +208,138 @@ void displaySingle(char a,char b , char c){
 
 
 void readrfid(){ //read rfid ball!
-    // Look for new cards
+  // Look for new cards
   if ( ! mfrc522.PICC_IsNewCardPresent()) {
     return;
   }
-    // Select one of the cards
+  // Select one of the cards
   if ( ! mfrc522.PICC_ReadCardSerial()) {
     return;
   }
-       // that is: sector #1, covering block #4 up to and including block #7
-    byte blockAddr      = 4; // Reading Block 4 (Sector 1)
-    byte trailerBlock   = 4; 
-    byte status;
-    byte buffer[18];
-    byte size = sizeof(buffer);
+  // that is: sector #1, covering block #4 up to and including block #7
+  byte blockAddr      = 4; // Reading Block 4 (Sector 1)
+  byte trailerBlock   = 4; 
+  byte status;
+  byte buffer[18];
+  byte size = sizeof(buffer);
 
-    // Authenticate using key A
-    status = mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_A, trailerBlock, &key, &(mfrc522.uid));
-    if (status != MFRC522::STATUS_OK) {
-        //Serial.println(mfrc522.GetStatusCodeName(status));
-        return;
-    }
+  // Authenticate using key A
+  status = mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_A, trailerBlock, &key, &(mfrc522.uid));
+  if (status != MFRC522::STATUS_OK) {
+    //Serial.println(mfrc522.GetStatusCodeName(status));
+    return;
+  }
 
-    // Authenticate using key B
-    status = mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_B, trailerBlock, &key, &(mfrc522.uid));
-    if (status != MFRC522::STATUS_OK) {
-        //Serial.println(mfrc522.GetStatusCodeName(status));
-        return;
-    }
-    
-      // Read data from the block
-    //Serial.print(F("Reading data from block ")); Serial.print(blockAddr);
-    //Serial.println(F(" ..."));
-    status = mfrc522.MIFARE_Read(blockAddr, buffer, &size);
-    if (status != MFRC522::STATUS_OK) {
-        Serial.print(F("MIFARE_Read() failed: "));
-        Serial.println(mfrc522.GetStatusCodeName(status));
-    }
-    //Serial.print(F("Data in block "));
-    //Serial.print(blockAddr);
-    //Serial.println(F(":"));
+  // Authenticate using key B
+  status = mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_B, trailerBlock, &key, &(mfrc522.uid));
+  if (status != MFRC522::STATUS_OK) {
+    //Serial.println(mfrc522.GetStatusCodeName(status));
+    return;
+  }
 
-    
-    //Serial.println(input);
-    //Serial.println(answer);
+  // Read data from the block
+  //Serial.print(F("Reading data from block ")); Serial.print(blockAddr);
+  //Serial.println(F(" ..."));
+  status = mfrc522.MIFARE_Read(blockAddr, buffer, &size);
+  if (status != MFRC522::STATUS_OK) {
+    Serial.print(F("MIFARE_Read() failed: "));
+    Serial.println(mfrc522.GetStatusCodeName(status));
+  }
+  //Serial.print(F("Data in block "));
+  //Serial.print(blockAddr);
+  //Serial.println(F(":"));
 
-    //dump_byte_array(buffer, 1);
-    //Serial.println();
-    
-        // Halt PICC
-    mfrc522.PICC_HaltA();
-    // Stop encryption on PCD
-    mfrc522.PCD_StopCrypto1();
 
-//Best workaround ever
+  //Serial.println(input);
+  //Serial.println(answer);
 
-     input = buffer[0];
-   
-   checkInput(input, answer);
+  //dump_byte_array(buffer, 1);
+  //Serial.println();
 
-    
+  // Halt PICC
+  mfrc522.PICC_HaltA();
+  // Stop encryption on PCD
+  mfrc522.PCD_StopCrypto1();
+
+  //Best workaround ever
+
+  input = buffer[0];
+
+  checkInput(input, answer);
+
+
 } 
 
 
 void dump_byte_array(byte *buffer, byte bufferSize) { //dump byte array function
-    for (byte i = 0; i < bufferSize; i++) {
-        Serial.print(buffer[i] < 0x10 ? " 0" : " ");
-        Serial.print(buffer[i], HEX);
-    }
+  for (byte i = 0; i < bufferSize; i++) {
+    Serial.print(buffer[i] < 0x10 ? " 0" : " ");
+    Serial.print(buffer[i], HEX);
+  }
 }
 
 boolean confirmed;
 String lastmsg; 
 
 void writeserial(char* input){
-    lastmsg=input;
-    Serial.println(input); //Took print out of the while loop to prevent overflow of information towards BBB
-    //delay(200); 
-    while(1){ 
-    
-      if(Serial.available()>=4){
-        byte b1,b2,b3,b4; 
-        b1=Serial.read();
-        if(b1=='c'){
+  lastmsg=input;
+  Serial.println(input); //Took print out of the while loop to prevent overflow of information towards BBB
+  //delay(200); 
+  while(1){ 
+
+    if(Serial.available()>=4){
+      byte b1,b2,b3,b4; 
+      b1=Serial.read();
+      if(b1=='c'){
         b2=Serial.read();
         b3=Serial.read();
         b4=Serial.read();
-          if(b2=='o'&&b3=='n'&&b4=='f'){
-            return;
-          }
+        if(b2=='o'&&b3=='n'&&b4=='f'){
+          return;
         }
-       
       }
+
     }
+  }
 }
 void loop(){
   if(Serial.available()>=4){
     byte b1,b2,b3,b4; 
     b1=Serial.read();
     if(b1=='s'){ //indicates a math problem is coming
-        b2=Serial.read();
-        b3=Serial.read();
-        b4=Serial.read();    
+      b2=Serial.read();
+      b3=Serial.read();
+      b4=Serial.read();    
       answer = getAnswer(b2-48, b3, b4-48);
 
       waitMouth();
       displayfuse(b2-48,b3-48,b4-48); //fuses the three numbers after the s to a math problem.
 
-    }else{
-          if(b1=='f'){
-                b2=Serial.read();
-                b3=Serial.read();
-                b4=Serial.read();    
-            displaySingle(b2,b3,b4);
-          }else{
-            
-          }
     }
-    }
+    else{
+      if(b1=='f'){
+        b2=Serial.read();
+        b3=Serial.read();
+        b4=Serial.read();    
+        displaySingle(b2,b3,b4);
+      }
+      else{
 
-    readrfid();
-  
-    
-  
+      }
+    }
+  }
+
+  readrfid();
+
+
+
 
 }
 
 void readloop(int length){
- long starttime= millis();
+  long starttime= millis();
   while(millis()-starttime<length){
     readrfid();
   }
 }
+

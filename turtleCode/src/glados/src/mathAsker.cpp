@@ -57,7 +57,7 @@ class mathasker{
 	void donelaunchcallback(std_msgs::String msg){
 		if (msg.data == "donelaunching"){
 			available_balls.clear();
-			for(int i=1;i<20;i++){
+			for(int i=1;i<NUMBEROFBALLS;i++){
 				available_balls.push_back(balls[i]);
 			}
 		}
