@@ -42,9 +42,9 @@
 #define SS_PIN		      10	
 #define servopin        6
 
-#define mouth_open_pos    0
-#define mouth_wait_pos    30
-#define mouth_closed_pos  50
+#define mouth_open_pos    70
+#define mouth_wait_pos    55
+#define mouth_closed_pos  0
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);	// Create MFRC522 instance
 MFRC522::MIFARE_Key key;
@@ -58,6 +58,7 @@ unsigned char fuse[1024];
 int wrong = 0;
 
 void longboot(){
+  displaySingle('n','e','u');
   waitMouth();
   delay(500);
   openMouth();
@@ -180,7 +181,7 @@ void checkInput(int input, int answer){
     writeserial("c");
     wrong = 0;
     closeMouth();
-    //displaySingle('h', 'a', 'p'); //show happy face (when implemented)
+    displaySingle('h', 'a', 'p'); //show happy face (when implemented)
     delay(1000);
     //    openMouth();
     Serial.flush();
@@ -190,7 +191,7 @@ void checkInput(int input, int answer){
     writeserial("w");
     if(wrong>5){
       writeserial("n");
-      //displaysingle('e','s','d');
+      displaySingle('s','a','d');
     }
     openMouth();
     delay(2000);
@@ -205,6 +206,16 @@ void displaySingle(char a,char b , char c){
   if(strcmp(str,"anr")==0){
     LCDA.DrawFullScreen(angryFace); 
   }
+  if(strcmp(str,"hap")==0){
+    LCDA.DrawFullScreen(happyFace); 
+  }
+  if(strcmp(str,"sad")==0){
+    LCDA.DrawFullScreen(sadFace); 
+  }
+  if(strcmp(str,"neu")==0){
+    LCDA.DrawFullScreen(neutralFace); 
+  }
+
 }
 
 
@@ -284,10 +295,9 @@ String lastmsg;
 
 void writeserial(char* input){
   lastmsg=input;
-  Serial.println(input); //Took print out of the while loop to prevent overflow of information towards BBB
-  //delay(200); 
-  while(1){ 
 
+  while(1){ 
+  Serial.println(input); //Took print out of the while loop to prevent overflow of information towards BBB
     if(Serial.available()>=4){
       byte b1,b2,b3,b4; 
       b1=Serial.read();
@@ -301,6 +311,7 @@ void writeserial(char* input){
       }
 
     }
+    delay(900); 
   }
 }
 void loop(){
