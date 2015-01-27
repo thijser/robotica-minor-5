@@ -6,7 +6,7 @@
 *	
 */ 
 #include "conveyorDriver.h"
-#define ROTATIONTIME 20
+#define ROTATIONTIME 15
 
 ConveyorDriver::ConveyorDriver () {
 	ros::NodeHandle nh;
