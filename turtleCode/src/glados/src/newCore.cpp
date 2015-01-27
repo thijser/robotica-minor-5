@@ -76,7 +76,7 @@ void NewCore::startConvey(){
 
 void NewCore::spin(){
 	NewCore::startLaunch();
-
+	acceptBall();
 	ros::Rate rate(10);
 
 	while(ros::ok()){
