@@ -137,9 +137,9 @@ int getAnswer(string s){
 void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
 	ROS_INFO("ask= %d",ask);
 	if(ask>0){
+		ask=0;
 		answer=getAnswer(msg->data);
 		ROS_INFO("NewCore: mathCallback: 	newSum: %s",msg->data.c_str());
-		ask=0;
 		writeSerial(msg->data);
 	}
 }
