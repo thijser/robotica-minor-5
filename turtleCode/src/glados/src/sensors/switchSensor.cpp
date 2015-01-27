@@ -52,7 +52,7 @@ int main(int argc, char **argv) {
 	ros::NodeHandle handle;
 	ros::Publisher pub = handle.advertise<std_msgs::Int16>("/tawi/sensors/switch", 10);
 	std_msgs::Int16 msg;
-	ros::Rate loop_Rate(30);
+	ros::Rate loop_Rate(50);
 
 	while(ros::ok()){
 		int stateRead = 2; 
@@ -62,7 +62,6 @@ int main(int argc, char **argv) {
 		if(stateRead == 2)
 			ROS_INFO("stateRead not set");
 		msg.data = stateRead; //Inverting for BBB logic no longer neccesary if you set port direction to in.
-		
 		pub.publish(msg);
 		//ROS_INFO("Switch broadcasts %d", msg.data);
 		loop_Rate.sleep();

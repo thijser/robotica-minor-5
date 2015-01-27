@@ -82,9 +82,8 @@ bool LaunchDriver::launch(){
 	
 	//This raises the platform!
 	//We're full, time to release for the platform.
-	if(ballCount >= MAX_BALLS && launching && switch2_ok == 1){
+	if(ballCount >= MAX_BALLS && !launching && switch2_ok == 1){
 		ROS_INFO("We're full, time to release for the platform.");
-
 		setPort(1);
 	}
 
@@ -141,7 +140,7 @@ bool LaunchDriver::launch(){
 }
 
 void LaunchDriver::setPort(int value){
-	//ROS_INFO("Echoing %d to gpio60", value);
+	ROS_INFO("Echoing %d to gpio60", value);
 	fs.open("/sys/class/gpio/gpio60/value"); // <<<PORT
 	fs << to_string(value); // "1" for off
 	fs.close();   	
@@ -150,7 +149,7 @@ void LaunchDriver::setPort(int value){
 void LaunchDriver::spin() {
 	ROS_INFO("Spinning launchDriver");
 
-	ros::Rate r(5);
+	ros::Rate r(25);
 	while(ros::ok()) {
 
 		ros::spinOnce();
