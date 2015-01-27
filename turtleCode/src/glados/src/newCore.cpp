@@ -13,14 +13,14 @@ void NewCore::init(){
 	mathSub = handle.subscribe<std_msgs::String>("/display", 10, &NewCore::mathCallback, this);
 	serSub = handle.subscribe<std_msgs::String>("/tawi/arduino/serial", 100,&NewCore::serialCallback,this);
 	mathPub = handle.advertise<std_msgs::String>("/questions", 100);
-	beatPub = handle.advertise<std_msgs::String>("/tawi/theBeat", 100);
+	beatPub = handle.advertise<glados::music>("/tawi/theBeat", 100);
 	ballPub = handle.advertise<std_msgs::Int16>("/tawi/core/ballcount", 100);
 	nmbrPub = handle.advertise<std_msgs::Int16>("/tawi/core/number", 100);
 }
 
 void NewCore::dance(){
 	glados::music msg;
-	msg.duration=5;
+	msg.duration=500000000;
 	msg.bpm=180;
 	msg.starttime=ros::Time::now().sec;
 	beatPub.publish(msg);
@@ -189,6 +189,6 @@ int main(int argc, char **argv){
 	ros::init(argc, argv, "newCore");
 	NewCore nc;
 	nc.init();
-
+	nc.dance();
 	nc.spin();
 }
