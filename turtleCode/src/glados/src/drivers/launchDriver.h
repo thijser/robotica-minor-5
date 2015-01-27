@@ -38,8 +38,8 @@ protected:
 	ros::Subscriber launchSub;	
 	ros::Publisher pub;
 	ros::Subscriber ballSub;
-	int ballCount = 0;
-	int launchCount = 20;
+	int ballCount = 20;
+	int launchCount = 0;
 };
 
 
