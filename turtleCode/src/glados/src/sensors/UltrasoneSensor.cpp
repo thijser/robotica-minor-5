@@ -32,7 +32,7 @@ int UltrasoneSensor::init(void) {
 }
 
 void UltrasoneSensor::spin(){
-	ros::Rate rate(1);
+	ros::Rate rate(50);
 	while (ros::ok()) {
 		
 		// Wait for the PRU interrupt

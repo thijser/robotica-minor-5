@@ -2,6 +2,6 @@
 
 	<node name="mathAsker" pkg="glados" type="mathAsker" output="screen"/>
 	<node name="newCore" pkg="glados" type="newCore" output="screen"/>
-	<node name="dance" pkg="glados" type="dance" output="screen"/>
+	<node name="dancer" pkg="glados" type="dancer" output="screen"/>
 </launch>
 

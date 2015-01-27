@@ -14,7 +14,6 @@ void LaunchManager::init(){
 }
 
 void LaunchManager::usCallback(const std_msgs::Float32::ConstPtr &msg){
-	ROS_INFO("ultrasone callback: %f", msg->data);
 	if(msg->data > 40){
 		ultrasoneSafe = true;
 	}

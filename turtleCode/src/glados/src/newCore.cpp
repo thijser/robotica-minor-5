@@ -20,7 +20,7 @@ void NewCore::init(){
 
 void NewCore::dance(){
 	glados::music msg;
-	msg.duration=500000000;
+	msg.duration=500;
 	msg.bpm=180;
 	msg.starttime=ros::Time::now().sec;
 	beatPub.publish(msg);
@@ -61,6 +61,7 @@ void NewCore::sendLaunch(){
 		std_msgs::String launchmsg;
 		launchmsg.data = "startlaunch";
 		mngrPub.publish(launchmsg);
+		NewCore::dance();
 	}	
 }
 
