@@ -20,7 +20,7 @@ void NewCore::init(){
 
 void NewCore::dance(){
 	glados::music msg;
-	msg.duration=500000000;
+	msg.duration=500;
 	msg.bpm=180;
 	msg.starttime=ros::Time::now().sec;
 	beatPub.publish(msg);
@@ -61,6 +61,7 @@ void NewCore::sendLaunch(){
 		std_msgs::String launchmsg;
 		launchmsg.data = "startlaunch";
 		mngrPub.publish(launchmsg);
+		NewCore::dance();
 	}	
 }
 
@@ -137,9 +138,9 @@ int getAnswer(string s){
 void NewCore::mathCallback(const std_msgs::String::ConstPtr& msg){
 	ROS_INFO("ask= %d",ask);
 	if(ask>0){
+		ask=0;
 		answer=getAnswer(msg->data);
 		ROS_INFO("NewCore: mathCallback: 	newSum: %s",msg->data.c_str());
-		ask=0;
 		writeSerial(msg->data);
 	}
 }

@@ -42,7 +42,18 @@ void LaunchDriver::init(){
 }
 
 void LaunchDriver::endSwitchCallback(const std_msgs::Int16::ConstPtr &msg){
-	prevSwitch2 = switch2_ok;
+	if(switch2_ok == 0 && prevSwitch2 == 1){
+                if(endTransition){
+                        stopLaunch = true;
+                        ROS_INFO("stopLaunch set to true");
+                }
+                else{
+                        endTransition = true;
+                        ROS_INFO("endTransition set to true");
+                }
+        }
+        prevSwitch2 = switch2_ok;
+	
 	switch2_ok = msg->data;
 }
 
@@ -76,7 +87,6 @@ bool LaunchDriver::launch(){
 	if(ballCount < MAX_BALLS && launching && switch2_ok == 1){
 		ROS_INFO("Pausing untill 20 balls");
 		setPort(0);
-		launching = false;
 		std_msgs::Int16 msg;
 		msg.data = 2;
 		pub.publish(msg);
@@ -84,7 +94,7 @@ bool LaunchDriver::launch(){
 	
 	//This raises the platform!
 	//We're full, time to release for the platform.
-	if(ballCount >= MAX_BALLS && !launching && switch2_ok == 1){
+	if(ballCount >= MAX_BALLS && launching && switch2_ok == 1){
 		ROS_INFO("We're full, time to release for the platform.");
 		setPort(1);
 	}
@@ -126,23 +136,10 @@ bool LaunchDriver::launch(){
 		ROS_INFO("State between the two switches. Set port 1 to continue to switch 2.");
 		setPort(1);
 	}
-	//set a bool true on the first occurence of a transition from switch2.ok -> !switch.ok.
-	//the second time this happens, set stopLaunch true.
-	if(switch2_ok == 0 && prevSwitch2 == 1){
-		if(endTransition){
-			stopLaunch = true;
-			ROS_INFO("stopLaunch set to true");
-		}
-		else{
-			endTransition = true;
-			ROS_INFO("endTransition set to true");
-		}
-	}
-	prevSwitch2 = switch2_ok;
+	
 }
 
 void LaunchDriver::setPort(int value){
-	ROS_INFO("Echoing %d to gpio60", value);
 	fs.open("/sys/class/gpio/gpio60/value"); // <<<PORT
 	fs << to_string(value); // "1" for off
 	fs.close();   	
