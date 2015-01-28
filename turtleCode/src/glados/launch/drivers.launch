@@ -1,5 +1,5 @@
 <launch>
-	<!--node name="drivingDriver" pkg="glados" type="drivingDriver" output="screen" respawn="false">
+	<node name="drivingDriver" pkg="glados" type="drivingDriver" output="screen" respawn="false">
 		<param name="motor_port" value="motor_comm"/>
 		<param name="motor_config" value="/home/ubuntu/robotica-minor-5/turtleCode/src/glados/cfg/wheels.xml"/>
 		<param name="wheel_diameter" value="0.295"/>
@@ -10,13 +10,13 @@
 		<param name="port_name" value="/dev/ttyUSB0"/>
 		<param name="port_type" value="RS485_FTDI"/>
 		<param name="baud_rate" value="921600"/>
-	</node-->
+	</node>
 
-	<node name="launchDriver" pkg="glados" type="launchDriver" output="screen">
+	<node name="launchDriver" pkg="glados" type="launchDriver" >
 	<!-- dingen -->
 	</node>
 
-	<node name="launchManager" pkg="glados" type="launchManager" output="screen">
+	<node name="launchManager" pkg="glados" type="launchManager" >
 	</node>
 
 	<node name="conveyorDriver" pkg="glados" type="conveyorDriver" output="screen">
