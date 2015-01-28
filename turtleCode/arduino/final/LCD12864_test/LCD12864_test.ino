@@ -67,10 +67,8 @@ int wrong = 0;
 void longboot(){
   displaySingle('n','e','u');
   fullcloseMouth();
-  Serial.print("hello");
 
   wiggle(5000);
-  Serial.println("endwiggle");
 }
 void setup(){ //////////////SETUP////////////////////////
   pinMode(12, OUTPUT);     
@@ -90,7 +88,6 @@ void setup(){ //////////////SETUP////////////////////////
 
   longboot();
   semiclose();
-  Serial.println(F("boot completed"));
 }
 
 void openMouth(){ //open the mouth
@@ -224,7 +221,7 @@ void checkInput(int input, int answer){
     openMouth();
     delay(2000);
     waitMouth();
-    displayfuse(lb2-48,lb3-48,lb4-48);
+    displayfuse(lb2-48,lb3-47,lb4-48);
   }
 }
 
@@ -243,7 +240,6 @@ void displaySingle(char a,char b , char c){
   if(strcmp(str,"neu")==0){
     LCDA.DrawFullScreen(neutralFace); 
   }
-  Serial.write(str);
 
 }
 
@@ -283,8 +279,6 @@ void readrfid(){ //read rfid ball!
   //Serial.println(F(" ..."));
   status = mfrc522.MIFARE_Read(blockAddr, buffer, &size);
   if (status != MFRC522::STATUS_OK) {
-    Serial.print(F("MIFARE_Read() failed: "));
-    Serial.println(mfrc522.GetStatusCodeName(status));
   }
   //Serial.print(F("Data in block "));
   //Serial.print(blockAddr);
@@ -314,8 +308,8 @@ void readrfid(){ //read rfid ball!
 
 void dump_byte_array(byte *buffer, byte bufferSize) { //dump byte array function
   for (byte i = 0; i < bufferSize; i++) {
-    Serial.print(buffer[i] < 0x10 ? " 0" : " ");
-    Serial.print(buffer[i], HEX);
+    //Serial.print(buffer[i] < 0x10 ? " 0" : " ");
+   // Serial.print(buffer[i], HEX);
   }
 }
 
@@ -327,6 +321,7 @@ void writeserial(char* input){
 
   while(1){ 
   Serial.println(input); //hugo> Took print out of the while loop to prevent overflow of information towards BBB thijs> thus trapping in an endless loop to ensure the arduino crashes instead?
+  for(int i=0;i<20;i++){
      if(Serial.available()>=4){
       byte b1,b2,b3,b4; 
       delay(200);
@@ -339,7 +334,7 @@ void writeserial(char* input){
           return;
         }
       }
-
+     }
     }
     delay(800); 
   }
