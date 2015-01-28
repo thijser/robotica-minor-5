@@ -12,11 +12,11 @@
 		<param name="baud_rate" value="921600"/>
 	</node>
 
-	<node name="launchDriver" pkg="glados" type="launchDriver" output="screen">
+	<node name="launchDriver" pkg="glados" type="launchDriver" >
 	<!-- dingen -->
 	</node>
 
-	<node name="launchManager" pkg="glados" type="launchManager" output="screen">
+	<node name="launchManager" pkg="glados" type="launchManager" >
 	</node>
 
 	<node name="conveyorDriver" pkg="glados" type="conveyorDriver" output="screen">

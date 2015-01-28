@@ -2,9 +2,9 @@
 	<node name="switchSensor" pkg="glados" type="switchSensor" >
 	</node>
 
-	<node name="endSwitchSensor" pkg="glados" type="endSwitchSensor" output="screen">
+	<node name="endSwitchSensor" pkg="glados" type="endSwitchSensor" >
 	</node>
 
-	<node name="UltrasoneSensor" pkg="glados" type="UltrasoneSensor" output="screen">
+	<node name="UltrasoneSensor" pkg="glados" type="UltrasoneSensor">
 	</node>
 </launch>
