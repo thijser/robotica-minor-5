@@ -41,16 +41,23 @@
 #define RST_PIN	        9		
 #define SS_PIN		      10	
 #define servopin        6
-
+#define tailpin         5
 #define mouth_open_pos    70
 #define mouth_wait_pos    55
 #define mouth_closed_pos  0
+#define mouth_semiclosed_pos  30
+
+#define wiglebig  120
+#define wiglesmall  60
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);	// Create MFRC522 instance
 MFRC522::MIFARE_Key key;
 byte cardUID;
 
 Servo mouthservo; //our servo
+Servo tailservo; //our servo
+
+byte lb1,lb2,lb3,lb4; 
 
 int answer;
 int input;
@@ -59,22 +66,18 @@ int wrong = 0;
 
 void longboot(){
   displaySingle('n','e','u');
-  waitMouth();
-  delay(500);
-  openMouth();
-  delay(1000);
-  waitMouth();
-  delay(500);
-  openMouth();
-  delay(1000);
-  waitMouth();
-  delay(1000);
+  fullcloseMouth();
+  Serial.print("hello");
+
+  wiggle(5000);
+  Serial.println("endwiggle");
 }
 void setup(){ //////////////SETUP////////////////////////
   pinMode(12, OUTPUT);     
   digitalWrite(12, HIGH); 
   Serial.begin(9600);
   mouthservo.attach(servopin);
+  tailservo.attach(tailpin);
   SPI.begin();
   mfrc522.PCD_Init();
   for (byte i = 0; i < 6; i++) {
@@ -97,6 +100,30 @@ void openMouth(){ //open the mouth
   }
 }
 
+int wiglespeed =12;
+void wiggle(int mseconds){
+  long starttime= millis();
+  int  keepgoing=1;
+  while(keepgoing){
+   
+    for(int i = tailservo.read(); i < wiglebig; i++){
+            tailservo.write(i);
+            delay(wiglespeed);
+            
+            if(starttime+mseconds<millis()){
+              keepgoing=0;break;}
+      }
+      
+          for(int i = tailservo.read(); i > wiglesmall; i--){
+            tailservo.write(i);
+            delay(wiglespeed);
+            if(starttime+mseconds<millis())
+             {
+              keepgoing=0;break;}
+      }
+  }
+}
+
 void waitMouth(){ //open the mouth
 
     for(int i = mouthservo.read(); i < mouth_wait_pos; i++){
@@ -110,17 +137,16 @@ void waitMouth(){ //open the mouth
 
 }
 void semiclose(){
-  for(int i = mouthservo.read(); i < mouth_closed_pos+20; i++){
+  for(int i = mouthservo.read(); i < mouth_semiclosed_pos; i++){
     mouthservo.write(i);
     delay(15);
   }
-  for(int i = mouthservo.read(); i > mouth_closed_pos+20; i--){
+  for(int i = mouthservo.read(); i > mouth_semiclosed_pos; i--){
     mouthservo.write(i);
     delay(15);
   }
 }
 void fullcloseMouth(){
-  delay(750);
   for(int i = mouthservo.read(); i > mouth_closed_pos; i--){
     mouthservo.write(i);
     delay(15);
@@ -128,7 +154,7 @@ void fullcloseMouth(){
 
 }
 void closeMouth(){ //close the mouth
-  int repeat= random(1,5);
+  int repeat= 3;
   for(int i=0;i<repeat;i++){
     fullcloseMouth();
     semiclose();
@@ -178,31 +204,33 @@ int getAnswer(int firstnumber, int operation , int secondnumber){
 
 void checkInput(int input, int answer){
   if (input == answer){
+    displaySingle('h', 'a', 'p'); //show happy face (when implemented)
     writeserial("c");
     wrong = 0;
     closeMouth();
-    displaySingle('h', 'a', 'p'); //show happy face (when implemented)
-    delay(1000);
+    wiggle(1000);
     //    openMouth();
     Serial.flush();
   }
   else{
     wrong++;
+    displaySingle('s','a','d');
+
     writeserial("w");
+
     if(wrong>5){
       writeserial("n");
-      displaySingle('s','a','d');
     }
     openMouth();
     delay(2000);
     waitMouth();
+    displayfuse(lb2-48,lb3-48,lb4-48);
   }
 }
 
 void displaySingle(char a,char b , char c){
   char str[] = {
     a,b,c,(char)NULL  };
-  Serial.write(str);
   if(strcmp(str,"anr")==0){
     LCDA.DrawFullScreen(angryFace); 
   }
@@ -215,6 +243,7 @@ void displaySingle(char a,char b , char c){
   if(strcmp(str,"neu")==0){
     LCDA.DrawFullScreen(neutralFace); 
   }
+  Serial.write(str);
 
 }
 
@@ -297,9 +326,10 @@ void writeserial(char* input){
   lastmsg=input;
 
   while(1){ 
-  Serial.println(input); //Took print out of the while loop to prevent overflow of information towards BBB
-    if(Serial.available()>=4){
+  Serial.println(input); //hugo> Took print out of the while loop to prevent overflow of information towards BBB thijs> thus trapping in an endless loop to ensure the arduino crashes instead?
+     if(Serial.available()>=4){
       byte b1,b2,b3,b4; 
+      delay(200);
       b1=Serial.read();
       if(b1=='c'){
         b2=Serial.read();
@@ -311,32 +341,33 @@ void writeserial(char* input){
       }
 
     }
-    delay(900); 
+    delay(800); 
   }
 }
+
 void loop(){
   if(Serial.available()>=4){
-    byte b1,b2,b3,b4; 
-    b1=Serial.read();
-    if(b1=='s'){ //indicates a math problem is coming
-      b2=Serial.read();
-      b3=Serial.read();
-      b4=Serial.read();    
-      answer = getAnswer(b2-48, b3, b4-48);
+    
+    lb1=Serial.read();
+    if(lb1=='s'){ //indicates a math problem is coming
+      lb2=Serial.read();
+      lb3=Serial.read();
+      lb4=Serial.read();    
+      answer = getAnswer(lb2-48, lb3, lb4-48);
 
       waitMouth();
-      displayfuse(b2-48,b3-48,b4-48); //fuses the three numbers after the s to a math problem.
+      displayfuse(lb2-48,lb3-48,lb4-48); //fuses the three numbers after the s to a math problem.
 
     }
     else{
-      if(b1=='f'){
-        b2=Serial.read();
-        b3=Serial.read();
-        b4=Serial.read();    
-        displaySingle(b2,b3,b4);
+      if(lb1=='f'){
+        lb2=Serial.read();
+        lb3=Serial.read();
+        lb4=Serial.read();    
+        displaySingle(lb2,lb3,lb4);
       }
       else{
-
+            
       }
     }
   }
