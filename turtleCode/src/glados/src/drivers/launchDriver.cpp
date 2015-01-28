@@ -42,6 +42,7 @@ void LaunchDriver::init(){
 }
 
 void LaunchDriver::endSwitchCallback(const std_msgs::Int16::ConstPtr &msg){
+	prevSwitch2 = switch2_ok;
 	switch2_ok = msg->data;
 }
 
@@ -52,6 +53,7 @@ void LaunchDriver::ballCallback(const std_msgs::Int16::ConstPtr &msg){
 
 void LaunchDriver::switchCallback(const std_msgs::Int16::ConstPtr &msg){
 //	ROS_INFO("switchCallback");
+
 	switch1_ok = msg->data;
 }
 
