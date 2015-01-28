@@ -40,7 +40,6 @@ void DrivingDriver::driveCallback(const geometry_msgs::Twist::ConstPtr &msg){
 
 	double leftMotorVelocity = v_x - v_theta;
 	double rightMotorVelocity = v_x + v_theta;
-	ROS_INFO("driveCallback %f", leftMotorVelocity);
 	
 
 	left_motor->setSpeed(fix_max_speed(leftMotorVelocity));	
