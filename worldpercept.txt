@@ -1,0 +1,27 @@
+World perception 
+	Spelen
+		1) Maak een node die opdrachten kan generen en deze aan het kind toont.
+			Wij hebben besloten deze code te spliten in meerdere nodes, de structuur is hierbij als volgt: De NewCore post een type som request en deze word door de MathAsker ontvangen. Deze MathAsker genereert vervolgens een  van het gevraagde type (+,-,* of /) afhankelijk som. Deze wordt vervolgens weer omgevangen door de core en verstuurd via de arduino-serial een bericht stuurt naar de arduino, deze vangt vervolgens het bericht in de main loop als dit bericht een som is wordt dit verder verstuurd naar de displayfuse functie die een aanroep doet naar de aangepaste library code in LCD12864RSPI.cpp. 
+
+		2)Maak een node die de RFID kan uitlezen van de ballen en de aansturing van het accepteren of afwijzen met de mond.
+			Dit wordt volledig in de arduino gedaan en wordt dus gedaan met behulp van functies. Eerst berekent getAnswer het antwoord, vervolgens lees readrfid de uit welke bal er aan geboden wordt. Vervolgens kijkt checkInput of het antwoord overeen komt met het eerder door getAnswer gegenereerde antwoord en als ze overeen komen roep de functie closeMouth aan en verstuurd een bericht terug aan de BeagleBone. Als het incorrect is roep dan de functie openMouth aan in beide gevallen laat een relavant gezicht zien met de displaySingle functie. 
+
+		3)Maak een node die de opdracht uitleest en de invoer van de ballen verwerkt en deze omzet naar een emote die getoond wordt.
+			Zie 2) 
+		4) Maak een node die checkt of de ballen gelanceerd kunnen worden en dit dan doet indien de benodigde ballen in de container zit.
+			Dit wordt gedaan door eerst in de core te zien dat er een bal binnen is gekomen (komt binnen vanuit de arduino) vervolgens wordt dit naar de launchManager gestuurd die dit door geeft aan de launchDriver. Als de launchdriver ziet dat er voldoende ballen zijn en de ultrasone sensor vrij heeft gegeven dan wordt er gelanceert. 
+
+Rondbewegen
+	 De robot moet kunnen dansen, maar ook een beetje rond bewegen.
+		1) Maak een node die de motoren aanstuurt van het basis platform.
+		Er is een makkelijk interface voor het laten rijden van de robot in de drivingDriver node. 
+		2) Maak een node die muziek afspeelt en erop danst.
+			Het afspelen van muziek doen wij simpelweg door een aanroep naar 
+				system("aplay /path/naar/de/muziek");	
+			Verder hebben we besloten om in plaats van de beat van de muziek te herkennen deze gewoon in te programeren omdat dit practicer, sneller en betrouwbaarder is dan het in real time te doen. 
+			Het dansen zelf vindt plaats in de dancer node deze is aan te roepen door een music message te publiceren om /tawi/theBeat hierin kan een starttijd duur en beats per minute aan gegeven worden en de robot zat daar op dansen. 
+
+	Maak een node die de omgeving kan waarnemen, rondbewegen en nergens tegen aan rijdt. meer info nodig, welke sensoren zitten er op de robot?
+	 Voor de tweede opdracht staat nog een deel opdracht niet gedefinieerd. Hier wil ik dat jullie ervoor gaan zorgen dat Tawi rond kan rijden zonder ergens tegen aan te botsen. Hier hebben jullie twee opties, plaats een kinect of plaats meerdere ultrasone sensoren. Jullie kunnen zelf kiezen welke van deze twee opties.
+			Omdat de robot in de praktijk onze robot het prima bleek te doen hebben wij er geen sensoren op gezet wel hebben we met behulp van de DPR4 rond gereden met een random walk/object avoidence programma werkent op een kinect en een laptop. 
+ 				De code hiervoor is te vinden in kinect_controller.cpp 
